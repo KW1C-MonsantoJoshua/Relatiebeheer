@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             } else {
                 // Incorrect username
-//            $message = 'Je hebt geen geldige combinatie van email en wachtwoord';
+//            $message = 'Je hebt geen geldige combinatie van email en wachtwoord'; test text
                 header("Location:../index.php?login=foutecombi");
             }
             $stmt->close();
