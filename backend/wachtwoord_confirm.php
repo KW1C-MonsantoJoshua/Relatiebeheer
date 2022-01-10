@@ -46,7 +46,7 @@ $token = $_GET["token"];
     <link rel="stylesheet" href="../app-assets/css-rtl/pages/authentication.css">
     <!-- END Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/style-rtl.css">
+    <link rel="stylesheet" type="text/css" href="../assets2/css/style-rtl.css">
     <!-- END: Custom CSS-->
 </head>
 <!-- END : Head-->
@@ -121,7 +121,7 @@ $token = $_GET["token"];
 <!-- BEGIN PAGE LEVEL JS-->
 <!-- END PAGE LEVEL JS-->
 <!-- BEGIN: Custom CSS-->
-<script src="../assets/js/scripts.js"></script>
+<script src="../assets2/js/scripts.js"></script>
 <!-- END: Custom CSS-->
 </body>
 <!-- END : Body-->

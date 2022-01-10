@@ -52,7 +52,7 @@ if (isset($_POST['subforgot'])) {
             <div class="card overflow-hidden">
                 <div class="row m-0">
                     <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center text-center auth-img-bg py-2">
-                        <img src="assets/img/gallery/forgot.png" alt="" class="img-fluid" width="260" height="230">
+                        <img src="../assets2/img/gallery/forgot.png" alt="" class="img-fluid" width="260" height="230">
                     </div>
                     <div class="col-lg-6 col-md-12 px-4 py-3">
 

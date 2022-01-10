@@ -78,7 +78,7 @@ if (isset($_POST['sub_set'])) {
                         <div class="card-body auth-img">
                             <div class="row m-0">
                                 <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center text-center auth-img-bg py-2">
-                                    <img src="assets/img/logo2.png"
+                                    <img src="assets2/img/logo2.png"
                                          class="logo img-fluid">
 
                                 </div>

@@ -17,8 +17,8 @@ global.menuActiveColor = "white"
 global.menuToggle = "ft-toggle-left"
 global.menuDataToggle = "expanded"
 global.sidebarBgColor = "man-of-steel"
-global.skSidebarBgImg = "../../../app-assets/img/sidebar-bg/01.jpg"
-global.sidebarBgImg = "../../../app-assets/img/sidebar-bg/01.jpg"
+global.skSidebarBgImg = "../../../app-assets2/img/sidebar-bg/01.jpg"
+global.sidebarBgImg = "../../../app-assets2/img/sidebar-bg/01.jpg"
 
 if (options.TextDirection !== undefined) {
   global.myTextDirection = options.TextDirection.toLowerCase()
