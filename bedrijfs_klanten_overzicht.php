@@ -468,13 +468,13 @@ include "partials/navbar.php";
                                                         </ol>
                                                         <div class="carousel-inner" role="listbox">
                                                             <div class="carousel-item active">
-                                                                <img src="../../../app-assets/img/photos/01.jpg" class="d-block w-100" alt="First slide">
+                                                                <img src="assets/img/photos/01.jpg" class="d-block w-100" alt="First slide">
                                                             </div>
                                                             <div class="carousel-item">
-                                                                <img src="../../../app-assets/img/photos/05.jpg" class="d-block w-100" alt="Second slide">
+                                                                <img src="assets/img/photos/05.jpg" class="d-block w-100" alt="Second slide">
                                                             </div>
                                                             <div class="carousel-item">
-                                                                <img src="../../../app-assets/img/photos/10.jpg" class="d-block w-100" alt="Third slide">
+                                                                <img src="assets/img/photos/10.jpg" class="d-block w-100" alt="Third slide">
                                                             </div>
                                                         </div>
                                                         <a class="carousel-control-prev" href="#carousel-example-generic2" role="button" data-slide="prev">
@@ -517,13 +517,13 @@ include "partials/navbar.php";
                                                         </ol>
                                                         <div class="carousel-inner" role="listbox">
                                                             <div class="carousel-item active">
-                                                                <img src="../../../app-assets/img/photos/01.jpg" class="d-block w-100" alt="First slide">
+                                                                <img src="assets/img/photos/01.jpg" class="d-block w-100" alt="First slide">
                                                             </div>
                                                             <div class="carousel-item">
-                                                                <img src="../../../app-assets/img/photos/05.jpg" class="d-block w-100" alt="Second slide">
+                                                                <img src="assets/img/photos/05.jpg" class="d-block w-100" alt="Second slide">
                                                             </div>
                                                             <div class="carousel-item">
-                                                                <img src="../../../app-assets/img/photos/10.jpg" class="d-block w-100" alt="Third slide">
+                                                                <img src="assets/img/photos/10.jpg" class="d-block w-100" alt="Third slide">
                                                             </div>
                                                         </div>
                                                         <a class="carousel-control-prev" href="#carousel-example-generic2" role="button" data-slide="prev">
@@ -566,13 +566,13 @@ include "partials/navbar.php";
                                                         </ol>
                                                         <div class="carousel-inner" role="listbox">
                                                             <div class="carousel-item active">
-                                                                <img src="../../../app-assets/img/photos/01.jpg" class="d-block w-100" alt="First slide">
+                                                                <img src="assets/img/photos/01.jpg" class="d-block w-100" alt="First slide">
                                                             </div>
                                                             <div class="carousel-item">
-                                                                <img src="../../../app-assets/img/photos/05.jpg" class="d-block w-100" alt="Second slide">
+                                                                <img src="assets/img/photos/05.jpg" class="d-block w-100" alt="Second slide">
                                                             </div>
                                                             <div class="carousel-item">
-                                                                <img src="../../../app-assets/img/photos/10.jpg" class="d-block w-100" alt="Third slide">
+                                                                <img src="assets/img/photos/10.jpg" class="d-block w-100" alt="Third slide">
                                                             </div>
                                                         </div>
                                                         <a class="carousel-control-prev" href="#carousel-example-generic2" role="button" data-slide="prev">
