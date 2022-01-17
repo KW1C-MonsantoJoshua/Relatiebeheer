@@ -178,7 +178,6 @@ include "partials/navbar.php";
                                                                                aria-invalid="false" name="huisnummertoevoeging">
                                                                     </div>
 																	</div>
-
                                                                 </div>
                                                             </div>
 															<div class="col-12 col-md-4">
