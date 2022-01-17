@@ -1,6 +1,6 @@
 <?php
-$pc		= "5043WH";		// vul een geldige postcode in
-$hn		= 109;			// vul een geldig huisnummer in
+$pc		= "5022JJ";		// vul een geldige postcode in
+$hn		= 197;			// vul een geldig huisnummer in
 $tv		= "";			// vul een geldige toevoeging in of laat leeg
 $ak		= "FbW29C_969cyVfAKrj";		// vul hier uw eigen key in (zie registratie hieronder).
 
