@@ -12,14 +12,8 @@ if ($result=="Geen resultaat.") {echo $result;} else {
     $adres = explode(";",$result);
     $str	= $adres[0];
     $pl	= $adres[1];
-    $lat	= $adres[2];
-    $lon	= $adres[3];
-    $gm	= $adres[4];
     echo "
 		straat		: $str<br>
-		plaats		: $pl<br>
-		lat 		: $lat<br>
-		lon 		: $lon<br>
-		googlemaps	: $gm<br>";
+		plaats		: $pl<br>";
 }
 ?>
