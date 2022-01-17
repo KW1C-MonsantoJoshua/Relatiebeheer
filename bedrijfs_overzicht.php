@@ -182,7 +182,7 @@ include "partials/navbar.php";
                                                                 </div>
                                                             </div>
 															<div class="col-12 col-md-4">
-                                                                <div class="form-group">
+`                                                                <div class="form-group">
                                                                     <h4>Contactgegevens</h4>
                                                                     <div class="controls">
                                                                         <label for="email">E-mail</label>
