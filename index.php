@@ -51,7 +51,7 @@ include "partials/header.php";
                                                         <div class="remember-me mb-2 mb-sm-0">
                                                             <div class="checkbox auth-checkbox">
                                                                 <input type="checkbox" id="auth-ligin" name="remember_me">
-                                                                <label for="auth-ligin"><span>Test</span></label>
+                                                                <label for="auth-ligin"><span>Onthoud Mij</span></label>
                                                             </div>
                                                         </div>
                                                         <a href="wachtwoord_vergeten.php">Wachtwoord vergeten?</a>
