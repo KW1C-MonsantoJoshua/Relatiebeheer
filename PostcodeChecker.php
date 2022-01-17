@@ -16,7 +16,7 @@ if ($result=="Geen resultaat.") {echo $result;} else {
     $lon	= $adres[3];
     $gm	= $adres[4];
     echo "
-		straat		: $str<br>
+		straat1		: $str<br>
 		plaats		: $pl<br>
 		lat 		: $lat<br>
 		lon 		: $lon<br>
