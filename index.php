@@ -54,7 +54,7 @@ include "partials/header.php";
                                                                 <label for="auth-ligin"><span>Onthoud Mij</span></label>
                                                             </div>
                                                         </div>
-                                                        <a href="wachtwoord_vergeten.php">Wachtwoord test?</a>
+                                                        <a href="wachtwoord_vergeten.php">Wachtwoord tesst?</a>
                                                     </div>
                                                     <div class="d-flex justify-content-between flex-sm-row flex-column">
                                                         <button name="login" type="submit" class="btn btn-primary">Inloggen</button>
