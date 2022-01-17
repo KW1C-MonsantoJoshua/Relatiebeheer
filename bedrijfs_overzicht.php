@@ -155,6 +155,13 @@ include "partials/navbar.php";
                                                                                placeholder="Straatnaam" required
                                                                                aria-invalid="false" name="straatnaam">
                                                                     </div>
+                                                                    <div class="controls ">
+                                                                        <label for="postcode">Postcode</label>
+                                                                        <input type="text" id="postcode"
+                                                                               class="form-control round"
+                                                                               placeholder="Postcode" required
+                                                                               aria-invalid="false" name="postcode">
+                                                                    </div>
 																	<div class="form-group row">
                                                                     <div class="controls col-md-5">
                                                                         <label for="huisnummer">Huisnummer</label>
@@ -171,13 +178,7 @@ include "partials/navbar.php";
                                                                                aria-invalid="false" name="huisnummertoevoeging">
                                                                     </div>
 																	</div>
-                                                                    <div class="controls ">
-                                                                        <label for="postcode">Postcode</label>
-                                                                        <input type="text" id="postcode"
-                                                                               class="form-control round"
-                                                                               placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode">
-                                                                    </div>
+
                                                                 </div>
                                                             </div>
 															<div class="col-12 col-md-4">
