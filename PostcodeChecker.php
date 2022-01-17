@@ -14,8 +14,8 @@ if ($result=="Geen resultaat.") {echo $result;} else {
     $pl	= $adres[1];
     echo "
 		straat		: $str<br>
-		plaats		: $pl<br>;
-		Huisnummer	: $hn<br>;
+		plaats		: $pl<br>
+		Huisnummer	: $hn<br>
         Postcode    : $pc<br>";
 }
 ?>
