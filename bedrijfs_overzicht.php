@@ -77,7 +77,10 @@ include "partials/navbar.php";
                                                     <tr>
                                                         <th>ID</th>
                                                         <th>Bedrijfsnaam</th>
-                                                        <th>Logo</th>
+                                                        <th>Telefoonnummer</th>
+                                                        <th>Email</th>
+                                                        <th>Status</th>
+                                                        <th>Handelingen</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
