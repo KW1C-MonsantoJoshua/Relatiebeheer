@@ -711,7 +711,7 @@ include "partials/navbar.php";
                                                                     <h4>Adresgegevens</h4>
                                                                     <div class="controls ">
                                                                         <label for="users-edit-username">Straatnaam</label>
-                                                                        <input type="text" id="straat_p"
+                                                                        <input type="text" id="straat"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,15}"
                                                                                title="Alleen letters"
@@ -720,7 +720,7 @@ include "partials/navbar.php";
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummer</label>
-                                                                        <input type="text" id="huisnr_p"
+                                                                        <input type="text" id="huisnr"
                                                                                class="form-control round"
                                                                                pattern="[0-9]{1,4}"
                                                                                title="Aleen cijfers"
@@ -730,7 +730,7 @@ include "partials/navbar.php";
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummertoevoeging</label>
-                                                                        <input type="text" id="toevoeging_p"
+                                                                        <input type="text" id="toevoeging"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
@@ -740,7 +740,7 @@ include "partials/navbar.php";
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="users-edit-username">Postcode</label>
-                                                                        <input type="text" id="postcode_p"
+                                                                        <input type="text" id="postcode"
                                                                                class="form-control round"
                                                                                pattern="[0-9]{4}[A-Za-z]{2}"
                                                                                title="Bijvoorbeeld: '1234AB'"
@@ -1097,18 +1097,18 @@ include "partials/footer.php";
             // NU WETEN WE ZEKER EEN POSTCODE TE HEBBEN DIE BEGINT MET 4 LETTERS EN EINDIGT OP 2 CIJFERS
 
             postcode = num_deel+alpha_deel;
-            document.getElementById("postcode_p").value = postcode;
+            document.getElementById("postcode").value = postcode;
         }
 
         if (wat=="huisnr") {
             huisnr = parseFloat(waarde);
             if (!huisnr) {maak_leeg();return;}
-            document.getElementById("huisnr_p").value = huisnr;
+            document.getElementById("huisnr").value = huisnr;
         }
 
         if (wat=="toevoeging") {
             toevoeging = waarde.trim();
-            document.getElementById("toevoeging_p").value = toevoeging;
+            document.getElementById("toevoeging").value = toevoeging;
         }
 
         if (huisnr==0) {return;}
@@ -1127,7 +1127,7 @@ include "partials/footer.php";
                 if (rString=="Onjuiste API Key.") {maak_leeg();alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');return;}
 
                 aResponse = rString.split(";");
-                document.getElementById("straat_p").value=aResponse[0];
+                document.getElementById("straat").value=aResponse[0];
                 document.getElementById("plaats").value=aResponse[1];
             }
         };
@@ -1137,7 +1137,7 @@ include "partials/footer.php";
     }
 
     function maak_leeg() {
-        document.getElementById("straat_p").value="";
+        document.getElementById("straat").value="";
         document.getElementById("plaats").value="";
     }
 
