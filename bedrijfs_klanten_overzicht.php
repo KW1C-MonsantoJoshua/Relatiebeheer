@@ -1145,6 +1145,10 @@ include "partials/footer.php";
                 aResponse = rString.split(";");
                 document.getElementById("straat_p").value=aResponse[0];
                 document.getElementById("plaats_p").value=aResponse[1];
+                document.getElementById("straat_z").value=aResponse[0];
+                document.getElementById("plaats_z").value=aResponse[1];
+                document.getElementById("straat_w").value=aResponse[0];
+                document.getElementById("plaats_w").value=aResponse[1];
             }
         };
 
@@ -1168,29 +1172,6 @@ include "partials/footer.php";
 
             document.getElementById("straat_z").value=aResponse[0];
             document.getElementById("plaats_z").value=aResponse[1];
-            document.getElementById("straat_w").value=aResponse[0];
-            document.getElementById("plaats_w").value=aResponse[1];
-        }
-    };
-
-    xmlhttp.open("GET", getadrlnk , true);
-    xmlhttp.send();
-    }
-    var getadrlnk	= 'https://bwnr.nl/postcode.php?pc='+postcode+'&hn='+huisnr+'&tv='+toevoeging+'&tg=data&ak='+'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
-
-    var xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            rString = this.responseText;
-            if (rString=="Geen resultaat.") {maak_leeg();return;}
-            if (rString=="Input onvolledig.") {maak_leeg();return;}
-            if (rString=="Onbekende API Key.") {maak_leeg();return;}
-            if (rString=="Over quota") {maak_leeg();return;}
-            if (rString=="Onjuiste API Key.") {maak_leeg();alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');return;}
-
-            aResponse = rString.split(";");
-
             document.getElementById("straat_w").value=aResponse[0];
             document.getElementById("plaats_w").value=aResponse[1];
         }
