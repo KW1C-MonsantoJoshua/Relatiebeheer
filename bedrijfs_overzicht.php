@@ -169,7 +169,6 @@ include "partials/navbar.php";
                                                                         <label for="huisnummer">Huisnummer</label>
                                                                         <input type="text" id="huisnummer"
                                                                                class="form-control round"
-
                                                                                placeholder="Huisnummer"
                                                                                required
                                                                                aria-invalid="false" name="huisnummer">
