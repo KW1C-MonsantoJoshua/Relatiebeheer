@@ -1776,7 +1776,7 @@ function editUserZ()
                                             <textarea  placeholder="Plaats hier je notities"
                                                        id="notities"
                                                        name="notities_z"
-                                                       rows="6" cols="50" maxlength="600"><? echo $rowCustomer['notes']; ?></textarea>
+                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomer['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
