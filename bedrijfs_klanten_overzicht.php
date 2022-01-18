@@ -711,7 +711,7 @@ include "partials/navbar.php";
                                                                     <h4>Adresgegevens</h4>
                                                                     <div class="controls ">
                                                                         <label for="users-edit-username">Straatnaam</label>
-                                                                        <input type="text" id="straat"
+                                                                        <input type="text" id="straat_p"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,15}"
                                                                                title="Alleen letters"
@@ -720,7 +720,7 @@ include "partials/navbar.php";
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummer</label>
-                                                                        <input type="text" id="huisnr"
+                                                                        <input type="text" id="huisnr_p"
                                                                                class="form-control round"
                                                                                pattern="[0-9]{1,4}"
                                                                                title="Aleen cijfers"
@@ -730,7 +730,7 @@ include "partials/navbar.php";
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummertoevoeging</label>
-                                                                        <input type="text" id="toevoeging"
+                                                                        <input type="text" id="toevoeging_p"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
@@ -740,7 +740,7 @@ include "partials/navbar.php";
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="users-edit-username">Postcode</label>
-                                                                        <input type="text" id="postcode"
+                                                                        <input type="text" id="postcode_p"
                                                                                class="form-control round"
                                                                                pattern="[0-9]{4}[A-Za-z]{2}"
                                                                                title="Bijvoorbeeld: '1234AB'"
