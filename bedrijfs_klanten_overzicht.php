@@ -1125,7 +1125,6 @@ include "partials/footer.php";
 
                 aResponse = rString.split(";");
                 document.getElementById("straat_p").value=aResponse[0];
-                document.getElementById("plaats").value=aResponse[1];
             }
         };
 
@@ -1135,7 +1134,6 @@ include "partials/footer.php";
 
     function maak_leeg() {
         document.getElementById("straat_p").value="";
-        document.getElementById("plaats").value="";
     }
 
 </script>
