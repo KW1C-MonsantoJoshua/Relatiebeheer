@@ -10,7 +10,6 @@
     <tr><td>Huisnummer</td>	<td><input type="text" id="huisnr_p" onkeyup="check_pc(&quot;huisnr&quot;,this.value)"></td></tr>
     <tr><td>Toevoeging</td>	<td><input type="text" id="toevoeging_p" onkeyup="check_pc(&quot;toevoeging&quot;,this.value)"></td></tr>
     <tr><td>Straat</td>		<td><input type="text" id="straat_p"></td></tr>
-    <tr><td>Plaats</td>		<td><input type="text" id="plaats"></td></tr>
     </tbody></table>
 
 <script>
