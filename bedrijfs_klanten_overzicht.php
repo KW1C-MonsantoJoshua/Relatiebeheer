@@ -1218,7 +1218,7 @@ include "partials/footer.php";
 
     function maak_leeg() {
         document.getElementById("straat_z").value="";
-        document.getElementById("plaats_p").value="";
+        document.getElementById("plaats_z").value="";
     }
 
 </script>
