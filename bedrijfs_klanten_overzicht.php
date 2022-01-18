@@ -1107,26 +1107,26 @@ include "partials/footer.php";
             // NU WETEN WE ZEKER EEN POSTCODE TE HEBBEN DIE BEGINT MET 4 LETTERS EN EINDIGT OP 2 CIJFERS
 
             postcode = num_deel+alpha_deel;
-            document.getElementById("postcode_p").value = postcode;
-            document.getElementById("postcode_z").value = postcode;
             document.getElementById("postcode_w").value = postcode;
+            document.getElementById("postcode_z").value = postcode;
+            document.getElementById("postcode_p").value = postcode;
 
         }
 
         if (wat=="huisnr") {
             huisnr = parseFloat(waarde);
             if (!huisnr) {maak_leeg();return;}
-            document.getElementById("huisnr_p").value = huisnr;
-            document.getElementById("huisnr_z").value = huisnr;
             document.getElementById("huisnr_w").value = huisnr;
+            document.getElementById("huisnr_z").value = huisnr;
+            document.getElementById("huisnr_p").value = huisnr;
 
         }
 
         if (wat=="toevoeging") {
             toevoeging = waarde.trim();
-            document.getElementById("toevoeging_p").value = toevoeging;
-            document.getElementById("toevoeging_z").value = toevoeging;
             document.getElementById("toevoeging_w").value = toevoeging;
+            document.getElementById("toevoeging_z").value = toevoeging;
+            document.getElementById("toevoeging_p").value = toevoeging;
         }
 
         if (huisnr==0) {return;}
@@ -1145,12 +1145,12 @@ include "partials/footer.php";
                 if (rString=="Onjuiste API Key.") {maak_leeg();alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');return;}
 
                 aResponse = rString.split(";");
-                document.getElementById("straat_p").value=aResponse[0];
-                document.getElementById("plaats_p").value=aResponse[1];
-                document.getElementById("straat_z").value=aResponse[0];
-                document.getElementById("plaats_z").value=aResponse[1];
                 document.getElementById("straat_w").value=aResponse[0];
                 document.getElementById("plaats_w").value=aResponse[1];
+                document.getElementById("straat_z").value=aResponse[0];
+                document.getElementById("plaats_z").value=aResponse[1];
+                document.getElementById("straat_p").value=aResponse[0];
+                document.getElementById("plaats_p").value=aResponse[1];
             }
         };
 
