@@ -1146,10 +1146,7 @@ include "partials/footer.php";
         xmlhttp.send();
     }
 
-    function maak_leeg() {
-        document.getElementById("straat_p").value="";
-        document.getElementById("plaats_p").value="";
-    }
+
 
 </script>
 <script>
@@ -1216,10 +1213,7 @@ include "partials/footer.php";
         xmlhttp.send();
     }
 
-    function maak_leeg() {
-        document.getElementById("straat_z").value="";
-        document.getElementById("plaats_z").value="";
-    }
+
 
 </script>
 <script>
@@ -1286,10 +1280,6 @@ include "partials/footer.php";
         xmlhttp.send();
     }
 
-    function maak_leeg() {
-        document.getElementById("straat_w").value="";
-        document.getElementById("plaats_w").value="";
-    }
 
 </script>
 </body>
