@@ -710,13 +710,14 @@ include "partials/navbar.php";
                                                                 <div class="form-group">
                                                                     <h4>Adresgegevens</h4>
                                                                     <div class="controls ">
-                                                                        <label for="users-edit-username">Straatnaam</label>
-                                                                        <input type="text" id="straat_p"
+                                                                        <label for="users-edit-username">Postcode</label>
+                                                                        <input type="text" id="postcode_p"
                                                                                class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,15}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Straatnaam" required
-                                                                               aria-invalid="false" name="straatnaam_p">
+                                                                               pattern="[0-9]{4}[A-Za-z]{2}"
+                                                                               title="Bijvoorbeeld: '1234AB'"
+                                                                               placeholder="Postcode" required
+                                                                               aria-invalid="false" name="postcode_p"
+                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummer</label>
@@ -734,20 +735,21 @@ include "partials/navbar.php";
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
-                                                                               placeholder="Huisnummertoevoeging" 
+                                                                               placeholder="Huisnummertoevoeging"
                                                                                aria-invalid="false" name="huisnummertoevoeging_p"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
                                                                     </div>
                                                                     <div class="controls ">
-                                                                        <label for="users-edit-username">Postcode</label>
-                                                                        <input type="text" id="postcode_p"
+                                                                        <label for="users-edit-username">Straatnaam</label>
+                                                                        <input type="text" id="straat_p"
                                                                                class="form-control round"
-                                                                               pattern="[0-9]{4}[A-Za-z]{2}"
-                                                                               title="Bijvoorbeeld: '1234AB'"
-                                                                               placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode_p"
-                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
+                                                                               pattern="[a-zA-Z]{1,15}"
+                                                                               title="Alleen letters"
+                                                                               placeholder="Straatnaam" required
+                                                                               aria-invalid="false" name="straatnaam_p">
                                                                     </div>
+
+
                                                                 </div>
                                                             </div>
                                                             <div class="col-12 col-md-4">
