@@ -941,7 +941,7 @@ include "partials/navbar.php";
                                                                                    class="form-control round"
                                                                                    pattern="[a-zA-Z\s\.0-9]{1,15}"
                                                                                    readonly
-                                                                                   aria-invalid="false" name="bedrijfsnaam" value="<?php GetCompanyNamePersonnel() ?>">
+                                                                                   aria-invalid="false" name="bedrijfsnaam" value="<?php GetCompanyNamePersonnel(); ?>">
                                                                             <input type="hidden" name="membof" value="<?= $_GET["membof"] ?>">
                                                                         </div>
                                                                         <label for="users-edit-username">Voornaam</label>
