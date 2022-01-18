@@ -1145,10 +1145,10 @@ include "partials/footer.php";
                 aResponse = rString.split(";");
                 document.getElementById("straat_p").value=aResponse[0];
                 document.getElementById("plaats_p").value=aResponse[1];
-                document.getElementById("straat_z").value=aResponse[2];
-                document.getElementById("plaats_z").value=aResponse[3];
-                document.getElementById("straat_w").value=aResponse[4];
-                document.getElementById("plaats_w").value=aResponse[5];
+                document.getElementById("straat_z").value=aResponse[0];
+                document.getElementById("plaats_z").value=aResponse[1];
+                document.getElementById("straat_w").value=aResponse[0];
+                document.getElementById("plaats_w").value=aResponse[1];
             }
         };
 
