@@ -13,7 +13,7 @@ if (!isset($_SESSION["loggedin"])) {
 <html class="loading" lang="en">
 <!-- BEGIN : Head-->
 <?php
-include "partials/header.php";
+	include "partials/header.php";
 ?>
 
 <!-- END : Head-->
@@ -36,13 +36,12 @@ include "partials/navbar.php";
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Bedrijfsnaam</h4>
-                            <ul class="breadcrumb bg-transparent">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>
-                                <li class="breadcrumb-item"></li>
-                            </ul>
+							<ul class="breadcrumb bg-transparent">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>
+  <li class="breadcrumb-item"></li>
+</ul>
                         </div>
-<<<<<<< HEAD
                          <div class="card-content">
         <div class="card-body">
             <section id="file-export">
@@ -78,9 +77,7 @@ include "partials/navbar.php";
                                                     <tr>
                                                         <th>ID</th>
                                                         <th>Bedrijfsnaam</th>
-                                                        <th>Telefoonnummer</th>
-                                                        <th>Email</th>
-                                                        <th>Status</th>
+                                                        <th>Logo</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -89,92 +86,45 @@ include "partials/navbar.php";
                                                     ?>
                                                     </tbody>
                                                 </table>
-=======
-                        <div class="card-content">
-                            <div class="card-body">
-                                <section id="file-export">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li class="nav-item active">
-                                            <a href="#Bedrijven" role="tab" id="account-tab"
-                                               class="nav-link d-flex align-items-center active" data-toggle="tab"
-                                               aria-controls="account" aria-selected="true">
-                                                <i class="ft-user mr-1"></i>
-                                                <span class="d-none d-sm-block">Bedrijven</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-tabs">
-                                            <a type="button"
-                                               class="nav-link d-flex align-items-end"
-                                               data-toggle="modal" data-target="#large">
-                                                <i class="ft-plus mr-1"></i>
-                                                <span class="d-none d-sm-block">Toevoegen</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade mt-2 show active" id="Bedrijven" role="tabpanel"
-                                             aria-labelledby="account-tab">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="card">
-                                                        <div class="card-content ">
-                                                            <div class="card-body">
-                                                                <div class="table-responsive">
-                                                                    <table class="table table-striped table-bordered file-export">
-                                                                        <thead>
-                                                                        <tr>
-                                                                            <th>ID</th>
-                                                                            <th>Bedrijfsnaam</th>
-                                                                            <th>Logo</th>
-                                                                        </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        <?php
-                                                                        GetCompany();
-                                                                        ?>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
->>>>>>> 2e51fa0a (backup van oudere versie)
                                             </div>
                                         </div>
                                     </div>
-                                </section>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- END : End Main Content-->
-        <!-- Scroll to top button -->
-        <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
-
     </div>
-    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <!-- END : End Main Content-->
+    <!-- Scroll to top button -->
+    <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
-    <div class="sidenav-overlay"></div>
-    <div class="drag-target"></div>
 </div>
-<div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17"
-     aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title" id="myModalLabel34">Bedrijf toevoegen</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                </button>
-            </div>
+<!-- ////////////////////////////////////////////////////////////////////////////-->
 
-            <form method="post">
-                <div class="modal-body">
+<div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
+	</div>
+	                                                     <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17"
+         aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h3 class="modal-title" id="myModalLabel34">Bedrijf toevoegen</h3>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                                                                    </button>
+                                                                </div>
+
+												<form method="post">
+													                <div class="modal-body">
                     <section class="users-edit">
-<<<<<<< HEAD
                                                         <div class="row">
                                                             <div class="col-12 col-md-4">
                                                                 <div class="form-group">
@@ -189,7 +139,8 @@ include "partials/navbar.php";
                                                                         <label for="users-edit-username">Website</label>
                                                                         <input type="text" id="users-edit-username"
                                                                                class="form-control round"
-                                                                               placeholder="Website" required
+                                                                               placeholder="Website"
+                                                                               required
                                                                                aria-invalid="false" name="website">
                                                                     </div>
 
@@ -202,15 +153,25 @@ include "partials/navbar.php";
                                                                         <label for="straatnaam">Straatnaam</label>
                                                                         <input type="text" id="straatnaam"
                                                                                class="form-control round"
-                                                                               placeholder="Straatnaam" required
+                                                                               placeholder="Straatnaam"
+                                                                               required
                                                                                aria-invalid="false" name="straatnaam">
+                                                                    </div>
+                                                                    <div class="controls ">
+                                                                        <label for="postcode">Postcode</label>
+                                                                        <input type="text" id="postcode"
+                                                                               class="form-control round"
+                                                                               placeholder="Postcode"
+                                                                               required
+                                                                               aria-invalid="false" name="postcode">
                                                                     </div>
 																	<div class="form-group row">
                                                                     <div class="controls col-md-5">
                                                                         <label for="huisnummer">Huisnummer</label>
                                                                         <input type="text" id="huisnummer"
                                                                                class="form-control round"
-                                                                               placeholder="Huisnummer" required
+                                                                               placeholder="Huisnummer"
+                                                                               required
                                                                                aria-invalid="false" name="huisnummer">
                                                                     </div>
 																	<div class="controls  col-md-5">
@@ -221,17 +182,10 @@ include "partials/navbar.php";
                                                                                aria-invalid="false" name="huisnummertoevoeging">
                                                                     </div>
 																	</div>
-                                                                    <div class="controls ">
-                                                                        <label for="postcode">Postcode</label>
-                                                                        <input type="text" id="postcode"
-                                                                               class="form-control round"
-                                                                               placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode">
-                                                                    </div>
                                                                 </div>
                                                             </div>
 															<div class="col-12 col-md-4">
-                                                                <div class="form-group">
+`                                                                <div class="form-group">
                                                                     <h4>Contactgegevens</h4>
                                                                     <div class="controls">
                                                                         <label for="email">E-mail</label>
@@ -264,110 +218,3 @@ include "partials/navbar.php";
                                                         </div>
 												</section>
 													</div>
-                                                    </form>
-			</div>
-															 </div>
-	</div>
-
-	<?php
-=======
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <div class="form-group">
-                                    <h4>Bedrijfsgegevens</h4>
-                                    <div class="controls">
-                                        <div class="controls ">
-                                            <label for="bedrijfsnaam">Bedrijfsnaam</label>
-                                            <input type="text" id="bedrijfsnaam"
-                                                   class="form-control round" placeholder="Bedrijfsnaam"
-                                                   aria-invalid="false" name="bedrijfsnaam" value="">
-                                        </div>
-                                        <label for="users-edit-username">Website</label>
-                                        <input type="text" id="users-edit-username"
-                                               class="form-control round"
-                                               placeholder="Website" required
-                                               aria-invalid="false" name="website">
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <div class="form-group">
-                                    <h4>Adresgegevens</h4>
-                                    <div class="controls ">
-                                        <label for="straatnaam">Straatnaam</label>
-                                        <input type="text" id="straatnaam"
-                                               class="form-control round"
-                                               placeholder="Straatnaam" required
-                                               aria-invalid="false" name="straatnaam">
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="controls col-md-5">
-                                            <label for="huisnummer">Huisnummer</label>
-                                            <input type="text" id="huisnummer"
-                                                   class="form-control round"
-                                                   placeholder="Huisnummer" required
-                                                   aria-invalid="false" name="huisnummer">
-                                        </div>
-                                        <div class="controls  col-md-5">
-                                            <label for="users-edit-username">Toevoeging</label>
-                                            <input type="text" id="users-edit-username"
-                                                   class="form-control round"
-                                                   placeholder="Toevoeging"
-                                                   aria-invalid="false" name="huisnummertoevoeging">
-                                        </div>
-                                    </div>
-                                    <div class="controls ">
-                                        <label for="postcode">Postcode</label>
-                                        <input type="text" id="postcode"
-                                               class="form-control round"
-                                               placeholder="Postcode" required
-                                               aria-invalid="false" name="postcode">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <div class="form-group">
-                                    <h4>Contactgegevens</h4>
-                                    <div class="controls">
-                                        <label for="email">E-mail</label>
-                                        <input type="email" id="email"
-                                               class="form-control round"
-                                               placeholder="Typeemail@hier.com" required
-                                               aria-invalid="false" name="email">
-                                    </div>
-                                    <div class="controls">
-                                        <label for="telefoonnummer">Telefoonnummer</label>
-                                        <input type="text" id="telefoonnummer"
-                                               class="form-control round"
-                                               placeholder="Telefoonnummer" required
-                                               aria-invalid="false"
-                                               name="telefoonnummer">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
-                                <input type="submit"
-                                       class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                       name="registreerBedrijf"
-                                       value="Bedrijf toevoegen">
-
-                                <button type="reset"
-                                        data-dismiss="modal"
-                                        class="btn btn-secondary">Cancel
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<?php
->>>>>>> 2e51fa0a (backup van oudere versie)
-include "partials/footer.php";
-?>
-</body>
-<!-- END : Body-->
