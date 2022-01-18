@@ -832,7 +832,14 @@ function ViewUserP()
                                                    name="achternaam_p"
                                                    value="<?= $rowCustomerP["last_name"] ?>">
                                         </div>
-
+                                        <div class="controls">
+                                            <label for="notities">Notities</label>
+                                            <textarea  placeholder="Plaats hier je notities"
+                                                       id="notities"
+                                                       readonly
+                                                       name="notities_z"
+                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomerP['notes']; ?></textarea>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4">
@@ -984,6 +991,14 @@ function ViewUserZ()
                                                    aria-invalid="false"
                                                    name="business"
                                                    value="<?= $rowCustomer["business"] ?>">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="notities">Notities</label>
+                                            <textarea  placeholder="Plaats hier je notities"
+                                                       id="notities"
+                                                       name="notities_z"
+                                                       readonly
+                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomer['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1504,7 +1519,7 @@ function editUserP()
     $DataCustomer_P = "SELECT customers_individual.id,customers_individual.status,customers_individual.first_name,customers_individual.last_name_prefix,
         customers_individual.last_name,customers_individual.street,customers_individual.housenumber,customers_individual.housenumberAddition,
         customers_individual.housenumberAddition,customers_individual.postalcode,customers_individual.phoneNumber,customers_individual.email,
-       customers_individual.customer_of
+       customers_individual.customer_of,customers_individual.notes
  FROM customers_individual 
      LEFT JOIN organisation 
          ON customers_individual.customer_of = organisation.id 
@@ -1575,7 +1590,7 @@ function editUserP()
                                             <textarea  placeholder="Plaats hier je notities"
                                                        id="notities"
                                                        name="notities_p"
-                                                       rows="6" cols="50" maxlength="600"></textarea>
+                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomerP['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1678,13 +1693,13 @@ function editUserP()
 
             $query = "UPDATE `customers_individual` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
                                 `street`= ?,`housenumber`=?,`housenumberAddition`=?,`postalcode`=?,`phoneNumber`=?,
-                                `email`= ?, `status`= ? WHERE id = ?";
+                                `email`= ?, `status`= ?,`status`= ?  WHERE id = ?";
             $stmt = $mysqli->prepare($query);
 //        $options = ['cost' => 12,];
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
-            $stmt->bind_param('ssssssssssi', $voornaam, $tussenvoegsel, $achternaam
+            $stmt->bind_param('sssssssssssi', $voornaam, $tussenvoegsel, $achternaam
                 , $straatnaam, $_POST["huisnummer_p"], $_POST["huisnummertoevoeging_p"], $_POST["postcode_p"],
-                $_POST["telefoonnummer_p"], $_POST["email_p"], $_POST["status"], $_POST["id_p"]);
+                $_POST["telefoonnummer_p"], $_POST["email_p"], $_POST["status"],$_POST['notities_p'], $_POST["id_p"]);
             $stmt->execute();
         }
     }
