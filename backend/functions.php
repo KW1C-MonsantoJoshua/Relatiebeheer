@@ -280,7 +280,35 @@ function GetCompany(){
         <tr>
             <td><?= $row["id"] ?></td>
             <td><a href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a></td>
-            <td><?= $row["logo"]?></td>
+            <td><?= $row["phoneNumber"]?></td>
+            <td><?= $row["email"]?></td>
+            <td><?php
+                if ($row["status"] === "Inactief") { ?>
+                    <span class="badge bg-light-danger">Inactief</span>
+                <?php } elseif ($row["status"] === "Actief") { ?>
+                    <span class="badge bg-light-succes">Actief</span>
+                <?php } ?>			</td>
+            <td>
+            <div class="row">
+                <div class="col-md-0">
+                </div>
+                <?php
+                if ($_SESSION['auth'] == "Bedrijfsleider"||$_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
+                    ?>
+                    <div class="col-md-5">
+                        <a href="#" data-toggle="modal" data-target="#editZ<?= $row["id"]?>">
+                            <i class="ft-edit"></i>
+                        </a>
+                    </div>
+                    <?php
+                }
+                ?>
+                <div class="col-md-5">
+                    <a data-toggle="modal" data-target="#info<?= $row["id"]?>" href="modals.php?<?= $row["id"] ?>">
+                        <i class="ft-eye"></i>
+                    </a>
+                </div>
+            </div>
         </tr>
         <?php
     }

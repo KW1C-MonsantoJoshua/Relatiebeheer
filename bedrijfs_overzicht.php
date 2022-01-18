@@ -77,7 +77,10 @@ include "partials/navbar.php";
                                                     <tr>
                                                         <th>ID</th>
                                                         <th>Bedrijfsnaam</th>
-                                                        <th>Logo</th>
+                                                        <th>Telefoonnummer</th>
+                                                        <th>Email</th>
+                                                        <th>Status</th>
+                                                        <th>Handelingen</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -121,7 +124,7 @@ include "partials/navbar.php";
                                                                         <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                                                                     </button>
                                                                 </div>
-                                                                
+
 												<form method="post">
 													                <div class="modal-body">
                     <section class="users-edit">
@@ -143,7 +146,7 @@ include "partials/navbar.php";
                                                                                required
                                                                                aria-invalid="false" name="website">
                                                                     </div>
-																	
+
                                                                 </div>
                                                             </div>
                                                             <div class="col-12 col-md-4">
@@ -218,4 +221,3 @@ include "partials/navbar.php";
                                                         </div>
 												</section>
 													</div>
-                  
