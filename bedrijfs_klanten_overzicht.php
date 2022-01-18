@@ -859,7 +859,7 @@ include "partials/navbar.php";
                                                                                placeholder="Huisnummer" required
                                                                                aria-invalid="false" name="huisnummer_z"
                                                                                onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
-                                                                        >
+
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummertoevoeging</label>
@@ -869,7 +869,7 @@ include "partials/navbar.php";
                                                                                placeholder="Huisnummertoevoeging"
                                                                                aria-invalid="false" name="huisnummertoevoeging_z"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
-                                                                        >
+
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="postcode">Postcode</label>
@@ -990,7 +990,7 @@ include "partials/navbar.php";
                                                                                placeholder="Huisnummer" required
                                                                                aria-invalid="false" name="huisnummer"
                                                                                onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
-                                                                        >
+
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummertoevoeging</label>
@@ -1001,7 +1001,7 @@ include "partials/navbar.php";
                                                                                placeholder="Huisnummertoevoeging"
                                                                                aria-invalid="false" name="huisnummertoevoeging"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
-                                                                        >
+
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="postcode">Postcode</label>
