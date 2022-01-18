@@ -304,7 +304,7 @@ function GetCompany(){
                 }
                 ?>
                 <div class="col-md-5">
-                    <a href="#" data-toggle="modal" data-target="#info<?= $row["id"]?>">
+                    <a href="#" data-toggle="modal" data-target="#infoCompany<?= $row["id"]?>">
                         <i class="ft-eye"></i>
                     </a>
                 </div>
@@ -324,7 +324,7 @@ function ViewCompany()
 
     while ($rowCustomerP = $resultData->fetch_array()) {
         ?>
-        <div class="modal fade text-left" id="info<?= $rowCustomerP["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="infoCompany<?= $rowCustomerP["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
