@@ -8,20 +8,20 @@
 <table>
     <tbody>
     <tr>
-        <td>Postcode</td>
-        <td><input type="text" id="postcode" onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus=""></td>
+        <td>postcode_p</td>
+        <td><input type="text" id="postcode_p" onkeyup="check_pc(&quot;postcode_p&quot;,this.value)" autofocus=""></td>
     </tr>
     <tr>
         <td>Huisnummer</td>
-        <td><input type="text" id="huisnr" onkeyup="check_pc(&quot;huisnr&quot;,this.value)"></td>
+        <td><input type="text" id="huisnummer_p" onkeyup="check_pc(&quot;huisnummer_p&quot;,this.value)"></td>
     </tr>
     <tr>
-        <td>Toevoeging</td>
-        <td><input type="text" id="toevoeging" onkeyup="check_pc(&quot;toevoeging&quot;,this.value)"></td>
+        <td>huisnummertoevoeging_p</td>
+        <td><input type="text" id="huisnummertoevoeging_p" onkeyup="check_pc(&quot;huisnummertoevoeging_p&quot;,this.value)"></td>
     </tr>
     <tr>
-        <td>Straat</td>
-        <td><input type="text" id="straat"></td>
+        <td>straatnaam_p</td>
+        <td><input type="text" id="straatnaam_p"></td>
     </tr>
     <tr>
         <td>Plaats</td>
@@ -38,12 +38,12 @@
         Bijzondere situatie? Neem gewoon contact op.
     */
     var e = "FbW29C_969cyVfAKrj";
-    var postcode = "";
-    var huisnr = "";
-    var toevoeging = "";
+    var postcode_p = "";
+    var huisnummer_p = "";
+    var huisnummertoevoeging_p = "";
 
     function check_pc(wat, waarde) {
-        if (wat == "postcode") {
+        if (wat == "postcode_p") {
             var pc = waarde.trim();
             if (pc.length < 6) {
                 maak_leeg();
@@ -63,29 +63,29 @@
 
             // NU WETEN WE ZEKER EEN POSTCODE TE HEBBEN DIE BEGINT MET 4 LETTERS EN EINDIGT OP 2 CIJFERS
 
-            postcode = num_deel + alpha_deel;
-            document.getElementById("postcode").value = postcode;
+            postcode_p = num_deel + alpha_deel;
+            document.getElementById("postcode_p").value = postcode_p;
         }
 
-        if (wat == "huisnr") {
-            huisnr = parseFloat(waarde);
-            if (!huisnr) {
+        if (wat == "huisnummer_p") {
+            huisnummer_p = parseFloat(waarde);
+            if (!huisnummer_p) {
                 maak_leeg();
                 return;
             }
-            document.getElementById("huisnr").value = huisnr;
+            document.getElementById("huisnummer_p").value = huisnummer_p;
         }
 
-        if (wat == "toevoeging") {
-            toevoeging = waarde.trim();
-            document.getElementById("toevoeging").value = toevoeging;
+        if (wat == "huisnummertoevoeging_p") {
+            huisnummertoevoeging_p = waarde.trim();
+            document.getElementById("huisnummertoevoeging_p").value = huisnummertoevoeging_p;
         }
 
-        if (huisnr == 0) {
+        if (huisnummer_p == 0) {
             return;
         }
 
-        var getadrlnk = 'https://bwnr.nl/postcode.php?pc=' + postcode + '&hn=' + huisnr + '&tv=' + toevoeging + '&tg=data&ak=' + 'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
+        var getadrlnk = 'https://bwnr.nl/postcode_p.php?pc=' + postcode_p + '&hn=' + huisnummer_p + '&tv=' + huisnummertoevoeging_p + '&tg=data&ak=' + 'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
 
         var xmlhttp = new XMLHttpRequest();
 
@@ -115,7 +115,7 @@
                 }
 
                 aResponse = rString.split(";");
-                document.getElementById("straat").value = aResponse[0];
+                document.getElementById("straatnaam_p").value = aResponse[0];
                 document.getElementById("plaats").value = aResponse[1];
             }
         };
@@ -125,7 +125,7 @@
     }
 
     function maak_leeg() {
-        document.getElementById("straat").value = "";
+        document.getElementById("straatnaam_p").value = "";
         document.getElementById("plaats").value = "";
     }
 
