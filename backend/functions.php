@@ -296,7 +296,7 @@ function GetCompany(){
                 if ($_SESSION['auth'] == "Bedrijfsleider"||$_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
                     ?>
                     <div class="col-md-5">
-                        <a href="#" data-toggle="modal" data-target="#edit<?= $row["id"]?>">
+                        <a href="#" data-toggle="modal" data-target="#editZ<?= $row["id"]?>">
                             <i class="ft-edit"></i>
                         </a>
                     </div>
@@ -304,7 +304,7 @@ function GetCompany(){
                 }
                 ?>
                 <div class="col-md-5">
-                    <a href="#" data-toggle="modal" data-target="#infoCompany<?= $row["id"]?>">
+                    <a data-toggle="modal" data-target="#info<?= $row["id"]?>" href="modals.php?<?= $row["id"] ?>">
                         <i class="ft-eye"></i>
                     </a>
                 </div>
@@ -313,162 +313,6 @@ function GetCompany(){
         <?php
     }
 }
-
-function ViewCompany()
-{
-    global $mysqli;
-    $tableData = "SELECT * FROM `organisation`";
-    $stmt = $mysqli->prepare($tableData);
-    $stmt->execute();
-    $resultData = $stmt->get_result();
-
-    while ($rowCustomerP = $resultData->fetch_array()) {
-        ?>
-        <div class="modal fade text-left" id="infoCompany<?= $rowCustomerP["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Basic Modal</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="post">
-                            <div class="row">
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <h4>Bedrijfsgegevens</h4>
-                                        <div class="controls">
-                                            <label for="users-edit-username">Naam</label>
-                                            <input type="text"
-                                                   id="users-edit-username"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Voornaam" readonly
-                                                   aria-invalid="false"
-                                                   name="voornaam_p"
-                                                   value="<?= $rowCustomerP["name"] ?>">
-                                            <input type="hidden" value="<?= $id ?>"
-                                                   name="id_p">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="tussenvoegsel">Kvk nummer</label>
-                                            <input type="text"
-                                                   id="tussenvoegsel"
-                                                   class="form-control-plaintext text-light round"
-                                                   readonly
-                                                   placeholder="Tussenvoegsel"
-                                                   aria-invalid="false"
-                                                   name="tussenvoegsel_p"
-                                                   value="<?= $rowCustomerP["kvk_nummer"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="achternaam">Btw nummer</label>
-                                            <input type="text" id="achternaam"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Achternaam" readonly
-                                                   aria-invalid="false"
-                                                   name="achternaam_p"
-                                                   value="<?= $rowCustomerP["btw_nummer"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="achternaam">Iban nummer</label>
-                                            <input type="text" id="achternaam"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Achternaam" readonly
-                                                   aria-invalid="false"
-                                                   name="achternaam_p"
-                                                   value="<?= $rowCustomerP["iban_nummer"] ?>">
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <h4>Adresgegevens</h4>
-                                        <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
-                                            <input type="text"
-                                                   id="users-edit-username"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Straatnaam" readonly
-                                                   aria-invalid="false"
-                                                   name="straatnaam_p"
-                                                   value="<?= $rowCustomerP["street"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
-                                            <input type="text"
-                                                   id="users-edit-username"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Huisnummer" readonly
-                                                   aria-invalid="false"
-                                                   name="huisnummer_p"
-                                                   value="<?= $rowCustomerP["housenumber"] ?>">
-                                        </div>
-                                        <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
-                                            <input type="text"
-                                                   id="users-edit-username"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Postcode" readonly
-                                                   aria-invalid="false"
-                                                   name="postcode_p"
-                                                   value="<?= $rowCustomerP["postalcode"] ?>">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <h4>Contactgegevens</h4>
-                                        <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
-                                            <input type="email"
-                                                   id="users-edit-email"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Typeemail@hier.com"
-                                                   readonly
-                                                   aria-invalid="false"
-                                                   name="email_p"
-                                                   value="<?= $rowCustomerP["email"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="telefoonnummer">Telefoonnummer</label>
-                                            <input type="text" id="telefoonnummer"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Telefoonnummer"
-                                                   readonly
-                                                   aria-invalid="false"
-                                                   name="telefoonnummer_p"
-                                                   value="<?= $rowCustomerP["phoneNumber"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="telefoonnummer">Website</label>
-                                            <input type="text" id="website"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="website"
-                                                   readonly
-                                                   aria-invalid="false"
-                                                   name="website"
-                                                   value="<?= $rowCustomerP["website"] ?>">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
-    }
-}
-
-ViewCompany();
 
 function password_reset($password,$confirmpassword,$email){
     global $mysqli;
@@ -929,7 +773,7 @@ function ViewUserP()
     $DataCustomer_P = "SELECT customers_individual.id,customers_individual.status,customers_individual.first_name,customers_individual.last_name_prefix,
         customers_individual.last_name,customers_individual.street,customers_individual.housenumber,customers_individual.housenumberAddition,
         customers_individual.housenumberAddition,customers_individual.postalcode,customers_individual.phoneNumber,customers_individual.email,
-       customers_individual.customer_of
+       customers_individual.customer_of,customers_individual.notes
  FROM customers_individual 
      LEFT JOIN organisation 
          ON customers_individual.customer_of = organisation.id 
@@ -1078,7 +922,7 @@ function ViewUserZ()
     $DataCustomer = "SELECT customers_business.id,customers_business.status,customers_business.first_name,customers_business.last_name_prefix,
         customers_business.last_name,customers_business.street,customers_business.housenumber,customers_business.housenumberAddition,
         customers_business.housenumberAddition,customers_business.postalcode,customers_business.email,customers_business.phoneNumber,customers_business.business,
-       customers_business.customer_of
+       customers_business.customer_of,customers_business.notes
  FROM customers_business 
      LEFT JOIN organisation 
          ON customers_business.customer_of = organisation.id 
@@ -1849,7 +1693,7 @@ function editUserP()
 
             $query = "UPDATE `customers_individual` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
                                 `street`= ?,`housenumber`=?,`housenumberAddition`=?,`postalcode`=?,`phoneNumber`=?,
-                                `email`= ?, `status`= ?,`status`= ?  WHERE id = ?";
+                                `email`= ?, `status`= ?,`notes`= ?  WHERE id = ?";
             $stmt = $mysqli->prepare($query);
 //        $options = ['cost' => 12,];
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
