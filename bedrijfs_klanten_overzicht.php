@@ -1165,7 +1165,7 @@ include "partials/footer.php";
     var toevoeging	= "";
 
     function check_pc(wat,waarde) {
-        if (wat=="postcode") {
+        if (wat=="postcode_z") {
             var pc = waarde.trim();
             if (pc.length <6) {maak_leeg();return;}					// POSTCODE MOET MINIMAAL 6 CHARACTERS BEVATTEN
             var num_deel = pc.substr(0,4);
@@ -1180,13 +1180,13 @@ include "partials/footer.php";
             document.getElementById("postcode_z").value = postcode_z;
         }
 
-        if (wat=="huisnr") {
+        if (wat=="huisnr_z") {
             huisnr_z = parseFloat(waarde);
             if (!huisnr) {maak_leeg();return;}
             document.getElementById("huisnr_z").value = huisnr_z;
         }
 
-        if (wat=="toevoeging") {
+        if (wat=="toevoeging_z") {
             toevoeging_z = waarde.trim();
             document.getElementById("toevoeging_z").value = toevoeging_z;
         }
