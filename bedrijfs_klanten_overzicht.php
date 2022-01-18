@@ -941,7 +941,7 @@ include "partials/navbar.php";
                                                                                    class="form-control round"
                                                                                    pattern="[a-zA-Z\s\.0-9]{1,15}"
                                                                                    readonly
-                                                                                   aria-invalid="false" name="bedrijfsnaam" value="<?php GetCompanyNamePersonnel() ?>">
+                                                                                   aria-invalid="false" name="bedrijfsnaam" value="<?php GetCompanyNamePersonnel(); ?>">
                                                                             <input type="hidden" name="membof" value="<?= $_GET["membof"] ?>">
                                                                         </div>
                                                                         <label for="users-edit-username">Voornaam</label>
@@ -1094,7 +1094,7 @@ include "partials/footer.php";
     var toevoeging	= "";
 
     function check_pc(wat,waarde) {
-        if (wat=="postcode") {
+        if (wat==="postcode") {
             var pc = waarde.trim();
             if (pc.length <6) {maak_leeg();return;}					// moet minimaal 6 characters hebben
             var num_deel = pc.substr(0,4);
@@ -1111,7 +1111,7 @@ include "partials/footer.php";
             document.getElementById("postcode_w").value = postcode;
         }
 
-        if (wat=="huisnr") {
+        if (wat==="huisnr") {
             huisnr = parseFloat(waarde);
             if (!huisnr) {maak_leeg();return;}
             document.getElementById("huisnr_p").value = huisnr;
@@ -1119,27 +1119,27 @@ include "partials/footer.php";
             document.getElementById("huisnr_w").value = huisnr;
         }
 
-        if (wat=="toevoeging") {
+        if (wat==="toevoeging") {
             toevoeging = waarde.trim();
             document.getElementById("toevoeging_p").value = toevoeging;
             document.getElementById("toevoeging_z").value = toevoeging;
             document.getElementById("toevoeging_w").value = toevoeging;
         }
 
-        if (huisnr==0) {return;}
+        if (huisnr===0) {return;}
 
         var getadrlnk	= 'https://bwnr.nl/postcode.php?pc='+postcode+'&hn='+huisnr+'&tv='+toevoeging+'&tg=data&ak='+'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
 
         var xmlhttp = new XMLHttpRequest();
 
         xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
+            if (this.readyState === 4 && this.status === 200) {
                 rString = this.responseText;
-                if (rString=="Geen resultaat.") {maak_leeg();return;}
-                if (rString=="Input onvolledig.") {maak_leeg();return;}
-                if (rString=="Onbekende API Key.") {maak_leeg();return;}
-                if (rString=="Over quota") {maak_leeg();return;}
-                if (rString=="Onjuiste API Key.") {maak_leeg();alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');return;}
+                if (rString==="Geen resultaat.") {maak_leeg();return;}
+                if (rString==="Input onvolledig.") {maak_leeg();return;}
+                if (rString==="Onbekende API Key.") {maak_leeg();return;}
+                if (rString==="Over quota") {maak_leeg();return;}
+                if (rString==="Onjuiste API Key.") {maak_leeg();alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');return;}
                 // 0 = straat - 1 = plaats
                 aResponse = rString.split(";");
                 document.getElementById("straat_p").value=aResponse[0];
