@@ -7,9 +7,9 @@
 <body>
 <table>
     <tbody><tr><td>Postcode</td>	<td><input type="text" id="postcode" onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus=""></td></tr>
-    <tr><td>Huisnummer</td>	<td><input type="text" id="huisnr" onkeyup="check_pc(&quot;huisnr&quot;,this.value)"></td></tr>
-    <tr><td>Toevoeging</td>	<td><input type="text" id="toevoeging" onkeyup="check_pc(&quot;toevoeging&quot;,this.value)"></td></tr>
-    <tr><td>Straat</td>		<td><input type="text" id="straat"></td></tr>
+    <tr><td>Huisnummer</td>	<td><input type="text" id="huisnr_p" onkeyup="check_pc(&quot;huisnr&quot;,this.value)"></td></tr>
+    <tr><td>Toevoeging</td>	<td><input type="text" id="toevoeging_p" onkeyup="check_pc(&quot;toevoeging&quot;,this.value)"></td></tr>
+    <tr><td>Straat</td>		<td><input type="text" id="straat_p"></td></tr>
     <tr><td>Plaats</td>		<td><input type="text" id="plaats"></td></tr>
     </tbody></table>
 
@@ -38,18 +38,18 @@
             // NU WETEN WE ZEKER EEN POSTCODE TE HEBBEN DIE BEGINT MET 4 LETTERS EN EINDIGT OP 2 CIJFERS
 
             postcode = num_deel+alpha_deel;
-            document.getElementById("postcode").value = postcode;
+            document.getElementById("postcode_p").value = postcode;
         }
 
         if (wat=="huisnr") {
             huisnr = parseFloat(waarde);
             if (!huisnr) {maak_leeg();return;}
-            document.getElementById("huisnr").value = huisnr;
+            document.getElementById("huisnr_p").value = huisnr;
         }
 
         if (wat=="toevoeging") {
             toevoeging = waarde.trim();
-            document.getElementById("toevoeging").value = toevoeging;
+            document.getElementById("toevoeging_p").value = toevoeging;
         }
 
         if (huisnr==0) {return;}
@@ -68,7 +68,7 @@
                 if (rString=="Onjuiste API Key.") {maak_leeg();alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');return;}
 
                 aResponse = rString.split(";");
-                document.getElementById("straat").value=aResponse[0];
+                document.getElementById("straat_p").value=aResponse[0];
                 document.getElementById("plaats").value=aResponse[1];
             }
         };
@@ -78,7 +78,7 @@
     }
 
     function maak_leeg() {
-        document.getElementById("straat").value="";
+        document.getElementById("straat_p").value="";
         document.getElementById("plaats").value="";
     }
 
