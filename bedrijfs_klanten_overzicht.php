@@ -18,7 +18,11 @@ if (!isset($_SESSION["loggedin"])) {
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <!-- BEGIN : Head-->
-
+<style>
+    br {
+        line-height: 150%;
+    }
+</style>
 <?php
 include "partials/header.php";
 ?>
