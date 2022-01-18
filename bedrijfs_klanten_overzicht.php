@@ -858,7 +858,7 @@ include "partials/navbar.php";
                                                                                title = "Alleen cijfers"
                                                                                placeholder="Huisnummer" required
                                                                                aria-invalid="false" name="huisnummer_z"
-                                                                               onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
+                                                                               onkeyup="check_pc(&quot;huisnr_z&quot;,this.value)">
 
                                                                     </div>
                                                                     <div class="controls">
@@ -868,7 +868,7 @@ include "partials/navbar.php";
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                placeholder="Huisnummertoevoeging"
                                                                                aria-invalid="false" name="huisnummertoevoeging_z"
-                                                                               onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+                                                                               onkeyup="check_pc(&quot;toevoeging_z&quot;,this.value)">
 
                                                                     </div>
                                                                     <div class="controls ">
@@ -879,7 +879,7 @@ include "partials/navbar.php";
                                                                                title="Bijvoorbeeld: '1234AB'"
                                                                                placeholder="Postcode" required
                                                                                aria-invalid="false" name="postcode_z"
-                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
+                                                                               onkeyup="check_pc(&quot;postcode_z&quot;,this.value)" autofocus="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1176,24 +1176,24 @@ include "partials/footer.php";
 
             // NU WETEN WE ZEKER EEN POSTCODE TE HEBBEN DIE BEGINT MET 4 LETTERS EN EINDIGT OP 2 CIJFERS
 
-            postcode = num_deel+alpha_deel;
-            document.getElementById("postcode_z").value = postcode;
+            postcode_z = num_deel+alpha_deel;
+            document.getElementById("postcode_z").value = postcode_z;
         }
 
         if (wat=="huisnr") {
-            huisnr = parseFloat(waarde);
+            huisnr_z = parseFloat(waarde);
             if (!huisnr) {maak_leeg();return;}
-            document.getElementById("huisnr_z").value = huisnr;
+            document.getElementById("huisnr_z").value = huisnr_z;
         }
 
         if (wat=="toevoeging") {
-            toevoeging = waarde.trim();
-            document.getElementById("toevoeging_z").value = toevoeging;
+            toevoeging_z = waarde.trim();
+            document.getElementById("toevoeging_z").value = toevoeging_z;
         }
 
         if (huisnr==0) {return;}
 
-        var getadrlnk	= 'https://bwnr.nl/postcode.php?pc='+postcode+'&hn='+huisnr+'&tv='+toevoeging+'&tg=data&ak='+'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
+        var getadrlnk	= 'https://bwnr.nl/postcode.php?pc='+postcode_z+'&hn='+huisnr_z+'&tv='+toevoeging_z+'&tg=data&ak='+'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
 
         var xmlhttp = new XMLHttpRequest();
 
