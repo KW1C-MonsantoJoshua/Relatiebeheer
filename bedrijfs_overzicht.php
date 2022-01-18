@@ -139,7 +139,8 @@ include "partials/navbar.php";
                                                                         <label for="users-edit-username">Website</label>
                                                                         <input type="text" id="users-edit-username"
                                                                                class="form-control round"
-                                                                               placeholder="Website" required
+                                                                               placeholder="Website"
+                                                                               required
                                                                                aria-invalid="false" name="website">
                                                                     </div>
 																	
