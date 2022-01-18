@@ -726,7 +726,7 @@ include "partials/navbar.php";
                                                                     </div>
                                                                     </br>
                                                                     <div class="form-group row">
-                                                                    <div class="controls col-md-4">
+                                                                    <div class="controls col-md-6">
                                                                         <label for="users-edit-username">Huisnummer</label>
                                                                         <input type="text" id="huisnr_p"
                                                                                class="form-control round"
@@ -736,7 +736,7 @@ include "partials/navbar.php";
                                                                                aria-invalid="false" name="huisnummer_p"
                                                                                onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
                                                                     </div>
-                                                                    <div class="controls col-md-4">
+                                                                    <div class="controls col-md-6">
                                                                         <label for="users-edit-username">toevoeging</label>
                                                                         <input type="text" id="toevoeging_p"
                                                                                class="form-control round"
