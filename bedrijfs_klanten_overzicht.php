@@ -1108,23 +1108,17 @@ include "partials/footer.php";
 
             postcode = num_deel+alpha_deel;
             document.getElementById("postcode_p").value = postcode;
-            document.getElementById("postcode_z").value = postcode;
-            document.getElementById("postcode_w").value = postcode;
         }
 
         if (wat=="huisnr") {
             huisnr = parseFloat(waarde);
             if (!huisnr) {maak_leeg();return;}
             document.getElementById("huisnr_p").value = huisnr;
-            document.getElementById("huisnr_z").value = huisnr;
-            document.getElementById("huisnr_w").value = huisnr;
         }
 
         if (wat=="toevoeging") {
             toevoeging = waarde.trim();
             document.getElementById("toevoeging_p").value = toevoeging;
-            document.getElementById("toevoeging_z").value = toevoeging;
-            document.getElementById("toevoeging_w").value = toevoeging;
         }
 
         if (huisnr==0) {return;}
