@@ -1774,10 +1774,9 @@ function editUserZ()
                                         <div class="controls">
                                             <label for="notities">Notities</label>
                                             <textarea  placeholder="Plaats hier je notities"
-                                                       value="<? $rowCustomer['notes'] ?>"
                                                        id="notities"
                                                        name="notities_z"
-                                                       rows="6" cols="50" maxlength="600"></textarea>
+                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomer['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
