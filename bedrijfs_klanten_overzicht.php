@@ -710,41 +710,46 @@ include "partials/navbar.php";
                                                                 <div class="form-group">
                                                                     <h4>Adresgegevens</h4>
                                                                     <div class="controls ">
+                                                                        <label for="users-edit-username">Postcode</label>
+                                                                        <input type="text" id="postcode_p"
+                                                                               class="form-control round"
+                                                                               pattern="[0-9]{4}[A-Za-z]{2}"
+                                                                               title="Bijvoorbeeld: '1234AB'"
+                                                                               placeholder="Postcode" required
+                                                                               aria-invalid="false" name="postcode_p"
+                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
+                                                                    </div>
+                                                                    <div class="controls">
+                                                                        <label for="users-edit-username">Huisnummer</label>
+                                                                        <input type="text" id="huisnr_p"
+                                                                               class="form-control round"
+                                                                               pattern="[0-9]{1,4}"
+                                                                               title="Aleen cijfers"
+                                                                               placeholder="Huisnummer" required
+                                                                               aria-invalid="false" name="huisnummer_p"
+                                                                               onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
+                                                                    </div>
+                                                                    <div class="controls">
+                                                                        <label for="users-edit-username">Huisnummertoevoeging</label>
+                                                                        <input type="text" id="toevoeging_p"
+                                                                               class="form-control round"
+                                                                               pattern="[a-zA-Z]{1,4}"
+                                                                               title="Alleen letters"
+                                                                               placeholder="Huisnummertoevoeging"
+                                                                               aria-invalid="false" name="huisnummertoevoeging_p"
+                                                                               onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+                                                                    </div>
+                                                                    <div class="controls ">
                                                                         <label for="users-edit-username">Straatnaam</label>
-                                                                        <input type="text" id="users-edit-username"
+                                                                        <input type="text" id="straat_p"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,15}"
                                                                                title="Alleen letters"
                                                                                placeholder="Straatnaam" required
                                                                                aria-invalid="false" name="straatnaam_p">
                                                                     </div>
-                                                                    <div class="controls">
-                                                                        <label for="users-edit-username">Huisnummer</label>
-                                                                        <input type="text" id="users-edit-username"
-                                                                               class="form-control round"
-                                                                               pattern="[0-9]{1,4}"
-                                                                               title="Aleen cijfers"
-                                                                               placeholder="Huisnummer" required
-                                                                               aria-invalid="false" name="huisnummer_p">
-                                                                    </div>
-                                                                    <div class="controls">
-                                                                        <label for="users-edit-username">Huisnummertoevoeging</label>
-                                                                        <input type="text" id="users-edit-username"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,4}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Huisnummertoevoeging" 
-                                                                               aria-invalid="false" name="huisnummertoevoeging_p">
-                                                                    </div>
-                                                                    <div class="controls ">
-                                                                        <label for="users-edit-username">Postcode</label>
-                                                                        <input type="text" id="users-edit-username"
-                                                                               class="form-control round"
-                                                                               pattern="[0-9]{4}[A-Za-z]{2}"
-                                                                               title="Bijvoorbeeld: '1234AB'"
-                                                                               placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode_p">
-                                                                    </div>
+
+
                                                                 </div>
                                                             </div>
                                                             <div class="col-12 col-md-4">
@@ -840,7 +845,7 @@ include "partials/navbar.php";
                                                                     <h4>Adresgegevens</h4>
                                                                     <div class="controls ">
                                                                         <label for="straatnaam">Straatnaam</label>
-                                                                        <input type="text" id="straatnaam"
+                                                                        <input type="text" id="straat_z"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,15}"
                                                                                title="Alleen letters"
@@ -849,29 +854,34 @@ include "partials/navbar.php";
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="huisnummer">Huisnummer</label>
-                                                                        <input type="text" id="huisnummer"
+                                                                        <input type="text" id="huisnr_z"
                                                                                class="form-control round"
                                                                                pattern="[0-9]{1,4}"
                                                                                title = "Alleen cijfers"
                                                                                placeholder="Huisnummer" required
-                                                                               aria-invalid="false" name="huisnummer_z">
+                                                                               aria-invalid="false" name="huisnummer_z"
+                                                                               onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
+
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummertoevoeging</label>
-                                                                        <input type="text" id="users-edit-username"
+                                                                        <input type="text" id="toevoeging_z"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                placeholder="Huisnummertoevoeging"
-                                                                               aria-invalid="false" name="huisnummertoevoeging_z">
+                                                                               aria-invalid="false" name="huisnummertoevoeging_z"
+                                                                               onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="postcode">Postcode</label>
-                                                                        <input type="text" id="postcode"
+                                                                        <input type="text" id="postcode_z"
                                                                                class="form-control round"
                                                                                pattern="[0-9]{4}[A-Za-z]{2}"
                                                                                title="Bijvoorbeeld: '1234AB'"
                                                                                placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode_z">
+                                                                               aria-invalid="false" name="postcode_z"
+                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -931,7 +941,7 @@ include "partials/navbar.php";
                                                                                    class="form-control round"
                                                                                    pattern="[a-zA-Z\s\.0-9]{1,15}"
                                                                                    readonly
-                                                                                   aria-invalid="false" name="bedrijfsnaam" value="<?php GetCompanyNamePersonnel() ?>">
+                                                                                   aria-invalid="false" name="bedrijfsnaam" value="<?php GetCompanyNamePersonnel(); ?>">
                                                                             <input type="hidden" name="membof" value="<?= $_GET["membof"] ?>">
                                                                         </div>
                                                                         <label for="users-edit-username">Voornaam</label>
@@ -966,7 +976,7 @@ include "partials/navbar.php";
                                                                     <h4>Adresgegevens</h4>
                                                                     <div class="controls ">
                                                                         <label for="straatnaam">Straatnaam</label>
-                                                                        <input type="text" id="straatnaam"
+                                                                        <input type="text" id="straat_w"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,15}"
                                                                                title="Alleen letters"
@@ -975,30 +985,35 @@ include "partials/navbar.php";
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="huisnummer">Huisnummer</label>
-                                                                        <input type="text" id="huisnummer"
+                                                                        <input type="text" id="huisnr_w"
                                                                                class="form-control round"
                                                                                pattern="[0-9]{1,4}"
                                                                                title = "Alleen cijfers"
                                                                                placeholder="Huisnummer" required
-                                                                               aria-invalid="false" name="huisnummer">
+                                                                               aria-invalid="false" name="huisnummer"
+                                                                               onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
+
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummertoevoeging</label>
-                                                                        <input type="text" id="users-edit-username"
+                                                                        <input type="text" id="toevoeging_w"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
                                                                                placeholder="Huisnummertoevoeging"
-                                                                               aria-invalid="false" name="huisnummertoevoeging">
+                                                                               aria-invalid="false" name="huisnummertoevoeging"
+                                                                               onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="postcode">Postcode</label>
-                                                                        <input type="text" id="postcode"
+                                                                        <input type="text" id="postcode_w"
                                                                                class="form-control round"
                                                                                pattern="[0-9]{4}[A-Za-z]{2}"
                                                                                title="Bijvoorbeeld: '1234AB'"
                                                                                placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode">
+                                                                               aria-invalid="false" name="postcode"
+                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1062,12 +1077,93 @@ include "partials/navbar.php";
         </div>
     </div>
 </div>
-<!-- ////////////////////////////////////////////////////////////////////////////-->
+<!-- /////////////////////////////////////////////////////////////////////////////-->
 
 <div class="sidenav-overlay"></div>
 <div class="drag-target"></div>
 <?php
 include "partials/footer.php";
 ?>
+<script>
+    /*
+        zet script nog in apart bestand wnnr af voor de aapie
+    */
+    var e		= "FbW29C_969cyVfAKrj";
+    var postcode	= "";
+    var huisnr		= "";
+    var toevoeging	= "";
+
+    function check_pc(wat,waarde) {
+        if (wat==="postcode") {
+            var pc = waarde.trim();
+            if (pc.length <6) {maak_leeg();return;}					// moet minimaal 6 characters hebben
+            var num_deel = pc.substr(0,4);
+            if (parseFloat(num_deel) < 1000) {maak_leeg();return;}	// moet minaal 1000 zijn
+            var alpha_deel = pc.substr(-2);
+            if (alpha_deel.charCodeAt(0) < 65 || alpha_deel.charCodeAt(0) > 122 || alpha_deel.charCodeAt(1) < 65 || alpha_deel.charCodeAt(1) > 122 ) {maak_leeg();return;} 	// DE LAATSTE 2 POSITIES MOETEN LETTERS ZIJN
+            alpha_deel = alpha_deel.toUpperCase();
+
+            // de checker niffo
+
+            postcode = num_deel+alpha_deel;
+            document.getElementById("postcode_p").value = postcode;
+            document.getElementById("postcode_z").value = postcode;
+            document.getElementById("postcode_w").value = postcode;
+        }
+
+        if (wat==="huisnr") {
+            huisnr = parseFloat(waarde);
+            if (!huisnr) {maak_leeg();return;}
+            document.getElementById("huisnr_p").value = huisnr;
+            document.getElementById("huisnr_z").value = huisnr;
+            document.getElementById("huisnr_w").value = huisnr;
+        }
+
+        if (wat==="toevoeging") {
+            toevoeging = waarde.trim();
+            document.getElementById("toevoeging_p").value = toevoeging;
+            document.getElementById("toevoeging_z").value = toevoeging;
+            document.getElementById("toevoeging_w").value = toevoeging;
+        }
+
+        if (huisnr===0) {return;}
+
+        var getadrlnk	= 'https://bwnr.nl/postcode.php?pc='+postcode+'&hn='+huisnr+'&tv='+toevoeging+'&tg=data&ak='+'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
+
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                rString = this.responseText;
+                if (rString==="Geen resultaat.") {maak_leeg();return;}
+                if (rString==="Input onvolledig.") {maak_leeg();return;}
+                if (rString==="Onbekende API Key.") {maak_leeg();return;}
+                if (rString==="Over quota") {maak_leeg();return;}
+                if (rString==="Onjuiste API Key.") {maak_leeg();alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');return;}
+                // 0 = straat - 1 = plaats
+                aResponse = rString.split(";");
+                document.getElementById("straat_p").value=aResponse[0];
+                document.getElementById("straat_z").value=aResponse[0];
+                document.getElementById("straat_w").value=aResponse[0];
+                document.getElementById("plaats_p").value=aResponse[1];
+                document.getElementById("plaats_z").value=aResponse[1];
+                document.getElementById("plaats_w").value=aResponse[1];
+            }
+        };
+
+        xmlhttp.open("GET", getadrlnk , true);
+        xmlhttp.send();
+    }
+
+    function maak_leeg() {
+        document.getElementById("straat_p").value="";
+        document.getElementById("plaats_p").value="";
+        document.getElementById("straat_z").value="";
+        document.getElementById("plaats_z").value="";
+        document.getElementById("straat_w").value="";
+        document.getElementById("plaats_w").value="";
+    }
+</script>
+
 </body>
 <!-- END : Body-->
