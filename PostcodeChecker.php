@@ -54,7 +54,7 @@
 
         if (huisnr==0) {return;}
 
-        var getadrlnk	= 'https://bwnr.nl/postcode.php?pc='+postcode+'&hn='+huisnr+'&tv='+toevoeging+'&tg=data&ak='+e;	// e moet uw apikey bevattten.
+        var getadrlnk	= 'https://bwnr.nl/postcode.php?pc='+postcode+'&hn='+huisnr+'&tv='+toevoeging+'&tg=data&ak='+'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
 
         var xmlhttp = new XMLHttpRequest();
 
