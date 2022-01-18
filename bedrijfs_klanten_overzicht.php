@@ -725,7 +725,8 @@ include "partials/navbar.php";
                                                                                pattern="[0-9]{1,4}"
                                                                                title="Aleen cijfers"
                                                                                placeholder="Huisnummer" required
-                                                                               aria-invalid="false" name="huisnummer_p">
+                                                                               aria-invalid="false" name="huisnummer_p"
+                                                                               onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummertoevoeging</label>
@@ -734,7 +735,8 @@ include "partials/navbar.php";
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
                                                                                placeholder="Huisnummertoevoeging" 
-                                                                               aria-invalid="false" name="huisnummertoevoeging_p">
+                                                                               aria-invalid="false" name="huisnummertoevoeging_p"
+                                                                               onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="users-edit-username">Postcode</label>
@@ -743,7 +745,8 @@ include "partials/navbar.php";
                                                                                pattern="[0-9]{4}[A-Za-z]{2}"
                                                                                title="Bijvoorbeeld: '1234AB'"
                                                                                placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode_p">
+                                                                               aria-invalid="false" name="postcode_p"
+                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1125,6 +1128,7 @@ include "partials/footer.php";
 
                 aResponse = rString.split(";");
                 document.getElementById("straat_p").value=aResponse[0];
+                document.getElementById("plaats").value=aResponse[1];
             }
         };
 
@@ -1134,6 +1138,7 @@ include "partials/footer.php";
 
     function maak_leeg() {
         document.getElementById("straat_p").value="";
+        document.getElementById("plaats").value="";
     }
 
 </script>
