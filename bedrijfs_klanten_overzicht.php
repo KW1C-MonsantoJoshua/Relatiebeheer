@@ -718,7 +718,9 @@ include "partials/navbar.php";
                                                                                placeholder="Postcode" required
                                                                                aria-invalid="false" name="postcode_p"
                                                                                onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
-
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                    <div class="controls">
                                                                         <label for="users-edit-username">Huisnummer</label>
                                                                         <input type="text" id="huisnr_p"
                                                                                class="form-control round"
@@ -727,7 +729,8 @@ include "partials/navbar.php";
                                                                                placeholder="Huisnummer" required
                                                                                aria-invalid="false" name="huisnummer_p"
                                                                                onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
-
+                                                                    </div>
+                                                                    <div class="controls">
                                                                         <label for="users-edit-username">Huisnummertoevoeging</label>
                                                                         <input type="text" id="toevoeging_p"
                                                                                class="form-control round"
@@ -736,6 +739,7 @@ include "partials/navbar.php";
                                                                                placeholder="Huisnummertoevoeging"
                                                                                aria-invalid="false" name="huisnummertoevoeging_p"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+                                                                    </div>
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="users-edit-username">Straatnaam</label>
