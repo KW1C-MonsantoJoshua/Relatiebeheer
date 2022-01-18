@@ -725,7 +725,8 @@ include "partials/navbar.php";
                                                                                pattern="[0-9]{1,4}"
                                                                                title="Aleen cijfers"
                                                                                placeholder="Huisnummer" required
-                                                                               aria-invalid="false" name="huisnummer_p">
+                                                                               aria-invalid="false" name="huisnummer_p"
+                                                                               onkeyup="check_pc(&quot;huisnummer_p&quot;,this.value)">
                                                                     </div>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Huisnummertoevoeging</label>
@@ -734,7 +735,8 @@ include "partials/navbar.php";
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
                                                                                placeholder="Huisnummertoevoeging" 
-                                                                               aria-invalid="false" name="huisnummertoevoeging_p">
+                                                                               aria-invalid="false" name="huisnummertoevoeging_p"
+                                                                               onkeyup="check_pc(&quot;huisnummertoevoeging_p&quot;,this.value)">
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="users-edit-username">Postcode</label>
@@ -743,7 +745,8 @@ include "partials/navbar.php";
                                                                                pattern="[0-9]{4}[A-Za-z]{2}"
                                                                                title="Bijvoorbeeld: '1234AB'"
                                                                                placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode_p">
+                                                                               aria-invalid="false" name="postcode_p"
+                                                                               onkeyup="check_pc(&quot;postcode_p&quot;,this.value)" autofocus="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1069,5 +1072,105 @@ include "partials/navbar.php";
 <?php
 include "partials/footer.php";
 ?>
+<script>
+    /*
+        Notice aan 'slimme programmeurs' die denken de hier gebruikte apikey te kunnen achterhalen en te gebruiken:
+        Spaar je de moeite. Je kunt inderdaad die apikey achterhalen. Maar het gaat toch niet werken. Het werkt alleen met een zelf aangevraagde apikey.
+        Dus vraag die apikey gewoon aan, gebruik de gratis calls om te testen. Kleine moeite, groot gemak.
+        Bijzondere situatie? Neem gewoon contact op.
+    */
+    var e = "FbW29C_969cyVfAKrj";
+    var postcode_p = "";
+    var huisnummer_p = "";
+    var huisnummertoevoeging_p = "";
+
+    function check_pc(wat, waarde) {
+        if (wat == "postcode_p") {
+            var pc = waarde.trim();
+            if (pc.length < 6) {
+                maak_leeg();
+                return;
+            }					// POSTCODE MOET MINIMAAL 6 CHARACTERS BEVATTEN
+            var num_deel = pc.substr(0, 4);
+            if (parseFloat(num_deel) < 1000) {
+                maak_leeg();
+                return;
+            }	// HET NUMERIEKE DEEL MOET MINIMAAL 1000 ZIJN
+            var alpha_deel = pc.substr(-2);
+            if (alpha_deel.charCodeAt(0) < 65 || alpha_deel.charCodeAt(0) > 122 || alpha_deel.charCodeAt(1) < 65 || alpha_deel.charCodeAt(1) > 122) {
+                maak_leeg();
+                return;
+            } 	// DE LAATSTE 2 POSITIES MOETEN LETTERS ZIJN
+            alpha_deel = alpha_deel.toUpperCase();
+
+            // NU WETEN WE ZEKER EEN POSTCODE TE HEBBEN DIE BEGINT MET 4 LETTERS EN EINDIGT OP 2 CIJFERS
+
+            postcode_p = num_deel + alpha_deel;
+            document.getElementById("postcode_p").value = postcode_p;
+        }
+
+        if (wat == "huisnummer_p") {
+            huisnummer_p = parseFloat(waarde);
+            if (!huisnummer_p) {
+                maak_leeg();
+                return;
+            }
+            document.getElementById("huisnummer_p").value = huisnummer_p;
+        }
+
+        if (wat == "huisnummertoevoeging_p") {
+            huisnummertoevoeging_p = waarde.trim();
+            document.getElementById("huisnummertoevoeging_p").value = huisnummertoevoeging_p;
+        }
+
+        if (huisnummer_p == 0) {
+            return;
+        }
+
+        var getadrlnk = 'https://bwnr.nl/postcode_p.php?pc=' + postcode_p + '&hn=' + huisnummer_p + '&tv=' + huisnummertoevoeging_p + '&tg=data&ak=' + 'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
+
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                rString = this.responseText;
+                if (rString == "Geen resultaat.") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString == "Input onvolledig.") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString == "Onbekende API Key.") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString == "Over quota") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString == "Onjuiste API Key.") {
+                    maak_leeg();
+                    alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');
+                    return;
+                }
+
+                aResponse = rString.split(";");
+                document.getElementById("straatnaam_p").value = aResponse[0];
+                document.getElementById("plaats").value = aResponse[1];
+            }
+        };
+
+        xmlhttp.open("GET", getadrlnk, true);
+        xmlhttp.send();
+    }
+
+    function maak_leeg() {
+        document.getElementById("straatnaam_p").value = "";
+        document.getElementById("plaats").value = "";
+    }
+
+</script>
 </body>
 <!-- END : Body-->
