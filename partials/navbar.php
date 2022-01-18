@@ -162,7 +162,6 @@ $row = Getuser();
     <div class="sidebar-background"></div>
     <!--     main menu content-->
 </div>
-
 </body>
 <!-- END : Body-->
 

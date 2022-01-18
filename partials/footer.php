@@ -19,7 +19,7 @@
 
 <!-- END APEX JS-->
 <!-- BEGIN PAGE LEVEL JS-->
-<script src="js/data-tables/dt-advanced-initialization.js"></script>
+<script src="../assets/js/dt-advanced-initialization.js"></script>
 <script src="../assets/js/core/app.js"></script>
 <script src="../assets/js/customizer.js"></script>
 <script src="../assets/js/scroll-top.js"></script>
