@@ -152,14 +152,16 @@ include "partials/navbar.php";
                                                                         <label for="straatnaam">Straatnaam</label>
                                                                         <input type="text" id="straatnaam"
                                                                                class="form-control round"
-                                                                               placeholder="Straatnaam" required
+                                                                               placeholder="Straatnaam"
+                                                                               required
                                                                                aria-invalid="false" name="straatnaam">
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="postcode">Postcode</label>
                                                                         <input type="text" id="postcode"
                                                                                class="form-control round"
-                                                                               placeholder="Postcode" required
+                                                                               placeholder="Postcode"
+                                                                               required
                                                                                aria-invalid="false" name="postcode">
                                                                     </div>
 																	<div class="form-group row">
@@ -167,7 +169,9 @@ include "partials/navbar.php";
                                                                         <label for="huisnummer">Huisnummer</label>
                                                                         <input type="text" id="huisnummer"
                                                                                class="form-control round"
-                                                                               placeholder="Huisnummer" required
+
+                                                                               placeholder="Huisnummer"
+                                                                               required
                                                                                aria-invalid="false" name="huisnummer">
                                                                     </div>
 																	<div class="controls  col-md-5">
@@ -214,13 +218,4 @@ include "partials/navbar.php";
                                                         </div>
 												</section>
 													</div>
-                                                    </form>
-			</div>
-															 </div>
-	</div>
-
-	<?php
-include "partials/footer.php";
-?>
-</body>
-<!-- END : Body-->
+                  
