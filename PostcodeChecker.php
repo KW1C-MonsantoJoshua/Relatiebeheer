@@ -1,26 +1,10 @@
-<html><head>
-    <meta charset="ISO-8859-1">
+<html>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="ROBOTS" content="INDEX,NOFOLLOW">
-    <title>Voorbeeld adres formulier</title>
-    <meta name="description" content="Voorbeeld adres formulier met automatisch invullen straat en plaats op basis van postcode in huisnummer">
-    <meta name="keywords" content="Gratis, postcode, adres, data, BAG, basis, administratie, adressen, gebouwen, API ">
-    <meta name="author" content="Maarten Heckman, InfoLead">
-    <script src="_pc/alg.js"></script>
-    <style>
-        input#postcode {width:100px;}
-        input#huisnr,input#toevoeging {width:30px;}
-        input#straat,input#plaats {width:250px;}
-    </style>
+    <title>teus Formulier</title>
 </head>
 
 <body>
-
-<p id="kop" width="100%" align="center"><a href="index.php"><img id="titel" title="Home" src="../_img/logotransp.png" width="300"></a></p>
-<p>Dit voorbeeld maakt gebruik van ajax, dus er is geen submit button nodig.</p>
-<p>Open de source in uw browser om het voorbeeld te kopiëren</p>
-
-<br>
 <table>
     <tbody><tr><td>Postcode</td>	<td><input type="text" id="postcode" onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus=""></td></tr>
     <tr><td>Huisnummer</td>	<td><input type="text" id="huisnr" onkeyup="check_pc(&quot;huisnr&quot;,this.value)"></td></tr>
@@ -28,8 +12,6 @@
     <tr><td>Straat</td>		<td><input type="text" id="straat"></td></tr>
     <tr><td>Plaats</td>		<td><input type="text" id="plaats"></td></tr>
     </tbody></table>
-<br>
-<a href="pcapi.php">Terug</a>
 
 <script>
     /*
