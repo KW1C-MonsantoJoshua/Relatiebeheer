@@ -1340,6 +1340,13 @@ function editPersonnel()
                                                    required
                                                    value="<?= $rowPersonnel["last_name"] ?>">
                                         </div>
+                                        <div class="controls">
+                                            <label for="notities">Notities</label>
+                                            <textarea  placeholder="Plaats hier je notities"
+                                                       id="notities"
+                                                       name="notities_pe"
+                                                       rows="6" cols="50" maxlength="600"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4">
@@ -1563,7 +1570,13 @@ function editUserP()
                                                    required
                                                    value="<?= $rowCustomerP["last_name"] ?>">
                                         </div>
-
+                                        <div class="controls">
+                                            <label for="notities">Notities</label>
+                                            <textarea  placeholder="Plaats hier je notities"
+                                                       id="notities"
+                                                       name="notities_p"
+                                                       rows="6" cols="50" maxlength="600"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4">
@@ -1682,7 +1695,7 @@ function editUserZ()
     $DataCustomer = "SELECT customers_business.id,customers_business.status,customers_business.first_name,customers_business.last_name_prefix,
         customers_business.last_name,customers_business.street,customers_business.housenumber,customers_business.housenumberAddition,
         customers_business.housenumberAddition,customers_business.postalcode,customers_business.email,customers_business.phoneNumber,customers_business.business,
-       customers_business.customer_of
+       customers_business.customer_of,customers_business.notes
  FROM customers_business 
      LEFT JOIN organisation 
          ON customers_business.customer_of = organisation.id 
@@ -1691,7 +1704,6 @@ function editUserZ()
     $stmt->bind_param("i", $_GET["custof"]);
     $stmt->execute();
     $resultCustomer = $stmt->get_result();
-
     while ($rowCustomer = $resultCustomer->fetch_array()) {
         ?>
         <div class="modal fade text-left" id="editZ<?= $rowCustomer["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
@@ -1758,6 +1770,14 @@ function editUserZ()
                                                    aria-invalid="false"
                                                    name="business_z"
                                                    value="<?= $rowCustomer["business"] ?>">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="notities">Notities</label>
+                                            <textarea  placeholder="Plaats hier je notities"
+                                                       value="<? $rowCustomer['notes'] ?>"
+                                                       id="notities"
+                                                       name="notities_z"
+                                                       rows="6" cols="50" maxlength="600"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1861,13 +1881,13 @@ function editUserZ()
 
             $query = "UPDATE `customers_business` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
                                 `street`= ?,`housenumber`=?,`housenumberAddition`=?,`postalcode`=?,`phoneNumber`=?,
-                                `email`= ?,`status`= ?,`business`=? WHERE id = ?";
+                                `email`= ?,`status`= ?,`business`=?,`notes`=? WHERE id = ?";
             $stmt = $mysqli->prepare($query);
 //        $options = ['cost' => 12,];
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
             $stmt->bind_param('sssssssssssi', $voornaam, $tussenvoegsel, $achternaam
                 , $straatnaam, $_POST["huisnummer_z"], $_POST["huisnummertoevoeging_z"], $_POST["postcode_z"],
-                $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"], $bedrijf,$_POST["id_z"]);
+                $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"],$_POST['notities_z'], $bedrijf,$_POST["id_z"]);
             $stmt->execute();
         }
     }
