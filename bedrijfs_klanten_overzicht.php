@@ -677,7 +677,7 @@ include "partials/navbar.php";
                                                     <form method="post" class='needs-validation'>
                                                         <div class="row">
                                                             <div class="col-12 col-md-4">
-                                                                <br class="form-group">
+                                                                <div class="form-group">
                                                                     <h4>Klantgegevens</h4>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Voornaam</label>
@@ -698,7 +698,6 @@ include "partials/navbar.php";
                                                                                placeholder="Tussenvoegsel"
                                                                                aria-invalid="false" name="tussenvoegsel_p">
                                                                     </div>
-                                                                </br>
                                                                     <div class="controls">
                                                                         <label for="achternaam">Achternaam</label>
                                                                         <input type="text" id="achternaam"
@@ -707,11 +706,11 @@ include "partials/navbar.php";
                                                                                title="Álleen letters"
                                                                                placeholder="Achternaam"
                                                                                aria-invalid="false" name="achternaam_p"
-                                                                               required>
+                                                                               required
+                                                                        >
                                                                     </div>
                                                                 </div>
                                                             </div>
-
                                                             <div class="col-12 col-md-4">
                                                                 <div class="form-group">
                                                                     <h4>Adresgegevens</h4>
