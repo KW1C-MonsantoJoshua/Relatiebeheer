@@ -20,7 +20,7 @@
         Dus vraag die apikey gewoon aan, gebruik de gratis calls om te testen. Kleine moeite, groot gemak.
         Bijzondere situatie? Neem gewoon contact op.
     */
-
+    $ak		= "FbW29C_969cyVfAKrj";
     var postcode	= "";
     var huisnr		= "";
     var toevoeging	= "";
