@@ -1885,9 +1885,9 @@ function editUserZ()
             $stmt = $mysqli->prepare($query);
 //        $options = ['cost' => 12,];
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
-            $stmt->bind_param('sssssssssssi', $voornaam, $tussenvoegsel, $achternaam
+            $stmt->bind_param('ssssssssssssi', $voornaam, $tussenvoegsel, $achternaam
                 , $straatnaam, $_POST["huisnummer_z"], $_POST["huisnummertoevoeging_z"], $_POST["postcode_z"],
-                $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"],$_POST['notities_z'], $bedrijf,$_POST["id_z"]);
+                $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"],$bedrijf,$_POST['notities_z'],$_POST["id_z"]);
             $stmt->execute();
         }
     }
