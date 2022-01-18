@@ -684,6 +684,7 @@ include "partials/navbar.php";
                                                                                placeholder="Voornaam" required
                                                                                aria-invalid="false" name="voornaam_p">
                                                                     </div>
+                                                                    <br>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Tussenvoegsel</label>
                                                                         <input type="text" id="users-edit-username"
