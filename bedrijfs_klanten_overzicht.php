@@ -1108,17 +1108,25 @@ include "partials/footer.php";
 
             postcode = num_deel+alpha_deel;
             document.getElementById("postcode_p").value = postcode;
+            document.getElementById("postcode_z").value = postcode;
+            document.getElementById("postcode_w").value = postcode;
+
         }
 
         if (wat=="huisnr") {
             huisnr = parseFloat(waarde);
             if (!huisnr) {maak_leeg();return;}
             document.getElementById("huisnr_p").value = huisnr;
+            document.getElementById("huisnr_z").value = huisnr;
+            document.getElementById("huisnr_w").value = huisnr;
+
         }
 
         if (wat=="toevoeging") {
             toevoeging = waarde.trim();
             document.getElementById("toevoeging_p").value = toevoeging;
+            document.getElementById("toevoeging_z").value = toevoeging;
+            document.getElementById("toevoeging_w").value = toevoeging;
         }
 
         if (huisnr==0) {return;}
@@ -1146,7 +1154,10 @@ include "partials/footer.php";
         xmlhttp.send();
     }
 
-
+    function maak_leeg() {
+        document.getElementById("straat_p").value="";
+        document.getElementById("plaats_p").value="";
+    }
 
 </script>
 <script>
@@ -1213,7 +1224,10 @@ include "partials/footer.php";
         xmlhttp.send();
     }
 
-
+    function maak_leeg() {
+        document.getElementById("straat_z").value="";
+        document.getElementById("plaats_z").value="";
+    }
 
 </script>
 <script>
@@ -1280,6 +1294,10 @@ include "partials/footer.php";
         xmlhttp.send();
     }
 
+    function maak_leeg() {
+        document.getElementById("straat_w").value="";
+        document.getElementById("plaats_w").value="";
+    }
 
 </script>
 </body>
