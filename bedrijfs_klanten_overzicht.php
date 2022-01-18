@@ -28,7 +28,7 @@ include "partials/header.php";
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
-<body class="vertical-layout vertical-menu 2-columns  navbar-sticky layout-dark layout-transparent bg-glass-1"
+<div class="vertical-layout vertical-menu 2-columns  navbar-sticky layout-dark layout-transparent bg-glass-1"
       data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
 
 <!-- Navbar (Header) Starts-->
@@ -1069,7 +1069,14 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                     </form>
-
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                                                     <!-- Account form starts -->
                                                     <!-- Account form ends -->
                                                 </div>
