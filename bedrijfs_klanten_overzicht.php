@@ -18,13 +18,17 @@ if (!isset($_SESSION["loggedin"])) {
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <!-- BEGIN : Head-->
-
+<style>
+    br {
+        line-height: 50%;
+    }
+</style>
 <?php
 include "partials/header.php";
 ?>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
-<body class="vertical-layout vertical-menu 2-columns  navbar-sticky layout-dark layout-transparent bg-glass-1"
+<div class="vertical-layout vertical-menu 2-columns  navbar-sticky layout-dark layout-transparent bg-glass-1"
       data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
 
 <!-- Navbar (Header) Starts-->
@@ -684,6 +688,7 @@ include "partials/navbar.php";
                                                                                placeholder="Voornaam" required
                                                                                aria-invalid="false" name="voornaam_p">
                                                                     </div>
+                                                                    </br>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Tussenvoegsel</label>
                                                                         <input type="text" id="users-edit-username"
@@ -693,6 +698,7 @@ include "partials/navbar.php";
                                                                                placeholder="Tussenvoegsel"
                                                                                aria-invalid="false" name="tussenvoegsel_p">
                                                                     </div>
+                                                                    </br>
                                                                     <div class="controls">
                                                                         <label for="achternaam">Achternaam</label>
                                                                         <input type="text" id="achternaam"
@@ -701,8 +707,7 @@ include "partials/navbar.php";
                                                                                title="Álleen letters"
                                                                                placeholder="Achternaam"
                                                                                aria-invalid="false" name="achternaam_p"
-                                                                               required
-                                                                        >
+                                                                               required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -719,7 +724,9 @@ include "partials/navbar.php";
                                                                                aria-invalid="false" name="postcode_p"
                                                                                onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
                                                                     </div>
-                                                                    <div class="controls">
+                                                                    </br>
+                                                                    <div class="form-group row">
+                                                                    <div class="controls col-md-6">
                                                                         <label for="users-edit-username">Huisnummer</label>
                                                                         <input type="text" id="huisnr_p"
                                                                                class="form-control round"
@@ -729,15 +736,16 @@ include "partials/navbar.php";
                                                                                aria-invalid="false" name="huisnummer_p"
                                                                                onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
                                                                     </div>
-                                                                    <div class="controls">
-                                                                        <label for="users-edit-username">Huisnummertoevoeging</label>
+                                                                    <div class="controls col-md-6">
+                                                                        <label for="users-edit-username">toevoeging</label>
                                                                         <input type="text" id="toevoeging_p"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
-                                                                               placeholder="Huisnummertoevoeging"
+                                                                               placeholder="toevoeging"
                                                                                aria-invalid="false" name="huisnummertoevoeging_p"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+                                                                    </div>
                                                                     </div>
                                                                     <div class="controls ">
                                                                         <label for="users-edit-username">Straatnaam</label>
@@ -762,6 +770,7 @@ include "partials/navbar.php";
                                                                                placeholder="Typeemail@hier.com" required
                                                                                aria-invalid="false" name="email_p">
                                                                     </div>
+                                                                    </br>
                                                                     <div class="controls">
                                                                         <label for="telefoonnummer">Telefoonnummer</label>
                                                                         <input type="text" id="telefoonnummer"
@@ -1060,7 +1069,14 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                     </form>
-
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                                                     <!-- Account form starts -->
                                                     <!-- Account form ends -->
                                                 </div>
