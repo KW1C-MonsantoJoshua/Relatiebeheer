@@ -1143,12 +1143,12 @@ include "partials/footer.php";
                 if (rString=="Onjuiste API Key.") {maak_leeg();alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');return;}
 
                 aResponse = rString.split(";");
-                document.getElementById("straat_w").value=aResponse[0];
+                document.getElementById("straat_p").value=aResponse[0];
                 document.getElementById("plaats_p").value=aResponse[1];
-                document.getElementById("straat_z").value=aResponse[0];
-                document.getElementById("plaats_z").value=aResponse[1];
-                document.getElementById("straat_w").value=aResponse[0];
-                document.getElementById("plaats_w").value=aResponse[1];
+                document.getElementById("straat_z").value=aResponse[2];
+                document.getElementById("plaats_z").value=aResponse[3];
+                document.getElementById("straat_w").value=aResponse[4];
+                document.getElementById("plaats_w").value=aResponse[5];
             }
         };
 
