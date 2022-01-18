@@ -736,7 +736,7 @@ include "partials/navbar.php";
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
-                                                                               placeholder="Huisnummertoevoeging"
+                                                                               placeholder="toevoeging"
                                                                                aria-invalid="false" name="huisnummertoevoeging_p"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
                                                                     </div>
