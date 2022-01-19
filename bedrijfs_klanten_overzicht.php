@@ -22,9 +22,9 @@ if (!isset($_SESSION["loggedin"])) {
     br {
         line-height: 75%;
     }
-    input::placeholder {
-       color: red;  !important;
-    }
+    /*input::placeholder {*/
+    /*   color: red;  !important;*/
+    /*}*/
 </style>
 <?php
 include "partials/header.php";
