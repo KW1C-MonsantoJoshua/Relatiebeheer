@@ -23,19 +23,19 @@ if (!isset($_SESSION["loggedin"])) {
         line-height: 75%;
     }
     ::-webkit-input-placeholder {
-        color:red;
+        !important;:red;
     }
 
     ::-moz-placeholder {
-        color:red;
+       !important;color:red;
     }
 
     ::-ms-placeholder {
-        color:red;
+        !important;color:red;
     }
 
     ::placeholder {
-        color:red;
+        !important;color:red;
     }
 </style>
 <?php
