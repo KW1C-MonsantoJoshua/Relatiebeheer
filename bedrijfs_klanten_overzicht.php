@@ -799,14 +799,15 @@ include "partials/navbar.php";
                                                             </div>
                                                             </div>
                                                         </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
+                                                            <button name ="submit" type="submit" class="btn btn-primary">Opslaan</button>
+                                                        </div>
                                                     </form>
                                                     <!-- Account form ends -->
                                                 </div>
                                                 <!-- Account content ends -->
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
-                                                    <button name ="submit" type="submit" class="btn btn-primary">Opslaan</button>
-                                                </div>
+
                                                 <!-- Information content starts -->
                                                 <div class="tab-pane fade mt-2 show" id="relatie_zakelijk"
                                                      role="tabpanel"
