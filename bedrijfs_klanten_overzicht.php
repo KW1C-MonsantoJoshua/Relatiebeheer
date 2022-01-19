@@ -929,15 +929,15 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
+                                                            <button type="reset"
+                                                                    data-dismiss="modal"
+                                                                    class="btn btn-secondary">Cancel
+                                                            </button>
                                                         <input type="submit"
                                                                class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
                                                                name="registreerParticulier"
                                                                value="Relatie Toevoegen">
 
-                                                        <button type="reset"
-                                                                data-dismiss="modal"
-                                                                class="btn btn-secondary">Cancel
-                                                        </button>
                                                             </div>
                                                     </form>
 
