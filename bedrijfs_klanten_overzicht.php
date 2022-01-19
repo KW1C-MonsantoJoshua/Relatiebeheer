@@ -928,6 +928,8 @@ include "partials/navbar.php";
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                    </br>
+                                                    </br>
                                                         <div class="modal-footer">
                                                             <button type="reset"
                                                                     data-dismiss="modal"
