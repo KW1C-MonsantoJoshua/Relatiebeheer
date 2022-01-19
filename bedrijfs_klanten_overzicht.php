@@ -637,7 +637,7 @@ include "partials/navbar.php";
                         <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body layout-transparent">
                     <section class="users-edit">
                         <div class="row">
                             <div class="col-12">
