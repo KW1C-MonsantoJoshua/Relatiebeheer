@@ -1077,7 +1077,8 @@ include "partials/navbar.php";
                                                             </div>
                                                         </br>
                                                             </br>
-                                                            <div class="modal-footer">
+                                                        </div>
+                                                        <div class="modal-footer">
                                                                 <button type="reset"
                                                                         data-dismiss="modal"
                                                                         class="btn btn-secondary">Cancel
@@ -1087,7 +1088,6 @@ include "partials/navbar.php";
                                                                        name="registreerWerknemer"
                                                                        value="Werknemer Toevoegen">
                                                             </div>
-                                                        </div>
                                                     </form>
 
                                                     <!-- Account form starts -->
