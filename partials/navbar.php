@@ -65,7 +65,7 @@ $row = Getuser();
                             <div class="user d-md-flex d-none mr-2"><span
                                         class="text-right"><?= $_SESSION["name"] ?></span><span
                                         class="text-right text-muted font-small-3">Beschikbaar</span></div>
-                            <img class="avatar" src="../uploads/<?= $row['image_url'] ?>" alt="avatar"
+                            <img class="avatar" src="../uploads/<?= $row['image_url']?>" alt="avatar"
                                  height="35" width="35">
                         </a>
                         <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0"
