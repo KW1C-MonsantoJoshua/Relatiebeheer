@@ -750,7 +750,6 @@ include "partials/navbar.php";
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
                                                                     </div>
                                                                     </div>
-                                                                </br>
                                                                     <div class="controls ">
                                                                         <label for="users-edit-username">Straatnaam</label>
                                                                         <input type="text" id="straat_p"
