@@ -786,27 +786,25 @@ include "partials/navbar.php";
                                                                                name="telefoonnummer_p">
                                                                     </div>
                                                                 </div>
-                                                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
-                                                                <input type="submit"
-                                                                       class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                                       name="registreerParticulier"
-                                                                       value="Relatie Toevoegen">
 
-                                                                <button type="reset"
-                                                                        data-dismiss="modal"
-                                                                        class="btn btn-secondary">Cancel
-                                                                </button>
-                                                            </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="reset"
+                                                                            data-dismiss="modal"
+                                                                            class="btn btn-secondary">Cancel
+                                                                    </button>
+                                                                    <input type="submit"
+                                                                           class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
+                                                                           name="registreerParticulier"
+                                                                           value="Relatie Toevoegen">
+                                                                </div>
+
                                                             </div>
                                                         </div>
                                                     </form>
                                                     <!-- Account form ends -->
                                                 </div>
                                                 <!-- Account content ends -->
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
-                                                    <button name ="submit" type="submit" class="btn btn-primary">Opslaan</button>
-                                                </div>
+
                                                 <!-- Information content starts -->
                                                 <div class="tab-pane fade mt-2 show" id="relatie_zakelijk"
                                                      role="tabpanel"
