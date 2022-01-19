@@ -882,7 +882,7 @@ include "partials/navbar.php";
 
                                                                     </div>
                                                                         <div class="controls col-md-6">
-                                                                        <label for="users-edit-username">Huisnummertoevoeging</label>
+                                                                        <label for="users-edit-username">toevoeging</label>
                                                                         <input type="text" id="toevoeging_z"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
@@ -891,7 +891,6 @@ include "partials/navbar.php";
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
                                                                     </div>
                                                                     </div>
-                                                                </br>
                                                                     <div class="controls ">
                                                                         <label for="straatnaam">Straatnaam</label>
                                                                         <input type="text" id="straat_z"
@@ -914,6 +913,7 @@ include "partials/navbar.php";
                                                                            placeholder="Typeemail@hier.com" required
                                                                            aria-invalid="false" name="email_z">
                                                                 </div>
+                                                            </br>
                                                                 <div class="controls">
                                                                     <label for="telefoonnummer">Telefoonnummer</label>
                                                                     <input type="text" id="telefoonnummer"
