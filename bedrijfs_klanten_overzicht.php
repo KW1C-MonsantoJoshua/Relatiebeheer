@@ -20,7 +20,7 @@ if (!isset($_SESSION["loggedin"])) {
 <!-- BEGIN : Head-->
 <style>
     br {
-        line-height: 50%;
+        line-height: 75%;
     }
 </style>
 <?php
