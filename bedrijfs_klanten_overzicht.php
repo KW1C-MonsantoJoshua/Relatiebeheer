@@ -23,7 +23,7 @@ if (!isset($_SESSION["loggedin"])) {
         line-height: 75%;
     }
     input::placeholder {
-        color: red;
+       color: red;  !important;
     }
 </style>
 <?php
