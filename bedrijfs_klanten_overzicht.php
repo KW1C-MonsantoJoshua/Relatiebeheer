@@ -962,6 +962,7 @@ include "partials/navbar.php";
                                                                                    aria-invalid="false" name="bedrijfsnaam" value="<?php GetCompanyNamePersonnel(); ?>">
                                                                             <input type="hidden" name="membof" value="<?= $_GET["membof"] ?>">
                                                                         </div>
+                                                                    </br>
                                                                         <label for="users-edit-username">Voornaam</label>
                                                                         <input type="text" id="users-edit-username"
                                                                                class="form-control round"
@@ -969,6 +970,7 @@ include "partials/navbar.php";
                                                                                placeholder="Voornaam" required
                                                                                aria-invalid="false" name="voornaam">
                                                                     </div>
+                                                                    </br>
                                                                     <div class="controls">
                                                                         <label for="users-edit-username">Tussenvoegsel</label>
                                                                         <input type="text" id="users-edit-username"
@@ -978,6 +980,7 @@ include "partials/navbar.php";
                                                                                placeholder="Tussenvoegsel"
                                                                                aria-invalid="false" name="tussenvoegsel">
                                                                     </div>
+                                                                    </br>
                                                                     <div class="controls">
                                                                         <label for="achternaam">Achternaam</label>
                                                                         <input type="text" id="achternaam"
@@ -993,37 +996,6 @@ include "partials/navbar.php";
                                                                 <div class="form-group">
                                                                     <h4>Adresgegevens</h4>
                                                                     <div class="controls ">
-                                                                        <label for="straatnaam">Straatnaam</label>
-                                                                        <input type="text" id="straat_w"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,15}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Straatnaam" required
-                                                                               aria-invalid="false" name="straat">
-                                                                    </div>
-                                                                    <div class="controls">
-                                                                        <label for="huisnummer">Huisnummer</label>
-                                                                        <input type="text" id="huisnr_w"
-                                                                               class="form-control round"
-                                                                               pattern="[0-9]{1,4}"
-                                                                               title = "Alleen cijfers"
-                                                                               placeholder="Huisnummer" required
-                                                                               aria-invalid="false" name="huisnummer"
-                                                                               onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
-
-                                                                    </div>
-                                                                    <div class="controls">
-                                                                        <label for="users-edit-username">Huisnummertoevoeging</label>
-                                                                        <input type="text" id="toevoeging_w"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,4}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Huisnummertoevoeging"
-                                                                               aria-invalid="false" name="huisnummertoevoeging"
-                                                                               onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
-
-                                                                    </div>
-                                                                    <div class="controls ">
                                                                         <label for="postcode">Postcode</label>
                                                                         <input type="text" id="postcode_w"
                                                                                class="form-control round"
@@ -1032,6 +1004,38 @@ include "partials/navbar.php";
                                                                                placeholder="Postcode" required
                                                                                aria-invalid="false" name="postcode"
                                                                                onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
+                                                                    </div>
+                                                                    </br>
+                                                                    <div class="form-group row">
+                                                                        <div class="controls col-md-6">
+                                                                        <label for="huisnummer">Huisnummer</label>
+                                                                        <input type="text" id="huisnr_w"
+                                                                               class="form-control round"
+                                                                               pattern="[0-9]{1,4}"
+                                                                               title = "Alleen cijfers"
+                                                                               placeholder="Huisnummer" required
+                                                                               aria-invalid="false" name="huisnummer"
+                                                                               onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
+                                                                    </div>
+                                                                        <div class="controls col-md-6">
+                                                                        <label for="users-edit-username">Huisnummertoevoeging</label>
+                                                                        <input type="text" id="toevoeging_w"
+                                                                               class="form-control round"
+                                                                               pattern="[a-zA-Z]{1,4}"
+                                                                               title="Alleen letters"
+                                                                               placeholder="Huisnummertoevoeging"
+                                                                               aria-invalid="false" name="huisnummertoevoeging"
+                                                                               onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+                                                                    </div>
+                                                                    </div>
+                                                                    <div class="controls ">
+                                                                        <label for="straatnaam">Straatnaam</label>
+                                                                        <input type="text" id="straat_w"
+                                                                               class="form-control round"
+                                                                               pattern="[a-zA-Z]{1,15}"
+                                                                               title="Alleen letters"
+                                                                               placeholder="Straatnaam" required
+                                                                               aria-invalid="false" name="straat">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1045,6 +1049,7 @@ include "partials/navbar.php";
                                                                                placeholder="Typeemail@hier.com" required
                                                                                aria-invalid="false" name="email">
                                                                     </div>
+                                                                </br>
                                                                     <div class="controls">
                                                                         <label for="telefoonnummer">Telefoonnummer</label>
                                                                         <input type="text" id="telefoonnummer"
@@ -1055,6 +1060,7 @@ include "partials/navbar.php";
                                                                                aria-invalid="false"
                                                                                name="telefoonnummer">
                                                                     </div>
+                                                                </br>
                                                                     <div class="controls">
                                                                         <label for="auth_level">Functie</label>
                                                                         <select id="auth_level" name="function" class="form-control" >
