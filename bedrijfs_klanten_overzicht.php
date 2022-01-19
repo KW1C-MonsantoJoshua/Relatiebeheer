@@ -643,7 +643,6 @@ include "partials/navbar.php";
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-content">
-                                        <div class="card-body">
                                             <!-- Nav-tabs -->
                                             <ul class="nav nav-tabs" role="tablist">
                                                 <li class="nav-item">
@@ -1093,7 +1092,6 @@ include "partials/navbar.php";
                                                 </div>
                                                 <!-- Information content ends -->
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
