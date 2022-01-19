@@ -1018,7 +1018,7 @@ include "partials/navbar.php";
                                                                                onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
                                                                     </div>
                                                                         <div class="controls col-md-6">
-                                                                        <label for="users-edit-username">Huisnummertoevoeging</label>
+                                                                        <label for="users-edit-username">toevoeging</label>
                                                                         <input type="text" id="toevoeging_w"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
