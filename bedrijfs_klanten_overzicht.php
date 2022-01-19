@@ -886,7 +886,7 @@ include "partials/navbar.php";
                                                                         <input type="text" id="toevoeging_z"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
-                                                                               placeholder="Huisnummertoevoeging"
+                                                                               placeholder="toevoeging"
                                                                                aria-invalid="false" name="huisnummertoevoeging_z"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
                                                                     </div>
@@ -1023,7 +1023,7 @@ include "partials/navbar.php";
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
-                                                                               placeholder="Huisnummertoevoeging"
+                                                                               placeholder="toevoeging"
                                                                                aria-invalid="false" name="huisnummertoevoeging"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
                                                                     </div>
