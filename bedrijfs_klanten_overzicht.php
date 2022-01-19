@@ -760,7 +760,7 @@ include "partials/navbar.php";
                                                                                aria-invalid="false" name="straatnaam_p">
                                                                     </div>
 
-
+                                                                </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-12 col-md-4">
