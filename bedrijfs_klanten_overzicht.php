@@ -799,7 +799,8 @@ include "partials/navbar.php";
                                                             <input type="submit"
                                                                    class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
                                                                    name="registreerParticulier"
-                                                                   value="Relatie Toevoegen">                                                        </div>
+                                                                   value="Relatie Toevoegen">
+                                                        </div>
                                                     </form>
                                                     <!-- Account form ends -->
                                                 </div>
