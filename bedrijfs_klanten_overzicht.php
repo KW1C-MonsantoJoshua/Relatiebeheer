@@ -788,10 +788,8 @@ include "partials/navbar.php";
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <div class="modal-footer">
                                                                     <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
                                                                     <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
                                                             </div>
                                                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
                                                                 <input type="submit"
