@@ -22,20 +22,8 @@ if (!isset($_SESSION["loggedin"])) {
     br {
         line-height: 75%;
     }
-    ::-webkit-input-placeholder {
-        !important;:red;
-    }
-
-    ::-moz-placeholder {
-       !important;color:red;
-    }
-
-    ::-ms-placeholder {
-        !important;color:red;
-    }
-
     ::placeholder {
-        !important;color:red;
+        color: red;
     }
 </style>
 <?php
