@@ -55,12 +55,13 @@ include "partials/navbar.php";
                             <ul class="breadcrumb bg-transparent">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>
-                                <li class="breadcrumb-item"><?php
-                                    $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
-                                    foreach($crumbs as $crumb){
-                                        echo ucfirst(str_replace(array(".php","_"),array(""," "),$crumb) . ' ');
-                                    }
-                                    ?></li>
+                                <li class="breadcrumb-item"><a href="#">Bedrijfs klanten overzicht</a></li>
+<!--                                <li class="breadcrumb-item">--><?php
+//                                    $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
+//                                    foreach($crumbs as $crumb){
+//                                        echo ucfirst(str_replace(array(".php","_"),array(""," "),$crumb) . ' ');
+//                                    }
+//                                    ?><!--</li>-->
                             </ul>
                         </div>
 
