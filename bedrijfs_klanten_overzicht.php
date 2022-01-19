@@ -787,8 +787,8 @@ include "partials/navbar.php";
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="modal-footer">
                                                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
+                                                                <div class="modal-footer">
                                                                 <input type="submit"
                                                                        class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
                                                                        name="registreerParticulier"
@@ -798,7 +798,7 @@ include "partials/navbar.php";
                                                                         data-dismiss="modal"
                                                                         class="btn btn-secondary">Cancel
                                                                 </button>
-                                                            </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </form>
