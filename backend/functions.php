@@ -1103,9 +1103,9 @@ function editC()
                                 <div class="row">
                                     <div class="col-12 col-md-4">
                                         <div class="form-group">
-                                            <h4>Klantgegevens</h4>
+                                            <h4>Bedrijfsgegevens</h4>
                                             <div class="controls">
-                                                <label for="users-edit-username">Voornaam</label>
+                                                <label for="users-edit-username">Naam</label>
                                                 <input type="text"
                                                        id="users-edit-username"
                                                        class="form-control text-light round"
@@ -1113,42 +1113,47 @@ function editC()
                                                        pattern="[a-zA-Z]{1,10}"
                                                        required
                                                        aria-invalid="false"
-                                                       name="voornaam_pe"
+                                                       name="name"
                                                        value="<?= $row["name"] ?>">
-                                                <input type="hidden" value="<?= $row["id"]?>"
-                                                       name="id">
-                                                <input type="hidden" value="<?= $row["name"]?>"
-                                                       name="username">
-                                                <input type="hidden" value="<?= $row["email"]?>"
-                                                       name="email">
                                             </div>
                                             <div class="controls">
-                                                <label for="tussenvoegsel">Tussenvoegsel</label>
+                                                <label for="tussenvoegsel">Kvk nummer</label>
                                                 <input type="text"
                                                        id="tussenvoegsel"
                                                        class="form-control text-light round"
                                                        placeholder="Tussenvoegsel"
                                                        pattern="[a-zA-Z]{1,10}"
                                                        aria-invalid="false"
-                                                       name="tussenvoegsel_pe"
-                                                       value="<?= $row["last_name_prefix"] ?>">
+                                                       name="kvk_nummer"
+                                                       value="<?= $row["kvk_nummer"] ?>">
                                             </div>
                                             <div class="controls">
-                                                <label for="achternaam">Achternaam</label>
+                                                <label for="achternaam">Btw nummer</label>
                                                 <input type="text" id="achternaam"
                                                        class="form-control text-light round"
                                                        placeholder="Achternaam"
                                                        pattern="[a-zA-Z]{1,12}"
                                                        aria-invalid="false"
-                                                       name="achternaam_pe"
+                                                       name="btw_nummer"
                                                        required
-                                                       value="<?= $row["last_name"] ?>">
+                                                       value="<?= $row["btw_nummer"] ?>">
+                                            </div>
+                                            <div class="controls">
+                                                <label for="achternaam">Iban nummer</label>
+                                                <input type="text" id="achternaam"
+                                                       class="form-control text-light round"
+                                                       placeholder="Achternaam"
+                                                       pattern="[a-zA-Z]{1,12}"
+                                                       aria-invalid="false"
+                                                       name="iban_nummer"
+                                                       required
+                                                       value="<?= $row["iban_nummer"] ?>">
                                             </div>
                                             <div class="controls">
                                                 <label for="notities">Notities</label>
                                                 <textarea  placeholder="Plaats hier je notities"
                                                            id="notities"
-                                                           name="notities_pe"
+                                                           name="notes"
                                                            rows="6" cols="50" maxlength="600"></textarea>
                                             </div>
                                         </div>
@@ -1165,7 +1170,7 @@ function editC()
                                                        pattern="[a-zA-Z]{1,15}"
                                                        title="Alleen letters"
                                                        aria-invalid="false"
-                                                       name="straatnaam_pe"
+                                                       name="street"
                                                        required
                                                        value="<?= $row["street"] ?>">
                                             </div>
@@ -1262,7 +1267,7 @@ function editC()
             $achternaam = ucfirst($_POST['achternaam_pe']);
             $straatnaam = ucfirst($_POST['straatnaam_pe']);
 
-            $query = "UPDATE `personnel` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
+            $query = "UPDATE `organisation` SET `name`=?,`last_name_prefix`=?,`last_name`=?,
                                 `street`= ?,`housenumber`=?, `postalcode`=?,`phoneNumber`=?,
                                 `email`= ?, `authentication_level`=? WHERE id = ?";
             $stmt = $mysqli->prepare($query);
@@ -1271,32 +1276,6 @@ function editC()
                               $_POST["telefoonnummer_pe"], $_POST["email_pe"],$_POST["function"], $_POST["id"]);
             $stmt->execute();
         }
-    }
-    if (isset($_POST["gebruiker"])) {
-        global $mysqli;
-        $token = bin2hex(random_bytes(50));
-        $sql = "INSERT INTO `users`(`username`,`name`,`email`,`reset_token`)VALUES(?,?,?,?)";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param(
-            "ssss",
-            $_POST["username"],
-            $_POST["username"],
-            $_POST["email"],
-            $token
-        );
-
-        $stmt->execute();
-        $stmt->close();
-        $email = $_POST["email"];
-        if ($email > 0) {
-            $to = $email;
-            $subject = "Wachtwoord vergeten";
-            $msg = "Your password reset link <br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . " <br> Reset your password with this link .Click or open in new tab<br>";
-            $msg = wordwrap($msg, 70);
-            $headers = "From: Admin@qccs.nl";
-            mail($to, $subject, $msg, $headers);
-            // header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"]);
-        } else echo "'$email' komt niet voor in de database";
     }
 }
 
