@@ -1098,133 +1098,157 @@ function editC()
                     </div>
                     <div class="modal-body">
                         <form method="post">
-                            <div class="row">
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <h4>Bedrijfsgegevens</h4>
-                                        <div class="controls">
-                                            <label for="users-edit-username">Voornaam</label>
-                                            <input type="text"
-                                                   id="users-edit-username"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Voornaam" readonly
-                                                   aria-invalid="false"
-                                                   name="voornaam_p"
-                                                   value="<?= $row["name"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="achternaam">Kvk nummer</label>
-                                            <input type="text" id="achternaam"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Achternaam"readonly
-                                                   aria-invalid="false"
-                                                   name="achternaam"
-                                                   value="<?= $row["kvk_nummer"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="business">Btw nummer</label>
-                                            <input type="text"
-                                                   id="business"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Bedrijf"
-                                                   readonly
-                                                   aria-invalid="false"
-                                                   name="business"
-                                                   value="<?= $row["btw_nummer"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="notities">Iban nummer</label>
-                                            <input type="text"
-                                                   id="business"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Bedrijf"
-                                                   readonly
-                                                   aria-invalid="false"
-                                                   name="business"
-                                                   value="<?= $row["iban_nummer"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="notities">Notities</label>
-                                            <textarea  placeholder="Plaats hier je notities"
-                                                       id="notities"
-                                                       name="notities_z"
-                                                       readonly
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $row['notes']; ?></textarea>
+                            <div class="modal-body">
+
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <div class="form-group">
+                                            <h4>Klantgegevens</h4>
+                                            <div class="controls">
+                                                <label for="users-edit-username">Voornaam</label>
+                                                <input type="text"
+                                                       id="users-edit-username"
+                                                       class="form-control text-light round"
+                                                       placeholder="Voornaam"
+                                                       pattern="[a-zA-Z]{1,10}"
+                                                       required
+                                                       aria-invalid="false"
+                                                       name="voornaam_pe"
+                                                       value="<?= $rowPersonnel["first_name"] ?>">
+                                                <input type="hidden" value="<?= $rowPersonnel["id"]?>"
+                                                       name="id">
+                                                <input type="hidden" value="<?= $rowPersonnel["first_name"]?>"
+                                                       name="username">
+                                                <input type="hidden" value="<?= $rowPersonnel["email"]?>"
+                                                       name="email">
+                                            </div>
+                                            <div class="controls">
+                                                <label for="tussenvoegsel">Tussenvoegsel</label>
+                                                <input type="text"
+                                                       id="tussenvoegsel"
+                                                       class="form-control text-light round"
+                                                       placeholder="Tussenvoegsel"
+                                                       pattern="[a-zA-Z]{1,10}"
+                                                       aria-invalid="false"
+                                                       name="tussenvoegsel_pe"
+                                                       value="<?= $rowPersonnel["last_name_prefix"] ?>">
+                                            </div>
+                                            <div class="controls">
+                                                <label for="achternaam">Achternaam</label>
+                                                <input type="text" id="achternaam"
+                                                       class="form-control text-light round"
+                                                       placeholder="Achternaam"
+                                                       pattern="[a-zA-Z]{1,12}"
+                                                       aria-invalid="false"
+                                                       name="achternaam_pe"
+                                                       required
+                                                       value="<?= $rowPersonnel["last_name"] ?>">
+                                            </div>
+                                            <div class="controls">
+                                                <label for="notities">Notities</label>
+                                                <textarea  placeholder="Plaats hier je notities"
+                                                           id="notities"
+                                                           name="notities_pe"
+                                                           rows="6" cols="50" maxlength="600"></textarea>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <h4>Adresgegevens</h4>
+                                    <div class="col-12 col-md-4">
+                                        <div class="form-group">
+                                            <h4>Adresgegevens</h4>
+                                            <div class="controls ">
+                                                <label for="users-edit-username">Straatnaam</label>
+                                                <input type="text"
+                                                       id="users-edit-username"
+                                                       class="form-control text-light round"
+                                                       placeholder="Straatnaam"
+                                                       pattern="[a-zA-Z]{1,15}"
+                                                       title="Alleen letters"
+                                                       aria-invalid="false"
+                                                       name="straatnaam_pe"
+                                                       required
+                                                       value="<?= $rowPersonnel["street"] ?>">
+                                            </div>
+                                            <div class="controls">
+                                                <label for="users-edit-username">Huisnummer</label>
+                                                <input type="text"
+                                                       id="users-edit-username"
+                                                       class="form-control text-light round"
+                                                       placeholder="Huisnummer"
+                                                       pattern="[0-9]{1,4}"
+                                                       title="Alleen cijfers"
+                                                       aria-invalid="false"
+                                                       name="huisnummer_pe"
+                                                       required
+                                                       value="<?= $rowPersonnel["housenumber"] ?>">
+                                            </div>
+                                            <div class="controls ">
+                                                <label for="users-edit-username">Postcode</label>
+                                                <input type="text"
+                                                       id="users-edit-username"
+                                                       class="form-control text-light round"
+                                                       placeholder="Postcode"
+                                                       pattern="[0-9]{4}[A-Za-z]{2}"
+                                                       title="Bijvoorbeeld: '1234AB'"
+                                                       aria-invalid="false"
+                                                       name="postcode_pe"
+                                                       required
+                                                       value="<?= $rowPersonnel["postalcode"] ?>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="form-group">
+                                            <h4>Contactgegevens</h4>
+                                            <div class="controls">
+                                                <label for="users-edit-email">E-mail</label>
+                                                <input type="email"
+                                                       id="users-edit-email"
+                                                       class="form-control text-light round"
+                                                       placeholder="Typeemail@hier.com"
+                                                       aria-invalid="false"
+                                                       name="email_pe"
+                                                       required
+                                                       value="<?= $rowPersonnel["email"] ?>">
+                                            </div>
+                                            <div class="controls">
+                                                <label for="telefoonnummer">Telefoonnummer</label>
+                                                <input type="number" id="telefoonnummer"
+                                                       class="form-control text-light round"
+                                                       placeholder="Telefoonnummer"
+                                                       pattern="[0-9]{1,15}"
+                                                       title="Alleen cijfers"
+                                                       aria-invalid="false"
+                                                       name="telefoonnummer_pe"
+                                                       required
+                                                       value="<?= $rowPersonnel["phoneNumber"] ?>">
+                                            </div>
+                                        </div>
                                         <div class="controls ">
-                                            <label for="users-edit-username">Straatnaam</label>
-                                            <input type="text"
-                                                   id="users-edit-username"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Straatnaam" readonly
-                                                   aria-invalid="false"
-                                                   name="straatnaam"
-                                                   value="<?= $row["street"] ?>">
+                                            <label for="users-edit-username">Bedrijf</label>
+                                            <br>
+                                            <?php ViewCompanyPersonnel(); ?>
                                         </div>
-                                        <div class="controls">
-                                            <label for="users-edit-username">Huisnummer</label>
-                                            <input type="text"
-                                                   id="users-edit-username"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Huisnummer" readonly
-                                                   aria-invalid="false"
-                                                   name="huisnummer"
-                                                   value="<?= $row["housenumber"] ?>">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <label for="users-edit-role">Functie</label>
+                                                <select id="users-edit-role" name="function" class="form-control" >
+                                                    <option value="<?=$rowPersonnel["authentication_level"] ?>" hidden selected><?=$rowPersonnel["authentication_level"] ?></option>
+                                                    <option value="Bedrijfsleider">Bedrijfsleider</option>
+                                                    <option value="Werknemer">Werknemer</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div class="controls ">
-                                            <label for="users-edit-username">Postcode</label>
-                                            <input type="text"
-                                                   id="users-edit-username"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Postcode" readonly
-                                                   aria-invalid="false"
-                                                   name="postcode"
-                                                   value="<?= $row["postalcode"] ?>">
-                                        </div>
+
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="form-group">
-                                        <h4>Contactgegevens</h4>
-                                        <div class="controls">
-                                            <label for="users-edit-email">E-mail</label>
-                                            <input type="email"
-                                                   id="users-edit-email"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Typeemail@hier.com"
-                                                   readonly
-                                                   aria-invalid="false"
-                                                   name="email"
-                                                   value="<?= $row["email"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="telefoonnummer">Telefoonnummer</label>
-                                            <input type="text" id="telefoonnummer"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Telefoonnummer"
-                                                   readonly
-                                                   aria-invalid="false"
-                                                   name="telefoonnummer"
-                                                   value="<?= $row["phoneNumber"] ?>">
-                                        </div>
-                                        <div class="controls">
-                                            <label for="tussenvoegsel">Website</label>
-                                            <input type="text"
-                                                   id="tussenvoegsel"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Tussenvoegsel"
-                                                   readonly
-                                                   aria-invalid="false"
-                                                   name="tussenvoegsel"
-                                                   value="<?= $row["website"] ?>">
-                                        </div>
-                                    </div>
-                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
+                                <button name ="gebruiker" type="submit" class="btn btn-primary ">Gebruiker maken</button>
+                                <button name ="submit" type="submit" class="btn btn-primary">Opslaan</button>
                             </div>
                         </form>
                     </div>
