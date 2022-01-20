@@ -1114,12 +1114,12 @@ function editC()
                                                        required
                                                        aria-invalid="false"
                                                        name="voornaam_pe"
-                                                       value="<?= $rowPersonnel["first_name"] ?>">
-                                                <input type="hidden" value="<?= $rowPersonnel["id"]?>"
+                                                       value="<?= $row["name"] ?>">
+                                                <input type="hidden" value="<?= $row["id"]?>"
                                                        name="id">
-                                                <input type="hidden" value="<?= $rowPersonnel["first_name"]?>"
+                                                <input type="hidden" value="<?= $row["name"]?>"
                                                        name="username">
-                                                <input type="hidden" value="<?= $rowPersonnel["email"]?>"
+                                                <input type="hidden" value="<?= $row["email"]?>"
                                                        name="email">
                                             </div>
                                             <div class="controls">
@@ -1131,7 +1131,7 @@ function editC()
                                                        pattern="[a-zA-Z]{1,10}"
                                                        aria-invalid="false"
                                                        name="tussenvoegsel_pe"
-                                                       value="<?= $rowPersonnel["last_name_prefix"] ?>">
+                                                       value="<?= $row["last_name_prefix"] ?>">
                                             </div>
                                             <div class="controls">
                                                 <label for="achternaam">Achternaam</label>
@@ -1142,7 +1142,7 @@ function editC()
                                                        aria-invalid="false"
                                                        name="achternaam_pe"
                                                        required
-                                                       value="<?= $rowPersonnel["last_name"] ?>">
+                                                       value="<?= $row["last_name"] ?>">
                                             </div>
                                             <div class="controls">
                                                 <label for="notities">Notities</label>
@@ -1167,7 +1167,7 @@ function editC()
                                                        aria-invalid="false"
                                                        name="straatnaam_pe"
                                                        required
-                                                       value="<?= $rowPersonnel["street"] ?>">
+                                                       value="<?= $row["street"] ?>">
                                             </div>
                                             <div class="controls">
                                                 <label for="users-edit-username">Huisnummer</label>
@@ -1180,7 +1180,7 @@ function editC()
                                                        aria-invalid="false"
                                                        name="huisnummer_pe"
                                                        required
-                                                       value="<?= $rowPersonnel["housenumber"] ?>">
+                                                       value="<?= $row["housenumber"] ?>">
                                             </div>
                                             <div class="controls ">
                                                 <label for="users-edit-username">Postcode</label>
@@ -1193,7 +1193,7 @@ function editC()
                                                        aria-invalid="false"
                                                        name="postcode_pe"
                                                        required
-                                                       value="<?= $rowPersonnel["postalcode"] ?>">
+                                                       value="<?= $row["postalcode"] ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -1209,7 +1209,7 @@ function editC()
                                                        aria-invalid="false"
                                                        name="email_pe"
                                                        required
-                                                       value="<?= $rowPersonnel["email"] ?>">
+                                                       value="<?= $row["email"] ?>">
                                             </div>
                                             <div class="controls">
                                                 <label for="telefoonnummer">Telefoonnummer</label>
@@ -1221,7 +1221,7 @@ function editC()
                                                        aria-invalid="false"
                                                        name="telefoonnummer_pe"
                                                        required
-                                                       value="<?= $rowPersonnel["phoneNumber"] ?>">
+                                                       value="<?= $row["phoneNumber"] ?>">
                                             </div>
                                         </div>
                                         <div class="controls ">
@@ -1233,7 +1233,7 @@ function editC()
                                             <div class="controls">
                                                 <label for="users-edit-role">Functie</label>
                                                 <select id="users-edit-role" name="function" class="form-control" >
-                                                    <option value="<?=$rowPersonnel["authentication_level"] ?>" hidden selected><?=$rowPersonnel["authentication_level"] ?></option>
+                                                    <option value="<?=$row["authentication_level"] ?>" hidden selected><?=$row["authentication_level"] ?></option>
                                                     <option value="Bedrijfsleider">Bedrijfsleider</option>
                                                     <option value="Werknemer">Werknemer</option>
                                                 </select>
@@ -1247,13 +1247,9 @@ function editC()
 
                             <div class="modal-footer">
                                 <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
-                                <button name ="gebruiker" type="submit" class="btn btn-primary ">Gebruiker maken</button>
                                 <button name ="submit" type="submit" class="btn btn-primary">Opslaan</button>
                             </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
