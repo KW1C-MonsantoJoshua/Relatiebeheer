@@ -463,8 +463,6 @@ function ViewC()
     }
 }
 
-ViewC();
-
 function password_reset($password,$confirmpassword,$email){
     global $mysqli;
     if (empty($password) or empty($confirmpassword)) {
