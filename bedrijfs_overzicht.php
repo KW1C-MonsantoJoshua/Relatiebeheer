@@ -3,7 +3,7 @@ require_once "backend/functions.php";
 
 InsertBedrijf();
 ViewC();
-editC();
+//editC();
 
 // Controleer of iemand ingelogd is
 if (!isset($_SESSION["loggedin"])) {

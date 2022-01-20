@@ -1087,7 +1087,6 @@ function editC()
     $resultData = $stmt->get_result();
     while ($row = $resultData->fetch_array()) {
         ?>
-
         <div class="modal fade text-left" id="edit<?= $row["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content ">
@@ -1254,7 +1253,6 @@ function editC()
                 </div>
             </div>
         </div>
-
         <?php
         if (isset($_POST['submit'])) {
 
