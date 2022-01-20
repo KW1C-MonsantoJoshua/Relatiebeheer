@@ -1098,6 +1098,14 @@ function ViewC()
                                                        readonly
                                                        rows="6" cols="50" maxlength="600"><?php  echo $row['iban_nummer']; ?></textarea>
                                         </div>
+                                        <div class="controls">
+                                            <label for="notities">Notities</label>
+                                            <textarea  placeholder="Plaats hier je notities"
+                                                       id="notities"
+                                                       name="notities_z"
+                                                       readonly
+                                                       rows="6" cols="50" maxlength="600"><?php  echo $row['notes']; ?></textarea>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4">
