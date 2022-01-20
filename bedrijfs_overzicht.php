@@ -25,11 +25,6 @@ include "partials/navbar.php";
 ?>
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 <!-- / main menu-->
-
-<button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#info1">
-    Launch Modal
-</button>
-
 <div class="main-panel">
     <!-- BEGIN : Main Content-->
     <div class="main-content">
@@ -40,6 +35,9 @@ include "partials/navbar.php";
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Bedrijfsnaam</h4>
+                            <button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#info1">
+                                Launch Modal
+                            </button>
                             <ul class="breadcrumb bg-transparent">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>
