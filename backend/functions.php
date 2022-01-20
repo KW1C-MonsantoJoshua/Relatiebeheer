@@ -1092,11 +1092,14 @@ function ViewC()
                                         </div>
                                         <div class="controls">
                                             <label for="notities">Iban nummer</label>
-                                            <textarea  placeholder="Plaats hier je notities"
-                                                       id="notities"
-                                                       name="notities_z"
-                                                       readonly
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $row['iban_nummer']; ?></textarea>
+                                            <input type="text"
+                                                   id="business"
+                                                   class="form-control-plaintext text-light round"
+                                                   placeholder="Bedrijf"
+                                                   readonly
+                                                   aria-invalid="false"
+                                                   name="business"
+                                                   value="<?= $row["iban_nummer"] ?>">
                                         </div>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
