@@ -1048,7 +1048,7 @@ function ViewC()
                             <div class="row">
                                 <div class="col-12 col-md-4">
                                     <div class="form-group">
-
+                                        <h4>Bedrijfsgegevens</h4>
                                         <div class="controls">
                                             <label for="users-edit-username">Voornaam</label>
                                             <input type="text"
@@ -1058,11 +1058,9 @@ function ViewC()
                                                    aria-invalid="false"
                                                    name="voornaam_p"
                                                    value="<?= $row["name"] ?>">
-                                            <input type="hidden" value="<?= $id ?>"
-                                                   name="id">
                                         </div>
                                         <div class="controls">
-                                            <label for="tussenvoegsel">Tussenvoegsel</label>
+                                            <label for="tussenvoegsel">Website</label>
                                             <input type="text"
                                                    id="tussenvoegsel"
                                                    class="form-control-plaintext text-light round"
@@ -1070,19 +1068,19 @@ function ViewC()
                                                    readonly
                                                    aria-invalid="false"
                                                    name="tussenvoegsel"
-                                                   value="<?= $row["last_name_prefix"] ?>">
+                                                   value="<?= $row["website"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="achternaam">Achternaam</label>
+                                            <label for="achternaam">Kvk nummer</label>
                                             <input type="text" id="achternaam"
                                                    class="form-control-plaintext text-light round"
                                                    placeholder="Achternaam"readonly
                                                    aria-invalid="false"
                                                    name="achternaam"
-                                                   value="<?= $row["last_name"] ?>">
+                                                   value="<?= $row["kvk_nummer"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="business">Business</label>
+                                            <label for="business">Btw nummer</label>
                                             <input type="text"
                                                    id="business"
                                                    class="form-control-plaintext text-light round"
@@ -1090,15 +1088,15 @@ function ViewC()
                                                    readonly
                                                    aria-invalid="false"
                                                    name="business"
-                                                   value="<?= $rowCustomer["business"] ?>">
+                                                   value="<?= $row["btw_nummer"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="notities">Notities</label>
+                                            <label for="notities">Iban nummer</label>
                                             <textarea  placeholder="Plaats hier je notities"
                                                        id="notities"
                                                        name="notities_z"
                                                        readonly
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomer['notes']; ?></textarea>
+                                                       rows="6" cols="50" maxlength="600"><?php  echo $row['iban_nummer']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
