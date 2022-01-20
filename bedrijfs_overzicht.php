@@ -26,6 +26,10 @@ include "partials/navbar.php";
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 <!-- / main menu-->
 
+<button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#info1">
+    Launch Modal
+</button>
+
 <div class="main-panel">
     <!-- BEGIN : Main Content-->
     <div class="main-content">
