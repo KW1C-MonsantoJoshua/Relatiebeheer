@@ -35,7 +35,7 @@ include "partials/navbar.php";
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Bedrijfsnaam</h4>
-                            <button href="#" type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#info1">
+                            <button type="button" class="btn bg-light-primary" data-toggle="modal" data-target="#info1">
                                 Launch Modal
                             </button>
                             <ul class="breadcrumb bg-transparent">
