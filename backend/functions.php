@@ -296,7 +296,7 @@ function GetCompany(){
                 if ($_SESSION['auth'] == "Bedrijfsleider"||$_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
                     ?>
                     <div class="col-md-5">
-                        <a href="#" data-toggle="modal" data-target="#editC<?= $row["id"]?>">
+                        <a href="#" data-toggle="modal" data-target="#edit<?= $row["id"]?>">
                             <i class="ft-edit"></i>
                         </a>
                     </div>
@@ -1077,6 +1077,230 @@ function ViewC()
         <?php
     }
 }
+
+function editC()
+{
+    global $mysqli;
+    $tableData = "SELECT * FROM `organisation`";
+    $stmt = $mysqli->prepare($tableData);
+    $stmt->execute();
+    $resultData = $stmt->get_result();
+    while ($row = $resultData->fetch_array()) {
+        ?>
+
+        <div class="modal fade text-left" id="edit<?= $row["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Personeel</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                        </button>
+                    </div>
+                    <form method="post">
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <h4>Klantgegevens</h4>
+                                        <div class="controls">
+                                            <label for="users-edit-username">Voornaam</label>
+                                            <input type="text"
+                                                   id="users-edit-username"
+                                                   class="form-control text-light round"
+                                                   placeholder="Voornaam"
+                                                   pattern="[a-zA-Z]{1,10}"
+                                                   required
+                                                   aria-invalid="false"
+                                                   name="voornaam_pe"
+                                                   value="<?= $row["first_name"] ?>">
+                                            <input type="hidden" value="<?= $row["id"]?>"
+                                                   name="id">
+                                            <input type="hidden" value="<?= $row["first_name"]?>"
+                                                   name="username">
+                                            <input type="hidden" value="<?= $row["email"]?>"
+                                                   name="email">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="tussenvoegsel">Tussenvoegsel</label>
+                                            <input type="text"
+                                                   id="tussenvoegsel"
+                                                   class="form-control text-light round"
+                                                   placeholder="Tussenvoegsel"
+                                                   pattern="[a-zA-Z]{1,10}"
+                                                   aria-invalid="false"
+                                                   name="tussenvoegsel_pe"
+                                                   value="<?= $row["last_name_prefix"] ?>">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="achternaam">Achternaam</label>
+                                            <input type="text" id="achternaam"
+                                                   class="form-control text-light round"
+                                                   placeholder="Achternaam"
+                                                   pattern="[a-zA-Z]{1,12}"
+                                                   aria-invalid="false"
+                                                   name="achternaam_pe"
+                                                   required
+                                                   value="<?= $row["last_name"] ?>">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="notities">Notities</label>
+                                            <textarea  placeholder="Plaats hier je notities"
+                                                       id="notities"
+                                                       name="notities_pe"
+                                                       rows="6" cols="50" maxlength="600"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <h4>Adresgegevens</h4>
+                                        <div class="controls ">
+                                            <label for="users-edit-username">Straatnaam</label>
+                                            <input type="text"
+                                                   id="users-edit-username"
+                                                   class="form-control text-light round"
+                                                   placeholder="Straatnaam"
+                                                   pattern="[a-zA-Z]{1,15}"
+                                                   title="Alleen letters"
+                                                   aria-invalid="false"
+                                                   name="straatnaam_pe"
+                                                   required
+                                                   value="<?= $row["street"] ?>">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="users-edit-username">Huisnummer</label>
+                                            <input type="text"
+                                                   id="users-edit-username"
+                                                   class="form-control text-light round"
+                                                   placeholder="Huisnummer"
+                                                   pattern="[0-9]{1,4}"
+                                                   title="Alleen cijfers"
+                                                   aria-invalid="false"
+                                                   name="huisnummer_pe"
+                                                   required
+                                                   value="<?= $row["housenumber"] ?>">
+                                        </div>
+                                        <div class="controls ">
+                                            <label for="users-edit-username">Postcode</label>
+                                            <input type="text"
+                                                   id="users-edit-username"
+                                                   class="form-control text-light round"
+                                                   placeholder="Postcode"
+                                                   pattern="[0-9]{4}[A-Za-z]{2}"
+                                                   title="Bijvoorbeeld: '1234AB'"
+                                                   aria-invalid="false"
+                                                   name="postcode_pe"
+                                                   required
+                                                   value="<?= $row["postalcode"] ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <h4>Contactgegevens</h4>
+                                        <div class="controls">
+                                            <label for="users-edit-email">E-mail</label>
+                                            <input type="email"
+                                                   id="users-edit-email"
+                                                   class="form-control text-light round"
+                                                   placeholder="Typeemail@hier.com"
+                                                   aria-invalid="false"
+                                                   name="email_pe"
+                                                   required
+                                                   value="<?= $row["email"] ?>">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="telefoonnummer">Telefoonnummer</label>
+                                            <input type="number" id="telefoonnummer"
+                                                   class="form-control text-light round"
+                                                   placeholder="Telefoonnummer"
+                                                   pattern="[0-9]{1,15}"
+                                                   title="Alleen cijfers"
+                                                   aria-invalid="false"
+                                                   name="telefoonnummer_pe"
+                                                   required
+                                                   value="<?= $row["phoneNumber"] ?>">
+                                        </div>
+                                    </div>
+                                    <div class="controls ">
+                                        <label for="users-edit-username">Bedrijf</label>
+                                        <br>
+                                        <?php ViewCompanyPersonnel(); ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <label for="users-edit-role">Functie</label>
+                                            <select id="users-edit-role" name="function" class="form-control" >
+                                                <option value="<?=$row["authentication_level"] ?>" hidden selected><?=$row["authentication_level"] ?></option>
+                                                <option value="Bedrijfsleider">Bedrijfsleider</option>
+                                                <option value="Werknemer">Werknemer</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
+                            <button name ="gebruiker" type="submit" class="btn btn-primary ">Gebruiker maken</button>
+                            <button name ="submit" type="submit" class="btn btn-primary">Opslaan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <?php
+        if (isset($_POST['submit'])) {
+
+            $voornaam = ucfirst($_POST['voornaam_pe']);
+            $tussenvoegsel = strtolower($_POST['tussenvoegsel_pe']);
+            $achternaam = ucfirst($_POST['achternaam_pe']);
+            $straatnaam = ucfirst($_POST['straatnaam_pe']);
+
+            $query = "UPDATE `personnel` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
+                                `street`= ?,`housenumber`=?, `postalcode`=?,`phoneNumber`=?,
+                                `email`= ?, `authentication_level`=? WHERE id = ?";
+            $stmt = $mysqli->prepare($query);
+            $stmt->bind_param('sssssssssi', $voornaam, $tussenvoegsel, $achternaam
+                , $straatnaam, $_POST["huisnummer_pe"], $_POST["postcode_pe"],
+                              $_POST["telefoonnummer_pe"], $_POST["email_pe"],$_POST["function"], $_POST["id"]);
+            $stmt->execute();
+        }
+    }
+    if (isset($_POST["gebruiker"])) {
+        global $mysqli;
+        $token = bin2hex(random_bytes(50));
+        $sql = "INSERT INTO `users`(`username`,`name`,`email`,`reset_token`)VALUES(?,?,?,?)";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param(
+            "ssss",
+            $_POST["username"],
+            $_POST["username"],
+            $_POST["email"],
+            $token
+        );
+
+        $stmt->execute();
+        $stmt->close();
+        $email = $_POST["email"];
+        if ($email > 0) {
+            $to = $email;
+            $subject = "Wachtwoord vergeten";
+            $msg = "Your password reset link <br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . " <br> Reset your password with this link .Click or open in new tab<br>";
+            $msg = wordwrap($msg, 70);
+            $headers = "From: Admin@qccs.nl";
+            mail($to, $subject, $msg, $headers);
+            // header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"]);
+        } else echo "'$email' komt niet voor in de database";
+    }
+}
+
 
 function ViewUserZ()
 {
