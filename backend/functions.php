@@ -1087,7 +1087,7 @@ function editC()
     $resultData = $stmt->get_result();
     while ($row = $resultData->fetch_array()) {
         ?>
-        <div class="modal fade text-left" id="info<?php echo $row['id']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+        <div class="modal fade text-left" id="edit<?php echo $row['id']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
