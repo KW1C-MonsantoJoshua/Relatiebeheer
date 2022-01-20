@@ -2,6 +2,7 @@
 require_once "backend/functions.php";
 
 InsertBedrijf();
+ViewC();
 
 // Controleer of iemand ingelogd is
 if (!isset($_SESSION["loggedin"])) {
