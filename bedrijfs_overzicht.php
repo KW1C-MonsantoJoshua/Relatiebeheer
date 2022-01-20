@@ -1,9 +1,8 @@
-<!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 require_once "backend/functions.php";
 
 InsertBedrijf();
-ViewC();
+
 // Controleer of iemand ingelogd is
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
@@ -25,6 +24,7 @@ include "partials/navbar.php";
 ?>
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 <!-- / main menu-->
+
 <div class="main-panel">
     <!-- BEGIN : Main Content-->
     <div class="main-content">
@@ -76,10 +76,7 @@ include "partials/navbar.php";
                                                                         <tr>
                                                                             <th>ID</th>
                                                                             <th>Bedrijfsnaam</th>
-                                                                            <th>Telefoonnummer</th>
-                                                                            <th>Email</th>
-                                                                            <th>Status</th>
-                                                                            <th>Handelingen</th>
+                                                                            <th>Logo</th>
                                                                         </tr>
                                                                         </thead>
                                                                         <tbody>
@@ -141,8 +138,7 @@ include "partials/navbar.php";
                                         <label for="users-edit-username">Website</label>
                                         <input type="text" id="users-edit-username"
                                                class="form-control round"
-                                               placeholder="Website"
-                                               required
+                                               placeholder="Website" required
                                                aria-invalid="false" name="website">
                                     </div>
 
@@ -155,25 +151,15 @@ include "partials/navbar.php";
                                         <label for="straatnaam">Straatnaam</label>
                                         <input type="text" id="straatnaam"
                                                class="form-control round"
-                                               placeholder="Straatnaam"
-                                               required
+                                               placeholder="Straatnaam" required
                                                aria-invalid="false" name="straatnaam">
-                                    </div>
-                                    <div class="controls ">
-                                        <label for="postcode">Postcode</label>
-                                        <input type="text" id="postcode"
-                                               class="form-control round"
-                                               placeholder="Postcode"
-                                               required
-                                               aria-invalid="false" name="postcode">
                                     </div>
                                     <div class="form-group row">
                                         <div class="controls col-md-5">
                                             <label for="huisnummer">Huisnummer</label>
                                             <input type="text" id="huisnummer"
                                                    class="form-control round"
-                                                   placeholder="Huisnummer"
-                                                   required
+                                                   placeholder="Huisnummer" required
                                                    aria-invalid="false" name="huisnummer">
                                         </div>
                                         <div class="controls  col-md-5">
@@ -184,10 +170,16 @@ include "partials/navbar.php";
                                                    aria-invalid="false" name="huisnummertoevoeging">
                                         </div>
                                     </div>
+                                    <div class="controls ">
+                                        <label for="postcode">Postcode</label>
+                                        <input type="text" id="postcode"
+                                               class="form-control round"
+                                               placeholder="Postcode" required
+                                               aria-invalid="false" name="postcode">
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
-                                `
                                 <div class="form-group">
                                     <h4>Contactgegevens</h4>
                                     <div class="controls">
@@ -226,3 +218,7 @@ include "partials/navbar.php";
     </div>
 </div>
 
+<?php
+include "partials/footer.php";
+?>
+</body>
