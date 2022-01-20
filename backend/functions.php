@@ -721,7 +721,7 @@ function GetCustomerP()
                     if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] = "Werknemer") {
                         ?>
                         <div class="col-md-5">
-                            <a href="#" data-toggle="modal" data-target="#editP<?= $rowCustomerP["id"]?>">
+                            <a data-toggle="modal" data-target="#editP<?= $rowCustomerP["id"]?>">
                                 <i class="ft-edit"></i>
                             </a>
                         </div>
