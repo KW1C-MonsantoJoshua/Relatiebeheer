@@ -304,7 +304,7 @@ function GetCompany(){
                 }
                 ?>
                 <div class="col-md-5">
-                    <a href="#" data-toggle="modal" data-target="#info<?= $row["id"]?>">
+                    <a href="#" data-toggle="modal" data-target="#info<?php echo $row["id"]?>">
                         <i class="ft-eye"></i>
                     </a>
                 </div>
