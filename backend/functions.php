@@ -931,22 +931,136 @@ function ViewC()
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel17">Basic Modal</h4>
+                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Klantgegevens</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h5>Check First Paragraph</h5>
-                        <p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice. Apple pie sugar plum powder donut soufflé.</p>
-                        <p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy cake.</p>
-                        <hr>
-                        <h5>Some More Text</h5>
-                        <p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish. Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
+                        <form method="post">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+
+                                        <div class="controls">
+                                            <label for="users-edit-username">Voornaam</label>
+                                            <input type="text"
+                                                   id="users-edit-username"
+                                                   class="form-control-plaintext text-light round"
+                                                   placeholder="Voornaam" readonly
+                                                   aria-invalid="false"
+                                                   name="voornaam_p"
+                                                   value="<?= $row["name"] ?>">
+                                            <input type="hidden" value="<?= $id ?>"
+                                                   name="id">
+                                        </div>
+<!--                                        <div class="controls">-->
+<!--                                            <label for="tussenvoegsel">Tussenvoegsel</label>-->
+<!--                                            <input type="text"-->
+<!--                                                   id="tussenvoegsel"-->
+<!--                                                   class="form-control-plaintext text-light round"-->
+<!--                                                   placeholder="Tussenvoegsel"-->
+<!--                                                   readonly-->
+<!--                                                   aria-invalid="false"-->
+<!--                                                   name="tussenvoegsel"-->
+<!--                                                   value="--><?//= $row["last_name_prefix"] ?><!--">-->
+<!--                                        </div>-->
+<!--                                        <div class="controls">-->
+<!--                                            <label for="achternaam">Achternaam</label>-->
+<!--                                            <input type="text" id="achternaam"-->
+<!--                                                   class="form-control-plaintext text-light round"-->
+<!--                                                   placeholder="Achternaam"readonly-->
+<!--                                                   aria-invalid="false"-->
+<!--                                                   name="achternaam"-->
+<!--                                                   value="--><?//= $row["last_name"] ?><!--">-->
+<!--                                        </div>-->
+<!--                                        <div class="controls">-->
+<!--                                            <label for="business">Business</label>-->
+<!--                                            <input type="text"-->
+<!--                                                   id="business"-->
+<!--                                                   class="form-control-plaintext text-light round"-->
+<!--                                                   placeholder="Bedrijf"-->
+<!--                                                   readonly-->
+<!--                                                   aria-invalid="false"-->
+<!--                                                   name="business"-->
+<!--                                                   value="--><?//= $rowCustomer["business"] ?><!--">-->
+<!--                                        </div>-->
+<!--                                        <div class="controls">-->
+<!--                                            <label for="notities">Notities</label>-->
+<!--                                            <textarea  placeholder="Plaats hier je notities"-->
+<!--                                                       id="notities"-->
+<!--                                                       name="notities_z"-->
+<!--                                                       readonly-->
+<!--                                                       rows="6" cols="50" maxlength="600">--><?php // echo $rowCustomer['notes']; ?><!--</textarea>-->
+<!--                                        </div>-->
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <h4>Adresgegevens</h4>
+                                        <div class="controls ">
+                                            <label for="users-edit-username">Straatnaam</label>
+                                            <input type="text"
+                                                   id="users-edit-username"
+                                                   class="form-control-plaintext text-light round"
+                                                   placeholder="Straatnaam" readonly
+                                                   aria-invalid="false"
+                                                   name="straatnaam"
+                                                   value="<?= $row["street"] ?>">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="users-edit-username">Huisnummer</label>
+                                            <input type="text"
+                                                   id="users-edit-username"
+                                                   class="form-control-plaintext text-light round"
+                                                   placeholder="Huisnummer" readonly
+                                                   aria-invalid="false"
+                                                   name="huisnummer"
+                                                   value="<?= $row["housenumber"] ?>">
+                                        </div>
+                                        <div class="controls ">
+                                            <label for="users-edit-username">Postcode</label>
+                                            <input type="text"
+                                                   id="users-edit-username"
+                                                   class="form-control-plaintext text-light round"
+                                                   placeholder="Postcode" readonly
+                                                   aria-invalid="false"
+                                                   name="postcode"
+                                                   value="<?= $row["postalcode"] ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                        <h4>Contactgegevens</h4>
+                                        <div class="controls">
+                                            <label for="users-edit-email">E-mail</label>
+                                            <input type="email"
+                                                   id="users-edit-email"
+                                                   class="form-control-plaintext text-light round"
+                                                   placeholder="Typeemail@hier.com"
+                                                   readonly
+                                                   aria-invalid="false"
+                                                   name="email"
+                                                   value="<?= $row["email"] ?>">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="telefoonnummer">Telefoonnummer</label>
+                                            <input type="text" id="telefoonnummer"
+                                                   class="form-control-plaintext text-light round"
+                                                   placeholder="Telefoonnummer"
+                                                   readonly
+                                                   aria-invalid="false"
+                                                   name="telefoonnummer"
+                                                   value="<?= $row["phoneNumber"] ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
