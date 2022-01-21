@@ -1261,7 +1261,7 @@ function editC()
                                 `street`= ?,`housenumber`=?, `postalcode`=?,`phoneNumber`=?,
                                 `email`= ?, `status`=? WHERE id = ?";
             $stmt = $mysqli->prepare($query);
-            $stmt->bind_param('sssssssssi', $voornaam, $_POST["kvk_nummer"], $_POST["btw_nummer"], $_POST["iban_nummer"]
+            $stmt->bind_param('ssssssssssi', $voornaam, $_POST["kvk_nummer"], $_POST["btw_nummer"], $_POST["iban_nummer"]
                 , $straatnaam, $_POST["housenumber"], $_POST["postalcode"],
                               $_POST["phoneNumber"], $_POST["email"],$_POST["status"], $_POST["id"]);
             $stmt->execute();
