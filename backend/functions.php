@@ -1183,7 +1183,7 @@ function editC()
                                                        pattern="[0-9]{1,4}"
                                                        title="Alleen cijfers"
                                                        aria-invalid="false"
-                                                       name="huisnummer_pe"
+                                                       name="housenumber"
                                                        required
                                                        value="<?= $row["housenumber"] ?>">
                                             </div>
@@ -1196,7 +1196,7 @@ function editC()
                                                        pattern="[0-9]{4}[A-Za-z]{2}"
                                                        title="Bijvoorbeeld: '1234AB'"
                                                        aria-invalid="false"
-                                                       name="postcode_pe"
+                                                       name="postalcode"
                                                        required
                                                        value="<?= $row["postalcode"] ?>">
                                             </div>
@@ -1212,7 +1212,7 @@ function editC()
                                                        class="form-control text-light round"
                                                        placeholder="Typeemail@hier.com"
                                                        aria-invalid="false"
-                                                       name="email_pe"
+                                                       name="email"
                                                        required
                                                        value="<?= $row["email"] ?>">
                                             </div>
@@ -1224,7 +1224,7 @@ function editC()
                                                        pattern="[0-9]{1,15}"
                                                        title="Alleen cijfers"
                                                        aria-invalid="false"
-                                                       name="telefoonnummer_pe"
+                                                       name="phoneNumber"
                                                        required
                                                        value="<?= $row["phoneNumber"] ?>">
                                             </div>
@@ -1238,7 +1238,7 @@ function editC()
                                             <div class="controls">
                                                 <label for="users-edit-role">Functie</label>
                                                 <select id="users-edit-role" name="function" class="form-control" >
-                                                    <option value="<?=$row["authentication_level"] ?>" hidden selected><?=$row["authentication_level"] ?></option>
+                                                    <option value="<?=$row["status"] ?>" hidden selected><?=$row["status"] ?></option>
                                                     <option value="Bedrijfsleider">Bedrijfsleider</option>
                                                     <option value="Werknemer">Werknemer</option>
                                                 </select>
@@ -1262,18 +1262,16 @@ function editC()
         <?php
         if (isset($_POST['submit'])) {
 
-            $voornaam = ucfirst($_POST['voornaam_pe']);
-            $tussenvoegsel = strtolower($_POST['tussenvoegsel_pe']);
-            $achternaam = ucfirst($_POST['achternaam_pe']);
-            $straatnaam = ucfirst($_POST['straatnaam_pe']);
+            $voornaam = ucfirst($_POST['name']);
+            $straatnaam = ucfirst($_POST['street']);
 
-            $query = "UPDATE `organisation` SET `name`=?,`last_name_prefix`=?,`last_name`=?,
+            $query = "UPDATE `organisation` SET `name`=?,`kvk_nummer`=?,`btw_nummer`=?, iban_nummer=?,
                                 `street`= ?,`housenumber`=?, `postalcode`=?,`phoneNumber`=?,
-                                `email`= ?, `authentication_level`=? WHERE id = ?";
+                                `email`= ?, `status`=? WHERE id = ?";
             $stmt = $mysqli->prepare($query);
-            $stmt->bind_param('sssssssssi', $voornaam, $tussenvoegsel, $achternaam
-                , $straatnaam, $_POST["huisnummer_pe"], $_POST["postcode_pe"],
-                              $_POST["telefoonnummer_pe"], $_POST["email_pe"],$_POST["function"], $_POST["id"]);
+            $stmt->bind_param('sssssssssi', $voornaam, $_POST["kvk_nummer"], $_POST["btw_nummer"], $_POST["iban_nummer"]
+                , $straatnaam, $_POST["housenumber"], $_POST["postalcode"],
+                              $_POST["phoneNumber"], $_POST["email"],$_POST["status"], $_POST["id"]);
             $stmt->execute();
         }
     }
