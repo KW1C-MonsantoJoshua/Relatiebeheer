@@ -1125,6 +1125,7 @@ function editC()
                                                        name="kvk_nummer"
                                                        value="<?= $row["kvk_nummer"] ?>">
                                             </div>
+                                            <input type="hidden" name="id" value="<?php echo $row['id']?>">
                                             <div class="controls">
                                                 <label for="achternaam">Btw nummer</label>
                                                 <input type="text" id="achternaam"
