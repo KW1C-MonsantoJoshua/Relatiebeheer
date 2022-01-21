@@ -1122,7 +1122,6 @@ function editC()
                                                        id="tussenvoegsel"
                                                        class="form-control text-light round"
                                                        placeholder="Tussenvoegsel"
-                                                       pattern="[a-zA-Z]{1,10}"
                                                        aria-invalid="false"
                                                        name="kvk_nummer"
                                                        value="<?= $row["kvk_nummer"] ?>">
