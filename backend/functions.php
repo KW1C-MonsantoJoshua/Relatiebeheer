@@ -1229,14 +1229,9 @@ function editC()
                                                        value="<?= $row["phoneNumber"] ?>">
                                             </div>
                                         </div>
-                                        <div class="controls ">
-                                            <label for="users-edit-username">Bedrijf</label>
-                                            <br>
-                                            <?php ViewCompanyPersonnel(); ?>
-                                        </div>
                                         <div class="form-group">
                                             <div class="controls">
-                                                <label for="users-edit-role">Functie</label>
+                                                <label for="users-edit-role">Status</label>
                                                 <select id="users-edit-role" name="function" class="form-control" >
                                                     <option value="<?=$row["status"] ?>" hidden selected><?=$row["status"] ?></option>
                                                     <option value="Bedrijfsleider">Bedrijfsleider</option>
