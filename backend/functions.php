@@ -1110,7 +1110,6 @@ function editC()
                                                        id="users-edit-username"
                                                        class="form-control text-light round"
                                                        placeholder="Naam"
-                                                       pattern="[a-zA-Z]{1,10}"
                                                        required
                                                        aria-invalid="false"
                                                        name="name"
