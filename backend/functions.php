@@ -1252,20 +1252,19 @@ function editC()
             </div>
         </div>
         <?php
-        if (isset($_POST['submit'])) {
-
-            $voornaam = ucfirst($_POST['name']);
-            $straatnaam = ucfirst($_POST['street']);
-
-            $query = "UPDATE `organisation` SET `name`=?,`kvk_nummer`=?,`btw_nummer`=?, iban_nummer=?,
-                                `street`= ?,`housenumber`=?, `postalcode`=?,`phoneNumber`=?,
-                                `email`= ?, `status`=? WHERE id = ?";
-            $stmt = $mysqli->prepare($query);
-            $stmt->bind_param('ssssssssssi', $voornaam, $_POST["kvk_nummer"], $_POST["btw_nummer"], $_POST["iban_nummer"]
-                , $straatnaam, $_POST["housenumber"], $_POST["postalcode"],
-                              $_POST["phoneNumber"], $_POST["email"],$_POST["status"], $_POST["id"]);
-            $stmt->execute();
-        }
+//        if (isset($_POST['submit'])) {
+//
+//            $voornaam = ucfirst($_POST['name']);
+//            $straatnaam = ucfirst($_POST['street']);
+//
+//            $query = "UPDATE `organisation` SET `name`=?,`kvk_nummer`=?,`btw_nummer`=?, iban_nummer=?,
+//                                `street`= ?,`housenumber`=?, `postalcode`=?,`phoneNumber`=?,
+//                                `email`= ?, `status`=? WHERE id = ?";
+//            $stmt = $mysqli->prepare($query);
+//            $stmt->bind_param('ssssssssssi', $voornaam, $_POST["kvk_nummer"], $_POST["btw_nummer"], $_POST["iban_nummer"]
+//                , $straatnaam, $_POST["housenumber"], $_POST["postalcode"], $_POST["phoneNumber"], $_POST["email"],$_POST["status"], $_POST["id"]);
+//            $stmt->execute();
+//        }
     }
 }
 
