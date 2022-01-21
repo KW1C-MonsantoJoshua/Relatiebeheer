@@ -1109,7 +1109,7 @@ function editC()
                                                 <input type="text"
                                                        id="users-edit-username"
                                                        class="form-control text-light round"
-                                                       placeholder="Voornaam"
+                                                       placeholder="Naam"
                                                        pattern="[a-zA-Z]{1,10}"
                                                        required
                                                        aria-invalid="false"
@@ -1121,7 +1121,7 @@ function editC()
                                                 <input type="text"
                                                        id="tussenvoegsel"
                                                        class="form-control text-light round"
-                                                       placeholder="Tussenvoegsel"
+                                                       placeholder="Kvk nummer"
                                                        aria-invalid="false"
                                                        name="kvk_nummer"
                                                        value="<?= $row["kvk_nummer"] ?>">
@@ -1130,7 +1130,7 @@ function editC()
                                                 <label for="achternaam">Btw nummer</label>
                                                 <input type="text" id="achternaam"
                                                        class="form-control text-light round"
-                                                       placeholder="Achternaam"
+                                                       placeholder="Btw nummer"
                                                        aria-invalid="false"
                                                        name="btw_nummer"
                                                        required
@@ -1140,8 +1140,7 @@ function editC()
                                                 <label for="achternaam">Iban nummer</label>
                                                 <input type="text" id="achternaam"
                                                        class="form-control text-light round"
-                                                       placeholder="Achternaam"
-                                                       pattern="[a-zA-Z]{1,12}"
+                                                       placeholder="Iban nummer"
                                                        aria-invalid="false"
                                                        name="iban_nummer"
                                                        required
@@ -1232,8 +1231,8 @@ function editC()
                                                 <label for="users-edit-role">Status</label>
                                                 <select id="users-edit-role" name="function" class="form-control" >
                                                     <option value="<?=$row["status"] ?>" hidden selected><?=$row["status"] ?></option>
-                                                    <option value="Bedrijfsleider">Bedrijfsleider</option>
-                                                    <option value="Werknemer">Werknemer</option>
+                                                    <option value="Actief">Actief</option>
+                                                    <option value="Non-actief">Non-actief</option>
                                                 </select>
                                             </div>
                                         </div>
