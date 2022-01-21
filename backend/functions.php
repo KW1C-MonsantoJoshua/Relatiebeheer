@@ -1131,7 +1131,6 @@ function editC()
                                                 <input type="text" id="achternaam"
                                                        class="form-control text-light round"
                                                        placeholder="Achternaam"
-                                                       pattern="[a-zA-Z]{1,12}"
                                                        aria-invalid="false"
                                                        name="btw_nummer"
                                                        required
