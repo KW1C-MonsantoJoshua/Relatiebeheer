@@ -160,7 +160,7 @@ include "partials/navbar.php";
                                         </br>
 
                                                         <!-- General Tab -->
-                                                        <div class="tab-pane active" id="generall" role="tabpanel" aria-labelledby="general-tab">
+                                                        <div class="tab-pane" id="generall" role="tabpanel" aria-labelledby="general-tab">
                                                             <div class="media">
                                                                 <img src="../../../app-assets/img/portrait/small/avatar-s-8.png" alt="profile-img" class="rounded mr-3" height="64" width="64">
                                                                 <div class="media-body">
