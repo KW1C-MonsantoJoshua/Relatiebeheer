@@ -1536,17 +1536,6 @@ function ViewPersonnel()
                                                    name="postcode"
                                                    value="<?= $rowPersonnel["postalcode"] ?>">
                                         </div>
-                                        <div class="controls ">
-                                            <label for="users-edit-username">Bedrijf</label>
-                                            <input type="text"
-                                                   id="users-edit-username"
-                                                   class="form-control-plaintext text-light round"
-                                                   placeholder="Postcode"
-                                                   readonly
-                                                   aria-invalid="false"
-                                                   name="bedrijf"
-                                                   value="<?php ViewCompanyPersonnel(); ?>">
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4">
@@ -1575,8 +1564,14 @@ function ViewPersonnel()
                                         </div>
                                         <div class="controls ">
                                             <label for="users-edit-username">Bedrijf</label>
-                                            <br>
-                                            <?php ViewCompanyPersonnel(); ?>
+                                            <input type="text"
+                                                   id="users-edit-username"
+                                                   class="form-control-plaintext text-light round"
+                                                   placeholder="Postcode"
+                                                   readonly
+                                                   aria-invalid="false"
+                                                   name="bedrijf"
+                                                   value="<?php ViewCompanyPersonnel(); ?>">
                                         </div>
                                     </div>
                                 </div>
