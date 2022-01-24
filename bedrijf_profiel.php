@@ -84,21 +84,10 @@ include "partials/navbar.php";
                                 <div class="card-body">
                                     <div class="tab-content">
                                         <!-- General Tab -->
+
+
+
                                         <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
-                                            <div class="media">
-                                                <img src="uploads/<?=$row['image_url']?>" alt="profile-img" class="rounded mr-3" height="64" width="64">
-                                                <div class="media-body">
-                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
-                                                        <form action="page-account-settings.php" method="post" enctype="multipart/form-data">
-                                                            <input type="file" name="my_image" type="button" class="btn btn-sm btn-primary mb-1 mb-sm-0">
-                                                            <input type="submit" class="btn btn-sm btn-primary mb-1 mb-sm-0" name="submitpic" value="Upload">
-                                                        </form>
-                                                    </div>
-                                                    <p class="text-muted mb-0 mt-1 mt-sm-0">
-                                                        <small>Allowed JPG, GIF or PNG. Max size of 800kB</small>
-                                                    </p>
-                                                </div>
-                                            </div>
                                             <hr class="mt-1 mt-sm-2">
                                             <form method="post" action="page-account-settings.php">
                                                 <div class="row">
@@ -161,6 +150,10 @@ include "partials/navbar.php";
                                                 </div>
                                             </form>
                                         </div>
+
+
+
+
                                         <!-- Change Password Tab -->
                                         <div class="tab-pane" id="change-password" role="tabpanel" aria-labelledby="change-password-tab">
                                             <form method="post">
@@ -188,6 +181,12 @@ include "partials/navbar.php";
                                                 </div>
                                             </form>
                                         </div>
+
+
+
+
+
+
                                         <!-- Connections Tab -->
                                         <div class="tab-pane" id="connections" role="tabpanel" aria-labelledby="connections-tab">
                                             <form method="post">
