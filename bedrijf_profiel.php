@@ -182,29 +182,6 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-4">
-                                                        <div class="form-group">
-                                                            <h4>Contactgegevens</h4>
-                                                        </div>
-                                                        <div class="controls">
-                                                            <label for="email">E-mail</label>
-                                                            <input type="email" id="email"
-                                                                   class="form-control round"
-                                                                   placeholder="Typeemail@hier.com" required
-                                                                   aria-invalid="false" name="email_z">
-                                                        </div>
-                                                        </br>
-                                                        <div class="controls">
-                                                            <label for="telefoonnummer">Telefoonnummer</label>
-                                                            <input type="text" id="telefoonnummer"
-                                                                   class="form-control round"
-                                                                   pattern="[0-9]{1,15}"
-                                                                   title="Alleen cijfers"
-                                                                   placeholder="Telefoonnummer" required
-                                                                   aria-invalid="false"
-                                                                   name="telefoonnummer_z">
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 </br>
                                                 </br>
