@@ -160,7 +160,7 @@ include "partials/navbar.php";
                                         <div class="tab-pane" id="change-password" role="tabpanel" aria-labelledby="change-password-tab">
                                             <form novalidate>
                                                 <div class="form-group">
-                                                    <label for="old-password">Old Password</label>
+                                                    <label for="old-password">Old Passworde</label>
                                                     <div class="controls">
                                                         <input type="password" id="old-password" class="form-control" placeholder="Old Password" required>
                                                     </div>
