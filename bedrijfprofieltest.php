@@ -156,6 +156,8 @@ include "partials/navbar.php";
                                         </div>
 
 
+                                    </br>
+
                                         <div class="card">
                                             <div class="card-content">
                                                 <div class="card-body">
