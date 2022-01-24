@@ -159,10 +159,6 @@ include "partials/navbar.php";
                                     </br>
                                         </br>
 
-                                        <div class="card">
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <div class="tab-content">
                                                         <!-- General Tab -->
                                                         <div class="tab-pane active" id="generall" role="tabpanel" aria-labelledby="general-tab">
                                                             <div class="media">
