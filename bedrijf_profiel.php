@@ -101,7 +101,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
                                                                        name="name"
-                                                                       value="<?= $rowC["name"]; ?>">
+<!--                                                                       value="--><?//= $rowC["name"]; ?><!--">-->
                                                             </div>
                                                         </div>
                                                         <div class="col-md-3">
@@ -112,7 +112,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Huisnummer"
                                                                        name="huisnummer"
-                                                                       value="<?=$rowC['housenumber']?>">
+<!--                                                                       value="--><?//=$rowC['housenumber']?><!--">-->
                                                             </div>
                                                         </div>
                                                         <div class="col-md-3">
@@ -123,7 +123,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Toevoeging"
                                                                        name="toevoeging"
-                                                                       value="<?=$rowC['housenumberAddition']?>">
+<!--                                                                       value="--><?//=$rowC['housenumberAddition']?><!--">-->
                                                             </div>
                                                         </div>
                                                     </div>
@@ -136,7 +136,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Adres"
                                                                        name="street"
-                                                                       value="<?=$rowC['street']?>">
+<!--                                                                       value="--><?//=$rowC['street']?><!--">-->
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
@@ -147,7 +147,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Postcode"
                                                                        name="postcode"
-                                                                       value="<?=$rowC['postalcode']?>">
+<!--                                                                       value="--><?//=$rowC['postalcode']?><!--">-->
                                                             </div>
                                                         </div>
                                                     </div>
@@ -182,7 +182,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Telefoon"
                                                                        name="telefoon"
-                                                                       value="<?=$rowC['phoneNumber']?>">
+<!--                                                                       value="--><?//=$rowC['phoneNumber']?><!--">-->
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
@@ -193,7 +193,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Website"
                                                                        name="website"
-                                                                       value="<?=$rowC['website']?>">
+<!--                                                                       value="--><?//=$rowC['website']?><!--">-->
                                                             </div>
                                                         </div>
                                                     </div>
@@ -206,7 +206,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Email"
                                                                        name="email"
-                                                                       value="<?=$rowC['email']?>">
+<!--                                                                       value="--><?//=$rowC['email']?><!--">-->
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
