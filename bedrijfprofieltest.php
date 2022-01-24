@@ -43,7 +43,7 @@ include "partials/navbar.php";
             <div class="content-wrapper">
                 <div class="row">
                     <div class="col-12">
-                        <div class="content-header">Account Settings</div>
+                        <div class="content-header">Account Settingss</div>
                         <p class="content-sub-header mb-1">Configure account settings to your needs.</p>
                     </div>
                 </div>
