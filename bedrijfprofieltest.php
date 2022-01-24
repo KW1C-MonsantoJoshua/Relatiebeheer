@@ -184,6 +184,33 @@ include "partials/navbar.php";
                                             </form>
                                         </div>
 
+                                        <div class="tab-pane" id="change-password" role="tabpanel" aria-labelledby="change-password-tab">
+                                            <form novalidate>
+                                                <div class="form-group">
+                                                    <label for="old-password">Old Passworde</label>
+                                                    <div class="controls">
+                                                        <input type="password" id="old-password" class="form-control" placeholder="Old Password" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="new-password">New Password</label>
+                                                    <div class="controls">
+                                                        <input type="password" id="new-password" class="form-control" placeholder="New Password" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="retype-new-password">Retype New Password</label>
+                                                    <div class="controls">
+                                                        <input type="password" id="retype-new-password" class="form-control" placeholder="New Password" required>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-sm-row flex-column justify-content-end">
+                                                    <button type="submit" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
+                                                    <button type="reset" class="btn btn-secondary mb-1">Cancel</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
                                         <!-- Info Tab -->
                                         <div class="tab-pane" id="info" role="tabpanel" aria-labelledby="info-tab">
                                             <form novalidate>
