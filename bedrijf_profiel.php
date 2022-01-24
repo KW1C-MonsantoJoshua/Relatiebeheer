@@ -127,7 +127,7 @@ include "partials/navbar.php";
                                                             </div>
                                                             </br>
                                                             <div class="controls">
-                                                                <label for="achternaam">Achternaam</label>
+                                                                <label for="achternaam">Achternaamm</label>
                                                                 <input type="text" id="achternaam"
                                                                        class="form-control round"
                                                                        pattern="[a-zA-Z]{1,10}"
