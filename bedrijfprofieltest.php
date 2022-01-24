@@ -193,7 +193,7 @@ include "partials/navbar.php";
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="new-password">New Password</label>
+                                                    <label for="new-password">New Passworde</label>
                                                     <div class="controls">
                                                         <input type="password" id="new-password" class="form-control" placeholder="New Password" required>
                                                     </div>
