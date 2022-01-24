@@ -91,9 +91,7 @@ include "partials/navbar.php";
                                         <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
                                             <hr class="mt-1 mt-sm-2">
                                             <form class=" form " id="formSettings" method="post">
-                                                <div class="form-body"><h6 class="mt-3"><i
-                                                            class="ft-eye mr-2"></i>Over <?= $rowC["name"]; ?>
-                                                    </h6>
+                                                <div class="form-body">
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
