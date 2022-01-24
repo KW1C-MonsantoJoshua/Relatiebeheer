@@ -96,7 +96,6 @@ include "partials/navbar.php";
                                                         <div class="form-group">
                                                             <h4>Klantgegevenss</h4>
                                                             <div class="controls">
-                                                                <div class="controls">
                                                                     <label for="bedrijfsnaam"
                                                                            class="sr-only">Bedrijfsnaamm</label>
                                                                     <input type="text" id="bedrijfsnaam"
@@ -107,6 +106,7 @@ include "partials/navbar.php";
 <!--                                                                    <input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
                                                                 </div>
                                                                 </br>
+                                                                <div class="controls">
                                                                 <label for="users-edit-username">Voornaam</label>
                                                                 <input type="text" id="users-edit-username"
                                                                        class="form-control round"
