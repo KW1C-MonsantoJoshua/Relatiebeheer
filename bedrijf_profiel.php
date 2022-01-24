@@ -102,7 +102,9 @@ include "partials/navbar.php";
                                                                            class="form-control"
                                                                            placeholder="Bedrijfsnaam"
                                                                            name="name"
+                                                                           value="<?= $rowC["name"]; ?>">
                                                                 </div>
+                                                                </br>
                                                             <div class="controls">
                                                                 <label for="bedrijfsnaam"
                                                                        class="sr-only">Bedrijfsnaamm</label>
@@ -110,7 +112,10 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
                                                                        name="name"
+                                                                       value="<?= $rowC["name"]; ?>">
+                                                                <!--<input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
                                                             </div>
+                                                            </br>
                                                             <div class="controls">
                                                                 <label for="users-edit-username">Tussenvoegsel</label>
                                                                 <input type="text" id="users-edit-username"
