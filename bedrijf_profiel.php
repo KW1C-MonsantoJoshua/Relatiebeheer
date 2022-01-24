@@ -141,15 +141,15 @@ include "partials/navbar.php";
                                                     <div class="col-12 col-md-4">
                                                         <div class="form-group">
                                                             <h4>Adresgegevens</h4>
-                                                            <div class="controls ">
-                                                                <label for="postcode">Postcode</label>
-                                                                <input type="text" id="postcode_z"
-                                                                       class="form-control round"
-                                                                       pattern="[0-9]{4}[A-Za-z]{2}"
-                                                                       title="Bijvoorbeeld: '1234AB'"
-                                                                       placeholder="Postcode" required
-                                                                       aria-invalid="false" name="postcode_z"
-                                                                       onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
+                                                            <div class="controls">
+                                                                <label for="bedrijfsnaam"
+                                                                       class="sr-only">Bedrijfsnaamm</label>
+                                                                <input type="text" id="bedrijfsnaam"
+                                                                       class="form-control"
+                                                                       placeholder="Bedrijfsnaam"
+                                                                       name="name"
+                                                                       value="<?= $rowC["name"]; ?>">
+                                                                <!--<input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
                                                             </div>
                                                             </br>
                                                             <div class="form-group row">
