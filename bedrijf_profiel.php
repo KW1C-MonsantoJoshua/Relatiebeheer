@@ -184,6 +184,7 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
                                                 </br>
                                                 </br>
                                                 <div class="modal-footer">
