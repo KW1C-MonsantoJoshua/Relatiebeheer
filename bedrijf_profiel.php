@@ -196,16 +196,6 @@ include "partials/navbar.php";
                                                                    aria-invalid="false" name="email_z">
                                                         </div>
                                                         </br>
-                                                        <div class="controls">
-                                                            <label for="telefoonnummer">Telefoonnummer</label>
-                                                            <input type="text" id="telefoonnummer"
-                                                                   class="form-control round"
-                                                                   pattern="[0-9]{1,15}"
-                                                                   title="Alleen cijfers"
-                                                                   placeholder="Telefoonnummer" required
-                                                                   aria-invalid="false"
-                                                                   name="telefoonnummer_z">
-                                                        </div>
                                                     </div>
                                                 </div>
                                                 </br>
