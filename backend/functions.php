@@ -1433,7 +1433,7 @@ function ViewPersonnel()
     global $mysqli;
     $DataCustomer = "SELECT personnel.id,personnel.first_name,personnel.last_name_prefix,
         personnel.last_name,personnel.street,personnel.housenumber,personnel.email,
-        personnel.housenumberAddition,personnel.postalcode,personnel.phoneNumber,personnel.authentication_level
+        personnel.housenumberAddition,personnel.postalcode,personnel.phoneNumber,personnel.authentication_level,personnel.notes
  FROM personnel 
      LEFT JOIN organisation 
          ON personnel.member_of = organisation.id 
@@ -1491,6 +1491,14 @@ function ViewPersonnel()
                                                    aria-invalid="false"
                                                    name="achternaam"
                                                    value="<?= $rowPersonnel["last_name"] ?>">
+                                        </div>
+                                        <div class="controls">
+                                            <label for="notities">Notities</label>
+                                            <textarea  placeholder="Plaats hier je notities"
+                                                       id="notities"
+                                                       readonly
+                                                       name="notities_pe"
+                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowPersonnel['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1639,7 +1647,7 @@ function editPersonnel()
     global $mysqli;
     $DataCustomer = "SELECT personnel.id,personnel.first_name,personnel.last_name_prefix,
     personnel.last_name,personnel.street,personnel.housenumber,personnel.email,
-    personnel.housenumberAddition,personnel.postalcode,personnel.phoneNumber,personnel.authentication_level
+    personnel.housenumberAddition,personnel.postalcode,personnel.phoneNumber,personnel.authentication_level,personnel.notes
     FROM personnel
     LEFT JOIN organisation
     ON personnel.member_of = organisation.id
@@ -1713,7 +1721,7 @@ function editPersonnel()
                                             <textarea  placeholder="Plaats hier je notities"
                                                        id="notities"
                                                        name="notities_pe"
-                                                       rows="6" cols="50" maxlength="600"></textarea>
+                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowPersonnel['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1829,11 +1837,11 @@ function editPersonnel()
 
             $query = "UPDATE `personnel` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
                                 `street`= ?,`housenumber`=?, `postalcode`=?,`phoneNumber`=?,
-                                `email`= ?, `authentication_level`=? WHERE id = ?";
+                                `email`= ?, `authentication_level`=?,`notes`=? WHERE id = ?";
             $stmt = $mysqli->prepare($query);
-            $stmt->bind_param('sssssssssi', $voornaam, $tussenvoegsel, $achternaam
+            $stmt->bind_param('ssssssssssi', $voornaam, $tussenvoegsel, $achternaam
                 , $straatnaam, $_POST["huisnummer_pe"], $_POST["postcode_pe"],
-                $_POST["telefoonnummer_pe"], $_POST["email_pe"],$_POST["function"], $_POST["id"]);
+                $_POST["telefoonnummer_pe"], $_POST["email_pe"],$_POST["function"],$_POST['notities_pe'], $_POST["id"]);
             $stmt->execute();
         }
     }
