@@ -98,7 +98,7 @@ include "partials/navbar.php";
                                                             <div class="controls">
                                                                 <div class="controls">
                                                                     <label for="bedrijfsnaam"
-                                                                           class="sr-only">Bedrijfsnaam</label>
+                                                                           class="sr-only">Bedrijfsnaamm</label>
                                                                     <input type="text" id="bedrijfsnaam"
                                                                            class="form-control"
                                                                            placeholder="Bedrijfsnaam"
