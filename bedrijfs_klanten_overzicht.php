@@ -247,7 +247,7 @@ include "partials/navbar.php";
                                                                 <th>Voornaam</th>
                                                                 <th>Email</th>
                                                                 <th>Telefoonnummer</th>
-                                                                <th>Functie</th>
+                                                                <th>Niveau</th>
                                                                 <th>Handelingen</th>
                                                             </tr>
                                                             </thead>
