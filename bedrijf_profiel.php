@@ -97,7 +97,7 @@ include "partials/navbar.php";
                                                             <h4>Klantgegevensss</h4>
                                                             <div class="controls">
                                                                 <div class="controls ">
-                                                                    <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                                                                    <label for="bedrijfsnaam">Bedrijfssnaam</label>
                                                                     <input type="text" id="bedrijfsnaam"
                                                                            class="form-control round"
                                                                            pattern="[a-zA-Z\s\.0-9]{1,15}"
