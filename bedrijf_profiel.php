@@ -106,14 +106,15 @@ include "partials/navbar.php";
 <!--                                                                    <input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
                                                                 </div>
                                                                 </br>
-                                                                <div class="controls">
-                                                                <label for="users-edit-username">Voornaam</label>
-                                                                <input type="text" id="users-edit-username"
-                                                                       class="form-control round"
-                                                                       pattern="[a-zA-Z]{1,10}"
-                                                                       title="Alleen letters"
-                                                                       placeholder="Voornaam" required
-                                                                       aria-invalid="false" name="voornaam_z">
+                                                            <div class="controls">
+                                                                <label for="bedrijfsnaam"
+                                                                       class="sr-only">Bedrijfsnaamm</label>
+                                                                <input type="text" id="bedrijfsnaam"
+                                                                       class="form-control"
+                                                                       placeholder="Bedrijfsnaam"
+                                                                       name="name"
+                                                                       value="<?= $rowC["name"]; ?>">
+                                                                <!--<input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
                                                             </div>
                                                             </br>
                                                             <div class="controls">
