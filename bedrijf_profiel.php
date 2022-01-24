@@ -78,6 +78,7 @@ include "partials/navbar.php";
                             </li>
                         </ul>
                     </div>
+                    <div class="col-md-9">
                         <!-- Tab panes -->
                         <div class="card">
                             <div class="card-content">
@@ -213,7 +214,7 @@ include "partials/navbar.php";
                                             </form>
                                         </div>
 
-
+                    </div>
                 </div>
             </div>
         </div>
