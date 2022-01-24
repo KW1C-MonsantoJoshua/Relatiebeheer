@@ -188,7 +188,7 @@ include "partials/navbar.php";
                                                 <div class="modal-footer">
                                                     <button type="reset"
                                                             data-dismiss="modal"
-                                                            class="btn btn-secondary">Cancel
+                                                            class="btn btn-secondary">Cancell
                                                     </button>
                                                     <input type="submit"
                                                            class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
