@@ -89,63 +89,179 @@ include "partials/navbar.php";
                                         <h1>Bedrijf Info</h1>
                                         <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
                                             <hr class="mt-1 mt-sm-2">
-                                            <form method="post" action="page-account-settings.php">
-                                                <div class="row">
-                                                    <div class="col-12 form-group">
-                                                        <label for="username">Username</label>
-                                                        <div class="controls">
-                                                            <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php echo $row['username']; ?>" required>
+                                            <form class=" form " id="formSettings" method="post">
+                                                <div class="form-body"><h6 class="mt-3"><i
+                                                            class="ft-eye mr-2"></i>Over <?= $rowC["name"]; ?>
+                                                    </h6>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="bedrijfsnaam"
+                                                                       class="sr-only">Bedrijfsnaam</label>
+                                                                <input type="text" id="bedrijfsnaam"
+                                                                       class="form-control"
+                                                                       placeholder="Bedrijfsnaam"
+                                                                       name="name"
+                                                                       value="<?= $rowC["name"]; ?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="huisnummer"
+                                                                       class="sr-only">Huisnummer</label>
+                                                                <input type="text" id="huisnummer"
+                                                                       class="form-control"
+                                                                       placeholder="Huisnummer"
+                                                                       name="huisnummer"
+                                                                       value="<?=$rowC['housenumber']?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="toevoeging"
+                                                                       class="sr-only">Toevoeging</label>
+                                                                <input type="text" id="toevoeging"
+                                                                       class="form-control"
+                                                                       placeholder="Toevoeging"
+                                                                       name="toevoeging"
+                                                                       value="<?=$rowC['housenumberAddition']?>">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 form-group">
-                                                        <label for="name">Name</label>
-                                                        <div class="controls">
-                                                            <input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<?php echo $row['name']; ?>" required>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="adres"
+                                                                       class="sr-only">Adres</label>
+                                                                <input type="text" id="adres"
+                                                                       class="form-control"
+                                                                       placeholder="Adres"
+                                                                       name="street"
+                                                                       value="<?=$rowC['street']?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="postcode"
+                                                                       class="sr-only">Postcode</label>
+                                                                <input type="text" id="postcode"
+                                                                       class="form-control"
+                                                                       placeholder="Postcode"
+                                                                       name="postcode"
+                                                                       value="<?=$rowC['postalcode']?>">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 form-group">
-                                                        <label for="name">E-mail</label>
-                                                        <div class="controls">
-                                                            <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="<?php echo $row['email']; ?>" required>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="plaats" class="sr-only">Plaats</label>
+                                                                <input class="form-control"
+                                                                       type="text"
+                                                                       placeholder="Plaats"
+                                                                       id="plaats" name="plaats">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="mobiel"
+                                                                       class="sr-only">Mobiel</label>
+                                                                <input type="text" id="mobiel"
+                                                                       class="form-control"
+                                                                       placeholder="Mobiel"
+                                                                       name="mobiel"
+                                                                       value="">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 form-group">
-                                                        <div class="controls">
-                                                            <input type="hidden" id="email" name=email"" class="form-control" placeholder="E-mail" value="<?php echo $row['email']; ?>" required>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="telefoon"
+                                                                       class="sr-only">Telefoon</label>
+                                                                <input type="text" id="telefoon"
+                                                                       class="form-control"
+                                                                       placeholder="Telefoon"
+                                                                       name="telefoon"
+                                                                       value="<?=$rowC['phoneNumber']?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="website"
+                                                                       class="sr-only">Website</label>
+                                                                <input type="text" id="website"
+                                                                       class="form-control"
+                                                                       placeholder="Website"
+                                                                       name="website"
+                                                                       value="<?=$rowC['website']?>">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <div class="alert bg-light-warning alert-dismissible mb-2">
-                                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                                <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                                                            </button>
-                                                            <p class="mb-0">Your email is not confirmed. Please check your inbox.</p>
-                                                            <a href="javascript:;" class="alert-link">Resend confirmation</a>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="email"
+                                                                       class="sr-only">Email</label>
+                                                                <input type="text" id="email"
+                                                                       class="form-control"
+                                                                       placeholder="Email"
+                                                                       name="email"
+                                                                       value="<?=$rowC['email']?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="btw"
+                                                                       class="sr-only">BTW
+                                                                    Nummer</label>
+                                                                <input type="text" id="btw"
+                                                                       class="form-control"
+                                                                       placeholder="BTW Nummer"
+                                                                       name="btw">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div style="color: red" class="error-message"><?php
-                                                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                                                            if (isset($error)) {
-                                                                echo $error;
-                                                            }
-                                                        }
-                                                        ?>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="kvk" class="sr-only">KVK
+                                                                    Nummer</label>
+                                                                <input class="form-control"
+                                                                       type="text"
+                                                                       placeholder="KVK Nummer"
+                                                                       id="kvk">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="bic"
+                                                                       class="sr-only">BIC</label>
+                                                                <input class="form-control"
+                                                                       type="text"
+                                                                       placeholder="BIC"
+                                                                       id="bic">
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                        <button type="submit" name="save" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
-                                                        <a href="<?php if ($_SESSION['memb_of'] == 0) {
-                                                            echo "../bedrijfs_overzicht.php?";
-                                                        } else {
-                                                            if (isset($_SESSION['auth']) && isset($_SESSION['memb_of'])) {
-                                                                if ($_SESSION['auth'] == "Werknemer") {
-                                                                    echo "klanten_overzicht.php?custof=$memb_of&membof=$memb_of";
-                                                                } else {
-                                                                    echo "bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of";
-                                                                }
-                                                            }
-                                                        } ?>" class="btn btn-secondary mb-1">
-                                                            Cancel
-                                                        </a>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="iban"
+                                                                       class="sr-only">IBAN
+                                                                    Nummer</label>
+                                                                <input class="form-control"
+                                                                       type="text"
+                                                                       placeholder="IBAN Nummer"
+                                                                       id="iban">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="float-right">
+                                                        <button type="button" name="bijwerken"
+                                                                class="btn btn-primary confirm-text ">Opslaan <i
+                                                                class="ft-check"></i>
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </form>
