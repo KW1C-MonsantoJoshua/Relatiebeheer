@@ -94,7 +94,7 @@ include "partials/navbar.php";
                                                 <div class="row">
                                                     <div class="col-12 col-md-4">
                                                         <div class="form-group">
-                                                            <h4>Klantgegevensss</h4>
+                                                            <h4>Klantgegevenss</h4>
                                                             <div class="controls">
                                                                 <div class="controls ">
                                                                     <label for="bedrijfsnaam">Bedrijfssnaam</label>
