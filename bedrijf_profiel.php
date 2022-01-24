@@ -86,9 +86,8 @@ include "partials/navbar.php";
                                         <!-- General Tab -->
 
 
-
+                                        <h1>Bedrijf Info</h1>
                                         <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
-                                            <h1>Bedrijf Info</h1>
                                             <hr class="mt-1 mt-sm-2">
                                             <form method="post" action="page-account-settings.php">
                                                 <div class="row">
