@@ -103,7 +103,7 @@ include "partials/navbar.php";
                                                                            pattern="[a-zA-Z\s\.0-9]{1,15}"
                                                                            placeholder="Bedrijfsnaam" required
                                                                            aria-invalid="false" name="bedrijfsnaam">
-                                                                    <input type="hidden" name="custof" value="<?= $_GET["custof"] ?>">
+<!--                                                                    <input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
                                                                 </div>
                                                                 </br>
                                                                 <label for="users-edit-username">Voornaam</label>
