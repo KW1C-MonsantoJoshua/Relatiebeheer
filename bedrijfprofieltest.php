@@ -156,68 +156,6 @@ include "partials/navbar.php";
                                         </div>
 
 
-                                    </br>
-                                        </br>
-
-                                                        <!-- General Tab -->
-                                                        <div class="tab-pane" id="generall" role="tabpanel" aria-labelledby="general-tab">
-                                                            <div class="media">
-                                                                <img src="../../../app-assets/img/portrait/small/avatar-s-8.png" alt="profile-img" class="rounded mr-3" height="64" width="64">
-                                                                <div class="media-body">
-                                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-start px-0 mb-sm-2">
-                                                                        <label class="btn btn-sm bg-light-primary mb-sm-0" for="select-files">Upload Photo</label>
-                                                                        <input type="file" id="select-files" hidden>
-                                                                        <button class="btn btn-sm bg-light-secondary ml-sm-2">Reset</button>
-                                                                    </div>
-                                                                    <p class="text-muted mb-0 mt-1 mt-sm-0">
-                                                                        <small>Allowed JPG, GIF or PNG. Max size of 800kB</small>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            <hr class="mt-1 mt-sm-2">
-                                                            <form novalidate>
-                                                                <div class="row">
-                                                                    <div class="col-12 form-group">
-                                                                        <label for="username">Username</label>
-                                                                        <div class="controls">
-                                                                            <input type="text" id="username" class="form-control" placeholder="Username" value="hermione007" required>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 form-group">
-                                                                        <label for="name">Name</label>
-                                                                        <div class="controls">
-                                                                            <input type="text" id="name" class="form-control" placeholder="Name" value="Hermione Granger" required>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 form-group">
-                                                                        <label for="email">E-mail</label>
-                                                                        <div class="controls">
-                                                                            <input type="text" id="email" class="form-control" placeholder="E-mail" value="granger007@hogward.com" required>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12">
-                                                                        <div class="alert bg-light-warning alert-dismissible mb-2">
-                                                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                                                <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                                                                            </button>
-                                                                            <p class="mb-0">Your email is not confirmed. Please check your inbox.</p>
-                                                                            <a href="javascript:;" class="alert-link">Resend confirmation</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 form-group">
-                                                                        <label for="company">Company</label>
-                                                                        <div class="controls">
-                                                                            <input type="text" id="company" class="form-control" placeholder="Company Name" aria-invalid="false" required>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                                        <button type="submit" class="btn btn-primary mr-sm-2 mb-1">Save Changes</button>
-                                                                        <button type="reset" class="btn btn-secondary mb-1">Cancel</button>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-
                                         <!-- Change Password Tab -->
                                         <div class="tab-pane" id="change-password" role="tabpanel" aria-labelledby="change-password-tab">
                                             <form novalidate>
