@@ -1275,7 +1275,7 @@ function ViewUserZ()
     $DataCustomer = "SELECT customers_business.id,customers_business.status,customers_business.first_name,customers_business.last_name_prefix,
         customers_business.last_name,customers_business.street,customers_business.housenumber,customers_business.housenumberAddition,
         customers_business.housenumberAddition,customers_business.postalcode,customers_business.email,customers_business.phoneNumber,customers_business.business,
-       customers_business.customer_of,customers_business.notes
+       customers_business.customer_of,customers_business.notes,customer_business.notes_date
  FROM customers_business 
      LEFT JOIN organisation 
          ON customers_business.customer_of = organisation.id 
@@ -1352,6 +1352,7 @@ function ViewUserZ()
                                                        name="notities_z"
                                                        readonly
                                                        rows="6" cols="50" maxlength="600"><?php  echo $rowCustomer['notes']; ?></textarea>
+                                            <span><?php  echo $rowCustomer['notes_date']; ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -2066,7 +2067,7 @@ function editUserZ()
     $DataCustomer = "SELECT customers_business.id,customers_business.status,customers_business.first_name,customers_business.last_name_prefix,
         customers_business.last_name,customers_business.street,customers_business.housenumber,customers_business.housenumberAddition,
         customers_business.housenumberAddition,customers_business.postalcode,customers_business.email,customers_business.phoneNumber,customers_business.business,
-       customers_business.customer_of,customers_business.notes
+       customers_business.customer_of,customers_business.notes,customer_business.notes_date
  FROM customers_business 
      LEFT JOIN organisation 
          ON customers_business.customer_of = organisation.id 
@@ -2148,6 +2149,8 @@ function editUserZ()
                                                        id="notities"
                                                        name="notities_z"
                                                        rows="6" cols="50" maxlength="600"><?php  echo $rowCustomer['notes']; ?></textarea>
+                                            <span><?php  echo $rowCustomer['notes_date']; ?></span>
+
                                         </div>
                                     </div>
                                 </div>
@@ -2248,16 +2251,17 @@ function editUserZ()
             $achternaam = ucfirst($_POST['achternaam_z']);
             $straatnaam = ucfirst($_POST['straatnaam_z']);
             $bedrijf = ucfirst($_POST['business_z']);
+            $date = date("l jS \of F Y h:i:s");
 
             $query = "UPDATE `customers_business` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
                                 `street`= ?,`housenumber`=?,`housenumberAddition`=?,`postalcode`=?,`phoneNumber`=?,
-                                `email`= ?,`status`= ?,`business`=?,`notes`=? WHERE id = ?";
+                                `email`= ?,`status`= ?,`business`=?,`notes`=?,`notes_date`=?, WHERE id = ?";
             $stmt = $mysqli->prepare($query);
 //        $options = ['cost' => 12,];
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
-            $stmt->bind_param('ssssssssssssi', $voornaam, $tussenvoegsel, $achternaam
+            $stmt->bind_param('sssssssssssssi', $voornaam, $tussenvoegsel, $achternaam
                 , $straatnaam, $_POST["huisnummer_z"], $_POST["huisnummertoevoeging_z"], $_POST["postcode_z"],
-                $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"],$bedrijf,$_POST['notities_z'],$_POST["id_z"]);
+                $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"],$bedrijf,$_POST['notities_z'],$date,$_POST["id_z"]);
             $stmt->execute();
         }
     }
