@@ -2248,7 +2248,7 @@ function editUserZ()
             $achternaam = ucfirst($_POST['achternaam_z']);
             $straatnaam = ucfirst($_POST['straatnaam_z']);
             $bedrijf = ucfirst($_POST['business_z']);
-            $date = date("l jS \of F Y h:i:s");
+
 
             $query = "UPDATE `customers_business` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
                                 `street`= ?,`housenumber`=?,`housenumberAddition`=?,`postalcode`=?,`phoneNumber`=?,
