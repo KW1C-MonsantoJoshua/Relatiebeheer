@@ -1,7 +1,7 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
-//UpdateCompanyInfo();
+UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 ViewUserP();
 ViewUserZ();
@@ -294,9 +294,6 @@ include "partials/navbar.php";
                                                                                            placeholder="Bedrijfsnaam"
                                                                                            name="name"
                                                                                            value="<?= $rowC["name"]; ?>">
-                                                                                    <input type="hidden"
-                                                                                           id="id"
-                                                                                           value="<?= $_GET['membof'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-3">
@@ -434,6 +431,9 @@ include "partials/navbar.php";
                                                                                            id="iban"
                                                                                            value="<?= $rowC['iban_nummer'] ?>">
                                                                                 </div>
+                                                                                <input type="hidden"
+                                                                                       id="id_company"
+                                                                                       value="<?= $rowC['id'] ?>">
                                                                             </div>
                                                                         </div>
                                                                         <div class="float-right">

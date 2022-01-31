@@ -83,7 +83,7 @@ function UpdateCompanyInfo(){
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('ssisssssiiii', $_POST["name"], $_POST["street"], $_POST["huisnummer"],
             $_POST["toevoeging"], $_POST["postcode"], $_POST["website"], $_POST["telefoon"], $_POST["email"],
-            $_POST["kvk"],$_POST["btw"],$_POST["iban"],$_GET["id"]);
+            $_POST["kvk"],$_POST["btw"],$_POST["iban"],$_POST["id_company"]);
         $stmt->execute();
     }
     else{
