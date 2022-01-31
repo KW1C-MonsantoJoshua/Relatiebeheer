@@ -29,7 +29,7 @@
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-xs-2 col-md-1">
-                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                                <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png" class="img-circle img-responsive" alt="" /></div>
                             <div class="col-xs-10 col-md-11">
                                 <div>
                                     <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">
