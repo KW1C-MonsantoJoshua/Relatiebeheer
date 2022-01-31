@@ -78,8 +78,8 @@ function UpdateCompanyInfo(){
     global $mysqli;
     if (isset($_POST['formSettings'])) {
         $query = "UPDATE `organisation`  SET  name = ?, street = ?,housenumber = ?,housenumberAddition = ?,
-                         postalcode = ?,website = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer=?,
-                           iban_nummer = ? WHERE id=?";
+                         postalcode = ?,website = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer = ?,
+                         iban_nummer = ? WHERE id= ?;";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('ssisssssiiii', $_POST["name"], $_POST["street"], $_POST["huisnummer"],
             $_POST["toevoeging"], $_POST["postcode"], $_POST["website"], $_POST["telefoon"], $_POST["email"],
