@@ -27,8 +27,6 @@
 
                         <h4 class="media-heading user_name">Baltej Singh</h4>
                         Wow! this is really great.
-
-                        <p><small><a href="">Like</a> - <a href="">Share</a></small></p>
                     </div>
                 </div>
 
