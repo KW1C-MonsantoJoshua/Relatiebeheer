@@ -228,7 +228,6 @@ include "partials/navbar.php";
                 </div>
             </div>
         </div>
-    </div>
 
                         <!-- Tab panes -->
                         <div class="card">
@@ -352,6 +351,7 @@ include "partials/navbar.php";
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
 <!-- END Notification Sidebar-->
 <div class="sidenav-overlay"></div>
