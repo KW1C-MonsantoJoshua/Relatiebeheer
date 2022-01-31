@@ -2244,7 +2244,7 @@ function editUserZ()
 
             $query = "UPDATE `customers_business` SET `first_name`=?,`last_name_prefix`=?,`last_name`=?,
                                 `street`= ?,`housenumber`=?,`housenumberAddition`=?,`postalcode`=?,`phoneNumber`=?,
-                                `email`= ?,`status`= ?,`business`=?,`notes`=?, WHERE id = ?";
+                                `email`= ?,`status`= ?,`business`=?,`notes`=? WHERE id = ?";
             $stmt = $mysqli->prepare($query);
 //        $options = ['cost' => 12,];
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
