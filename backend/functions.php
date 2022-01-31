@@ -76,7 +76,7 @@ function GetCompanyInfo(){
 }
 function UpdateCompanyInfo(){
     global $mysqli;
-    if (isset($_POST['SaveCompanySettings'])) {
+    if (isset($_POST['Instellingen'])) {
         $query = "UPDATE `organisation`  SET  name = ?, street = ?,housenumber = ?,housenumberAddition = ?,
                          postalcode = ?,website = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer = ?,
                          iban_nummer = ? WHERE id= ?;";
