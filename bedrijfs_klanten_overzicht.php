@@ -379,6 +379,7 @@ include "partials/navbar.php";
                                                                                            value="<?= $rowC['email'] ?>">
                                                                                 </div>
                                                                             </div>
+
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="btw"
@@ -391,53 +392,55 @@ include "partials/navbar.php";
                                                                                            value="<?= $rowC['btw_nummer'] ?>">
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="row">
-                                                                                <div class="col-md-6">
-                                                                                    <div class="form-group">
-                                                                                        <label for="kvk"
-                                                                                               class="sr-only">KVK
-                                                                                            Nummer</label>
-                                                                                        <input class="form-control"
-                                                                                               type="text"
-                                                                                               placeholder="KVK Nummer"
-                                                                                               id="kvk"
-                                                                                               name="kvk"
-                                                                                               value="<?= $rowC['kvk_nummer'] ?>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-md-6">
-                                                                                    <div class="form-group">
-                                                                                        <label for="bic"
-                                                                                               class="sr-only">BIC</label>
-                                                                                        <input class="form-control"
-                                                                                               type="text"
-                                                                                               name="iban"
-                                                                                               placeholder="BIC"
-                                                                                               id="bic">
-                                                                                    </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="kvk"
+                                                                                           class="sr-only">KVK
+                                                                                        Nummer</label>
+                                                                                    <input class="form-control"
+                                                                                           type="text"
+                                                                                           placeholder="KVK Nummer"
+                                                                                           id="kvk"
+                                                                                           name="kvk"
+                                                                                           value="<?= $rowC['kvk_nummer'] ?>">
                                                                                 </div>
                                                                             </div>
-                                                                                <div class="col-md-6">
-                                                                                    <div class="form-group">
-                                                                                        <label for="iban"
-                                                                                               class="sr-only">IBAN
-                                                                                            Nummer</label>
-                                                                                        <input class="form-control"
-                                                                                               type="text"
-                                                                                               placeholder="IBAN Nummer"
-                                                                                               id="iban"
-                                                                                               value="<?= $rowC['iban_nummer'] ?>">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="float-right">
-                                                                                    <button type="button"
-                                                                                            name="bijwerken"
-                                                                                            class="btn btn-primary confirm-text ">
-                                                                                        Opslaan <i
-                                                                                                class="ft-check"></i>
-                                                                                    </button>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="bic"
+                                                                                           class="sr-only">BIC</label>
+                                                                                    <input class="form-control"
+                                                                                           type="text"
+                                                                                           name="iban"
+                                                                                           placeholder="BIC"
+                                                                                           id="bic">
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="iban"
+                                                                                           class="sr-only">IBAN
+                                                                                        Nummer</label>
+                                                                                    <input class="form-control"
+                                                                                           type="text"
+                                                                                           placeholder="IBAN Nummer"
+                                                                                           id="iban"
+                                                                                           value="<?= $rowC['iban_nummer'] ?>">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="float-right">
+                                                                            <button type="button"
+                                                                                    name="bijwerken"
+                                                                                    class="btn btn-primary confirm-text ">
+                                                                                Opslaan <i
+                                                                                        class="ft-check"></i>
+                                                                            </button>
+                                                                        </div>
                                                                 </form>
                                                             </div>
                                                         </div>
