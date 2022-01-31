@@ -230,7 +230,6 @@ include "partials/navbar.php";
         </div>
     </div>
 
-                    <div class="col-md-9">
                         <!-- Tab panes -->
                         <div class="card">
                             <div class="card-content">
@@ -353,7 +352,6 @@ include "partials/navbar.php";
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
 <!-- END Notification Sidebar-->
 <div class="sidenav-overlay"></div>
