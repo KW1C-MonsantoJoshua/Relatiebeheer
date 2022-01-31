@@ -8,8 +8,10 @@
         .parent {
             margin: auto;
             width: 50%;
-            border: 3px solid green;
+            border: 3px solid gray;
+            background-color: lightblue;
             padding: 10px;
+
         }
     </style>
     <title>Test</title>
