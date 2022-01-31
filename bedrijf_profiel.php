@@ -109,7 +109,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Telefoon"
                                                                        name="telefoon"
-                                                                       value="<?= $rowC['phoneNumber'] ?>">
+                                                                       value="<?= $rowC["name"]; ?>">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="email"
