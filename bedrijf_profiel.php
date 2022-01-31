@@ -174,6 +174,7 @@ include "partials/navbar.php";
                                                                        name="btw"
                                                                        value="<?= $rowC['btw_nummer'] ?>">
                                                             </div>
+                                                            </br>
                                                             <div class="form-group">
                                                                 <label for="kvk"
                                                                        class="sr-only">KVK
@@ -204,6 +205,15 @@ include "partials/navbar.php";
                                                                        id="iban"
                                                                        value="<?= $rowC['iban_nummer'] ?>">
                                                             </div>
+                                                            </div>
+                                                            <div class="controls ">
+                                                                <label for="straatnaam">Straatnaam</label>
+                                                                <input type="text" id="straat_z"
+                                                                       class="form-control round"
+                                                                       pattern="[a-zA-Z]{1,15}"
+                                                                       title="Alleen letters"
+                                                                       placeholder="Straatnaam" required
+                                                                       aria-invalid="false" name="straatnaam_z">
                                                             </div>
                                                         </div>
                                                     </div>
