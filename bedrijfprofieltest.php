@@ -20,7 +20,7 @@
             <div class="panel-heading">
                 <span class="glyphicon glyphicon-comment"></span>
                 <h3 class="panel-title">
-                    Recent Comments</h3>
+                    Meest recente notities</h3>
                 <span class="label label-info">
                     78</span>
             </div>
