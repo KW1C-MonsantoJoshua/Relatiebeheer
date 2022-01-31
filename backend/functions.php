@@ -313,6 +313,10 @@ function GetCompany(){
                             <i class="ft-eye"></i>
                         </a>
                     </div>
+                                        <div class="col-md-5">
+            <a href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?><i class="ft-eye"></i>
+                        </a>
+                    </div>
                 </div>
         </tr>
         <?php
