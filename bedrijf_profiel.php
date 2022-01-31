@@ -210,7 +210,7 @@ include "partials/navbar.php";
                                                 <div class="modal-footer">
                                                     <button type="reset"
                                                             data-dismiss="modal"
-                                                            class="btn btn-secondary">Annuleren
+                                                            class="btn btn-secondary mb-2">Annuleren
                                                     </button>
                                                     <input type="submit"
                                                            class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
