@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="comment-text">
-                                    met de klant veel gepraat met de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraat
+                                    met de klant veel gepraamet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatt met de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraat
                                 </div>
                                 <div class="action">
                                     <button type="button" class="btn btn-primary btn-xs" title="Edit">
