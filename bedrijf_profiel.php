@@ -130,7 +130,7 @@ include "partials/navbar.php";
                                                                        value="<?= $rowC['postalcode'] ?>">
                                                             </div>
                                                             <div class="form-group row">
-                                                            <div class="form-group">
+                                                            <div class="controls col-md-6">
                                                                 <label for="huisnummer"
                                                                        class="sr-only">Huisnummer</label>
                                                                 <input type="text" id="huisnummer"
@@ -139,7 +139,7 @@ include "partials/navbar.php";
                                                                        name="huisnummer"
                                                                        value="<?= $rowC['housenumber'] ?>">
                                                             </div>
-                                                            <div class="form-group">
+                                                            <div class="controls col-md-6">
                                                                 <label for="toevoeging"
                                                                        class="sr-only">Toevoeging</label>
                                                                 <input type="text" id="toevoeging"
