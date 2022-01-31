@@ -46,12 +46,12 @@ include"partials/header.php";
 include "partials/navbar.php";
 ?>
 <div class="wrapper">
-    <div class="main-panel">
+    <div class="main-panel sticky">
         <!-- BEGIN : Main Content-->
         <div class="main-content">
             <div class="content-overlay"></div>
             <div class="content-wrapper">
-                <div class=" sticky row">
+                <div class="row">
                     <div class="col-12 ">
                         <div class="content-header">Menu</div>
                         <p class="content-sub-header mb-1">vrije keuze</p>
