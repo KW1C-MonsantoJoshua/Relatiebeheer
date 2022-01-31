@@ -327,6 +327,7 @@ include "partials/navbar.php";
                             </div>
                         </div>
                     </div>
+                </div>
 <!-- END Notification Sidebar-->
 <div class="sidenav-overlay"></div>
 <div class="drag-target"></div>
