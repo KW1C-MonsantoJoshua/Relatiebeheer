@@ -27,9 +27,9 @@ $rowC = GetCompanyInfo();
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        background-color: yellow;
-        padding: 50px;
-        font-size: 20px;
+        background-color: #666;
+        padding: 40px;
+        font-size: 25px;
     }
 </style>
 <!-- BEGIN : Head-->
@@ -45,6 +45,7 @@ include"partials/header.php";
 <?php
 include "partials/navbar.php";
 ?>
+<div class="sticky">Sticky Div</div>
 <div class="wrapper">
     <div class="main-panel">
         <!-- BEGIN : Main Content-->
@@ -61,7 +62,6 @@ include "partials/navbar.php";
                 <div class="row">
                     <div class="col-md-3 mt-3">
                         <!-- Nav tabs -->
-                    <div class="sticky">
                         <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">
@@ -82,7 +82,6 @@ include "partials/navbar.php";
                                 </a>
                             </li>
                         </ul>
-                    </div>
                     </div>
                     <div class="col-md-9">
                         <!-- Tab panes -->
