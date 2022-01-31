@@ -94,6 +94,7 @@ include "partials/navbar.php";
                                                         <div class="form-group">
                                                             <h4>Gegevens 1</h4>
                                                             <div class="controls">
+                                                                <div class="form-group">
                                                                 <label for="bedrijfsnaam"
                                                                        class="sr-only">Bedrijfsnaamm</label>
                                                                 <input type="text" id="bedrijfsnaam"
@@ -102,7 +103,6 @@ include "partials/navbar.php";
                                                                        name="name"
                                                                        value="">
                                                             </div>
-                                                            </br>
                                                             <div class="form-group">
                                                                 <label for="telefoon"
                                                                        class="sr-only">Telefoon</label>
