@@ -410,6 +410,8 @@ include "partials/navbar.php";
                                                                                            value="<?=$rowC['kvk_nummer']?>">
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                        <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="bic"
@@ -420,8 +422,6 @@ include "partials/navbar.php";
                                                                                            id="bic">
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="iban"
