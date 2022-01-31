@@ -136,7 +136,7 @@ include "partials/navbar.php";
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <h4>Gegevens2</h4>
+                                                            <h4>Gegevens 2</h4>
                                                             <div class="controls">
                                                                 <label for="bedrijfsnaam"
                                                                        class="sr-only">Bedrijfsnaamm</label>
