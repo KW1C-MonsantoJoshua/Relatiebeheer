@@ -352,8 +352,6 @@ include "partials/navbar.php";
                                                                                            id="plaats" name="plaats">
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="telefoon"
@@ -364,7 +362,7 @@ include "partials/navbar.php";
                                                                                            name="telefoon"
                                                                                            value="<?=$rowC['phoneNumber']?>">
                                                                                 </div>
-                                                                            </div>
+                                                                        </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="website"
