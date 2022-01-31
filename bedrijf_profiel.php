@@ -43,8 +43,8 @@ include "partials/navbar.php";
             <div class="content-wrapper">
                 <div class="row">
                     <div class="col-12">
-                        <div class="content-header">Account Settings</div>
-                        <p class="content-sub-header mb-1">Pas uw gegevens aan</p>
+                        <div class="content-header">Menu</div>
+                        <p class="content-sub-header mb-1">vrije keuze</p>
                     </div>
                 </div>
                 <!-- Account Settings starts -->
@@ -55,25 +55,19 @@ include "partials/navbar.php";
                             <li class="nav-item">
                                 <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">
                                     <i class="ft-settings mr-1 align-middle"></i>
-                                    <span class="align-middle">General</span>
+                                    <span class="align-middle">Bedrijf Info</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="change-password-tab" data-toggle="tab" href="#change-password" role="tab" aria-controls="change-password" aria-selected="false">
                                     <i class="ft-lock mr-1 align-middle"></i>
-                                    <span class="align-middle">Wachtwoord veranderen</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="connections-tab" data-toggle="tab" href="#connections" role="tab" aria-controls="connections" aria-selected="false">
-                                    <i class="ft-link mr-1 align-middle"></i>
-                                    <span class="align-middle">Extra beveiliging</span>
+                                    <span class="align-middle">Notities</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">
                                     <i class="ft-bell mr-1 align-middle"></i>
-                                    <span class="align-middle">Accountinstellingen</span>
+                                    <span class="align-middle">Abonnementen</span>
                                 </a>
                             </li>
                         </ul>
