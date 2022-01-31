@@ -14,9 +14,6 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <div class="page-header">
-                <h1><small class="pull-right">45 comments</small> Comments </h1>
-            </div>
             <div class="comments-list">
                 <div class="media">
                     <p class="pull-right"><small>5 days ago</small></p>
