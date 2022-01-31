@@ -34,7 +34,7 @@ include"partials/header.php";
 <?php	
 	include "partials/navbar.php";
 ?>
-    <div class="wrapper">
+
         <div class="main-panel">
             <!-- BEGIN : Main Content-->
             <div class="main-content">
@@ -296,7 +296,7 @@ include"partials/header.php";
             <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
         </div>
-    </div>
+
     <!-- ////////////////////////////////////////////////////////////////////////////-->
 
     <div class="sidenav-overlay"></div>
