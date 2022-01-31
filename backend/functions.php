@@ -81,14 +81,14 @@ function UpdateCompanyInfo()
 {
     global $mysqli;
     if (!empty($_POST['name'] || $_POST['street'] || $_POST['huisnummer'] ||
-        $_POST['toevoeging'] || $_POST['postcode'] || $_POST['website'] || $_POST['telefoon'] || $_POST['email'] ||
+        $_POST['toevoeging'] || $_POST['postcode'] || $_POST['telefoon'] || $_POST['email'] ||
         $_POST['kvk'] || $_POST['btw'] || $_POST['iban'] || $_GET['membof'])) {
         $query = "UPDATE `organisation`  SET  name = ?, street = ?,housenumber = ?,housenumberAddition = ?,
-                         postalcode = ?,website = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer = ?,
+                         postalcode = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer = ?,
                          iban_nummer = ? WHERE id= ?;";
         $stmt = $mysqli->prepare($query);
-        $stmt->bind_param('ssisssssiiii', $_POST['name'], $_POST['street'], $_POST['huisnummer'],
-            $_POST['toevoeging'], $_POST['postcode'], $_POST['website'], $_POST['telefoon'], $_POST['email'],
+        $stmt->bind_param('ssissssiiii', $_POST['name'], $_POST['street'], $_POST['huisnummer'],
+            $_POST['toevoeging'], $_POST['postcode'], $_POST['telefoon'], $_POST['email'],
             $_POST['kvk'], $_POST['btw'], $_POST['iban'], $_GET['membof']);
         $stmt->execute();
     }
