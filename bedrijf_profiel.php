@@ -210,8 +210,8 @@ include "partials/navbar.php";
                                 <div class="card-body">
                                     <div class="tab-content">
                                         <!-- General Tab -->
-                                        <h1>Bedrijf Infoo</h1>
-                                        <div class="tab-pane active" id="general12" role="tabpanel" aria-labelledby="general-tab">
+                                        <h1>Bedrijf Info</h1>
+                                        <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
                                             <hr class="mt-1 mt-sm-2">
                                             <form method="post">
                                                 <div class="row">
@@ -225,7 +225,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
                                                                        name="name"
-                                                                       value="<?= $rowC["name"]; ?>">
+                                                                       value="">
                                                             </div>
                                                             </br>
                                                             <div class="controls">
@@ -235,8 +235,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
                                                                        name="name"
-                                                                       value="<?= $rowC["name"]; ?>">
-                                                                <!--<input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
+                                                                       value="">
                                                             </div>
                                                             </br>
                                                             <div class="controls">
@@ -260,7 +259,7 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
                                                             <h4>Adresgegevens</h4>
                                                             <div class="controls">
@@ -270,8 +269,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
                                                                        name="name"
-                                                                       value="<?= $rowC["name"]; ?>">
-                                                                <!--<input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
+                                                                       value="">
                                                             </div>
                                                             </br>
                                                             <div class="form-group row">
@@ -305,29 +303,6 @@ include "partials/navbar.php";
                                                                        placeholder="Straatnaam" required
                                                                        aria-invalid="false" name="straatnaam_z">
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-4">
-                                                        <div class="form-group">
-                                                            <h4>Contactgegevens</h4>
-                                                        </div>
-                                                        <div class="controls">
-                                                            <label for="email">E-mail</label>
-                                                            <input type="email" id="email"
-                                                                   class="form-control round"
-                                                                   placeholder="Typeemail@hier.com" required
-                                                                   aria-invalid="false" name="email_z">
-                                                        </div>
-                                                        </br>
-                                                        <div class="controls">
-                                                            <label for="telefoonnummer">Telefoonnummer</label>
-                                                            <input type="text" id="telefoonnummer"
-                                                                   class="form-control round"
-                                                                   pattern="[0-9]{1,15}"
-                                                                   title="Alleen cijfers"
-                                                                   placeholder="Telefoonnummer" required
-                                                                   aria-invalid="false"
-                                                                   name="telefoonnummer_z">
                                                         </div>
                                                     </div>
                                                 </div>
