@@ -2130,7 +2130,6 @@ function editUserZ()
                                                    id="business"
                                                    class="form-control text-light round"
                                                    placeholder="Bedrijf"
-                                                   pattern="[a-zA-Z\s\.0-9]{1,15}"
                                                    aria-invalid="false"
                                                    name="business_z"
                                                    value="<?= $rowCustomer["business"] ?>">
