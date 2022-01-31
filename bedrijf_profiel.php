@@ -102,7 +102,6 @@ include "partials/navbar.php";
                                                                        name="name"
                                                                        value="">
                                                             </div>
-                                                            </br>
                                                             <div class="form-group">
                                                                 <label for="telefoon"
                                                                        class="sr-only">Telefoon</label>
