@@ -135,7 +135,7 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-md-4">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
                                                             <h4>Adresgegevens</h4>
                                                             <div class="controls">
