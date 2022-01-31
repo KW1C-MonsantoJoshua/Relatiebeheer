@@ -113,14 +113,14 @@ include "partials/navbar.php";
                                                                        value="<?= $rowC['phoneNumber'] ?>">
                                                             </div>
                                                             </br>
-                                                            <div class="controls">
-                                                                <label for=""
-                                                                       class="sr-only"></label>
-                                                                <input type="text" id=""
+                                                            <div class="form-group">
+                                                                <label for="email"
+                                                                       class="sr-only">Email</label>
+                                                                <input type="text" id="email"
                                                                        class="form-control"
-                                                                       placeholder=""
-                                                                       name=""
-                                                                       value="">
+                                                                       placeholder="Email"
+                                                                       name="email"
+                                                                       value="<?= $rowC['email'] ?>">
                                                             </div>
                                                             </br>
                                                             <div class="controls">
