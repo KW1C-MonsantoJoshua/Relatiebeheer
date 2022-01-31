@@ -76,7 +76,6 @@ function GetCompanyInfo(){
 }
 function UpdateCompanyInfo(){
     global $mysqli;
-    if (isset($_POST['Instellingen'])) {
         $query = "UPDATE `organisation`  SET  name = ?, street = ?,housenumber = ?,housenumberAddition = ?,
                          postalcode = ?,website = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer = ?,
                          iban_nummer = ? WHERE id= ?;";
@@ -86,10 +85,6 @@ function UpdateCompanyInfo(){
             $_POST['kvk'],$_POST['btw'],$_POST['iban'],$_GET['membof']);
         $stmt->execute();
         echo $_POST['iban'];
-    }
-    else{
-        echo "Fout1";
-    }
 }
 
 
