@@ -1,14 +1,12 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
-if (!isset($_SESSION['loggedin'])) {
-    $_SESSION['loggedin'] = time();
-} elseif (time() - $_SESSION['loggedin'] > 60) {
-    // session started more than 30 minutes ago
-    session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
-    $_SESSION['loggedin'] = time();  // update creation time
-}else
-{
-    header("Location: index.php");
+if(time() - $_SESSION['loggedin'] > 900) { //subtract new timestamp from the old one
+    echo"<script>alert('15 Minutes over!');</script>";
+    unset($_SESSION['username'], $_SESSION['password'], $_SESSION['loggedin']);
+    $_SESSION['loggedin'] = false;
+    exit;
+} else {
+    $_SESSION['loggedin'] = time(); //set new timestamp
 }
 include "backend/functions.php";
 UpdateCompanyInfo();
