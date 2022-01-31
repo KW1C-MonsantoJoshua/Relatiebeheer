@@ -39,43 +39,43 @@ include"partials/header.php";
 <?php
 include "partials/navbar.php";
 ?>
-<div class="wrapper" style="overflow:visible;">
+    <div class="wrapper" style="overflow:visible;">
     <div class="main-panel">
         <!-- BEGIN : Main Content-->
         <div class="main-content">
             <div class="content-overlay"></div>
             <div class="content-wrapper">
-                <div class="row">
-                    <div class="col-12 ">
-                        <div class="content-header">Menu</div>
-                        <p class="content-sub-header mb-1">vrije keuze</p>
-                    </div>
-                </div>
+<!--                <div class="row">-->
+<!--                    <div class="col-12 ">-->
+<!--                        <div class="content-header">Menu</div>-->
+<!--                        <p class="content-sub-header mb-1">vrije keuze</p>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <!-- Account Settings starts -->
-                <div class="row">
-                    <div class="sticky col-md-3 mt-3">
-                        <!-- Nav tabs -->
-                        <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">
-                                    <i class="ft-settings mr-1 align-middle"></i>
-                                    <span class="align-middle">Bedrijf Info</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="change-password-tab" data-toggle="tab" href="#change-password" role="tab" aria-controls="change-password" aria-selected="false">
-                                    <i class="ft-lock mr-1 align-middle"></i>
-                                    <span class="align-middle">Notities</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">
-                                    <i class="ft-bell mr-1 align-middle"></i>
-                                    <span class="align-middle">Abonnementen</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="row justify-content-center">
+<!--                    <div class="sticky col-md-3 mt-3">-->
+<!--                        <!-- Nav tabs -->-->
+<!--                        <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">-->
+<!--                                    <i class="ft-settings mr-1 align-middle"></i>-->
+<!--                                    <span class="align-middle">Bedrijf Info</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" id="change-password-tab" data-toggle="tab" href="#change-password" role="tab" aria-controls="change-password" aria-selected="false">-->
+<!--                                    <i class="ft-lock mr-1 align-middle"></i>-->
+<!--                                    <span class="align-middle">Notities</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">-->
+<!--                                    <i class="ft-bell mr-1 align-middle"></i>-->
+<!--                                    <span class="align-middle">Abonnementen</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
                     <div class="col-md-9">
                         <!-- Tab panes -->
                         <div class="card">
