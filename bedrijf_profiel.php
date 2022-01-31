@@ -1388,33 +1388,92 @@ include "partials/navbar.php";
                                     <div class="tab-pane active" id="general2" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
-                                        <form method="post">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <h4>Klantgegevenss</h4>
+                                        <div class="container1">
+                                            <div class="row1">
+                                                <div class="panel panel-default widget">
+                                                    <div class="panel-heading">
+                                                        <span class="glyphicon glyphicon-comment"></span>
+                                                        <h3 class="panel-title">
+                                                            Meest recente notities</h3>
+                                                        <span class="label label-info">
+                    2</span>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <h4>Adresgegevens</h4>
+                                                    <div class="panel-body">
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                                                <div class="row1">
+                                                                    <div class="col-xs-2 col-md-1">
+                                                                        <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
+                                                                             class="img-circle img-responsive" alt=""/></div>
+                                                                    <div class="col-xs-10 col-md-11">
+                                                                        <div>
+                                                                            <a href="teuskip.nl/Miranda4.html">
+                                                                                Met klant besproken BTW prijs</a>
+                                                                            <div class="mic-info">
+                                                                                By: <a href="#">Teus Brom</a> on 31 Jan 2022
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="comment-text">
+                                                                            met de klant veel gepraamet de klant veel gepraatmet de klant veel gepraatmet de
+                                                                            klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant
+                                                                            veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel
+                                                                            gepraatt met de klant veel gepraatmet de klant veel gepraatmet de klant veel
+                                                                            gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraat
+                                                                        </div>
+                                                                        <div class="action">
+                                                                            <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                                                                <span class="glyphicon glyphicon-pencil"></span>
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                                                                <span class="glyphicon glyphicon-ok"></span>
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <div class="row1">
+                                                                    <div class="col-xs-2 col-md-1">
+                                                                        <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
+                                                                             class="img-circle img-responsive" alt=""/></div>
+                                                                    <div class="col-xs-10 col-md-11">
+                                                                        <div>
+                                                                            <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">
+                                                                                Met klant besproken BTW prijs</a>
+                                                                            <div class="mic-info">
+                                                                                By: <a href="#">Teus Brom</a> on 31 Jan 2022
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="comment-text">
+                                                                            met de klant veel gepraamet de klant veel gepraatmet de klant veel gepraatmet de
+                                                                            klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant
+                                                                            veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel
+                                                                            gepraatt met de klant veel gepraatmet de klant veel gepraatmet de klant veel
+                                                                            gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraat
+                                                                        </div>
+                                                                        <div class="action">
+                                                                            <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                                                                <span class="glyphicon glyphicon-pencil"></span>
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                                                                <span class="glyphicon glyphicon-ok"></span>
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <!--                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>-->
                                                     </div>
                                                 </div>
                                             </div>
-                                            </br>
-                                            </br>
-                                            <div class="modal-footer">
-                                                <button type="reset"
-                                                        data-dismiss="modal"
-                                                        class="btn btn-secondary">Cancell
-                                                </button>
-                                                <input type="submit"
-                                                       class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                       name="registreerParticulier"
-                                                       value="Relatie Toevoegen">
-
-                                            </div>
-                                        </form>
+                                        </div>
                                     </div>
 
                                 </div>
