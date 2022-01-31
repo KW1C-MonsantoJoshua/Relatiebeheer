@@ -77,7 +77,7 @@ include "partials/navbar.php";
                             <li class="nav-item">
                                 <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">
                                     <i class="ft-bell mr-1 align-middle"></i>
-                                    <span class="align-middle">Abonnementen</span>
+                                    <span class="align-middle">Abonnementenn</span>
                                 </a>
                             </li>
                         </ul>
