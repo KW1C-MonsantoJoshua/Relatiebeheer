@@ -296,7 +296,7 @@ include "partials/navbar.php";
                                                                                            value="<?= $rowC["name"]; ?>">
                                                                                     <input type="hidden"
                                                                                            id="id"
-                                                                                           value="<?= $rowC['id'] ?>">
+                                                                                           value="<?= $_GET['membof'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-3">
