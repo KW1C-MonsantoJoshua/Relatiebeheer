@@ -1,4 +1,3 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <style>
     .post .post-heading {
         height: 95px;
@@ -9,6 +8,12 @@
     }
     .float-left {
         float: left!important;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+    div {
+        display: block;
     }
     .row {
         display: -webkit-box;
