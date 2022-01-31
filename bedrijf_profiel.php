@@ -46,7 +46,7 @@ include"partials/header.php";
 include "partials/navbar.php";
 ?>
 <div class="wrapper">
-    <div class="main-panel sticky">
+    <div class="main-panel">
         <!-- BEGIN : Main Content-->
         <div class="main-content">
             <div class="content-overlay"></div>
