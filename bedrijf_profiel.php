@@ -15,6 +15,7 @@ if (!isset($_SESSION["loggedin"])) {
 Changepassword();
 Updateuser();
 UploadPic1();
+UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 
 
@@ -179,7 +180,7 @@ include "partials/navbar.php";
                                                                        class="sr-only">BIC</label>
                                                                 <input class="form-control"
                                                                        type="text"
-                                                                       name="iban"
+                                                                       name="bic"
                                                                        placeholder="BIC"
                                                                        id="bic">
                                                             </div>
@@ -202,6 +203,7 @@ include "partials/navbar.php";
                                                                        type="text"
                                                                        placeholder="IBAN Nummer"
                                                                        id="iban"
+                                                                       name="iban"
                                                                        value="<?= $rowC['iban_nummer'] ?>">
                                                             </div>
                                                         </div>
@@ -214,7 +216,7 @@ include "partials/navbar.php";
                                                     </button>
                                                     <input type="submit"
                                                            class="btn btn-primary"
-                                                           name=""
+                                                           name="SaveCompanySettings"
                                                            value="Opslaan">
                                                 </div>
                                             </form>
@@ -363,8 +365,6 @@ include "partials/navbar.php";
                                                                 <label for="straatnaam">Straatnaam</label>
                                                                 <input type="text" id="straat_z"
                                                                        class="form-control round"
-                                                                       pattern="[a-zA-Z]{1,15}"
-                                                                       title="Alleen letters"
                                                                        placeholder="Straatnaam" required
                                                                        aria-invalid="false" name="straatnaam_z">
                                                             </div>
@@ -376,7 +376,7 @@ include "partials/navbar.php";
                                                 <div class="modal-footer">
                                                     <button type="reset"
                                                             data-dismiss="modal"
-                                                            class="btn btn-secondary">Cancell
+                                                            class="btn btn-secondary">Cancel
                                                     </button>
                                                     <input type="submit"
                                                            class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
