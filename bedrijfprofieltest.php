@@ -1,35 +1,140 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <style>
-    .user_name{
-        font-size:14px;
-        font-weight: bold;
+
+
+    .card-white  .card-heading {
+        color: #333;
+        background-color: #fff;
+        border-color: #ddd;
+        border: 1px solid #dddddd;
     }
-    .comments-list .media{
-        border-bottom: 1px dotted #ccc;
+    .card-white  .card-footer {
+        background-color: #fff;
+        border-color: #ddd;
+    }
+    .card-white .h5 {
+        font-size:14px;
+    //font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    .card-white .time {
+        font-size:12px;
+    //font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    .post .post-heading {
+        height: 95px;
+        padding: 20px 15px;
+    }
+    .post .post-heading .avatar {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin-right: 15px;
+    }
+    .post .post-heading .meta .title {
+        margin-bottom: 0;
+    }
+    .post .post-heading .meta .title a {
+        color: black;
+    }
+    .post .post-heading .meta .title a:hover {
+        color: #aaaaaa;
+    }
+    .post .post-heading .meta .time {
+        margin-top: 8px;
+        color: #999;
+    }
+    .post .post-image .image {
+        width: 100%;
+        height: auto;
+    }
+    .post .post-description {
+        padding: 15px;
+    }
+    .post .post-description p {
+        font-size: 14px;
+    }
+    .post .post-description .stats {
+        margin-top: 20px;
+    }
+    .post .post-description .stats .stat-item {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .post .post-description .stats .stat-item .icon {
+        margin-right: 8px;
+    }
+    .post .post-footer {
+        border-top: 1px solid #ddd;
+        padding: 15px;
+    }
+    .post .post-footer .input-group-addon a {
+        color: #454545;
+    }
+    .post .post-footer .comments-list {
+        padding: 0;
+        margin-top: 20px;
+        list-style-type: none;
+    }
+    .post .post-footer .comments-list .comment {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .post .post-footer .comments-list .comment .avatar {
+        width: 35px;
+        height: 35px;
+    }
+    .post .post-footer .comments-list .comment .comment-heading {
+        display: block;
+        width: 100%;
+    }
+    .post .post-footer .comments-list .comment .comment-heading .user {
+        font-size: 14px;
+        font-weight: bold;
+        display: inline;
+        margin-top: 0;
+        margin-right: 10px;
+    }
+    .post .post-footer .comments-list .comment .comment-heading .time {
+        font-size: 12px;
+        color: #aaa;
+        margin-top: 0;
+        display: inline;
+    }
+    .post .post-footer .comments-list .comment .comment-body {
+        margin-left: 50px;
+    }
+    .post .post-footer .comments-list .comment > .comments-list {
+        margin-left: 50px;
     }
 </style>
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
-            <div class="comments-list">
-                <div class="media">
-                    <p class="pull-right"><small>5 days ago</small></p>
-                    <a class="media-left" href="#">
-                        <img src="data:image/jpeg;base64,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">
-                    </a>
-                    <div class="media-body">
-
-                        <h4 class="media-heading user_name">Baltej Singh</h4>
-                        Wow! this is really great.
+        <div class="col-8">
+            <div class="card card-white post">
+                <div class="post-heading">
+                    <div class="float-left image">
+                        <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                    </div>
+                    <div class="float-left meta">
+                        <div class="title h5">
+                            <a href="#"><b>Ryan Haywood</b></a>
+                            made a post.
+                        </div>
+                        <h6 class="text-muted time">1 minute ago</h6>
                     </div>
                 </div>
-
+                <div class="post-description">
+                    <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
                 </div>
             </div>
+        </div>
 
+    </div>
+</div>
 
 
         </div>
