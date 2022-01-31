@@ -54,7 +54,6 @@ include "partials/navbar.php";
                 <!-- Account Settings starts -->
                 <div class="row justify-content-center">
 <!--                    <div class="sticky col-md-3 mt-3">-->
-<!--                        <!-- Nav tabs -->-->
 <!--                        <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">-->
 <!--                            <li class="nav-item">-->
 <!--                                <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">-->
