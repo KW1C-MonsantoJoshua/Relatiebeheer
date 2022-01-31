@@ -345,15 +345,6 @@ include "partials/navbar.php";
                                                                         <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                    <label for="plaats" class="sr-only">Plaats</label>
-                                                                                    <input class="form-control"
-                                                                                           type="text"
-                                                                                           placeholder="Plaats"
-                                                                                           id="plaats" name="plaats">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group">
                                                                                     <label for="telefoon"
                                                                                            class="sr-only">Telefoon</label>
                                                                                     <input type="text" id="telefoon"
@@ -407,6 +398,7 @@ include "partials/navbar.php";
                                                                                            type="text"
                                                                                            placeholder="KVK Nummer"
                                                                                            id="kvk"
+                                                                                           name="kvk"
                                                                                            value="<?=$rowC['kvk_nummer']?>">
                                                                                 </div>
                                                                             </div>
@@ -418,6 +410,7 @@ include "partials/navbar.php";
                                                                                            class="sr-only">BIC</label>
                                                                                     <input class="form-control"
                                                                                            type="text"
+                                                                                           name="iban"
                                                                                            placeholder="BIC"
                                                                                            id="bic">
                                                                                 </div>
