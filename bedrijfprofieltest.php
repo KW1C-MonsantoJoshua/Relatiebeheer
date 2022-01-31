@@ -1,5 +1,14 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <style>
+    .post .post-heading {
+        height: 95px;
+        padding: 20px 15px;
+    }
+    .post .post-description {
+        padding: 15px;
+    }
+    .float-left {
+        float: left!important;
+    }
     .row {
         display: -webkit-box;
         display: -ms-flexbox;
