@@ -296,51 +296,51 @@
         padding-left: 5px
     }
 
-    .container {
+    .container1 {
         padding-right: 15px;
         padding-left: 15px;
         margin-right: auto;
         margin-left: auto
     }
 
-    .container:after, .container:before {
+    .container1:after, .container:before {
         display: table;
         content: " "
     }
 
-    .container:after {
+    .container1:after {
         clear: both
     }
 
-    .container:after, .container:before {
+    .container1:after, .container:before {
         display: table;
         content: " "
     }
 
-    .container:after {
+    .container1:after {
         clear: both
     }
 
-    .row {
+    .row1 {
         margin-right: -15px;
         margin-left: -15px
     }
 
-    .row:after, .row:before {
+    .row1:after, .row:before {
         display: table;
         content: " "
     }
 
-    .row:after {
+    .row1:after {
         clear: both
     }
 
-    .row:after, .row:before {
+    .row1:after, .row:before {
         display: table;
         content: " "
     }
 
-    .row:after {
+    .row1:after {
         clear: both
     }
 
@@ -1156,8 +1156,8 @@
     }
 
 </style>
-<div class="container">
-    <div class="row">
+<div class="container1">
+    <div class="row1">
         <div class="panel panel-default widget">
             <div class="panel-heading">
                 <span class="glyphicon glyphicon-comment"></span>
@@ -1169,7 +1169,7 @@
             <div class="panel-body">
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <div class="row">
+                        <div class="row1">
                             <div class="col-xs-2 col-md-1">
                                 <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
                                      class="img-circle img-responsive" alt=""/></div>
@@ -1203,7 +1203,7 @@
                         </div>
                     </li>
                     <li class="list-group-item">
-                        <div class="row">
+                        <div class="row1">
                             <div class="col-xs-2 col-md-1">
                                 <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
                                      class="img-circle img-responsive" alt=""/></div>
