@@ -89,7 +89,7 @@ include "partials/navbar.php";
                                         <h1>Bedrijf Info</h1>
                                         <div class="tab-pane active" id="general1" role="tabpanel" aria-labelledby="general-tab">
                                             <hr class="mt-1 mt-sm-2">
-                                            <form method="post" id="FormInstellingen">
+                                            <form method="post">
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -214,8 +214,9 @@ include "partials/navbar.php";
                                                             data-dismiss="modal"
                                                             class="btn btn-secondary">Annuleren
                                                     </button>
-                                                    <input type="button"
-                                                           class="btn btn-primary confirm-text"
+                                                    <input type="submit"
+                                                           class="btn btn-primary"
+                                                           name="SaveCompanySettings"
                                                            value="Opslaan">
                                                 </div>
                                             </form>
