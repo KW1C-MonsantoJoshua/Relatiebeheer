@@ -149,14 +149,14 @@ include "partials/navbar.php";
                                                                        value="<?= $rowC['housenumberAddition'] ?>">
                                                             </div>
                                                             </div>
-                                                            <div class="controls">
-                                                                <label for="users-edit-username">Tussenvoegsel</label>
-                                                                <input type="text" id="users-edit-username"
-                                                                       class="form-control round"
-                                                                       pattern="[a-zA-Z]{1,10}"
-                                                                       title="Alleen letters"
-                                                                       placeholder="Tussenvoegsel"
-                                                                       aria-invalid="false" name="tussenvoegsel_z">
+                                                            <div class="form-group">
+                                                                <label for="adres"
+                                                                       class="sr-only">Adres</label>
+                                                                <input type="text" id="adres"
+                                                                       class="form-control"
+                                                                       placeholder="Adres"
+                                                                       name="street"
+                                                                       value="<?= $rowC['street'] ?>">
                                                             </div>
                                                             </br>
                                                             <div class="controls">
