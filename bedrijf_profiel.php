@@ -23,10 +23,13 @@ $rowC = GetCompanyInfo();
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <style>
-    .sticky {
+    div.sticky {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
+        background-color: yellow;
+        padding: 50px;
+        font-size: 20px;
     }
 </style>
 <!-- BEGIN : Head-->
