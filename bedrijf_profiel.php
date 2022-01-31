@@ -225,7 +225,6 @@ include "partials/navbar.php";
             </div>
         </div>
                     </br>
-                    </br>
                         <!-- Tab panes -->
                         <div class="card">
                             <div class="card-content">
