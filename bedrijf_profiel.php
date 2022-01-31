@@ -214,7 +214,7 @@ include "partials/navbar.php";
                                                     </button>
                                                     <input type="submit"
                                                            class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                           name="registreerParticulier"
+                                                           name=""
                                                            value="Opslaan">
                                                 </div>
                                             </form>
