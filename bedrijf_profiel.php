@@ -15,9 +15,6 @@ if (!isset($_SESSION["loggedin"])) {
 Changepassword();
 Updateuser();
 UploadPic1();
-$row = Getuser();
-UpdateCompanyInfo();
-$rowC = GetCompanyInfo();
 
 ?>
 <!DOCTYPE html>
