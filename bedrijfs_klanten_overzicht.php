@@ -22,6 +22,7 @@ if (!isset($_SESSION["loggedin"])) {
     br {
         line-height: 75%;
     }
+
     /*input::placeholder {*/
     /*   color: red;  !important;*/
     /*}*/
@@ -50,18 +51,18 @@ include "partials/navbar.php";
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title"><?php GetCompanyName();?></h4>
+                            <h4 class="card-title"><?php GetCompanyName(); ?></h4>
 
                             <ul class="breadcrumb bg-transparent">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>
                                 <li class="breadcrumb-item"><a href="#">Bedrijfs klanten overzicht</a></li>
-<!--                                <li class="breadcrumb-item">--><?php
-//                                    $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
-//                                    foreach($crumbs as $crumb){
-//                                        echo ucfirst(str_replace(array(".php","_"),array(""," "),$crumb) . ' ');
-//                                    }
-//                                    ?><!--</li>-->
+                                <!--                                <li class="breadcrumb-item">--><?php
+                                //                                    $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
+                                //                                    foreach($crumbs as $crumb){
+                                //                                        echo ucfirst(str_replace(array(".php","_"),array(""," "),$crumb) . ' ');
+                                //                                    }
+                                //                                    ?><!--</li>-->
                             </ul>
                         </div>
 
@@ -129,9 +130,9 @@ include "partials/navbar.php";
                                                                     echo "<p class='text-danger'>Email klopt niet</p>";
                                                                 } elseif ($_GET["toevoegenPart"] == "emaildupli") {
                                                                     echo "<p class='text-danger'>Email bestaat al</p>";
-                                                                }elseif ($_GET["toevoegenPart"] == "straatfout") {
+                                                                } elseif ($_GET["toevoegenPart"] == "straatfout") {
                                                                     echo "<p class='text-danger'>Straatnaam mag geen nummers bevatten!</p>";
-                                                                }elseif ($_GET["toevoegenPart"] == "postcodefout") {
+                                                                } elseif ($_GET["toevoegenPart"] == "postcodefout") {
                                                                     echo "<p class='text-danger'>Ongeldige postcode ! </p>";
                                                                 }
                                                                 if ($_GET["toevoegenPart"] == "succes") {
@@ -179,9 +180,9 @@ include "partials/navbar.php";
                                                                     echo "<p class='text-danger'>Email klopt niet</p>";
                                                                 } elseif ($_GET["toevoegenZak"] == "emaildupli") {
                                                                     echo "<p class='text-danger'>Email bestaat al</p>";
-                                                                }elseif ($_GET["toevoegenZak"] == "straatfout") {
+                                                                } elseif ($_GET["toevoegenZak"] == "straatfout") {
                                                                     echo "<p class='text-danger'>Straatnaam mag geen nummers bevatten!</p>";
-                                                                }elseif ($_GET["toevoegenZak"] == "postcodefout") {
+                                                                } elseif ($_GET["toevoegenZak"] == "postcodefout") {
                                                                     echo "<p class='text-danger'>Ongeldige postcode !</p>";
                                                                 }
                                                                 if ($_GET["toevoegenZak"] == "succes") {
@@ -229,9 +230,9 @@ include "partials/navbar.php";
                                                                     echo "<p class='text-danger'>Email klopt niet</p>";
                                                                 } elseif ($_GET["toevoegenMemb"] == "emaildupli") {
                                                                     echo "<p class='text-danger'>Email bestaat al</p>";
-                                                                }elseif ($_GET["toevoegenMemb"] == "straatfout") {
+                                                                } elseif ($_GET["toevoegenMemb"] == "straatfout") {
                                                                     echo "<p class='text-danger'>Straatnaam mag geen nummers bevatten!</p>";
-                                                                }elseif ($_GET["toevoegenMemb"] == "postcodefout") {
+                                                                } elseif ($_GET["toevoegenMemb"] == "postcodefout") {
                                                                     echo "<p class='text-danger'>Ongeldige postcode !</p>";
                                                                 }
                                                                 if ($_GET["toevoegenMemb"] == "succes") {
@@ -271,11 +272,11 @@ include "partials/navbar.php";
                                                         <div class="card-header">
                                                             <h4 class="card-title success">
                                                                 Bedrijfsgegevens <?= $rowC["name"]; ?></h4>
-															<?php 
-															if(isset($_POST['bijwerken'])){
-																echo "<p class='text-succes'>Update Succesvol!</p>";
-															}
-															?>
+                                                            <?php
+                                                            if (isset($_POST['bijwerken'])) {
+                                                                echo "<p class='text-succes'>Update Succesvol!</p>";
+                                                            }
+                                                            ?>
                                                         </div>
                                                         <div class="card-content">
                                                             <div class="card-body">
@@ -303,7 +304,7 @@ include "partials/navbar.php";
                                                                                            class="form-control"
                                                                                            placeholder="Huisnummer"
                                                                                            name="huisnummer"
-                                                                                           value="<?=$rowC['housenumber']?>">
+                                                                                           value="<?= $rowC['housenumber'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-3">
@@ -314,7 +315,7 @@ include "partials/navbar.php";
                                                                                            class="form-control"
                                                                                            placeholder="Toevoeging"
                                                                                            name="toevoeging"
-                                                                                           value="<?=$rowC['housenumberAddition']?>">
+                                                                                           value="<?= $rowC['housenumberAddition'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -327,7 +328,7 @@ include "partials/navbar.php";
                                                                                            class="form-control"
                                                                                            placeholder="Adres"
                                                                                            name="street"
-                                                                                           value="<?=$rowC['street']?>">
+                                                                                           value="<?= $rowC['street'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
@@ -338,7 +339,7 @@ include "partials/navbar.php";
                                                                                            class="form-control"
                                                                                            placeholder="Postcode"
                                                                                            name="postcode"
-                                                                                           value="<?=$rowC['postalcode']?>">
+                                                                                           value="<?= $rowC['postalcode'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -351,9 +352,9 @@ include "partials/navbar.php";
                                                                                            class="form-control"
                                                                                            placeholder="Telefoon"
                                                                                            name="telefoon"
-                                                                                           value="<?=$rowC['phoneNumber']?>">
+                                                                                           value="<?= $rowC['phoneNumber'] ?>">
                                                                                 </div>
-                                                                        </div>
+                                                                            </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="website"
@@ -362,7 +363,7 @@ include "partials/navbar.php";
                                                                                            class="form-control"
                                                                                            placeholder="Website"
                                                                                            name="website"
-                                                                                           value="<?=$rowC['website']?>">
+                                                                                           value="<?= $rowC['website'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -375,7 +376,7 @@ include "partials/navbar.php";
                                                                                            class="form-control"
                                                                                            placeholder="Email"
                                                                                            name="email"
-                                                                                           value="<?=$rowC['email']?>">
+                                                                                           value="<?= $rowC['email'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
@@ -387,220 +388,275 @@ include "partials/navbar.php";
                                                                                            class="form-control"
                                                                                            placeholder="BTW Nummer"
                                                                                            name="btw"
-                                                                                           value="<?=$rowC['btw_nummer']?>">
+                                                                                           value="<?= $rowC['btw_nummer'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="row">
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group">
-                                                                                    <label for="kvk" class="sr-only">KVK
-                                                                                        Nummer</label>
-                                                                                    <input class="form-control"
-                                                                                           type="text"
-                                                                                           placeholder="KVK Nummer"
-                                                                                           id="kvk"
-                                                                                           name="kvk"
-                                                                                           value="<?=$rowC['kvk_nummer']?>">
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="kvk"
+                                                                                               class="sr-only">KVK
+                                                                                            Nummer</label>
+                                                                                        <input class="form-control"
+                                                                                               type="text"
+                                                                                               placeholder="KVK Nummer"
+                                                                                               id="kvk"
+                                                                                               name="kvk"
+                                                                                               value="<?= $rowC['kvk_nummer'] ?>">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="bic"
+                                                                                               class="sr-only">BIC</label>
+                                                                                        <input class="form-control"
+                                                                                               type="text"
+                                                                                               name="iban"
+                                                                                               placeholder="BIC"
+                                                                                               id="bic">
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group">
-                                                                                    <label for="bic"
-                                                                                           class="sr-only">BIC</label>
-                                                                                    <input class="form-control"
-                                                                                           type="text"
-                                                                                           name="iban"
-                                                                                           placeholder="BIC"
-                                                                                           id="bic">
+                                                                                <div class="col-md-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="iban"
+                                                                                               class="sr-only">IBAN
+                                                                                            Nummer</label>
+                                                                                        <input class="form-control"
+                                                                                               type="text"
+                                                                                               placeholder="IBAN Nummer"
+                                                                                               id="iban"
+                                                                                               value="<?= $rowC['iban_nummer'] ?>">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="float-right">
+                                                                                    <button type="button"
+                                                                                            name="bijwerken"
+                                                                                            class="btn btn-primary confirm-text ">
+                                                                                        Opslaan <i
+                                                                                                class="ft-check"></i>
+                                                                                    </button>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group">
-                                                                                    <label for="iban"
-                                                                                           class="sr-only">IBAN
-                                                                                        Nummer</label>
-                                                                                    <input class="form-control"
-                                                                                           type="text"
-                                                                                           placeholder="IBAN Nummer"
-                                                                                           id="iban"
-                                                                                           value="<?=$rowC['iban_nummer']?>">
-                                                                                </div>
-                                                                            </div>
-                                                                        <div class="float-right">
-                                                                            <button type="button" name="bijwerken"
-                                                                                    class="btn btn-primary confirm-text ">Opslaan <i
-                                                                                        class="ft-check"></i>
-                                                                            </button>
-                                                                        </div>
-																	</div>
                                                                 </form>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                        </div>
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h4 class="card-title">Card</h4>
-                                                    <p>Gedeelte op de instellingen pagina voor het toevoegen van briefpapier en factuur layout</p>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
-                                                        <ol class="carousel-indicators">
-                                                            <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
-                                                            <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
-                                                            <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
-                                                        </ol>
-                                                        <div class="carousel-inner" role="listbox">
-                                                            <div class="carousel-item active">
-                                                                <img src="assets/img/photos/01.jpg" class="d-block w-100" alt="First slide">
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Card</h4>
+                                                        <p>Gedeelte op de instellingen pagina voor het toevoegen van
+                                                            briefpapier en factuur layout</p>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div id="carousel-example-generic2" class="carousel slide"
+                                                             data-ride="carousel">
+                                                            <ol class="carousel-indicators">
+                                                                <li data-target="#carousel-example-generic2"
+                                                                    data-slide-to="0" class="active"></li>
+                                                                <li data-target="#carousel-example-generic2"
+                                                                    data-slide-to="1"></li>
+                                                                <li data-target="#carousel-example-generic2"
+                                                                    data-slide-to="2"></li>
+                                                            </ol>
+                                                            <div class="carousel-inner" role="listbox">
+                                                                <div class="carousel-item active">
+                                                                    <img src="assets/img/photos/01.jpg"
+                                                                         class="d-block w-100" alt="First slide">
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="assets/img/photos/05.jpg"
+                                                                         class="d-block w-100" alt="Second slide">
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="assets/img/photos/10.jpg"
+                                                                         class="d-block w-100" alt="Third slide">
+                                                                </div>
                                                             </div>
-                                                            <div class="carousel-item">
-                                                                <img src="assets/img/photos/05.jpg" class="d-block w-100" alt="Second slide">
-                                                            </div>
-                                                            <div class="carousel-item">
-                                                                <img src="assets/img/photos/10.jpg" class="d-block w-100" alt="Third slide">
-                                                            </div>
+                                                            <a class="carousel-control-prev"
+                                                               href="#carousel-example-generic2" role="button"
+                                                               data-slide="prev">
+                                                                <span class="fa fa-angle-left icon-prev"
+                                                                      aria-hidden="true"></span>
+                                                                <span class="sr-only">Previous</span>
+                                                            </a>
+                                                            <a class="carousel-control-next"
+                                                               href="#carousel-example-generic2" role="button"
+                                                               data-slide="next">
+                                                                <span class="fa fa-angle-right icon-next"
+                                                                      aria-hidden="true"></span>
+                                                                <span class="sr-only">Next</span>
+                                                            </a>
                                                         </div>
-                                                        <a class="carousel-control-prev" href="#carousel-example-generic2" role="button" data-slide="prev">
-                                                            <span class="fa fa-angle-left icon-prev" aria-hidden="true"></span>
-                                                            <span class="sr-only">Previous</span>
-                                                        </a>
-                                                        <a class="carousel-control-next" href="#carousel-example-generic2" role="button" data-slide="next">
-                                                            <span class="fa fa-angle-right icon-next" aria-hidden="true"></span>
-                                                            <span class="sr-only">Next</span>
-                                                        </a>
+                                                        <div class="card-body">
+                                                            <p class="card-text">Some quick example text to build on the
+                                                                card title and make up the bulk of the card's
+                                                                content.</p>
+                                                            <a href="javascript:void(0);" class="card-link">Card
+                                                                link</a>
+                                                            <a href="javascript:void(0);" class="card-link">Another
+                                                                link</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="card-body">
-                                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                                            content.</p>
-                                                        <a href="javascript:void(0);" class="card-link">Card link</a>
-                                                        <a href="javascript:void(0);" class="card-link">Another link</a>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer text-muted pt-0">
-                                                    <span class="float-left">2 days ago</span>
-                                                    <span class="tags float-right">
+                                                    <div class="card-footer text-muted pt-0">
+                                                        <span class="float-left">2 days ago</span>
+                                                        <span class="tags float-right">
                                             <span class="badge bg-primary">Branding</span>
                                             <span class="badge bg-danger">Design</span>
                                         </span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h4 class="card-title">Verbindingen</h4>
-                                                    <p>Gedeelte op de instellingen pagina met verbindingen naar verschillende betaalmethodes</p>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
-                                                        <ol class="carousel-indicators">
-                                                            <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
-                                                            <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
-                                                            <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
-                                                        </ol>
-                                                        <div class="carousel-inner" role="listbox">
-                                                            <div class="carousel-item active">
-                                                                <img src="assets/img/photos/01.jpg" class="d-block w-100" alt="First slide">
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Verbindingen</h4>
+                                                        <p>Gedeelte op de instellingen pagina met verbindingen naar
+                                                            verschillende betaalmethodes</p>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div id="carousel-example-generic2" class="carousel slide"
+                                                             data-ride="carousel">
+                                                            <ol class="carousel-indicators">
+                                                                <li data-target="#carousel-example-generic2"
+                                                                    data-slide-to="0" class="active"></li>
+                                                                <li data-target="#carousel-example-generic2"
+                                                                    data-slide-to="1"></li>
+                                                                <li data-target="#carousel-example-generic2"
+                                                                    data-slide-to="2"></li>
+                                                            </ol>
+                                                            <div class="carousel-inner" role="listbox">
+                                                                <div class="carousel-item active">
+                                                                    <img src="assets/img/photos/01.jpg"
+                                                                         class="d-block w-100" alt="First slide">
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="assets/img/photos/05.jpg"
+                                                                         class="d-block w-100" alt="Second slide">
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="assets/img/photos/10.jpg"
+                                                                         class="d-block w-100" alt="Third slide">
+                                                                </div>
                                                             </div>
-                                                            <div class="carousel-item">
-                                                                <img src="assets/img/photos/05.jpg" class="d-block w-100" alt="Second slide">
-                                                            </div>
-                                                            <div class="carousel-item">
-                                                                <img src="assets/img/photos/10.jpg" class="d-block w-100" alt="Third slide">
-                                                            </div>
+                                                            <a class="carousel-control-prev"
+                                                               href="#carousel-example-generic2" role="button"
+                                                               data-slide="prev">
+                                                                <span class="fa fa-angle-left icon-prev"
+                                                                      aria-hidden="true"></span>
+                                                                <span class="sr-only">Previous</span>
+                                                            </a>
+                                                            <a class="carousel-control-next"
+                                                               href="#carousel-example-generic2" role="button"
+                                                               data-slide="next">
+                                                                <span class="fa fa-angle-right icon-next"
+                                                                      aria-hidden="true"></span>
+                                                                <span class="sr-only">Next</span>
+                                                            </a>
                                                         </div>
-                                                        <a class="carousel-control-prev" href="#carousel-example-generic2" role="button" data-slide="prev">
-                                                            <span class="fa fa-angle-left icon-prev" aria-hidden="true"></span>
-                                                            <span class="sr-only">Previous</span>
-                                                        </a>
-                                                        <a class="carousel-control-next" href="#carousel-example-generic2" role="button" data-slide="next">
-                                                            <span class="fa fa-angle-right icon-next" aria-hidden="true"></span>
-                                                            <span class="sr-only">Next</span>
-                                                        </a>
+                                                        <div class="card-body">
+                                                            <p class="card-text">Some quick example text to build on the
+                                                                card title and make up the bulk of the card's
+                                                                content.</p>
+                                                            <a href="javascript:void(0);" class="card-link">Card
+                                                                link</a>
+                                                            <a href="javascript:void(0);" class="card-link">Another
+                                                                link</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="card-body">
-                                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                                            content.</p>
-                                                        <a href="javascript:void(0);" class="card-link">Card link</a>
-                                                        <a href="javascript:void(0);" class="card-link">Another link</a>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer text-muted pt-0">
-                                                    <span class="float-left">2 days ago</span>
-                                                    <span class="tags float-right">
+                                                    <div class="card-footer text-muted pt-0">
+                                                        <span class="float-left">2 days ago</span>
+                                                        <span class="tags float-right">
                                             <span class="badge bg-primary">Branding</span>
                                             <span class="badge bg-danger">Design</span>
                                         </span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h4 class="card-title">Backups & Social Media</h4>
-                                                    <p>Gedeelte op de instellingen pagina voor het maken van backups en social media</p>
-                                                </div>
-                                                <div class="card-content">
-                                                    <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
-                                                        <ol class="carousel-indicators">
-                                                            <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
-                                                            <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
-                                                            <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
-                                                        </ol>
-                                                        <div class="carousel-inner" role="listbox">
-                                                            <div class="carousel-item active">
-                                                                <img src="assets/img/photos/01.jpg" class="d-block w-100" alt="First slide">
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Backups & Social Media</h4>
+                                                        <p>Gedeelte op de instellingen pagina voor het maken van backups
+                                                            en social media</p>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div id="carousel-example-generic2" class="carousel slide"
+                                                             data-ride="carousel">
+                                                            <ol class="carousel-indicators">
+                                                                <li data-target="#carousel-example-generic2"
+                                                                    data-slide-to="0" class="active"></li>
+                                                                <li data-target="#carousel-example-generic2"
+                                                                    data-slide-to="1"></li>
+                                                                <li data-target="#carousel-example-generic2"
+                                                                    data-slide-to="2"></li>
+                                                            </ol>
+                                                            <div class="carousel-inner" role="listbox">
+                                                                <div class="carousel-item active">
+                                                                    <img src="assets/img/photos/01.jpg"
+                                                                         class="d-block w-100" alt="First slide">
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="assets/img/photos/05.jpg"
+                                                                         class="d-block w-100" alt="Second slide">
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="assets/img/photos/10.jpg"
+                                                                         class="d-block w-100" alt="Third slide">
+                                                                </div>
                                                             </div>
-                                                            <div class="carousel-item">
-                                                                <img src="assets/img/photos/05.jpg" class="d-block w-100" alt="Second slide">
-                                                            </div>
-                                                            <div class="carousel-item">
-                                                                <img src="assets/img/photos/10.jpg" class="d-block w-100" alt="Third slide">
-                                                            </div>
+                                                            <a class="carousel-control-prev"
+                                                               href="#carousel-example-generic2" role="button"
+                                                               data-slide="prev">
+                                                                <span class="fa fa-angle-left icon-prev"
+                                                                      aria-hidden="true"></span>
+                                                                <span class="sr-only">Previous</span>
+                                                            </a>
+                                                            <a class="carousel-control-next"
+                                                               href="#carousel-example-generic2" role="button"
+                                                               data-slide="next">
+                                                                <span class="fa fa-angle-right icon-next"
+                                                                      aria-hidden="true"></span>
+                                                                <span class="sr-only">Next</span>
+                                                            </a>
                                                         </div>
-                                                        <a class="carousel-control-prev" href="#carousel-example-generic2" role="button" data-slide="prev">
-                                                            <span class="fa fa-angle-left icon-prev" aria-hidden="true"></span>
-                                                            <span class="sr-only">Previous</span>
-                                                        </a>
-                                                        <a class="carousel-control-next" href="#carousel-example-generic2" role="button" data-slide="next">
-                                                            <span class="fa fa-angle-right icon-next" aria-hidden="true"></span>
-                                                            <span class="sr-only">Next</span>
-                                                        </a>
+                                                        <div class="card-body">
+                                                            <p class="card-text">Some quick example text to build on the
+                                                                card title and make up the bulk of the card's
+                                                                content.</p>
+                                                            <a href="javascript:void(0);" class="card-link">Card
+                                                                link</a>
+                                                            <a href="javascript:void(0);" class="card-link">Another
+                                                                link</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="card-body">
-                                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                                            content.</p>
-                                                        <a href="javascript:void(0);" class="card-link">Card link</a>
-                                                        <a href="javascript:void(0);" class="card-link">Another link</a>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer text-muted pt-0">
-                                                    <span class="float-left">2 days ago</span>
-                                                    <span class="tags float-right">
+                                                    <div class="card-footer text-muted pt-0">
+                                                        <span class="float-left">2 days ago</span>
+                                                        <span class="tags float-right">
                                             <span class="badge bg-primary">Branding</span>
                                             <span class="badge bg-danger">Design</span>
                                         </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </section>
                             </div>
-                            </section>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- END : End Main Content-->
+    <!-- END : End Main Content-->
 
-<!-- Scroll to top button -->
-<button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
+    <!-- Scroll to top button -->
+    <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
 
 </div>
 <div class="col-lg-3 col-md-6 col-12">
@@ -622,92 +678,93 @@ include "partials/navbar.php";
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-content">
-                                            <!-- Nav-tabs -->
-                                            <ul class="nav nav-tabs" role="tablist">
-                                                <li class="nav-item">
-                                                    <a href="#relatie_particulier" role="tab" id="account-tab"
-                                                       class="nav-link d-flex align-items-center active"
-                                                       data-toggle="tab"
-                                                       aria-controls="account" aria-selected="true">
-                                                        <i class="ft-user mr-1"></i>
-                                                        <span class="d-none d-sm-block">Particulier</span>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#relatie_zakelijk" role="tab" id="information-tab"
-                                                       class="nav-link d-flex align-items-center" data-toggle="tab"
-                                                       aria-controls="information" aria-selected="false">
-                                                        <i class="ft-info mr-1"></i>
-                                                        <span class="d-none d-sm-block">Zakelijk</span>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#relatie_werknemers" role="tab" id="information-tab"
-                                                       class="nav-link d-flex align-items-center" data-toggle="tab"
-                                                       aria-controls="information" aria-selected="false">
-                                                        <i class="ft-info mr-1"></i>
-                                                        <span class="d-none d-sm-block">Werknemers</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content">
-                                                <!-- Account content starts -->
-                                                <div class="tab-pane fade mt-2 show active" id="relatie_particulier"
-                                                     role="tabpanel"
-                                                     aria-labelledby="account-tab">
-                                                    <!-- Account form starts -->
-                                                    <form method="post" class='needs-validation'>
-                                                        <div class="row">
-                                                            <div class="col-12 col-md-4">
-                                                                <div class="form-group">
-                                                                    <h4>Klantgegevens</h4>
-                                                                    <div class="controls">
-                                                                        <label for="users-edit-username">Voornaam</label>
-                                                                        <input type="text" id="users-edit-username"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,10}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Voornaam" required
-                                                                               aria-invalid="false" name="voornaam_p">
-                                                                    </div>
-                                                                    </br>
-                                                                    <div class="controls">
-                                                                        <label for="users-edit-username">Tussenvoegsel</label>
-                                                                        <input type="text" id="users-edit-username"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,10}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Tussenvoegsel"
-                                                                               aria-invalid="false" name="tussenvoegsel_p">
-                                                                    </div>
-                                                                    </br>
-                                                                    <div class="controls">
-                                                                        <label for="achternaam">Achternaam</label>
-                                                                        <input type="text" id="achternaam"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,10}"
-                                                                               title="Álleen letters"
-                                                                               placeholder="Achternaam"
-                                                                               aria-invalid="false" name="achternaam_p"
-                                                                               required>
-                                                                    </div>
+                                        <!-- Nav-tabs -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a href="#relatie_particulier" role="tab" id="account-tab"
+                                                   class="nav-link d-flex align-items-center active"
+                                                   data-toggle="tab"
+                                                   aria-controls="account" aria-selected="true">
+                                                    <i class="ft-user mr-1"></i>
+                                                    <span class="d-none d-sm-block">Particulier</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#relatie_zakelijk" role="tab" id="information-tab"
+                                                   class="nav-link d-flex align-items-center" data-toggle="tab"
+                                                   aria-controls="information" aria-selected="false">
+                                                    <i class="ft-info mr-1"></i>
+                                                    <span class="d-none d-sm-block">Zakelijk</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#relatie_werknemers" role="tab" id="information-tab"
+                                                   class="nav-link d-flex align-items-center" data-toggle="tab"
+                                                   aria-controls="information" aria-selected="false">
+                                                    <i class="ft-info mr-1"></i>
+                                                    <span class="d-none d-sm-block">Werknemers</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <!-- Account content starts -->
+                                            <div class="tab-pane fade mt-2 show active" id="relatie_particulier"
+                                                 role="tabpanel"
+                                                 aria-labelledby="account-tab">
+                                                <!-- Account form starts -->
+                                                <form method="post" class='needs-validation'>
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <h4>Klantgegevens</h4>
+                                                                <div class="controls">
+                                                                    <label for="users-edit-username">Voornaam</label>
+                                                                    <input type="text" id="users-edit-username"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,10}"
+                                                                           title="Alleen letters"
+                                                                           placeholder="Voornaam" required
+                                                                           aria-invalid="false" name="voornaam_p">
+                                                                </div>
+                                                                </br>
+                                                                <div class="controls">
+                                                                    <label for="users-edit-username">Tussenvoegsel</label>
+                                                                    <input type="text" id="users-edit-username"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,10}"
+                                                                           title="Alleen letters"
+                                                                           placeholder="Tussenvoegsel"
+                                                                           aria-invalid="false" name="tussenvoegsel_p">
+                                                                </div>
+                                                                </br>
+                                                                <div class="controls">
+                                                                    <label for="achternaam">Achternaam</label>
+                                                                    <input type="text" id="achternaam"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,10}"
+                                                                           title="Álleen letters"
+                                                                           placeholder="Achternaam"
+                                                                           aria-invalid="false" name="achternaam_p"
+                                                                           required>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-md-4">
-                                                                <div class="form-group">
-                                                                    <h4>Adresgegevens</h4>
-                                                                    <div class="controls ">
-                                                                        <label for="users-edit-username">Postcode</label>
-                                                                        <input type="text" id="postcode_p"
-                                                                               class="form-control round"
-                                                                               pattern="[0-9]{4}[A-Za-z]{2}"
-                                                                               title="Bijvoorbeeld: '1234AB'"
-                                                                               placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode_p"
-                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
-                                                                    </div>
-                                                                    </br>
-                                                                    <div class="form-group row">
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <h4>Adresgegevens</h4>
+                                                                <div class="controls ">
+                                                                    <label for="users-edit-username">Postcode</label>
+                                                                    <input type="text" id="postcode_p"
+                                                                           class="form-control round"
+                                                                           pattern="[0-9]{4}[A-Za-z]{2}"
+                                                                           title="Bijvoorbeeld: '1234AB'"
+                                                                           placeholder="Postcode" required
+                                                                           aria-invalid="false" name="postcode_p"
+                                                                           onkeyup="check_pc(&quot;postcode&quot;,this.value)"
+                                                                           autofocus="">
+                                                                </div>
+                                                                </br>
+                                                                <div class="form-group row">
                                                                     <div class="controls col-md-6">
                                                                         <label for="users-edit-username">Huisnummer</label>
                                                                         <input type="text" id="huisnr_p"
@@ -725,176 +782,35 @@ include "partials/navbar.php";
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
                                                                                placeholder="toevoeging"
-                                                                               aria-invalid="false" name="huisnummertoevoeging_p"
-                                                                               onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
-                                                                    </div>
-                                                                    </div>
-                                                                    <div class="controls ">
-                                                                        <label for="users-edit-username">Straatnaam</label>
-                                                                        <input type="text" id="straat_p"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,15}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Straatnaam" required
-                                                                               aria-invalid="false" name="straatnaam_p">
-                                                                    </div>
-
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 col-md-4">
-                                                                <div class="form-group">
-                                                                    <h4>Contactgegevens</h4>
-                                                                    <div class="controls">
-                                                                        <label for="users-edit-email">E-mail</label>
-                                                                        <input type="email" id="users-edit-email"
-                                                                               class="form-control round"
-                                                                               placeholder="Typeemail@hier.com" required
-                                                                               aria-invalid="false" name="email_p">
-                                                                    </div>
-                                                                    </br>
-                                                                    <div class="controls">
-                                                                        <label for="telefoonnummer">Telefoonnummer</label>
-                                                                        <input type="text" id="telefoonnummer"
-                                                                               class="form-control round"
-                                                                               pattern="[0-9]{1,15}"
-                                                                               title="Alleen cijfers"
-                                                                               placeholder="Telefoonnummer" required
                                                                                aria-invalid="false"
-                                                                               name="telefoonnummer_p">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </br>
-                                                    </br>
-                                                        <div class="modal-footer">
-                                                            <button type="reset"
-                                                                    data-dismiss="modal"
-                                                                    class="btn btn-secondary">Cancel
-                                                            </button>
-                                                            <input type="submit"
-                                                                   class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                                   name="registreerParticulier"
-                                                                   value="Relatie Toevoegen">
-                                                        </div>
-                                                    </form>
-                                                    <!-- Account form ends -->
-                                                </div>
-                                                <!-- Account content ends -->
-
-                                                <!-- Information content starts -->
-                                                <div class="tab-pane fade mt-2 show" id="relatie_zakelijk"
-                                                     role="tabpanel"
-                                                     aria-labelledby="Zakelijk-tab">
-                                                    <!-- Media object starts -->
-                                                    <!-- Media object ends -->
-                                                    <form method="post">
-                                                        <div class="row">
-                                                            <div class="col-12 col-md-4">
-                                                                <div class="form-group">
-                                                                    <h4>Klantgegevens</h4>
-                                                                    <div class="controls">
-                                                                        <div class="controls ">
-                                                                            <label for="bedrijfsnaam">Bedrijfsnaam</label>
-                                                                            <input type="text" id="bedrijfsnaam"
-                                                                                   class="form-control round"
-                                                                                   pattern="[a-zA-Z\s\.0-9]{1,15}"
-                                                                                   placeholder="Bedrijfsnaam" required
-                                                                                   aria-invalid="false" name="bedrijfsnaam">
-                                                                            <input type="hidden" name="custof" value="<?= $_GET["custof"] ?>">
-                                                                        </div>
-                                                                        </br>
-                                                                        <label for="users-edit-username">Voornaam</label>
-                                                                        <input type="text" id="users-edit-username"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,10}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Voornaam" required
-                                                                               aria-invalid="false" name="voornaam_z">
-                                                                    </div>
-                                                                    </br>
-                                                                    <div class="controls">
-                                                                        <label for="users-edit-username">Tussenvoegsel</label>
-                                                                        <input type="text" id="users-edit-username"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,10}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Tussenvoegsel"
-                                                                               aria-invalid="false" name="tussenvoegsel_z">
-                                                                    </div>
-                                                                    </br>
-                                                                    <div class="controls">
-                                                                        <label for="achternaam">Achternaam</label>
-                                                                        <input type="text" id="achternaam"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,10}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Achternaam" required
-                                                                               aria-invalid="false" name="achternaam_z">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 col-md-4">
-                                                                <div class="form-group">
-                                                                    <h4>Adresgegevens</h4>
-                                                                    <div class="controls ">
-                                                                        <label for="postcode">Postcode</label>
-                                                                        <input type="text" id="postcode_z"
-                                                                               class="form-control round"
-                                                                               pattern="[0-9]{4}[A-Za-z]{2}"
-                                                                               title="Bijvoorbeeld: '1234AB'"
-                                                                               placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode_z"
-                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
-                                                                    </div>
-                                                                    </br>
-                                                                    <div class="form-group row">
-                                                                        <div class="controls col-md-6">
-                                                                        <label for="huisnummer">Huisnummer</label>
-                                                                        <input type="text" id="huisnr_z"
-                                                                               class="form-control round"
-                                                                               pattern="[0-9]{1,4}"
-                                                                               title = "Alleen cijfers"
-                                                                               placeholder="Huisnummer" required
-                                                                               aria-invalid="false" name="huisnummer_z"
-                                                                               onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
-
-                                                                    </div>
-                                                                        <div class="controls col-md-6">
-                                                                        <label for="users-edit-username">toevoeging</label>
-                                                                        <input type="text" id="toevoeging_z"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,4}"
-                                                                               placeholder="toevoeging"
-                                                                               aria-invalid="false" name="huisnummertoevoeging_z"
+                                                                               name="huisnummertoevoeging_p"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
                                                                     </div>
-                                                                    </div>
-                                                                    <div class="controls ">
-                                                                        <label for="straatnaam">Straatnaam</label>
-                                                                        <input type="text" id="straat_z"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,15}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Straatnaam" required
-                                                                               aria-invalid="false" name="straatnaam_z">
-                                                                    </div>
                                                                 </div>
+                                                                <div class="controls ">
+                                                                    <label for="users-edit-username">Straatnaam</label>
+                                                                    <input type="text" id="straat_p"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,15}"
+                                                                           title="Alleen letters"
+                                                                           placeholder="Straatnaam" required
+                                                                           aria-invalid="false" name="straatnaam_p">
+                                                                </div>
+
+
                                                             </div>
-                                                            <div class="col-12 col-md-4">
-                                                                <div class="form-group">
-                                                                    <h4>Contactgegevens</h4>
-                                                                </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <h4>Contactgegevens</h4>
                                                                 <div class="controls">
-                                                                    <label for="email">E-mail</label>
-                                                                    <input type="email" id="email"
+                                                                    <label for="users-edit-email">E-mail</label>
+                                                                    <input type="email" id="users-edit-email"
                                                                            class="form-control round"
                                                                            placeholder="Typeemail@hier.com" required
-                                                                           aria-invalid="false" name="email_z">
+                                                                           aria-invalid="false" name="email_p">
                                                                 </div>
-                                                            </br>
+                                                                </br>
                                                                 <div class="controls">
                                                                     <label for="telefoonnummer">Telefoonnummer</label>
                                                                     <input type="text" id="telefoonnummer"
@@ -903,177 +819,328 @@ include "partials/navbar.php";
                                                                            title="Alleen cijfers"
                                                                            placeholder="Telefoonnummer" required
                                                                            aria-invalid="false"
-                                                                           name="telefoonnummer_z">
+                                                                           name="telefoonnummer_p">
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                    </div>
                                                     </br>
                                                     </br>
-                                                        <div class="modal-footer">
-                                                            <button type="reset"
-                                                                    data-dismiss="modal"
-                                                                    class="btn btn-secondary">Cancel
-                                                            </button>
+                                                    <div class="modal-footer">
+                                                        <button type="reset"
+                                                                data-dismiss="modal"
+                                                                class="btn btn-secondary">Cancel
+                                                        </button>
+                                                        <input type="submit"
+                                                               class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
+                                                               name="registreerParticulier"
+                                                               value="Relatie Toevoegen">
+                                                    </div>
+                                                </form>
+                                                <!-- Account form ends -->
+                                            </div>
+                                            <!-- Account content ends -->
+
+                                            <!-- Information content starts -->
+                                            <div class="tab-pane fade mt-2 show" id="relatie_zakelijk"
+                                                 role="tabpanel"
+                                                 aria-labelledby="Zakelijk-tab">
+                                                <!-- Media object starts -->
+                                                <!-- Media object ends -->
+                                                <form method="post">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <h4>Klantgegevens</h4>
+                                                                <div class="controls">
+                                                                    <div class="controls ">
+                                                                        <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                                                                        <input type="text" id="bedrijfsnaam"
+                                                                               class="form-control round"
+                                                                               pattern="[a-zA-Z\s\.0-9]{1,15}"
+                                                                               placeholder="Bedrijfsnaam" required
+                                                                               aria-invalid="false" name="bedrijfsnaam">
+                                                                        <input type="hidden" name="custof"
+                                                                               value="<?= $_GET["custof"] ?>">
+                                                                    </div>
+                                                                    </br>
+                                                                    <label for="users-edit-username">Voornaam</label>
+                                                                    <input type="text" id="users-edit-username"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,10}"
+                                                                           title="Alleen letters"
+                                                                           placeholder="Voornaam" required
+                                                                           aria-invalid="false" name="voornaam_z">
+                                                                </div>
+                                                                </br>
+                                                                <div class="controls">
+                                                                    <label for="users-edit-username">Tussenvoegsel</label>
+                                                                    <input type="text" id="users-edit-username"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,10}"
+                                                                           title="Alleen letters"
+                                                                           placeholder="Tussenvoegsel"
+                                                                           aria-invalid="false" name="tussenvoegsel_z">
+                                                                </div>
+                                                                </br>
+                                                                <div class="controls">
+                                                                    <label for="achternaam">Achternaam</label>
+                                                                    <input type="text" id="achternaam"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,10}"
+                                                                           title="Alleen letters"
+                                                                           placeholder="Achternaam" required
+                                                                           aria-invalid="false" name="achternaam_z">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <h4>Adresgegevens</h4>
+                                                                <div class="controls ">
+                                                                    <label for="postcode">Postcode</label>
+                                                                    <input type="text" id="postcode_z"
+                                                                           class="form-control round"
+                                                                           pattern="[0-9]{4}[A-Za-z]{2}"
+                                                                           title="Bijvoorbeeld: '1234AB'"
+                                                                           placeholder="Postcode" required
+                                                                           aria-invalid="false" name="postcode_z"
+                                                                           onkeyup="check_pc(&quot;postcode&quot;,this.value)"
+                                                                           autofocus="">
+                                                                </div>
+                                                                </br>
+                                                                <div class="form-group row">
+                                                                    <div class="controls col-md-6">
+                                                                        <label for="huisnummer">Huisnummer</label>
+                                                                        <input type="text" id="huisnr_z"
+                                                                               class="form-control round"
+                                                                               pattern="[0-9]{1,4}"
+                                                                               title="Alleen cijfers"
+                                                                               placeholder="Huisnummer" required
+                                                                               aria-invalid="false" name="huisnummer_z"
+                                                                               onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
+
+                                                                    </div>
+                                                                    <div class="controls col-md-6">
+                                                                        <label for="users-edit-username">toevoeging</label>
+                                                                        <input type="text" id="toevoeging_z"
+                                                                               class="form-control round"
+                                                                               pattern="[a-zA-Z]{1,4}"
+                                                                               placeholder="toevoeging"
+                                                                               aria-invalid="false"
+                                                                               name="huisnummertoevoeging_z"
+                                                                               onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="controls ">
+                                                                    <label for="straatnaam">Straatnaam</label>
+                                                                    <input type="text" id="straat_z"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,15}"
+                                                                           title="Alleen letters"
+                                                                           placeholder="Straatnaam" required
+                                                                           aria-invalid="false" name="straatnaam_z">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <h4>Contactgegevens</h4>
+                                                            </div>
+                                                            <div class="controls">
+                                                                <label for="email">E-mail</label>
+                                                                <input type="email" id="email"
+                                                                       class="form-control round"
+                                                                       placeholder="Typeemail@hier.com" required
+                                                                       aria-invalid="false" name="email_z">
+                                                            </div>
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for="telefoonnummer">Telefoonnummer</label>
+                                                                <input type="text" id="telefoonnummer"
+                                                                       class="form-control round"
+                                                                       pattern="[0-9]{1,15}"
+                                                                       title="Alleen cijfers"
+                                                                       placeholder="Telefoonnummer" required
+                                                                       aria-invalid="false"
+                                                                       name="telefoonnummer_z">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </br>
+                                                    </br>
+                                                    <div class="modal-footer">
+                                                        <button type="reset"
+                                                                data-dismiss="modal"
+                                                                class="btn btn-secondary">Cancel
+                                                        </button>
                                                         <input type="submit"
                                                                class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
                                                                name="registreerParticulier"
                                                                value="Relatie Toevoegen">
 
-                                                            </div>
-                                                    </form>
+                                                    </div>
+                                                </form>
 
-                                                    <!-- Account form starts -->
-                                                    <!-- Account form ends -->
-                                                </div>
-                                                <div class="tab-pane fade mt-2 show" id="relatie_werknemers"
-                                                     role="tabpanel"
-                                                     aria-labelledby="Zakelijk-tab">
-                                                    <!-- Media object starts -->
-                                                    <!-- Media object ends -->
-                                                    <form method="post">
-                                                        <div class="row">
-                                                            <div class="col-12 col-md-4">
-                                                                <div class="form-group">
-                                                                    <h4>Klantgegevens</h4>
-                                                                    <div class="controls">
-                                                                        <div class="controls ">
-                                                                            <label for="bedrijfsnaam">Bedrijfsnaam</label>
-                                                                            <input type="text" id="bedrijfsnaam"
-                                                                                   class="form-control round"
-                                                                                   pattern="[a-zA-Z\s\.0-9]{1,15}"
-                                                                                   readonly
-                                                                                   aria-invalid="false" name="bedrijfsnaam" value="<?php GetCompanyNamePersonnel(); ?>">
-                                                                            <input type="hidden" name="membof" value="<?= $_GET["membof"] ?>">
-                                                                        </div>
-                                                                    </br>
-                                                                        <label for="users-edit-username">Voornaam</label>
-                                                                        <input type="text" id="users-edit-username"
+                                                <!-- Account form starts -->
+                                                <!-- Account form ends -->
+                                            </div>
+                                            <div class="tab-pane fade mt-2 show" id="relatie_werknemers"
+                                                 role="tabpanel"
+                                                 aria-labelledby="Zakelijk-tab">
+                                                <!-- Media object starts -->
+                                                <!-- Media object ends -->
+                                                <form method="post">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <h4>Klantgegevens</h4>
+                                                                <div class="controls">
+                                                                    <div class="controls ">
+                                                                        <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                                                                        <input type="text" id="bedrijfsnaam"
                                                                                class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,10}"
-                                                                               placeholder="Voornaam" required
-                                                                               aria-invalid="false" name="voornaam">
+                                                                               pattern="[a-zA-Z\s\.0-9]{1,15}"
+                                                                               readonly
+                                                                               aria-invalid="false" name="bedrijfsnaam"
+                                                                               value="<?php GetCompanyNamePersonnel(); ?>">
+                                                                        <input type="hidden" name="membof"
+                                                                               value="<?= $_GET["membof"] ?>">
                                                                     </div>
                                                                     </br>
-                                                                    <div class="controls">
-                                                                        <label for="users-edit-username">Tussenvoegsel</label>
-                                                                        <input type="text" id="users-edit-username"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,10}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Tussenvoegsel"
-                                                                               aria-invalid="false" name="tussenvoegsel">
-                                                                    </div>
-                                                                    </br>
-                                                                    <div class="controls">
-                                                                        <label for="achternaam">Achternaam</label>
-                                                                        <input type="text" id="achternaam"
-                                                                               pattern="[a-zA-Z]{1,10}"
-                                                                               title="Alleen letters"
-                                                                               class="form-control round"
-                                                                               placeholder="Achternaam" required
-                                                                               aria-invalid="false" name="achternaam">
-                                                                    </div>
+                                                                    <label for="users-edit-username">Voornaam</label>
+                                                                    <input type="text" id="users-edit-username"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,10}"
+                                                                           placeholder="Voornaam" required
+                                                                           aria-invalid="false" name="voornaam">
+                                                                </div>
+                                                                </br>
+                                                                <div class="controls">
+                                                                    <label for="users-edit-username">Tussenvoegsel</label>
+                                                                    <input type="text" id="users-edit-username"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,10}"
+                                                                           title="Alleen letters"
+                                                                           placeholder="Tussenvoegsel"
+                                                                           aria-invalid="false" name="tussenvoegsel">
+                                                                </div>
+                                                                </br>
+                                                                <div class="controls">
+                                                                    <label for="achternaam">Achternaam</label>
+                                                                    <input type="text" id="achternaam"
+                                                                           pattern="[a-zA-Z]{1,10}"
+                                                                           title="Alleen letters"
+                                                                           class="form-control round"
+                                                                           placeholder="Achternaam" required
+                                                                           aria-invalid="false" name="achternaam">
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-md-4">
-                                                                <div class="form-group">
-                                                                    <h4>Adresgegevens</h4>
-                                                                    <div class="controls ">
-                                                                        <label for="postcode">Postcode</label>
-                                                                        <input type="text" id="postcode_w"
-                                                                               class="form-control round"
-                                                                               pattern="[0-9]{4}[A-Za-z]{2}"
-                                                                               title="Bijvoorbeeld: '1234AB'"
-                                                                               placeholder="Postcode" required
-                                                                               aria-invalid="false" name="postcode"
-                                                                               onkeyup="check_pc(&quot;postcode&quot;,this.value)" autofocus="">
-                                                                    </div>
-                                                                    </br>
-                                                                    <div class="form-group row">
-                                                                        <div class="controls col-md-6">
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <h4>Adresgegevens</h4>
+                                                                <div class="controls ">
+                                                                    <label for="postcode">Postcode</label>
+                                                                    <input type="text" id="postcode_w"
+                                                                           class="form-control round"
+                                                                           pattern="[0-9]{4}[A-Za-z]{2}"
+                                                                           title="Bijvoorbeeld: '1234AB'"
+                                                                           placeholder="Postcode" required
+                                                                           aria-invalid="false" name="postcode"
+                                                                           onkeyup="check_pc(&quot;postcode&quot;,this.value)"
+                                                                           autofocus="">
+                                                                </div>
+                                                                </br>
+                                                                <div class="form-group row">
+                                                                    <div class="controls col-md-6">
                                                                         <label for="huisnummer">Huisnummer</label>
                                                                         <input type="text" id="huisnr_w"
                                                                                class="form-control round"
                                                                                pattern="[0-9]{1,4}"
-                                                                               title = "Alleen cijfers"
+                                                                               title="Alleen cijfers"
                                                                                placeholder="Huisnummer" required
                                                                                aria-invalid="false" name="huisnummer"
                                                                                onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
                                                                     </div>
-                                                                        <div class="controls col-md-6">
+                                                                    <div class="controls col-md-6">
                                                                         <label for="users-edit-username">toevoeging</label>
                                                                         <input type="text" id="toevoeging_w"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z]{1,4}"
                                                                                title="Alleen letters"
                                                                                placeholder="toevoeging"
-                                                                               aria-invalid="false" name="huisnummertoevoeging"
+                                                                               aria-invalid="false"
+                                                                               name="huisnummertoevoeging"
                                                                                onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
                                                                     </div>
-                                                                    </div>
-                                                                    <div class="controls ">
-                                                                        <label for="straatnaam">Straatnaam</label>
-                                                                        <input type="text" id="straat_w"
-                                                                               class="form-control round"
-                                                                               pattern="[a-zA-Z]{1,15}"
-                                                                               title="Alleen letters"
-                                                                               placeholder="Straatnaam" required
-                                                                               aria-invalid="false" name="straat">
-                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-12 col-md-4">
-                                                                <div class="form-group">
-                                                                    <h4>Contactgegevens</h4>
-                                                                    <div class="controls">
-                                                                        <label for="email">E-mail</label>
-                                                                        <input type="email" id="email"
-                                                                               class="form-control round"
-                                                                               placeholder="Typeemail@hier.com" required
-                                                                               aria-invalid="false" name="email">
-                                                                    </div>
-                                                                </br>
-                                                                    <div class="controls">
-                                                                        <label for="telefoonnummer">Telefoonnummer</label>
-                                                                        <input type="text" id="telefoonnummer"
-                                                                               class="form-control round"
-                                                                               placeholder="Telefoonnummer" required
-                                                                               pattern="[0-9]{1,15}"
-                                                                               title="Alleen cijfers"
-                                                                               aria-invalid="false"
-                                                                               name="telefoonnummer">
-                                                                    </div>
-                                                                </br>
-                                                                    <div class="controls">
-                                                                        <label for="auth_level">Functie</label>
-                                                                        <select id="auth_level" name="function" class="form-control" >
-                                                                            <option value="" hidden>Select Role</option>
-                                                                            <option value="Bedrijfsleider">Bedrijfsleider</option>
-                                                                            <option value="Werknemer">Werknemer</option>
-                                                                        </select>
-                                                                    </div>
+                                                                <div class="controls ">
+                                                                    <label for="straatnaam">Straatnaam</label>
+                                                                    <input type="text" id="straat_w"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,15}"
+                                                                           title="Alleen letters"
+                                                                           placeholder="Straatnaam" required
+                                                                           aria-invalid="false" name="straat">
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        </br>
-                                                        </br>
-                                                        <div class="modal-footer">
-                                                                <button type="reset"
-                                                                        data-dismiss="modal"
-                                                                        class="btn btn-secondary">Cancel
-                                                                </button>
-                                                                <input type="submit"
-                                                                       class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                                       name="registreerWerknemer"
-                                                                       value="Werknemer Toevoegen">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <h4>Contactgegevens</h4>
+                                                                <div class="controls">
+                                                                    <label for="email">E-mail</label>
+                                                                    <input type="email" id="email"
+                                                                           class="form-control round"
+                                                                           placeholder="Typeemail@hier.com" required
+                                                                           aria-invalid="false" name="email">
+                                                                </div>
+                                                                </br>
+                                                                <div class="controls">
+                                                                    <label for="telefoonnummer">Telefoonnummer</label>
+                                                                    <input type="text" id="telefoonnummer"
+                                                                           class="form-control round"
+                                                                           placeholder="Telefoonnummer" required
+                                                                           pattern="[0-9]{1,15}"
+                                                                           title="Alleen cijfers"
+                                                                           aria-invalid="false"
+                                                                           name="telefoonnummer">
+                                                                </div>
+                                                                </br>
+                                                                <div class="controls">
+                                                                    <label for="auth_level">Functie</label>
+                                                                    <select id="auth_level" name="function"
+                                                                            class="form-control">
+                                                                        <option value="" hidden>Select Role</option>
+                                                                        <option value="Bedrijfsleider">Bedrijfsleider
+                                                                        </option>
+                                                                        <option value="Werknemer">Werknemer</option>
+                                                                    </select>
+                                                                </div>
                                                             </div>
-                                                    </form>
+                                                        </div>
+                                                    </div>
+                                                    </br>
+                                                    </br>
+                                                    <div class="modal-footer">
+                                                        <button type="reset"
+                                                                data-dismiss="modal"
+                                                                class="btn btn-secondary">Cancel
+                                                        </button>
+                                                        <input type="submit"
+                                                               class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
+                                                               name="registreerWerknemer"
+                                                               value="Werknemer Toevoegen">
+                                                    </div>
+                                                </form>
 
-                                                    <!-- Account form starts -->
-                                                    <!-- Account form ends -->
-                                                </div>
-                                                <!-- Information content ends -->
+                                                <!-- Account form starts -->
+                                                <!-- Account form ends -->
                                             </div>
+                                            <!-- Information content ends -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1095,80 +1162,110 @@ include "partials/footer.php";
     /*
         zet script nog in apart bestand wnnr af voor de aapie
     */
-    var e		= "FbW29C_969cyVfAKrj";
-    var postcode	= "";
-    var huisnr		= "";
-    var toevoeging	= "";
+    var e = "FbW29C_969cyVfAKrj";
+    var postcode = "";
+    var huisnr = "";
+    var toevoeging = "";
 
-    function check_pc(wat,waarde) {
-        if (wat==="postcode") {
+    function check_pc(wat, waarde) {
+        if (wat === "postcode") {
             var pc = waarde.trim();
-            if (pc.length <6) {maak_leeg();return;}					// moet minimaal 6 characters hebben
-            var num_deel = pc.substr(0,4);
-            if (parseFloat(num_deel) < 1000) {maak_leeg();return;}	// moet minaal 1000 zijn
+            if (pc.length < 6) {
+                maak_leeg();
+                return;
+            }					// moet minimaal 6 characters hebben
+            var num_deel = pc.substr(0, 4);
+            if (parseFloat(num_deel) < 1000) {
+                maak_leeg();
+                return;
+            }	// moet minaal 1000 zijn
             var alpha_deel = pc.substr(-2);
-            if (alpha_deel.charCodeAt(0) < 65 || alpha_deel.charCodeAt(0) > 122 || alpha_deel.charCodeAt(1) < 65 || alpha_deel.charCodeAt(1) > 122 ) {maak_leeg();return;} 	// DE LAATSTE 2 POSITIES MOETEN LETTERS ZIJN
+            if (alpha_deel.charCodeAt(0) < 65 || alpha_deel.charCodeAt(0) > 122 || alpha_deel.charCodeAt(1) < 65 || alpha_deel.charCodeAt(1) > 122) {
+                maak_leeg();
+                return;
+            } 	// DE LAATSTE 2 POSITIES MOETEN LETTERS ZIJN
             alpha_deel = alpha_deel.toUpperCase();
 
             // de checker niffo
 
-            postcode = num_deel+alpha_deel;
+            postcode = num_deel + alpha_deel;
             document.getElementById("postcode_p").value = postcode;
             document.getElementById("postcode_z").value = postcode;
             document.getElementById("postcode_w").value = postcode;
         }
 
-        if (wat==="huisnr") {
+        if (wat === "huisnr") {
             huisnr = parseFloat(waarde);
-            if (!huisnr) {maak_leeg();return;}
+            if (!huisnr) {
+                maak_leeg();
+                return;
+            }
             document.getElementById("huisnr_p").value = huisnr;
             document.getElementById("huisnr_z").value = huisnr;
             document.getElementById("huisnr_w").value = huisnr;
         }
 
-        if (wat==="toevoeging") {
+        if (wat === "toevoeging") {
             toevoeging = waarde.trim();
             document.getElementById("toevoeging_p").value = toevoeging;
             document.getElementById("toevoeging_z").value = toevoeging;
             document.getElementById("toevoeging_w").value = toevoeging;
         }
 
-        if (huisnr===0) {return;}
+        if (huisnr === 0) {
+            return;
+        }
 
-        var getadrlnk	= 'https://bwnr.nl/postcode.php?pc='+postcode+'&hn='+huisnr+'&tv='+toevoeging+'&tg=data&ak='+'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
+        var getadrlnk = 'https://bwnr.nl/postcode.php?pc=' + postcode + '&hn=' + huisnr + '&tv=' + toevoeging + '&tg=data&ak=' + 'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
 
         var xmlhttp = new XMLHttpRequest();
 
-        xmlhttp.onreadystatechange = function() {
+        xmlhttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 rString = this.responseText;
-                if (rString==="Geen resultaat.") {maak_leeg();return;}
-                if (rString==="Input onvolledig.") {maak_leeg();return;}
-                if (rString==="Onbekende API Key.") {maak_leeg();return;}
-                if (rString==="Over quota") {maak_leeg();return;}
-                if (rString==="Onjuiste API Key.") {maak_leeg();alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');return;}
+                if (rString === "Geen resultaat.") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString === "Input onvolledig.") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString === "Onbekende API Key.") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString === "Over quota") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString === "Onjuiste API Key.") {
+                    maak_leeg();
+                    alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');
+                    return;
+                }
                 // 0 = straat - 1 = plaats
                 aResponse = rString.split(";");
-                document.getElementById("straat_p").value=aResponse[0];
-                document.getElementById("straat_z").value=aResponse[0];
-                document.getElementById("straat_w").value=aResponse[0];
-                document.getElementById("plaats_p").value=aResponse[1];
-                document.getElementById("plaats_z").value=aResponse[1];
-                document.getElementById("plaats_w").value=aResponse[1];
+                document.getElementById("straat_p").value = aResponse[0];
+                document.getElementById("straat_z").value = aResponse[0];
+                document.getElementById("straat_w").value = aResponse[0];
+                document.getElementById("plaats_p").value = aResponse[1];
+                document.getElementById("plaats_z").value = aResponse[1];
+                document.getElementById("plaats_w").value = aResponse[1];
             }
         };
 
-        xmlhttp.open("GET", getadrlnk , true);
+        xmlhttp.open("GET", getadrlnk, true);
         xmlhttp.send();
     }
 
     function maak_leeg() {
-        document.getElementById("straat_p").value="";
-        document.getElementById("plaats_p").value="";
-        document.getElementById("straat_z").value="";
-        document.getElementById("plaats_z").value="";
-        document.getElementById("straat_w").value="";
-        document.getElementById("plaats_w").value="";
+        document.getElementById("straat_p").value = "";
+        document.getElementById("plaats_p").value = "";
+        document.getElementById("straat_z").value = "";
+        document.getElementById("plaats_z").value = "";
+        document.getElementById("straat_w").value = "";
+        document.getElementById("plaats_w").value = "";
     }
 </script>
 
