@@ -58,7 +58,8 @@ include "partials/navbar.php";
                 <div class="row">
                     <div class="col-md-3 mt-3">
                         <!-- Nav tabs -->
-                        <ul class="sticky nav flex-column nav-pills" id="myTab" role="tablist">
+                    <div class="sticky">
+                        <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">
                                     <i class="ft-settings mr-1 align-middle"></i>
@@ -78,6 +79,7 @@ include "partials/navbar.php";
                                 </a>
                             </li>
                         </ul>
+                    </div>
                     </div>
                     <div class="col-md-9">
                         <!-- Tab panes -->
