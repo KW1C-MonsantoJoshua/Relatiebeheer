@@ -1,8 +1,9 @@
 <?php
 include "db.php";
 session_start();
-include"error.php";
-function Updateuser(){
+include "error.php";
+function Updateuser()
+{
     global $mysqli;
     if (isset($_POST['save'])) {
         $query = "UPDATE users SET username = ?, name = ? , email = ? WHERE id = ?";
@@ -13,6 +14,7 @@ function Updateuser(){
         $stmt->execute();
     }
 }
+
 function InsertBedrijf()
 {
     global $mysqli;
@@ -32,8 +34,7 @@ function InsertBedrijf()
                 $error = "Invalid Phone number";
             } elseif (preg_match($pattern, $_POST['email']) === 0) {
                 $error = "Invalid Email";
-            }
-            else {
+            } else {
                 $sql = "INSERT INTO `organisation`(`name`,`street`,
                                  `housenumber`,`housenumberAddition`,`postalcode`,`website`,
                                  `phoneNumber`,`email`)VALUES(?,?,?,?,?,?,?,?)";
@@ -65,29 +66,37 @@ function InsertBedrijf()
 
 //Functie voor het ophalen van bedrijfsgegevens
 //Functie gebruikt de GET method om uit te vinden van welk bedrijf de gegevens moeten komen
-function GetCompanyInfo(){
+function GetCompanyInfo()
+{
     global $mysqli;
     $sql = "SELECT * FROM `organisation` WHERE id = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("i",$_GET["membof"]);
+    $stmt->bind_param("i", $_GET["membof"]);
     $stmt->execute();
     $result = $stmt->get_result();
-    return  $result->fetch_array();
+    return $result->fetch_array();
 }
-function UpdateCompanyInfo(){
+
+function UpdateCompanyInfo()
+{
     global $mysqli;
+    if (!empty($_POST['name'] || $_POST['street'] || $_POST['huisnummer'] ||
+        $_POST['toevoeging'] || $_POST['postcode'] || $_POST['telefoon'] || $_POST['email'] ||
+        $_POST['kvk'] || $_POST['btw'] || $_POST['iban'] || $_GET['membof'])) {
         $query = "UPDATE `organisation`  SET  name = ?, street = ?,housenumber = ?,housenumberAddition = ?,
-                         postalcode = ?,website = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer = ?,
+                         postalcode = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer = ?,
                          iban_nummer = ? WHERE id= ?;";
         $stmt = $mysqli->prepare($query);
-        $stmt->bind_param('ssisssssiiii', $_POST['name'], $_POST['street'], $_POST['huisnummer'],
-            $_POST['toevoeging'], $_POST['postcode'], $_POST['website'], $_POST['telefoon'], $_POST['email'],
-            $_POST['kvk'],$_POST['btw'],$_POST['iban'],$_GET['membof']);
+        $stmt->bind_param('ssissssiiii', $_POST['name'], $_POST['street'], $_POST['huisnummer'],
+            $_POST['toevoeging'], $_POST['postcode'], $_POST['telefoon'], $_POST['email'],
+            $_POST['kvk'], $_POST['btw'], $_POST['iban'], $_GET['membof']);
         $stmt->execute();
+    }
 }
 
 
-function Getuser(){
+function Getuser()
+{
     global $mysqli;
     $sql = "SELECT * FROM users where id= ?";
     $stmt = $mysqli->prepare($sql);
@@ -117,7 +126,7 @@ function Changepassword()
                         $stmt = $mysqli->prepare($query);
                         $stmt->bind_param('si', $_POST['retype-new-password'], $_SESSION['id']);
                         $stmt->execute();
-                    }else{
+                    } else {
                         header("Location:../page-account-settings.php?login=fout");
                     }
                 } else {
@@ -130,7 +139,8 @@ function Changepassword()
 }
 
 
-function qron(){
+function qron()
+{
     global $mysqli;
     if (isset($_POST['set'])) {
         $sql = "UPDATE `users` SET `googlecode` = ? WHERE id = ?";
@@ -144,14 +154,15 @@ function qron(){
     }
 }
 
-function qroff(){
+function qroff()
+{
     global $mysqli;
-    if (isset($_POST['del'])){
+    if (isset($_POST['del'])) {
         $string = "";
         $sql_d = "UPDATE `users` SET `googlecode` = ? WHERE id = ?";
         $stmt = $mysqli->prepare($sql_d);
         $stmt->bind_param(
-            "si", $string ,$_SESSION['id']
+            "si", $string, $_SESSION['id']
         );
         $stmt->execute();
     }
@@ -221,14 +232,14 @@ function Getpersonnel()
         ?>
         <tr>
             <td><?= $rowPersonnel["id"] ?></td>
-            <td><?= $rowPersonnel["first_name"]. " ".$rowPersonnel["last_name_prefix"]. " ". $rowPersonnel["last_name"]?></td>
+            <td><?= $rowPersonnel["first_name"] . " " . $rowPersonnel["last_name_prefix"] . " " . $rowPersonnel["last_name"] ?></td>
             <td><?= $rowPersonnel["email"] ?></td>
             <td><?= $rowPersonnel["phoneNumber"] ?></td>
             <td>
                 <?php
                 if ($rowPersonnel["authentication_level"] === "Bedrijfsleider") { ?>
-                    <span class="badge gradient-purple-bliss" >Bedrijfsleider</span>
-                <?php } elseif ( $rowPersonnel["authentication_level"] === "Werknemer") { ?>
+                    <span class="badge gradient-purple-bliss">Bedrijfsleider</span>
+                <?php } elseif ($rowPersonnel["authentication_level"] === "Werknemer") { ?>
                     <span class="badge">Werknemer</span>
                 <?php } ?>
             </td>
@@ -237,12 +248,13 @@ function Getpersonnel()
                     <div class="col-md-0">
                     </div>
                     <div class="col-md-5">
-                        <a href="#" data-toggle="modal" data-target="#editPersonnel<?= $rowPersonnel["id"]?>">
+                        <a href="#" data-toggle="modal" data-target="#editPersonnel<?= $rowPersonnel["id"] ?>">
                             <i class="ft-edit"></i>
                         </a>
                     </div>
                     <div class="col-md-5">
-                        <a data-toggle="modal" data-target="#info<?= $rowPersonnel["id"]?>" href="modals.php?<?= $rowPersonnel["id"]?>">
+                        <a data-toggle="modal" data-target="#info<?= $rowPersonnel["id"] ?>"
+                           href="modals.php?<?= $rowPersonnel["id"] ?>">
                             <i class="ft-eye"></i>
                         </a>
                     </div>
@@ -252,7 +264,9 @@ function Getpersonnel()
         <?php
     }
 }
-function GetCompanyPersonneel(){
+
+function GetCompanyPersonneel()
+{
     global $mysqli;
     $tableData = "SELECT * FROM `organisation`";
     $stmt = $mysqli->prepare($tableData);
@@ -269,7 +283,8 @@ function GetCompanyPersonneel(){
     }
 }
 
-function GetCompany(){
+function GetCompany()
+{
     global $mysqli;
     $tableData = "SELECT * FROM `organisation`";
     $stmt = $mysqli->prepare($tableData);
@@ -279,24 +294,26 @@ function GetCompany(){
         ?>
         <tr>
             <td><?= $row["id"] ?></td>
-            <td><a href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a></td>
-            <td><?= $row["phoneNumber"]?></td>
-            <td><?= $row["email"]?></td>
+            <td>
+                <a href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a>
+            </td>
+            <td><?= $row["phoneNumber"] ?></td>
+            <td><?= $row["email"] ?></td>
             <td><?php
                 if ($row["status"] === "Inactief") { ?>
                     <span class="badge bg-light-danger">Inactief</span>
                 <?php } elseif ($row["status"] === "Actief") { ?>
                     <span class="badge bg-light-succes">Actief</span>
-                <?php } ?>			</td>
+                <?php } ?>            </td>
             <td>
                 <div class="row">
                     <div class="col-md-0">
                     </div>
                     <?php
-                    if ($_SESSION['auth'] == "Bedrijfsleider"||$_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
+                    if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
                         ?>
                         <div class="col-md-5">
-                            <a href="#" data-toggle="modal" data-target="#edit<?= $row["id"]?>">
+                            <a href="#" data-toggle="modal" data-target="#edit<?= $row["id"] ?>">
                                 <i class="ft-edit"></i>
                             </a>
                         </div>
@@ -304,12 +321,13 @@ function GetCompany(){
                     }
                     ?>
                     <div class="col-md-5">
-                        <a data-toggle="modal" data-target="#info<?php echo $row["id"]?>">
+                        <a data-toggle="modal" data-target="#info<?php echo $row["id"] ?>">
                             <i class="ft-eye"></i>
                         </a>
                     </div>
-                                        <div class="col-md-5">
-            <a href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><i class="ft-eye"></i>
+                    <div class="col-md-5">
+                        <a href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><i
+                                    class="ft-eye"></i>
                         </a>
                     </div>
                 </div>
@@ -319,7 +337,8 @@ function GetCompany(){
 }
 
 
-function password_reset($password,$confirmpassword,$email){
+function password_reset($password, $confirmpassword, $email)
+{
     global $mysqli;
     if (empty($password) or empty($confirmpassword)) {
         exit('Not all fields are filled in.');
@@ -327,7 +346,7 @@ function password_reset($password,$confirmpassword,$email){
     if ($password == $confirmpassword) {
         $sqlUpdate = "UPDATE `users` SET `password`= ? WHERE email  = ?";
         $stmt = $mysqli->prepare($sqlUpdate);
-        $stmt->bind_param('ss',$password,$email);
+        $stmt->bind_param('ss', $password, $email);
         $stmt->execute();
         echo "Gelukt!";
     } else {
@@ -346,10 +365,11 @@ function Updatepersonnel()
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('sssssssssi', $_POST["voornaam"], $_POST["tussenvoegsel"], $_POST["achternaam"]
             , $_POST["straat"], $_POST["huisnummer"], $_POST["postcode"],
-            $_POST["telefoonnummer"], $_POST["email"],$_POST["function"], $_POST["id"]);
+            $_POST["telefoonnummer"], $_POST["email"], $_POST["function"], $_POST["id"]);
         $stmt->execute();
     }
 }
+
 function InsertPersonnel1()
 {
     global $mysqli;
@@ -374,10 +394,10 @@ function InsertPersonnel1()
             } elseif (preg_match($pattern, $_POST['email']) === 0) {
                 header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenMemb=mailfout");
                 exit();
-            }elseif (preg_match($reStraat, $_POST["straat"])) {
+            } elseif (preg_match($reStraat, $_POST["straat"])) {
                 header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenMemb=straatfout");
                 exit();
-            }elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode'])) {
+            } elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode'])) {
                 header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenMemb=postcodefout");
                 exit();
             } else {
@@ -401,8 +421,8 @@ function InsertPersonnel1()
 
                     $stmt = $mysqli->prepare($sql);
                     $voornaam = ucwords($_POST['voornaam']);
-                    $achternaam = 	ucwords($_POST['achternaam']);
-                    $stmt->bind_param("ssssisisii",$voornaam , $_POST['tussenvoegsel'],$achternaam, $_POST['straat'],$_POST['huisnummer'], $_POST['postcode'], $_POST['telefoonnummer'], $_POST['email'],$_POST['function'], $_GET["membof"]);
+                    $achternaam = ucwords($_POST['achternaam']);
+                    $stmt->bind_param("ssssisisii", $voornaam, $_POST['tussenvoegsel'], $achternaam, $_POST['straat'], $_POST['huisnummer'], $_POST['postcode'], $_POST['telefoonnummer'], $_POST['email'], $_POST['function'], $_GET["membof"]);
 
                     $stmt->execute();
                     $stmt->close();
@@ -413,17 +433,19 @@ function InsertPersonnel1()
         }
     }
 }
+
 InsertPersonnel1();
 function Getpersonnel1()
 {
     global $mysqli;
     $Datapersonnel = "SELECT * FROM personnel WHERE id = ?";
     $stmt = $mysqli->prepare($Datapersonnel);
-    $stmt->bind_param("i",$_GET["id"]);
+    $stmt->bind_param("i", $_GET["id"]);
     $stmt->execute();
     $resultpersonnel = $stmt->get_result();
-    return  $resultpersonnel->fetch_array();
+    return $resultpersonnel->fetch_array();
 }
+
 Getpersonnel1();
 
 function InsertCustomerIndividual()
@@ -451,19 +473,19 @@ function InsertCustomerIndividual()
             } elseif (preg_match($pattern, $_POST['email_p']) === 0) {
                 header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=mailfout");
                 exit();
-            }elseif (preg_match($reStraat, $_POST["straatnaam_p"])) {
+            } elseif (preg_match($reStraat, $_POST["straatnaam_p"])) {
                 header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=straatfout");
                 exit();
-            }elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode_p'])) {
+            } elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode_p'])) {
                 header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=postcodefout");
                 exit();
-            }else {
+            } else {
                 $query = "SELECT * FROM `customers_individual` WHERE email = ?";
                 $stmt = $mysqli->prepare($query);
                 $stmt->bind_param("s", $_POST["email_p"]);
                 $stmt->execute();
                 if (!$stmt->execute()) {
-                    die('Error: ' .$mysqli->error);
+                    die('Error: ' . $mysqli->error);
                 }
                 $result = $stmt->get_result();
 
@@ -480,8 +502,8 @@ function InsertCustomerIndividual()
                     $stmt = $mysqli->prepare($sql);
                     $voornaam = ucwords($_POST['voornaam_p']);
                     $achternaam = ucwords($_POST['achternaam_p']);
-                    $stmt->bind_param("sssssssssi",$voornaam ,
-                        $_POST['tussenvoegsel_p'],$achternaam, $_POST['straatnaam_p'],
+                    $stmt->bind_param("sssssssssi", $voornaam,
+                        $_POST['tussenvoegsel_p'], $achternaam, $_POST['straatnaam_p'],
                         $_POST['huisnummer_p'], $_POST['huisnummertoevoeging_p'],
                         $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p']
                         , $_GET["custof"]);
@@ -496,6 +518,7 @@ function InsertCustomerIndividual()
         }
     }
 }
+
 InsertCustomerIndividual();
 
 function InsertCustomerBusiness()
@@ -522,10 +545,10 @@ function InsertCustomerBusiness()
             } elseif (preg_match($pattern, $_POST['email_z']) === 0) {
                 //header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=mailfout");
                 exit();
-            }elseif (preg_match($reStraat, $_POST["straatnaam_z"])) {
+            } elseif (preg_match($reStraat, $_POST["straatnaam_z"])) {
                 // header("Location:../bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=straatfout");
                 exit();
-            }elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode_z'])) {
+            } elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode_z'])) {
                 //header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=postcodefout");
                 exit();
             } else {
@@ -542,7 +565,7 @@ function InsertCustomerBusiness()
 
                     // header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=emaildupli");
                     exit();
-                } elseif ($result->num_rows== 0) {
+                } elseif ($result->num_rows == 0) {
 
                     $sql = "INSERT INTO `customers_business`(`id`,`first_name`,`last_name_prefix`,`last_name`,`street`,
                                  `housenumber`,`housenumberAddition`,`postalcode`,`phoneNumber`,
@@ -552,22 +575,23 @@ function InsertCustomerBusiness()
                     $voornaam = ucwords($_POST['voornaam_z']);
                     $achternaam = ucwords($_POST['achternaam_z']);
                     $bedrijfsnaam = ucwords($_POST['bedrijfsnaam']);
-                    $stmt->bind_param("ssssssssssi",$voornaam,
-                        $_POST['tussenvoegsel_z'],$achternaam, $_POST['straatnaam_z'],
+                    $stmt->bind_param("ssssssssssi", $voornaam,
+                        $_POST['tussenvoegsel_z'], $achternaam, $_POST['straatnaam_z'],
                         $_POST['huisnummer_z'], $_POST['huisnummertoevoeging_z'],
                         $_POST['postcode_z'], $_POST['telefoonnummer_z'],
-                        $_POST['email_z'],$bedrijfsnaam , $_GET["custof"]);
+                        $_POST['email_z'], $bedrijfsnaam, $_GET["custof"]);
 
                     $stmt->execute();
                     $stmt->close();
                     $mysqli->close();
-                    header("Location:bedrijfs_klanten_overzicht.php?custof=". $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=succes");
+                    header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=succes");
                     exit();
                 }
             }
         }
     }
 }
+
 InsertCustomerBusiness();
 
 function BusinessSelector()
@@ -584,7 +608,9 @@ function BusinessSelector()
         <?php
     }
 }
-function StatusSelector() {
+
+function StatusSelector()
+{
     if (!empty($_POST['status'])) {
         global $mysqli;
         $query = "UPDATE `customers_individual` SET `status`=? WHERE id = ?";
@@ -607,10 +633,11 @@ function UpdateCustomerB()
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
         $stmt->bind_param('sssssssssssi', $_POST["voornaam_z"], $_POST["tussenvoegsel_z"], $_POST["achternaam_z"]
             , $_POST["straatnaam_z"], $_POST["huisnummer_z"], $_POST["huisnummertoevoeging_z"], $_POST["postcode_z"],
-            $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"], $_POST["bedrijfsnaam"],$_POST["id_z"]);
+            $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"], $_POST["bedrijfsnaam"], $_POST["id_z"]);
         $stmt->execute();
     }
 }
+
 UpdateCustomerB();
 
 function UpdateCustomerI()
@@ -652,7 +679,7 @@ function GetCustomerZ()
         ?>
         <tr>
             <td><?= $rowCustomer["id"] ?></td>
-            <td><?= $rowCustomer["first_name"] . " " . $rowCustomer["last_name_prefix"] . " " . $rowCustomer["last_name"]?></td>
+            <td><?= $rowCustomer["first_name"] . " " . $rowCustomer["last_name_prefix"] . " " . $rowCustomer["last_name"] ?></td>
             <td><?= $rowCustomer["phoneNumber"] ?></td>
             <td><?= $rowCustomer["business"] ?></td>
             <td><?php
@@ -660,16 +687,16 @@ function GetCustomerZ()
                     <span class="badge bg-light-danger">Inactief</span>
                 <?php } elseif ($rowCustomer["status"] === "Actief") { ?>
                     <span class="badge bg-light-succes">Actief</span>
-                <?php } ?>			</td>
+                <?php } ?>            </td>
             <td>
                 <div class="row">
                     <div class="col-md-0">
                     </div>
                     <?php
-                    if ($_SESSION['auth'] == "Bedrijfsleider"||$_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
+                    if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
                         ?>
                         <div class="col-md-5">
-                            <a href="#" data-toggle="modal" data-target="#editZ<?= $rowCustomer["id"]?>">
+                            <a href="#" data-toggle="modal" data-target="#editZ<?= $rowCustomer["id"] ?>">
                                 <i class="ft-edit"></i>
                             </a>
                         </div>
@@ -677,7 +704,8 @@ function GetCustomerZ()
                     }
                     ?>
                     <div class="col-md-5">
-                        <a data-toggle="modal" data-target="#info<?= $rowCustomer["id"]?>" href="modals.php?<?= $rowCustomer["id"] ?>">
+                        <a data-toggle="modal" data-target="#info<?= $rowCustomer["id"] ?>"
+                           href="modals.php?<?= $rowCustomer["id"] ?>">
                             <i class="ft-eye"></i>
                         </a>
                     </div>
@@ -708,7 +736,7 @@ function GetCustomerP()
 
         <tr>
             <td><?= $rowCustomerP["id"] ?></td>
-            <td><?= $rowCustomerP["first_name"] . " " . $rowCustomerP["last_name_prefix"] . " " . $rowCustomerP["last_name"]?></td>
+            <td><?= $rowCustomerP["first_name"] . " " . $rowCustomerP["last_name_prefix"] . " " . $rowCustomerP["last_name"] ?></td>
             <td><?= $rowCustomerP["street"] . " " . $rowCustomerP["housenumber"] . " " . $rowCustomerP["housenumberAddition"] ?></td>
             <td><?= $rowCustomerP["phoneNumber"] ?></td>
             <td><?php
@@ -716,7 +744,7 @@ function GetCustomerP()
                     <span class="badge bg-light-danger">Inactief</span>
                 <?php } elseif ($rowCustomerP["status"] === "Actief") { ?>
                     <span class="badge bg-light-succes">Actief</span>
-                <?php } ?>			</td>
+                <?php } ?>            </td>
             <td>
                 <div class="row">
                     <div class="col-md-0">
@@ -725,7 +753,7 @@ function GetCustomerP()
                     if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] = "Werknemer") {
                         ?>
                         <div class="col-md-5">
-                            <a href="#" data-toggle="modal" data-target="#editP<?= $rowCustomerP["id"]?>">
+                            <a href="#" data-toggle="modal" data-target="#editP<?= $rowCustomerP["id"] ?>">
                                 <i class="ft-edit"></i>
                             </a>
                         </div>
@@ -733,7 +761,8 @@ function GetCustomerP()
                     }
                     ?>
                     <div class="col-md-5">
-                        <a data-toggle="modal" data-target="#info<?= $rowCustomerP["id"]?>" href="modals.php?<?= $rowCustomerP["id"] ?>">
+                        <a data-toggle="modal" data-target="#info<?= $rowCustomerP["id"] ?>"
+                           href="modals.php?<?= $rowCustomerP["id"] ?>">
                             <i class="ft-eye"></i>
                         </a>
                     </div>
@@ -746,32 +775,37 @@ function GetCustomerP()
 
     <?php
 }
-function GetCompanyName(){
-    if (isset($_GET["custof"])){
+
+function GetCompanyName()
+{
+    if (isset($_GET["custof"])) {
         global $mysqli;
         $sql = "SELECT name from `organisation` WHERE id = ? ";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param("i", $_GET["custof"]);
         $stmt->execute();
         $result = $stmt->get_result();
-        if ($data = $result->fetch_assoc()){
+        if ($data = $result->fetch_assoc()) {
             echo $data["name"];
         }
     }
 }
-function GetCompanyNamePersonnel(){
-    if (isset($_GET["membof"])){
+
+function GetCompanyNamePersonnel()
+{
+    if (isset($_GET["membof"])) {
         global $mysqli;
         $sql = "SELECT name from `organisation` WHERE id = ? ";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param("i", $_GET["membof"]);
         $stmt->execute();
         $result = $stmt->get_result();
-        if ($data = $result->fetch_assoc()){
+        if ($data = $result->fetch_assoc()) {
             echo $data["name"];
         }
     }
 }
+
 function ViewUserP()
 {
     global $mysqli;
@@ -790,7 +824,8 @@ function ViewUserP()
 
     while ($rowCustomerP = $resultCustomer->fetch_array()) {
         ?>
-        <div class="modal fade text-left" id="info<?= $rowCustomerP["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="info<?= $rowCustomerP["id"] ?>" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -814,7 +849,7 @@ function ViewUserP()
                                                    aria-invalid="false"
                                                    name="voornaam_p"
                                                    value="<?= $rowCustomerP["first_name"] ?>">
-                                            <input type="hidden" value="<?= $rowCustomerP["id"]?>"
+                                            <input type="hidden" value="<?= $rowCustomerP["id"] ?>"
                                                    name="id_p">
                                         </div>
                                         <div class="controls">
@@ -839,11 +874,12 @@ function ViewUserP()
                                         </div>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
-                                            <textarea  placeholder="Plaats hier je notities"
-                                                       id="notities"
-                                                       readonly
-                                                       name="notities_z"
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomerP['notes']; ?></textarea>
+                                            <textarea placeholder="Plaats hier je notities"
+                                                      id="notities"
+                                                      readonly
+                                                      name="notities_z"
+                                                      rows="6" cols="50"
+                                                      maxlength="600"><?php echo $rowCustomerP['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -931,7 +967,8 @@ function ViewC()
     $resultData = $stmt->get_result();
     while ($row = $resultData->fetch_array()) {
         ?>
-        <div class="modal fade text-left" id="info<?php echo $row['id']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+        <div class="modal fade text-left" id="info<?php echo $row['id'] ?>" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel17" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -960,7 +997,7 @@ function ViewC()
                                             <label for="achternaam">Kvk nummer</label>
                                             <input type="text" id="achternaam"
                                                    class="form-control-plaintext text-light round"
-                                                   placeholder="Achternaam"readonly
+                                                   placeholder="Achternaam" readonly
                                                    aria-invalid="false"
                                                    name="achternaam"
                                                    value="<?= $row["kvk_nummer"] ?>">
@@ -989,11 +1026,12 @@ function ViewC()
                                         </div>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
-                                            <textarea  placeholder="Plaats hier je notities"
-                                                       id="notities"
-                                                       name="notities_z"
-                                                       readonly
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $row['notes']; ?></textarea>
+                                            <textarea placeholder="Plaats hier je notities"
+                                                      id="notities"
+                                                      name="notities_z"
+                                                      readonly
+                                                      rows="6" cols="50"
+                                                      maxlength="600"><?php echo $row['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1091,7 +1129,8 @@ function editC()
     $resultData = $stmt->get_result();
     while ($row = $resultData->fetch_array()) {
         ?>
-        <div class="modal fade text-left" id="edit<?php echo $row['id']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17" aria-hidden="true">
+        <div class="modal fade text-left" id="edit<?php echo $row['id'] ?>" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel17" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1129,7 +1168,7 @@ function editC()
                                                        name="kvk_nummer"
                                                        value="<?= $row["kvk_nummer"] ?>">
                                             </div>
-                                            <input type="hidden" name="id" value="<?php echo $row['id']?>">
+                                            <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
                                             <div class="controls">
                                                 <label for="achternaam">Btw nummer</label>
                                                 <input type="text" id="achternaam"
@@ -1152,10 +1191,10 @@ function editC()
                                             </div>
                                             <div class="controls">
                                                 <label for="notities">Notities</label>
-                                                <textarea  placeholder="Plaats hier je notities"
-                                                           id="notities"
-                                                           name="notes"
-                                                           rows="6" cols="50" maxlength="600"></textarea>
+                                                <textarea placeholder="Plaats hier je notities"
+                                                          id="notities"
+                                                          name="notes"
+                                                          rows="6" cols="50" maxlength="600"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -1233,8 +1272,9 @@ function editC()
                                         <div class="form-group">
                                             <div class="controls">
                                                 <label for="users-edit-role">Status</label>
-                                                <select id="users-edit-role" name="function" class="form-control" >
-                                                    <option value="<?=$row["status"] ?>" hidden selected><?=$row["status"] ?></option>
+                                                <select id="users-edit-role" name="function" class="form-control">
+                                                    <option value="<?= $row["status"] ?>" hidden
+                                                            selected><?= $row["status"] ?></option>
                                                     <option value="Actief">Actief</option>
                                                     <option value="Non-actief">Non-actief</option>
                                                 </select>
@@ -1247,8 +1287,9 @@ function editC()
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
-                                <button name ="submit" type="submit" class="btn btn-primary">Opslaan</button>
+                                <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten
+                                </button>
+                                <button name="submit" type="submit" class="btn btn-primary">Opslaan</button>
                             </div>
                         </form>
                     </div>
@@ -1291,7 +1332,8 @@ function ViewUserZ()
 
     while ($rowCustomer = $resultCustomer->fetch_array()) {
         ?>
-        <div class="modal fade text-left" id="info<?= $rowCustomer["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="info<?= $rowCustomer["id"] ?>" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1333,7 +1375,7 @@ function ViewUserZ()
                                             <label for="achternaam">Achternaam</label>
                                             <input type="text" id="achternaam"
                                                    class="form-control-plaintext text-light round"
-                                                   placeholder="Achternaam"readonly
+                                                   placeholder="Achternaam" readonly
                                                    aria-invalid="false"
                                                    name="achternaam"
                                                    value="<?= $rowCustomer["last_name"] ?>">
@@ -1351,11 +1393,12 @@ function ViewUserZ()
                                         </div>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
-                                            <textarea  placeholder="Plaats hier je notities"
-                                                       id="notities"
-                                                       name="notities_z"
-                                                       readonly
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomer['notes']; ?></textarea>
+                                            <textarea placeholder="Plaats hier je notities"
+                                                      id="notities"
+                                                      name="notities_z"
+                                                      readonly
+                                                      rows="6" cols="50"
+                                                      maxlength="600"><?php echo $rowCustomer['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1432,6 +1475,7 @@ function ViewUserZ()
         <?php
     }
 }
+
 function ViewPersonnel()
 {
     global $mysqli;
@@ -1449,7 +1493,8 @@ function ViewPersonnel()
 
     while ($rowPersonnel = $resultPersonnel->fetch_array()) {
         ?>
-        <div class="modal fade text-left" id="info<?= $rowPersonnel["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="info<?= $rowPersonnel["id"] ?>" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content ">
                     <div class="modal-header">
@@ -1473,7 +1518,7 @@ function ViewPersonnel()
                                                    aria-invalid="false"
                                                    name="voornaam"
                                                    value="<?= $rowPersonnel["first_name"] ?>">
-                                            <input type="hidden" value="<?= $rowPersonnel["id"]?>"
+                                            <input type="hidden" value="<?= $rowPersonnel["id"] ?>"
                                                    name="id">
                                         </div>
                                         <div class="controls">
@@ -1498,11 +1543,12 @@ function ViewPersonnel()
                                         </div>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
-                                            <textarea  placeholder="Plaats hier je notities"
-                                                       id="notities"
-                                                       readonly
-                                                       name="notities_pe"
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowPersonnel['notes']; ?></textarea>
+                                            <textarea placeholder="Plaats hier je notities"
+                                                      id="notities"
+                                                      readonly
+                                                      name="notities_pe"
+                                                      rows="6" cols="50"
+                                                      maxlength="600"><?php echo $rowPersonnel['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1591,7 +1637,9 @@ function ViewPersonnel()
         <?php
     }
 }
-function ViewCompanyPersonnel(){
+
+function ViewCompanyPersonnel()
+{
     global $mysqli;
     $sql = "SELECT organisation.name,organisation.id
  FROM `organisation` 
@@ -1602,18 +1650,19 @@ function ViewCompanyPersonnel(){
     $stmt->bind_param("i", $_GET["membof"]);
     $stmt->execute();
     $resultCompanyPersonnel = $stmt->get_result();
-    if ($row = $resultCompanyPersonnel->fetch_array()){
+    if ($row = $resultCompanyPersonnel->fetch_array()) {
         echo $row["name"];
     }
 }
 
 
-function InsertUser(){
+function InsertUser()
+{
     if (isset($_POST['gebruiker'])) {
         global $mysqli;
         $token = bin2hex(random_bytes(50));
         $rowPersonnel1 = Getpersonnel1();
-        $email =  $rowPersonnel1['email'];
+        $email = $rowPersonnel1['email'];
         $sql = "INSERT INTO `users`(`username`,`name`,`email`,`reset_token`,`member_of`)VALUES(?,?,?,?,?)";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param(
@@ -1659,7 +1708,8 @@ function editPersonnel()
     while ($rowPersonnel = $resultPersonnel->fetch_array()) {
         ?>
 
-        <div class="modal fade text-left" id="editPersonnel<?= $rowPersonnel["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="editPersonnel<?= $rowPersonnel["id"] ?>" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content ">
                     <div class="modal-header">
@@ -1686,11 +1736,11 @@ function editPersonnel()
                                                    aria-invalid="false"
                                                    name="voornaam_pe"
                                                    value="<?= $rowPersonnel["first_name"] ?>">
-                                            <input type="hidden" value="<?= $rowPersonnel["id"]?>"
+                                            <input type="hidden" value="<?= $rowPersonnel["id"] ?>"
                                                    name="id">
-                                            <input type="hidden" value="<?= $rowPersonnel["first_name"]?>"
+                                            <input type="hidden" value="<?= $rowPersonnel["first_name"] ?>"
                                                    name="username">
-                                            <input type="hidden" value="<?= $rowPersonnel["email"]?>"
+                                            <input type="hidden" value="<?= $rowPersonnel["email"] ?>"
                                                    name="email">
                                         </div>
                                         <div class="controls">
@@ -1717,10 +1767,11 @@ function editPersonnel()
                                         </div>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
-                                            <textarea  placeholder="Plaats hier je notities"
-                                                       id="notities"
-                                                       name="notities_pe"
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowPersonnel['notes']; ?></textarea>
+                                            <textarea placeholder="Plaats hier je notities"
+                                                      id="notities"
+                                                      name="notities_pe"
+                                                      rows="6" cols="50"
+                                                      maxlength="600"><?php echo $rowPersonnel['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -1797,8 +1848,9 @@ function editPersonnel()
                                     <div class="form-group">
                                         <div class="controls">
                                             <label for="users-edit-role">Functie</label>
-                                            <select id="users-edit-role" name="function" class="form-control" >
-                                                <option value="<?=$rowPersonnel["authentication_level"] ?>" hidden selected><?=$rowPersonnel["authentication_level"] ?></option>
+                                            <select id="users-edit-role" name="function" class="form-control">
+                                                <option value="<?= $rowPersonnel["authentication_level"] ?>" hidden
+                                                        selected><?= $rowPersonnel["authentication_level"] ?></option>
                                                 <option value="Bedrijfsleider">Bedrijfsleider</option>
                                                 <option value="Werknemer">Werknemer</option>
                                             </select>
@@ -1812,8 +1864,8 @@ function editPersonnel()
 
                         <div class="modal-footer">
                             <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Sluiten</button>
-                            <button name ="gebruiker" type="submit" class="btn btn-primary ">Gebruiker maken</button>
-                            <button name ="submit" type="submit" class="btn btn-primary">Opslaan</button>
+                            <button name="gebruiker" type="submit" class="btn btn-primary ">Gebruiker maken</button>
+                            <button name="submit" type="submit" class="btn btn-primary">Opslaan</button>
                         </div>
                     </form>
                 </div>
@@ -1834,7 +1886,7 @@ function editPersonnel()
             $stmt = $mysqli->prepare($query);
             $stmt->bind_param('ssssssssssi', $voornaam, $tussenvoegsel, $achternaam
                 , $straatnaam, $_POST["huisnummer_pe"], $_POST["postcode_pe"],
-                $_POST["telefoonnummer_pe"], $_POST["email_pe"],$_POST["function"],$_POST['notities_pe'], $_POST["id"]);
+                $_POST["telefoonnummer_pe"], $_POST["email_pe"], $_POST["function"], $_POST['notities_pe'], $_POST["id"]);
             $stmt->execute();
         }
     }
@@ -1885,11 +1937,13 @@ function editUserP()
 
     while ($rowCustomerP = $resultCustomer->fetch_array()) {
         ?>
-        <div class="modal fade text-left" id="editP<?= $rowCustomerP["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="editP<?= $rowCustomerP["id"] ?>" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Particuliere klant</h4>
+                        <h4 class="modal-title" id="myModalLabel2"><i class="ft-bookmark mr-2"></i>Particuliere klant
+                        </h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                         </button>
@@ -1941,10 +1995,11 @@ function editUserP()
                                         </div>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
-                                            <textarea  placeholder="Plaats hier je notities"
-                                                       id="notities"
-                                                       name="notities_p"
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomerP['notes']; ?></textarea>
+                                            <textarea placeholder="Plaats hier je notities"
+                                                      id="notities"
+                                                      name="notities_p"
+                                                      rows="6" cols="50"
+                                                      maxlength="600"><?php echo $rowCustomerP['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -2015,7 +2070,8 @@ function editUserP()
                                         <div class="controls">
                                             <label for="status">Status</label>
                                             <select id="status" name="status" class="form-control">
-                                                <option value="<?=$rowCustomerP['status']?>" hidden selected><?=$rowCustomerP['status']?></option>
+                                                <option value="<?= $rowCustomerP['status'] ?>" hidden
+                                                        selected><?= $rowCustomerP['status'] ?></option>
                                                 <option value="Actief">Actief</option>
                                                 <option value="Inactief">Inactief</option>
                                             </select>
@@ -2047,11 +2103,12 @@ function editUserP()
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
             $stmt->bind_param('sssssssssssi', $voornaam, $tussenvoegsel, $achternaam
                 , $straatnaam, $_POST["huisnummer_p"], $_POST["huisnummertoevoeging_p"], $_POST["postcode_p"],
-                $_POST["telefoonnummer_p"], $_POST["email_p"], $_POST["status"],$_POST['notities_p'], $_POST["id_p"]);
+                $_POST["telefoonnummer_p"], $_POST["email_p"], $_POST["status"], $_POST['notities_p'], $_POST["id_p"]);
             $stmt->execute();
         }
     }
 }
+
 function editUserZ()
 {
     global $mysqli;
@@ -2069,7 +2126,8 @@ function editUserZ()
     $resultCustomer = $stmt->get_result();
     while ($rowCustomer = $resultCustomer->fetch_array()) {
         ?>
-        <div class="modal fade text-left" id="editZ<?= $rowCustomer["id"]?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal fade text-left" id="editZ<?= $rowCustomer["id"] ?>" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -2096,7 +2154,7 @@ function editUserZ()
                                                    pattern="[a-zA-Z]{1,10}"
                                                    title="Alleen letters"
                                                    value="<?= $rowCustomer["first_name"] ?>">
-                                            <input type="hidden" value="<?= $rowCustomer['id']?>"
+                                            <input type="hidden" value="<?= $rowCustomer['id'] ?>"
                                                    name="id_z">
                                         </div>
                                         <div class="controls">
@@ -2135,10 +2193,11 @@ function editUserZ()
                                         </div>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
-                                            <textarea  placeholder="Plaats hier je notities"
-                                                       id="notities"
-                                                       name="notities_z"
-                                                       rows="6" cols="50" maxlength="600"><?php  echo $rowCustomer['notes']; ?></textarea>
+                                            <textarea placeholder="Plaats hier je notities"
+                                                      id="notities"
+                                                      name="notities_z"
+                                                      rows="6" cols="50"
+                                                      maxlength="600"><?php echo $rowCustomer['notes']; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -2165,7 +2224,7 @@ function editUserZ()
                                                    class="form-control text-light round"
                                                    placeholder="Huisnummer"
                                                    pattern="[0-9]{1,4}"
-                                                   title = "Alleen cijfers"
+                                                   title="Alleen cijfers"
                                                    aria-invalid="false"
                                                    name="huisnummer_z"
                                                    required
@@ -2215,7 +2274,8 @@ function editUserZ()
                                         <div class="controls">
                                             <label for="users-edit-status">Status</label>
                                             <select name="status" class="form-control">
-                                                <option value="<?=$rowCustomer["status"]?>" hidden selected><?=$rowCustomer['status']?></option>
+                                                <option value="<?= $rowCustomer["status"] ?>" hidden
+                                                        selected><?= $rowCustomer['status'] ?></option>
                                                 <option value="Actief">Actief</option>
                                                 <option value="Inactief">Inactief</option>
                                             </select>
@@ -2249,7 +2309,7 @@ function editUserZ()
 //        $wachtwoord = password_hash($_POST['Wachtwoord'], PASSWORD_BCRYPT, $options);
             $stmt->bind_param('ssssssssssssi', $voornaam, $tussenvoegsel, $achternaam
                 , $straatnaam, $_POST["huisnummer_z"], $_POST["huisnummertoevoeging_z"], $_POST["postcode_z"],
-                $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"],$bedrijf,$_POST['notities_z'],$_POST["id_z"]);
+                $_POST["telefoonnummer_z"], $_POST["email_z"], $_POST["status"], $bedrijf, $_POST['notities_z'], $_POST["id_z"]);
             $stmt->execute();
         }
     }
