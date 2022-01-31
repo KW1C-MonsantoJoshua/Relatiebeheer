@@ -36,7 +36,7 @@
                     text: 'Uw gegevens zijn geupdate',
                     confirmButtonClass: 'btn btn-success',
                 }).then(function () {
-                    document.getElementById("formSettings").submit();
+                    document.getElementById("FormInstellingen").submit();
                 });
             } else {
                 swal("Cancelled", "Wijziging geaunnuleerd :)", "error");
