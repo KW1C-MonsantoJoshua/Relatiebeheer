@@ -184,15 +184,24 @@ include "partials/navbar.php";
                                                                        name="kvk"
                                                                        value="<?= $rowC['kvk_nummer'] ?>">
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label for="bic"
-                                                                       class="sr-only">BIC</label>
-                                                                <input class="form-control"
-                                                                       type="text"
-                                                                       name="iban"
-                                                                       placeholder="BIC"
-                                                                       id="bic">
+                                                                <div class="controls col-md-6">
+                                                                    <label for="users-edit-username">toevoeging</label>
+                                                                    <input type="text" id="toevoeging_z"
+                                                                           class="form-control round"
+                                                                           pattern="[a-zA-Z]{1,4}"
+                                                                           placeholder="toevoeging"
+                                                                           aria-invalid="false" name="huisnummertoevoeging_z"
+                                                                           onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+                                                                </div>
                                                             </div>
+                                                            <div class="controls ">
+                                                                <label for="straatnaam">Straatnaam</label>
+                                                                <input type="text" id="straat_z"
+                                                                       class="form-control round"
+                                                                       pattern="[a-zA-Z]{1,15}"
+                                                                       title="Alleen letters"
+                                                                       placeholder="Straatnaam" required
+                                                                       aria-invalid="false" name="straatnaam_z">
                                                             </div>
                                                         </div>
                                                     </div>
