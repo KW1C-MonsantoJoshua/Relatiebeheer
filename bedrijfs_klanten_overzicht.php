@@ -1,7 +1,7 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
-UpdateCompanyInfo();
+//UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 ViewUserP();
 ViewUserZ();
