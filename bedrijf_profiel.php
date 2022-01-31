@@ -22,8 +22,16 @@ $rowC = GetCompanyInfo();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
-
-
+<style>
+    div.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: #666;
+        padding: 40px;
+        font-size: 25px;
+    }
+</style>
 <!-- BEGIN : Head-->
 
 <?php
@@ -51,13 +59,7 @@ include "partials/navbar.php";
                 </div>
                 <!-- Account Settings starts -->
                 <div class="row">
-                    <div style="
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        background-color: #666;
-        padding: 40px;
-        font-size: 25px;" class="col-md-3 mt-3">
+                    <div class="col-md-3 mt-3">
                         <!-- Nav tabs -->
                         <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">
                             <li class="nav-item">
@@ -75,7 +77,7 @@ include "partials/navbar.php";
                             <li class="nav-item">
                                 <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">
                                     <i class="ft-bell mr-1 align-middle"></i>
-                                    <span class="align-middle">Abonnementenn</span>
+                                    <span class="align-middle">Abonnementen</span>
                                 </a>
                             </li>
                         </ul>
