@@ -174,38 +174,6 @@ include "partials/navbar.php";
                                                                        name="btw"
                                                                        value="<?= $rowC['btw_nummer'] ?>">
                                                             </div>
-                                                            </br>
-                                                            <div class="form-group row">
-                                                                <div class="controls col-md-6">
-                                                                    <label for="huisnummer">Huisnummer</label>
-                                                                    <input type="text" id="huisnr_z"
-                                                                           class="form-control round"
-                                                                           pattern="[0-9]{1,4}"
-                                                                           title = "Alleen cijfers"
-                                                                           placeholder="Huisnummer" required
-                                                                           aria-invalid="false" name="huisnummer_z"
-                                                                           onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
-
-                                                                </div>
-                                                                <div class="controls col-md-6">
-                                                                    <label for="users-edit-username">toevoeging</label>
-                                                                    <input type="text" id="toevoeging_z"
-                                                                           class="form-control round"
-                                                                           pattern="[a-zA-Z]{1,4}"
-                                                                           placeholder="toevoeging"
-                                                                           aria-invalid="false" name="huisnummertoevoeging_z"
-                                                                           onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
-                                                                </div>
-                                                            </div>
-                                                            <div class="controls ">
-                                                                <label for="straatnaam">Straatnaam</label>
-                                                                <input type="text" id="straat_z"
-                                                                       class="form-control round"
-                                                                       pattern="[a-zA-Z]{1,15}"
-                                                                       title="Alleen letters"
-                                                                       placeholder="Straatnaam" required
-                                                                       aria-invalid="false" name="straatnaam_z">
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
