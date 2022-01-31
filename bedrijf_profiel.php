@@ -196,6 +196,15 @@ include "partials/navbar.php";
                                                                        placeholder="Straatnaam" required
                                                                        aria-invalid="false" name="straatnaam_z">
                                                             </div>
+                                                            <div class="controls ">
+                                                                <label for="straatnaam">Straatnaam</label>
+                                                                <input type="text" id="straat_z"
+                                                                       class="form-control round"
+                                                                       pattern="[a-zA-Z]{1,15}"
+                                                                       title="Alleen letters"
+                                                                       placeholder="Straatnaam" required
+                                                                       aria-invalid="false" name="straatnaam_z">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
