@@ -214,9 +214,8 @@ include "partials/navbar.php";
                                                             data-dismiss="modal"
                                                             class="btn btn-secondary">Annuleren
                                                     </button>
-                                                    <input type="submit"
+                                                    <input type="button"
                                                            class="btn btn-primary confirm-text"
-                                                           name="SaveCompanySettings"
                                                            value="Opslaan">
                                                 </div>
                                             </form>
