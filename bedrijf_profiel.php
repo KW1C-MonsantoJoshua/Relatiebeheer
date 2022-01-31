@@ -45,7 +45,6 @@ include"partials/header.php";
 <?php
 include "partials/navbar.php";
 ?>
-<div class="sticky">Sticky Div</div>
 <div class="wrapper">
     <div class="main-panel">
         <!-- BEGIN : Main Content-->
@@ -53,7 +52,7 @@ include "partials/navbar.php";
             <div class="content-overlay"></div>
             <div class="content-wrapper">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 sticky">
                         <div class="content-header">Menu</div>
                         <p class="content-sub-header mb-1">vrije keuze</p>
                     </div>
