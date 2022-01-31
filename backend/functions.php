@@ -1682,7 +1682,7 @@ function editPersonnel()
                                                    id="users-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Voornaam"
-                                                   pattern="[a-zA-Z]{1,10}"
+                                                   pattern="[a-zA-Z]{1,15}"
                                                    required
                                                    aria-invalid="false"
                                                    name="voornaam_pe"
@@ -1710,7 +1710,7 @@ function editPersonnel()
                                             <input type="text" id="achternaam"
                                                    class="form-control text-light round"
                                                    placeholder="Achternaam"
-                                                   pattern="[a-zA-Z]{1,12}"
+                                                   pattern="[a-zA-Z]{1,25}"
                                                    aria-invalid="false"
                                                    name="achternaam_pe"
                                                    required
@@ -1734,8 +1734,6 @@ function editPersonnel()
                                                    id="users-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Straatnaam"
-                                                   pattern="[a-zA-Z]{1,15}"
-                                                   title="Alleen letters"
                                                    aria-invalid="false"
                                                    name="straatnaam_pe"
                                                    required
@@ -1760,8 +1758,6 @@ function editPersonnel()
                                                    id="users-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Postcode"
-                                                   pattern="[0-9]{4}[A-Za-z]{2}"
-                                                   title="Bijvoorbeeld: '1234AB'"
                                                    aria-invalid="false"
                                                    name="postcode_pe"
                                                    required
@@ -1788,8 +1784,6 @@ function editPersonnel()
                                             <input type="number" id="telefoonnummer"
                                                    class="form-control text-light round"
                                                    placeholder="Telefoonnummer"
-                                                   pattern="[0-9]{1,15}"
-                                                   title="Alleen cijfers"
                                                    aria-invalid="false"
                                                    name="telefoonnummer_pe"
                                                    required
@@ -1964,8 +1958,6 @@ function editUserP()
                                                    id="users-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Straatnaam"
-                                                   pattern="[a-zA-Z]{1,15}"
-                                                   title="Alleen letters"
                                                    aria-invalid="false"
                                                    name="straatnaam_p"
                                                    required
@@ -1990,8 +1982,6 @@ function editUserP()
                                                    id="users-edit-username"
                                                    class="form-control text-light round"
                                                    placeholder="Postcode"
-                                                   pattern="[0-9]{4}[A-Za-z]{2}"
-                                                   title="Bijvoorbeeld: '1234AB'"
                                                    aria-invalid="false"
                                                    name="postcode_p"
                                                    required
@@ -2018,16 +2008,14 @@ function editUserP()
                                             <input type="text" id="telefoonnummer"
                                                    class="form-control text-light round"
                                                    placeholder="Telefoonnummer"
-                                                   pattern="[0-9]{1,15}"
-                                                   title="Alleen cijfers"
                                                    aria-invalid="false"
                                                    name="telefoonnummer_p"
                                                    required
                                                    value="<?= $rowCustomerP["phoneNumber"] ?>">
                                         </div>
                                         <div class="controls">
-                                            <label for="users-edit-status">Status</label>
-                                            <select name="status" class="form-control">
+                                            <label for="status">Status</label>
+                                            <select id="status" name="status" class="form-control">
                                                 <option value="<?=$rowCustomerP['status']?>" hidden selected><?=$rowCustomerP['status']?></option>
                                                 <option value="Actief">Actief</option>
                                                 <option value="Inactief">Inactief</option>
