@@ -120,70 +120,82 @@ include "partials/navbar.php";
                                                                        name="email"
                                                                        value="<?= $rowC['email'] ?>">
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label for="postcode"
-                                                                       class="sr-only">Postcode</label>
-                                                                <input type="text" id="postcode"
+                                                            <div class="controls">
+                                                                <label for=""
+                                                                       class="sr-only"></label>
+                                                                <input type="text" id=""
                                                                        class="form-control"
-                                                                       placeholder="Postcode"
-                                                                       name="postcode"
-                                                                       value="<?= $rowC['postalcode'] ?>">
+                                                                       placeholder=""
+                                                                       name=""
+                                                                       value="">
                                                             </div>
-                                                            <div class="form-group row">
-                                                            <div class="controls col-md-6">
-                                                                <label for="huisnummer"
-                                                                       class="sr-only">Huisnummer</label>
-                                                                <input type="text" id="huisnummer"
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for=""
+                                                                       class="sr-only"></label>
+                                                                <input type="text" id=""
                                                                        class="form-control"
-                                                                       placeholder="Huisnummer"
-                                                                       name="huisnummer"
-                                                                       value="<?= $rowC['housenumber'] ?>">
+                                                                       placeholder=""
+                                                                       name=""
+                                                                       value="">
                                                             </div>
-                                                            <div class="controls col-md-6">
-                                                                <label for="toevoeging"
-                                                                       class="sr-only">Toevoeging</label>
-                                                                <input type="text" id="toevoeging"
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for=""
+                                                                       class="sr-only"></label>
+                                                                <input type="text" id=""
                                                                        class="form-control"
-                                                                       placeholder="Toevoeging"
-                                                                       name="toevoeging"
-                                                                       value="<?= $rowC['housenumberAddition'] ?>">
+                                                                       placeholder=""
+                                                                       name=""
+                                                                       value="">
                                                             </div>
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for="users-edit-username">Tussenvoegsel</label>
+                                                                <input type="text" id="users-edit-username"
+                                                                       class="form-control round"
+                                                                       pattern="[a-zA-Z]{1,10}"
+                                                                       title="Alleen letters"
+                                                                       placeholder="Tussenvoegsel"
+                                                                       aria-invalid="false" name="tussenvoegsel_z">
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label for="adres"
-                                                                       class="sr-only">Adres</label>
-                                                                <input type="text" id="adres"
-                                                                       class="form-control"
-                                                                       placeholder="Adres"
-                                                                       name="street"
-                                                                       value="<?= $rowC['street'] ?>">
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for="achternaam">Achternaamm</label>
+                                                                <input type="text" id="achternaam"
+                                                                       class="form-control round"
+                                                                       pattern="[a-zA-Z]{1,10}"
+                                                                       title="Alleen letters"
+                                                                       placeholder="Achternaam" required
+                                                                       aria-invalid="false" name="achternaam_z">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <h4>Gegevens 2</h4>
-                                                            <div class="form-group">
-                                                                <label for="btw"
-                                                                       class="sr-only">BTW
-                                                                    Nummer</label>
-                                                                <input type="text" id="btw"
+                                                            <div class="controls">
+                                                                <label for="bedrijfsnaam"
+                                                                       class="sr-only">Bedrijfsnaamm</label>
+                                                                <input type="text" id="bedrijfsnaam"
                                                                        class="form-control"
-                                                                       placeholder="BTW Nummer"
-                                                                       name="btw"
-                                                                       value="<?= $rowC['btw_nummer'] ?>">
+                                                                       placeholder="Bedrijfsnaam"
+                                                                       name="name"
+                                                                       value="">
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label for="kvk"
-                                                                       class="sr-only">KVK
-                                                                    Nummer</label>
-                                                                <input class="form-control"
-                                                                       type="text"
-                                                                       placeholder="KVK Nummer"
-                                                                       id="kvk"
-                                                                       name="kvk"
-                                                                       value="<?= $rowC['kvk_nummer'] ?>">
-                                                            </div>
+                                                            </br>
+                                                            <div class="form-group row">
+                                                                <div class="controls col-md-6">
+                                                                    <label for="huisnummer">Huisnummer</label>
+                                                                    <input type="text" id="huisnr_z"
+                                                                           class="form-control round"
+                                                                           pattern="[0-9]{1,4}"
+                                                                           title = "Alleen cijfers"
+                                                                           placeholder="Huisnummer" required
+                                                                           aria-invalid="false" name="huisnummer_z"
+                                                                           onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
+
+                                                                </div>
                                                                 <div class="controls col-md-6">
                                                                     <label for="users-edit-username">toevoeging</label>
                                                                     <input type="text" id="toevoeging_z"
