@@ -32,7 +32,7 @@
                                 <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png" class="img-circle img-responsive" alt="" /></div>
                             <div class="col-xs-10 col-md-11">
                                 <div>
-                                    <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">
+                                    <a href="teuskip.nl/Miranda4.html">
                                         Met klant besproken BTW prijs</a>
                                     <div class="mic-info">
                                         By: <a href="#">Teus Brom</a> on 31 Jan 2022
