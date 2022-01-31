@@ -95,22 +95,62 @@ include "partials/navbar.php";
                                                         <div class="form-group">
                                                             <h4>Gegevens 1</h4>
                                                             <div class="controls">
-                                                                    <label for="bedrijfsnaam"
-                                                                           class="sr-only">Bedrijfsnaamm</label>
-                                                                    <input type="text" id="bedrijfsnaam"
-                                                                           class="form-control"
-                                                                           placeholder="Bedrijfsnaam"
-                                                                           name="name"
-                                                                           value="">
-                                                                </div>
-                                                                </br>
-                                                            <div class="controls">
                                                                 <label for="bedrijfsnaam"
                                                                        class="sr-only">Bedrijfsnaamm</label>
                                                                 <input type="text" id="bedrijfsnaam"
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
                                                                        name="name"
+                                                                       value="">
+                                                            </div>
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for=""
+                                                                       class="sr-only"></label>
+                                                                <input type="text" id=""
+                                                                       class="form-control"
+                                                                       placeholder=""
+                                                                       name=""
+                                                                       value="">
+                                                            </div>
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for=""
+                                                                       class="sr-only"></label>
+                                                                <input type="text" id=""
+                                                                       class="form-control"
+                                                                       placeholder=""
+                                                                       name=""
+                                                                       value="">
+                                                            </div>
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for=""
+                                                                       class="sr-only"></label>
+                                                                <input type="text" id=""
+                                                                       class="form-control"
+                                                                       placeholder=""
+                                                                       name=""
+                                                                       value="">
+                                                            </div>
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for=""
+                                                                       class="sr-only"></label>
+                                                                <input type="text" id=""
+                                                                       class="form-control"
+                                                                       placeholder=""
+                                                                       name=""
+                                                                       value="">
+                                                            </div>
+                                                            </br>
+                                                            <div class="controls">
+                                                                <label for=""
+                                                                       class="sr-only"></label>
+                                                                <input type="text" id=""
+                                                                       class="form-control"
+                                                                       placeholder=""
+                                                                       name=""
                                                                        value="">
                                                             </div>
                                                             </br>
