@@ -100,7 +100,7 @@ include "partials/navbar.php";
                                                                            class="form-control"
                                                                            placeholder="Bedrijfsnaam"
                                                                            name="name"
-                                                                           value="<?= $rowC["name"]; ?>">
+                                                                           value="">
                                                                 </div>
                                                                 </br>
                                                             <div class="controls">
@@ -110,8 +110,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
                                                                        name="name"
-                                                                       value="<?= $rowC["name"]; ?>">
-                                                                <!--<input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
+                                                                       value="">
                                                             </div>
                                                             </br>
                                                             <div class="controls">
@@ -145,8 +144,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
                                                                        name="name"
-                                                                       value="<?= $rowC["name"]; ?>">
-                                                                <!--<input type="hidden" name="custof" value="--><?//= $_GET["custof"] ?><!--">-->
+                                                                       value="">
                                                             </div>
                                                             </br>
                                                             <div class="form-group row">
