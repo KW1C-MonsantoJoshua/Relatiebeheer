@@ -85,6 +85,7 @@ function UpdateCompanyInfo(){
             $_POST['toevoeging'], $_POST['postcode'], $_POST['website'], $_POST['telefoon'], $_POST['email'],
             $_POST['kvk'],$_POST['btw'],$_POST['iban'],$_GET['membof']);
         $stmt->execute();
+        echo $_POST['iban'];
     }
     else{
         echo "Fout1";
