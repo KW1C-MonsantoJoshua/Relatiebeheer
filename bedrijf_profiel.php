@@ -23,6 +23,7 @@ $rowC = GetCompanyInfo();
 <!DOCTYPE html>
 <html class="loading" lang="en">
 
+
 <!-- BEGIN : Head-->
 
 <?php
@@ -54,7 +55,9 @@ include "partials/navbar.php";
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-">
+        background-color: #666;
+        padding: 40px;
+        font-size: 25px;">
                         <!-- Nav tabs -->
                         <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">
                             <li class="nav-item">
