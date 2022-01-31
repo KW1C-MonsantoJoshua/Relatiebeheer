@@ -1154,7 +1154,6 @@
         background-color: #d9edf7;
         border-color: #bce8f1
     }
-
 </style>
 <div class="container1">
     <div class="row1">
@@ -1242,5 +1241,3 @@
         </div>
     </div>
 </div>
-
-
