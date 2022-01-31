@@ -101,16 +101,14 @@ include "partials/navbar.php";
                                                                        value="">
                                                             </div>
                                                             </br>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label for="adres"
-                                                                           class="sr-only">Adres</label>
-                                                                    <input type="text" id="adres"
-                                                                           class="form-control"
-                                                                           placeholder="Adres"
-                                                                           name="street"
-                                                                           value="<?= $rowC['street'] ?>">
-                                                                </div>
+                                                            <div class="form-group">
+                                                                <label for="adres"
+                                                                       class="sr-only">Adres</label>
+                                                                <input type="text" id="adres"
+                                                                       class="form-control"
+                                                                       placeholder="Adres"
+                                                                       name="street"
+                                                                       value="<?= $rowC['street'] ?>">
                                                             </div>
                                                             </br>
                                                             <div class="controls">
