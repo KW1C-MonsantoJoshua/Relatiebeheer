@@ -10,8 +10,7 @@
             width: 50%;
             border: 3px solid gray;
             background-color: lightblue;
-            padding: 10px;
-
+            padding: 100px;
         }
     </style>
     <title>Test</title>
