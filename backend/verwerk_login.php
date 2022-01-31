@@ -34,13 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['memb_of'] = $memb_of;
                     $_SESSION['id'] = $id;
                     $_SESSION['auth'] = $auth_level;
-                    if (!isset($_SESSION['loggedin'])) {
-                        $_SESSION['loggedin'] = time();
-                    } else if (time() - $_SESSION['loggedin'] > 60) {
-                        // session started more than 30 minutes ago
-                        session_regenerate_id(true);    // change session ID for the current session and invalidate old session ID
-                        $_SESSION['loggedin'] = time();  // update creation time
-                    }
 //            echo 'Welcome ' . $_SESSION['name'] . '!';
                     if (!empty($_POST["remember_me"])) {
                         setcookie("username", $_POST["email"], time() + 3600);
