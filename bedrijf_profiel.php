@@ -46,7 +46,7 @@ include "partials/navbar.php";
                 <div class="row">
                     <div class="col-12 ">
                         <div class="content-header">Menu</div>
-                        <p class="content-sub-header mb-1">vrije keuze</p>
+                        <p class="content-sub-header mb-1">vrijee keuze</p>
                     </div>
                 </div>
                 <!-- Account Settings starts -->
