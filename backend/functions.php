@@ -80,9 +80,7 @@ function GetCompanyInfo()
 function UpdateCompanyInfo()
 {
     global $mysqli;
-    if (!empty($_POST['name'] || $_POST['street'] || $_POST['huisnummer'] ||
-        $_POST['toevoeging'] || $_POST['postcode'] || $_POST['telefoon'] || $_POST['email'] ||
-        $_POST['kvk'] || $_POST['btw'] || $_POST['iban'] || $_GET['membof'])) {
+    if (isset($_POST['Instellingen'])) {
         $query = "UPDATE `organisation`  SET  name = ?, street = ?,housenumber = ?,housenumberAddition = ?,
                          postalcode = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,btw_nummer = ?,
                          iban_nummer = ? WHERE id= ?;";
