@@ -20,13 +20,9 @@ UploadPic1();
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <style>
-    div.sticky {
-        position: -webkit-sticky;
-        position: sticky;
+    .stick {
+        position: fixed;
         top: 0;
-        background-color: #666;
-        padding: 40px;
-        font-size: 25px;
     }
 </style>
 <!-- BEGIN : Head-->
@@ -56,7 +52,7 @@ include "partials/navbar.php";
                 </div>
                 <!-- Account Settings starts -->
                 <div class="row">
-                    <div class="col-md-3 mt-3">
+                    <div class=" mainMenuBar col-md-3 mt-3">
                         <!-- Nav tabs -->
                         <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">
                             <li class="nav-item">
@@ -413,6 +409,30 @@ include "partials/navbar.php";
 <!-- END Notification Sidebar-->
 <div class="sidenav-overlay"></div>
 <div class="drag-target"></div>
+                <script>
+                    $(document).ready(function() {
+                        // Cache selectors for faster performance.
+                        var $window = $(window),
+                            $mainMenuBar = $('#mainMenuBar'),
+                            $mainMenuBarAnchor = $('#mainMenuBarAnchor');
+
+                        // Run this on scroll events.
+                        $window.scroll(function() {
+                            var window_top = $window.scrollTop();
+                            var div_top = $mainMenuBarAnchor.offset().top;
+                            if (window_top > div_top) {
+                                // Make the div sticky.
+                                $mainMenuBar.addClass('stick');
+                                $mainMenuBarAnchor.height($mainMenuBar.height());
+                            }
+                            else {
+                                // Unstick the div.
+                                $mainMenuBar.removeClass('stick');
+                                $mainMenuBarAnchor.height(0);
+                            }
+                        });
+                    });                </script>
+
 </body>
 
 <?php
