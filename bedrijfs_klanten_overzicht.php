@@ -352,17 +352,6 @@ include "partials/navbar.php";
                                                                                            id="plaats" name="plaats">
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group">
-                                                                                    <label for="mobiel"
-                                                                                           class="sr-only">Mobiel</label>
-                                                                                    <input type="text" id="mobiel"
-                                                                                           class="form-control"
-                                                                                           placeholder="Mobiel"
-                                                                                           name="mobiel"
-                                                                                           value="">
-                                                                                </div>
-                                                                            </div>
                                                                         </div>
                                                                         <div class="row">
                                                                             <div class="col-md-6">

@@ -77,11 +77,13 @@ function GetCompanyInfo(){
 function UpdateCompanyInfo(){
     global $mysqli;
     if (isset($_POST['formSettings'])) {
-        $query = "UPDATE `organisation` SET `name`=?,`street`=?,`housenumber`=?,`housenumberAddition`=?,
-                          `postalcode`=?,`website`=?,`phoneNumber`=?,`email`=? WHERE id = ?";
+        $query = "UPDATE organisation  SET  name = ?, street = ?,housenumber = ?,housenumberAddition = ?,
+                         postalcode = ?,website = ?,phoneNumber = ?,email = ?,kvk_nummer = ?,iban_nummer = ?,
+                         status = ?,notes = ?";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('ssisssssi', $_POST["name"], $_POST["street"], $_POST["huisnummer"],
-            $_POST["toevoeging"], $_POST["postcode"], $_POST["website"], $_POST["telefoon"], $_POST["email"], $_GET["membof"]);
+            $_POST["toevoeging"], $_POST["postcode"], $_POST["website"], $_POST["telefoon"], $_POST["email"],
+            $_POST["kvk_nummer"],$_POST["iban_nummer"],$_POST["status"],$_POST["notes"],$_GET["membof"]);
         $stmt->execute();
     }
 }
