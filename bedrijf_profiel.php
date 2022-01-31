@@ -93,7 +93,7 @@ include "partials/navbar.php";
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <h4>Gegevens 1</h4>
-                                                            <div class="controls">
+                                                            <div class="form-group">
                                                                 <label for="bedrijfsnaam"
                                                                        class="sr-only">Bedrijfsnaamm</label>
                                                                 <input type="text" id="bedrijfsnaam"
