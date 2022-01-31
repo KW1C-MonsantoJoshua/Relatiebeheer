@@ -102,13 +102,13 @@ include "partials/navbar.php";
                                                             </div>
                                                             </br>
                                                             <div class="form-group">
-                                                                <label for="adres"
-                                                                       class="sr-only">Adres</label>
-                                                                <input type="text" id="adres"
+                                                                <label for="telefoon"
+                                                                       class="sr-only">Telefoon</label>
+                                                                <input type="text" id="telefoon"
                                                                        class="form-control"
-                                                                       placeholder="Adres"
-                                                                       name="street"
-                                                                       value="<?= $rowC['street'] ?>">
+                                                                       placeholder="Telefoon"
+                                                                       name="telefoon"
+                                                                       value="<?= $rowC['phoneNumber'] ?>">
                                                             </div>
                                                             </br>
                                                             <div class="controls">
