@@ -51,13 +51,13 @@ include "partials/navbar.php";
                 </div>
                 <!-- Account Settings starts -->
                 <div class="row">
-                    <div class="col-md-3 mt-3" style="
+                    <div style="
         position: -webkit-sticky;
         position: sticky;
         top: 0;
         background-color: #666;
         padding: 40px;
-        font-size: 25px;">
+        font-size: 25px;" class="col-md-3 mt-3">
                         <!-- Nav tabs -->
                         <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">
                             <li class="nav-item">
