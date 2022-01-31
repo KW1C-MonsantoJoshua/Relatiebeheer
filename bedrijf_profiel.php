@@ -39,7 +39,8 @@ include"partials/header.php";
 <?php
 include "partials/navbar.php";
 ?>
-    <div class="wrapper" style="overflow:visible;">
+
+    <div class="wrapper"">
     <div class="main-panel">
         <!-- BEGIN : Main Content-->
         <div class="main-content">
