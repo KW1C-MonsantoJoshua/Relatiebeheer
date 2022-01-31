@@ -374,8 +374,6 @@ include "partials/navbar.php";
                                                                                            value="<?=$rowC['website']?>">
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="email"
@@ -387,6 +385,9 @@ include "partials/navbar.php";
                                                                                            value="<?=$rowC['email']?>">
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                        <div class="row">
+
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="btw"
