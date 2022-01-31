@@ -480,11 +480,12 @@ include "partials/navbar.php";
 <!-- END Notification Sidebar-->
 <div class="sidenav-overlay"></div>
 <div class="drag-target"></div>
+</body>
+
 <?php
 qron();
 qroff();
 include "partials/footer.php";
 ?>
-</body>
 <!-- END : Body-->
 </html>
