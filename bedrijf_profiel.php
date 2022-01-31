@@ -92,7 +92,7 @@ include "partials/navbar.php";
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <h4>Klantgegevenss</h4>
+                                                            <h4>Gegevens 1</h4>
                                                             <div class="controls">
                                                                     <label for="bedrijfsnaam"
                                                                            class="sr-only">Bedrijfsnaamm</label>
@@ -136,7 +136,7 @@ include "partials/navbar.php";
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <h4>Adresgegevens</h4>
+                                                            <h4>Gegevens2</h4>
                                                             <div class="controls">
                                                                 <label for="bedrijfsnaam"
                                                                        class="sr-only">Bedrijfsnaamm</label>
