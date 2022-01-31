@@ -387,7 +387,6 @@ include "partials/navbar.php";
                                                                             </div>
                                                                         </div>
                                                                         <div class="row">
-
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="btw"
@@ -396,11 +395,10 @@ include "partials/navbar.php";
                                                                                     <input type="text" id="btw"
                                                                                            class="form-control"
                                                                                            placeholder="BTW Nummer"
-                                                                                           name="btw">
+                                                                                           name="btw"
+                                                                                           value="<?=$rowC['btw_nummer']?>">
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="row">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="kvk" class="sr-only">KVK
@@ -408,9 +406,13 @@ include "partials/navbar.php";
                                                                                     <input class="form-control"
                                                                                            type="text"
                                                                                            placeholder="KVK Nummer"
-                                                                                           id="kvk">
+                                                                                           id="kvk"
+                                                                                           value="<?=$rowC['kvk_nummer']?>">
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                        <div class="row">
+
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                     <label for="bic"
@@ -431,7 +433,8 @@ include "partials/navbar.php";
                                                                                     <input class="form-control"
                                                                                            type="text"
                                                                                            placeholder="IBAN Nummer"
-                                                                                           id="iban">
+                                                                                           id="iban"
+                                                                                           value="<?=$rowC['iban_nummer']?>">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
