@@ -112,7 +112,6 @@ include "partials/navbar.php";
                                                                        name="telefoon"
                                                                        value="<?= $rowC['phoneNumber'] ?>">
                                                             </div>
-                                                            </br>
                                                             <div class="form-group">
                                                                 <label for="email"
                                                                        class="sr-only">Email</label>
