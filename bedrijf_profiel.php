@@ -164,46 +164,46 @@ include "partials/navbar.php";
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <h4>Gegevens 2</h4>
-                                                            <div class="controls">
-                                                                <label for="bedrijfsnaam"
-                                                                       class="sr-only">Bedrijfsnaamm</label>
-                                                                <input type="text" id="bedrijfsnaam"
+                                                            <div class="form-group">
+                                                                <label for="btw"
+                                                                       class="sr-only">BTW
+                                                                    Nummer</label>
+                                                                <input type="text" id="btw"
                                                                        class="form-control"
-                                                                       placeholder="Bedrijfsnaam"
-                                                                       name="name"
-                                                                       value="">
+                                                                       placeholder="BTW Nummer"
+                                                                       name="btw"
+                                                                       value="<?= $rowC['btw_nummer'] ?>">
                                                             </div>
-                                                            </br>
-                                                            <div class="form-group row">
-                                                                <div class="controls col-md-6">
-                                                                    <label for="huisnummer">Huisnummer</label>
-                                                                    <input type="text" id="huisnr_z"
-                                                                           class="form-control round"
-                                                                           pattern="[0-9]{1,4}"
-                                                                           title = "Alleen cijfers"
-                                                                           placeholder="Huisnummer" required
-                                                                           aria-invalid="false" name="huisnummer_z"
-                                                                           onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
-
-                                                                </div>
-                                                                <div class="controls col-md-6">
-                                                                    <label for="users-edit-username">toevoeging</label>
-                                                                    <input type="text" id="toevoeging_z"
-                                                                           class="form-control round"
-                                                                           pattern="[a-zA-Z]{1,4}"
-                                                                           placeholder="toevoeging"
-                                                                           aria-invalid="false" name="huisnummertoevoeging_z"
-                                                                           onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
-                                                                </div>
+                                                            <div class="form-group">
+                                                                <label for="kvk"
+                                                                       class="sr-only">KVK
+                                                                    Nummer</label>
+                                                                <input class="form-control"
+                                                                       type="text"
+                                                                       placeholder="KVK Nummer"
+                                                                       id="kvk"
+                                                                       name="kvk"
+                                                                       value="<?= $rowC['kvk_nummer'] ?>">
                                                             </div>
-                                                            <div class="controls ">
-                                                                <label for="straatnaam">Straatnaam</label>
-                                                                <input type="text" id="straat_z"
-                                                                       class="form-control round"
-                                                                       pattern="[a-zA-Z]{1,15}"
-                                                                       title="Alleen letters"
-                                                                       placeholder="Straatnaam" required
-                                                                       aria-invalid="false" name="straatnaam_z">
+                                                            <div class="form-group">
+                                                                <label for="bic"
+                                                                       class="sr-only">BIC</label>
+                                                                <input class="form-control"
+                                                                       type="text"
+                                                                       name="iban"
+                                                                       placeholder="BIC"
+                                                                       id="bic">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="iban"
+                                                                       class="sr-only">IBAN
+                                                                    Nummer</label>
+                                                                <input class="form-control"
+                                                                       type="text"
+                                                                       placeholder="IBAN Nummer"
+                                                                       id="iban"
+                                                                       value="<?= $rowC['iban_nummer'] ?>">
+                                                            </div>
                                                             </div>
                                                         </div>
                                                     </div>
