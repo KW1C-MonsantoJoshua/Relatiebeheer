@@ -124,8 +124,11 @@
                             <a href="#"><b>Ryan Haywood</b></a>
                             made a post.
                         </div>
-                        <h6 class="text-muted time">Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</h6>
+                        <h6 class="text-muted time">1 minute ago</h6>
                     </div>
+                </div>
+                <div class="post-description">
+                    <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
                 </div>
             </div>
         </div>
