@@ -1,6 +1,6 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
-if(time() - $_SESSION['loggedin'] > 900) { //subtract new timestamp from the old one
+if(time() - $_SESSION['loggedin'] > 60) { //subtract new timestamp from the old one
     echo"<script>alert('15 Minutes over!');</script>";
     unset($_SESSION['username'], $_SESSION['password'], $_SESSION['loggedin']);
     $_SESSION['loggedin'] = false;
