@@ -100,7 +100,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
                                                                        name="name"
-                                                                       value="">
+                                                                       value="<?= $rowC["name"]; ?>">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="telefoon"
@@ -109,7 +109,7 @@ include "partials/navbar.php";
                                                                        class="form-control"
                                                                        placeholder="Telefoon"
                                                                        name="telefoon"
-                                                                       value="<?= $rowC["name"]; ?>">
+                                                                       value="<?= $rowC['phoneNumber'] ?>">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="email"
