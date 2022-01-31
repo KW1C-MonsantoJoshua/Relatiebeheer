@@ -219,7 +219,7 @@ include "partials/navbar.php";
                                                 </button>
                                                 <input type="button"
                                                        class="btn btn-primary confirm-text"
-                                                       name="SaveCompanySettings"
+                                                       name="Instellingen"
                                                        value="Opslaan">
                                             </div>
                                         </form>
