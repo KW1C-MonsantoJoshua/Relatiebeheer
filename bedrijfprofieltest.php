@@ -22,7 +22,7 @@
                 <h3 class="panel-title">
                     Meest recente notities</h3>
                 <span class="label label-info">
-                    78</span>
+                    2</span>
             </div>
             <div class="panel-body">
                 <ul class="list-group">
