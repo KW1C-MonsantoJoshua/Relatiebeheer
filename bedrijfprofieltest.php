@@ -404,7 +404,7 @@
     }
 
     @media (min-width: 768px) {
-        .container {
+        .container1 {
             max-width: 750px
         }
 
@@ -462,7 +462,7 @@
     }
 
     @media (min-width: 992px) {
-        .container {
+        .container1 {
             max-width: 970px
         }
 
@@ -520,7 +520,7 @@
     }
 
     @media (min-width: 1200px) {
-        .container {
+        .container1 {
             max-width: 1170px
         }
     }
