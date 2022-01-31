@@ -303,7 +303,7 @@
         margin-left: auto
     }
 
-    .container1:after, .container:before {
+    .container1:after, .container1:before {
         display: table;
         content: " "
     }
@@ -312,7 +312,7 @@
         clear: both
     }
 
-    .container1:after, .container:before {
+    .container1:after, .container1:before {
         display: table;
         content: " "
     }
@@ -326,7 +326,7 @@
         margin-left: -15px
     }
 
-    .row1:after, .row:before {
+    .row1:after, .row1:before {
         display: table;
         content: " "
     }
@@ -335,7 +335,7 @@
         clear: both
     }
 
-    .row1:after, .row:before {
+    .row1:after, .row1:before {
         display: table;
         content: " "
     }
