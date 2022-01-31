@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if (isset($_POST['email'], $_POST['wachtwoord'])) {
        $_SESSION['email'] = $_POST['email'];
-        if ($stmt = $con->prepare('SELECT id, password, googlecode,authentication_level,member_of FROM users WHERE email = ?')) {
+        if ($stmt = $mysqli->prepare('SELECT id, password, googlecode,authentication_level,member_of FROM users WHERE email = ?')) {
             // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
             $stmt->bind_param('s', $_POST['email']);
             $stmt->execute();
