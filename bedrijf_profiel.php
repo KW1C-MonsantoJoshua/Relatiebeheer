@@ -159,15 +159,6 @@ include "partials/navbar.php";
                                                                        value="<?= $rowC['street'] ?>">
                                                             </div>
                                                             </br>
-                                                            <div class="controls">
-                                                                <label for="achternaam">Achternaamm</label>
-                                                                <input type="text" id="achternaam"
-                                                                       class="form-control round"
-                                                                       pattern="[a-zA-Z]{1,10}"
-                                                                       title="Alleen letters"
-                                                                       placeholder="Achternaam" required
-                                                                       aria-invalid="false" name="achternaam_z">
-                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
