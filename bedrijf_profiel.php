@@ -41,10 +41,6 @@ include "partials/navbar.php";
 ?>
     <div class="wrapper" style="overflow:visible;">
     <div class="main-panel">
-        <!-- BEGIN : Main Content-->
-        <div class="main-content">
-            <div class="content-overlay"></div>
-            <div class="content-wrapper">
 <!--                <div class="row">-->
 <!--                    <div class="col-12 ">-->
 <!--                        <div class="content-header">Menu</div>-->
@@ -399,7 +395,6 @@ include "partials/navbar.php";
                                                 </div>
                                             </form>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
