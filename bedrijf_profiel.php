@@ -39,7 +39,7 @@ include"partials/header.php";
 <?php
 include "partials/navbar.php";
 ?>
-<div class="wrapper" style="overflow:visible;">
+    <div class="wrapper" style="overflow:visible;">
     <div class="main-panel">
         <!-- BEGIN : Main Content-->
         <div class="main-content">
@@ -52,7 +52,7 @@ include "partials/navbar.php";
 <!--                    </div>-->
 <!--                </div>-->
                 <!-- Account Settings starts -->
-                <div class="row">
+                <div class="row justify-content-center">
 <!--                    <div class="sticky col-md-3 mt-3">-->
 <!--                        <!-- Nav tabs -->-->
 <!--                        <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">-->
