@@ -23,9 +23,6 @@ $rowC = GetCompanyInfo();
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <style>
-    body {
-        padding-top: 30px
-    }
 
     .widget .panel-body {
         padding: 0
