@@ -359,7 +359,7 @@ include "partials/navbar.php";
                                 <div class="card-body">
                                     <div class="tab-content">
                                         <!-- General Tab -->
-                                        <h1>Bedrijf Info</h1>
+                                        <h1>Abonnementen</h1>
                                         <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
                                             <hr class="mt-1 mt-sm-2">
                                             <form method="post">
