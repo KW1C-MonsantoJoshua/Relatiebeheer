@@ -27,9 +27,6 @@ $rowC = GetCompanyInfo();
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        background-color: yellow;
-        padding: 50px;
-        font-size: 20px;
     }
 </style>
 <!-- BEGIN : Head-->
