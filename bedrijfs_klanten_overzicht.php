@@ -280,7 +280,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="card-content">
                                                             <div class="card-body">
-                                                                <form class=" form " id="formSettings" method="post">
+                                                                <form class="form" id="formSettings" method="post">
                                                                     <div class="form-body"><h6 class="mt-3"><i
                                                                                     class="ft-eye mr-2"></i>Over <?= $rowC["name"]; ?>
                                                                         </h6>
@@ -294,6 +294,9 @@ include "partials/navbar.php";
                                                                                            placeholder="Bedrijfsnaam"
                                                                                            name="name"
                                                                                            value="<?= $rowC["name"]; ?>">
+                                                                                    <input type="hidden"
+                                                                                           id="id"
+                                                                                           value="<?= $_GET['membof'] ?>">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-3">
