@@ -1329,15 +1329,6 @@ include "partials/navbar.php";
                                                                    value="<?= $rowC['btw_nummer'] ?>">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="bic"
-                                                                   class="sr-only">BIC</label>
-                                                            <input class="form-control"
-                                                                   type="text"
-                                                                   name="bic"
-                                                                   placeholder="BIC"
-                                                                   id="bic">
-                                                        </div>
-                                                        <div class="form-group">
                                                             <label for="kvk"
                                                                    class="sr-only">KVK
                                                                 Nummer</label>
