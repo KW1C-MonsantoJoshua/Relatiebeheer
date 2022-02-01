@@ -1367,8 +1367,8 @@ include "partials/navbar.php";
                                                         data-dismiss="modal"
                                                         class="btn btn-secondary">Annuleren
                                                 </button>
-                                                <input type="button"
-                                                       class="btn btn-primary confirm-text"
+                                                <input type="submit"
+                                                       class="btn btn-primary"
                                                        name="Instellingen"
                                                        value="Opslaan">
                                             </div>
