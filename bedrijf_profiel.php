@@ -1632,8 +1632,8 @@ include "partials/navbar.php";
                             </select>
                     </fieldset>
                     <fieldset class="form-group floating-label-form-group">
-                        <label for="title1">Description</label>
-                        <textarea class="form-control" id="title1" rows="3" placeholder="Description"></textarea>
+                        <label for="title1">Beschrijving</label>
+                        <textarea class="form-control" id="title1" rows="3" placeholder="Beschrijving"></textarea>
                     </fieldset>
                 </div>
                 <div class="modal-footer">
