@@ -1642,61 +1642,6 @@ include "partials/navbar.php";
 
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4">
-                                <div class="form-group">
-                                    <h4>Adresgegevens</h4>
-                                    <div class="controls ">
-                                        <label for="straatnaam">Straatnaam</label>
-                                        <input type="text" id="straatnaam"
-                                               class="form-control round"
-                                               placeholder="Straatnaam" required
-                                               aria-invalid="false" name="straatnaam">
-                                    </div>
-                                    <div class="controls ">
-                                        <label for="postcode">Postcode</label>
-                                        <input type="text" id="postcode"
-                                               class="form-control round"
-                                               placeholder="Postcode" required
-                                               aria-invalid="false" name="postcode">
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="controls col-md-5">
-                                            <label for="huisnummer">Huisnummer</label>
-                                            <input type="text" id="huisnummer"
-                                                   class="form-control round"
-                                                   placeholder="Huisnummer" required
-                                                   aria-invalid="false" name="huisnummer">
-                                        </div>
-                                        <div class="controls  col-md-5">
-                                            <label for="users-edit-username">Toevoeging</label>
-                                            <input type="text" id="users-edit-username"
-                                                   class="form-control round"
-                                                   placeholder="Toevoeging"
-                                                   aria-invalid="false" name="huisnummertoevoeging">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <div class="form-group">
-                                    <h4>Contactgegevens</h4>
-                                    <div class="controls">
-                                        <label for="email">E-mail</label>
-                                        <input type="email" id="email"
-                                               class="form-control round"
-                                               placeholder="Typeemail@hier.com" required
-                                               aria-invalid="false" name="email">
-                                    </div>
-                                    <div class="controls">
-                                        <label for="telefoonnummer">Telefoonnummer</label>
-                                        <input type="text" id="telefoonnummer"
-                                               class="form-control round"
-                                               placeholder="Telefoonnummer" required
-                                               aria-invalid="false"
-                                               name="telefoonnummer">
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
                                 <input type="submit"
                                        class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
