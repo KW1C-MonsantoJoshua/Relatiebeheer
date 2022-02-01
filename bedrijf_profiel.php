@@ -1625,8 +1625,17 @@ include "partials/navbar.php";
                     </fieldset>
                     <br>
                     <fieldset class="form-group floating-label-form-group">
-                        <label for="title">Password</label>
-                        <input type="password" class="form-control" id="title" placeholder="Password">
+                        <div class="col-md-6 col-12">
+                            <label for="basic-form-6">Interested in</label>
+                            <select id="basic-form-6" name="interested" class="form-control">
+                                <option value="none" selected disabled>Interested in</option>
+                                <option value="design">Design</option>
+                                <option value="development">Development</option>
+                                <option value="illustration">Illustration</option>
+                                <option value="branding">Branding</option>
+                                <option value="video">Video</option>
+                            </select>
+                        </div>
                     </fieldset>
                     <br>
                     <fieldset class="form-group floating-label-form-group">
