@@ -51,7 +51,8 @@ if (isset($_GET['code'])) {
         if ($result = $stmt->affected_rows > 0){
             header("Location:googlecode.php");
         }else{
-            if ($memb_of == 0 ){
+            if ($memb_of == 0 && isset($_SESSION['rank'])){
+
                 header("Location:bedrijfs_overzicht.php");
             }else
             {
