@@ -1393,7 +1393,7 @@ include "partials/navbar.php";
                                         <div class="container1">
                                             <div class="row1">
                                                 <div class="panel panel-default widget">
-                                                    <div class="panel-heading">
+                                                    <div class="panel-heading" style="color: #333 !important;">
                                                         <span class="glyphicon glyphicon-comment"></span>
                                                         <h3 class="panel-title">
                                                             Meest recente notities</h3>
