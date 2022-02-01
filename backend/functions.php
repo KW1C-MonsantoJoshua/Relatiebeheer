@@ -92,18 +92,8 @@ function UpdateCompanyInfo()
         if ($stmt->affected_rows > 0){?>
             <script>
                 $(document).ready(function(){
-                    Swal.fire({
-                        title: 'Gegevens gewijzigd',
-                        text: "Gegevens gewijzigd",
-                        type: 'succes',
-                        showCancelButton: true,
-                        confirmButtonColor: '#2F8BE6',
-                        confirmButtonText: 'Okay',
-                        confirmButtonClass: 'btn btn-primary',
-                        buttonsStyling: false,
-                    });
+                    alert("Wijzigingen opgeslage");
                 });
-
             </script>
 
                 <?php
