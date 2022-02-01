@@ -1625,7 +1625,6 @@ include "partials/navbar.php";
                     </fieldset>
                     <br>
                     <fieldset class="form-group floating-label-form-group">
-                        <div class="col-md-6 col-12">
                             <label for="basic-form-6">Interested in</label>
                             <select id="basic-form-6" name="interested" class="form-control">
                                 <option value="none" selected disabled>Interested in</option>
@@ -1635,7 +1634,6 @@ include "partials/navbar.php";
                                 <option value="branding">Branding</option>
                                 <option value="video">Video</option>
                             </select>
-                        </div>
                     </fieldset>
                     <br>
                     <fieldset class="form-group floating-label-form-group">
