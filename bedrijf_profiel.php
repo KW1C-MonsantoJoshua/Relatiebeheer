@@ -1623,7 +1623,7 @@ include "partials/navbar.php";
                 <div class="modal-body">
                     <section class="users-edit">
                         <div class="row">
-                            <div class="col-md-11 col-md-10">
+                            <div class="col-md-11 col-md-1">
                                 <div class="form-group">
                                     <h4>Bedrijfsgegevens</h4>
                                     <div class="controls">
@@ -1639,7 +1639,6 @@ include "partials/navbar.php";
                                                placeholder="Website" required
                                                aria-invalid="false" name="website">
                                     </div>
-
                                 </div>
                             </div>
                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
