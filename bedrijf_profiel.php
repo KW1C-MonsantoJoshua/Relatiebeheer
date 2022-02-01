@@ -1608,7 +1608,7 @@ include "partials/navbar.php";
 
 
 
-<div class="modal fade text-left" id="#largechicken" tabindex="-1" role="dialog"
+<div class="modal fade text-left" id="largechickenwing" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel17" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -1619,89 +1619,137 @@ include "partials/navbar.php";
                 </button>
             </div>
             <div class="modal-body">
-                <div class="col-lg-6 col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Basic Form</h4>
+                <form method="post">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <h4>Bedrijfsgegevens</h4>
+                                <div class="controls">
+                                    <label for="users-edit-username">Voornaam</label>
+                                    <input type="text"
+                                           id="users-edit-username"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Voornaam" readonly
+                                           aria-invalid="false"
+                                           name="voornaam_p"
+                                           value="<?= $row["name"] ?>">
+                                </div>
+                                <div class="controls">
+                                    <label for="achternaam">Kvk nummer</label>
+                                    <input type="text" id="achternaam"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Achternaam" readonly
+                                           aria-invalid="false"
+                                           name="achternaam"
+                                           value="<?= $row["kvk_nummer"] ?>">
+                                </div>
+                                <div class="controls">
+                                    <label for="business">Btw nummer</label>
+                                    <input type="text"
+                                           id="business"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Bedrijf"
+                                           readonly
+                                           aria-invalid="false"
+                                           name="business"
+                                           value="<?= $row["btw_nummer"] ?>">
+                                </div>
+                                <div class="controls">
+                                    <label for="notities">Iban nummer</label>
+                                    <input type="text"
+                                           id="business"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Bedrijf"
+                                           readonly
+                                           aria-invalid="false"
+                                           name="business"
+                                           value="<?= $row["iban_nummer"] ?>">
+                                </div>
+                                <div class="controls">
+                                    <label for="notities">Notities</label>
+                                    <textarea placeholder="Plaats hier je notities"
+                                              id="notities"
+                                              name="notities_z"
+                                              readonly
+                                              rows="6" cols="50"
+                                              maxlength="600"><?php echo $row['notes']; ?></textarea>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <div class="card-body">
-                                <p>This is the most basic and default form having inputs, labels and buttons.</p>
-                                <form>
-                                    <div class="form-row">
-                                        <div class="col-md-6 col-12">
-                                            <div class="form-group mb-2">
-                                                <label for="basic-form-1">First Name</label>
-                                                <input type="text" id="basic-form-1" class="form-control" name="fname">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-12">
-                                            <div class="form-group mb-2">
-                                                <label for="basic-form-2">Last Name</label>
-                                                <input type="text" id="basic-form-2" class="form-control" name="lname">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 col-12">
-                                            <div class="form-group mb-2">
-                                                <label for="basic-form-3">E-mail</label>
-                                                <input type="text" id="basic-form-3" class="form-control" name="email">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-12">
-                                            <div class="form-group mb-2">
-                                                <label for="basic-form-4">Contact Number</label>
-                                                <input type="number" id="basic-form-4" class="form-control" name="phone">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-2">
-                                        <label for="basic-form-5">Company</label>
-                                        <input type="text" id="basic-form-5" class="form-control" name="company">
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-6 col-12">
-                                            <div class="form-group mb-2">
-                                                <label for="basic-form-6">Interested in</label>
-                                                <select id="basic-form-6" name="interested" class="form-control">
-                                                    <option value="none" selected disabled>Interested in</option>
-                                                    <option value="design">Design</option>
-                                                    <option value="development">Development</option>
-                                                    <option value="illustration">Illustration</option>
-                                                    <option value="branding">Branding</option>
-                                                    <option value="video">Video</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-12">
-                                            <div class="form-group mb-2">
-                                                <label for="basic-form-7">Budget</label>
-                                                <select id="basic-form-7" name="budget" class="form-control">
-                                                    <option value="0" selected disabled>Budget</option>
-                                                    <option value="less than $5000">less than $5000</option>
-                                                    <option value="$5000 - $10000">$5000 - $10000</option>
-                                                    <option value="$10000 - $20000">$10000 - $20000</option>
-                                                    <option value="more than $20000">more than $20000</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-2">
-                                        <label for="basic-form-8">Select File</label>
-                                        <input type="file" class="form-control-file" id="basic-form-8">
-                                    </div>
-                                    <div class="form-group mb-2">
-                                        <label for="basic-form-9">About Project</label>
-                                        <textarea id="basic-form-9" rows="4" class="form-control" name="comment"></textarea>
-                                    </div>
-                                    <button type="button" class="btn btn-primary mr-2"><i class="ft-check-square mr-1"></i>Save</button>
-                                    <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>
-                                </form>
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <h4>Adresgegevens</h4>
+                                <div class="controls ">
+                                    <label for="users-edit-username">Straatnaam</label>
+                                    <input type="text"
+                                           id="users-edit-username"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Straatnaam" readonly
+                                           aria-invalid="false"
+                                           name="straatnaam"
+                                           value="<?= $row["street"] ?>">
+                                </div>
+                                <div class="controls">
+                                    <label for="users-edit-username">Huisnummer</label>
+                                    <input type="text"
+                                           id="users-edit-username"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Huisnummer" readonly
+                                           aria-invalid="false"
+                                           name="huisnummer"
+                                           value="<?= $row["housenumber"] ?>">
+                                </div>
+                                <div class="controls ">
+                                    <label for="users-edit-username">Postcode</label>
+                                    <input type="text"
+                                           id="users-edit-username"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Postcode" readonly
+                                           aria-invalid="false"
+                                           name="postcode"
+                                           value="<?= $row["postalcode"] ?>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="form-group">
+                                <h4>Contactgegevens</h4>
+                                <div class="controls">
+                                    <label for="users-edit-email">E-mail</label>
+                                    <input type="email"
+                                           id="users-edit-email"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Typeemail@hier.com"
+                                           readonly
+                                           aria-invalid="false"
+                                           name="email"
+                                           value="<?= $row["email"] ?>">
+                                </div>
+                                <div class="controls">
+                                    <label for="telefoonnummer">Telefoonnummer</label>
+                                    <input type="text" id="telefoonnummer"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Telefoonnummer"
+                                           readonly
+                                           aria-invalid="false"
+                                           name="telefoonnummer"
+                                           value="<?= $row["phoneNumber"] ?>">
+                                </div>
+                                <div class="controls">
+                                    <label for="tussenvoegsel">Website</label>
+                                    <input type="text"
+                                           id="tussenvoegsel"
+                                           class="form-control-plaintext text-light round"
+                                           placeholder="Tussenvoegsel"
+                                           readonly
+                                           aria-invalid="false"
+                                           name="tussenvoegsel"
+                                           value="<?= $row["website"] ?>">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn bg-light-secondary" data-dismiss="modal">Close</button>
