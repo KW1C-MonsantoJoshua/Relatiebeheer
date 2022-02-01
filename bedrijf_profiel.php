@@ -1368,7 +1368,7 @@ include "partials/navbar.php";
                                                         class="btn btn-secondary">Annuleren
                                                 </button>
                                                 <input type="submit"
-                                                       class="btn btn-primary"
+                                                       class="btn btn-primary confirm-text"
                                                        name="Instellingen"
                                                        value="Opslaan">
                                             </div>
