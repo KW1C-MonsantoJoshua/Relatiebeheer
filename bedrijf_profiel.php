@@ -1633,12 +1633,14 @@ include "partials/navbar.php";
                                                    aria-invalid="false" name="onderwerp" value="">
                                         </div>
                                     <div class="controls">
-                                    <label for="users-edit-username">Tekst</label>
-                                        <input type="text" id="tekst"
-                                               class="form-control round"
-                                               placeholder="tekst" required
-                                               aria-invalid="false" name="tekst">
-                                </div>
+                                        <label for="notities">Notities</label>
+                                        <textarea placeholder="Plaats hier je notities"
+                                                  id="notities"
+                                                  name="notities_z"
+                                                  readonly
+                                                  rows="6" cols="50"
+                                                  maxlength="600"><?php echo $row['notes']; ?></textarea>
+                                    </div>
                             </div>
                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
                                 <input type="submit"
