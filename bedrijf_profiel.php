@@ -41,8 +41,6 @@ $rowC = GetCompanyInfo();
     }
 
     .widget li.list-group-item {
-        border-radius: 0;
-        border: 0;
         border-top: 1px solid #ddd
         border-bottom: 1px solid #ddd;
     }
@@ -1435,7 +1433,6 @@ include "partials/navbar.php";
                                                                     </div>
                                                                 </div>
                                                             </li>
-                                                            <hr style="border-top: 8px solid #bbb; border-radius: 5px;">
                                                             <li class="list-group-item">
                                                                 <div class="row1">
                                                                     <div class="col-xs-2 col-md-1">
