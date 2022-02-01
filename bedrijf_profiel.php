@@ -1459,7 +1459,8 @@ include "partials/navbar.php";
                                                                     <div class="col-xs-2 col-md-1">
                                                                         <img src="uploads/IMG-61e7da270b4cd2.43662757.jpg"
                                                                              class="img-circle img-responsive"
-                                                                             alt=""/></div>
+                                                                             alt="avatar" height="35" width="35"/></div>
+<!--                                                                    <img class="avatar"> -->
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
                                                                             <a style="color: #7a09e5; font-size: 20px;"
