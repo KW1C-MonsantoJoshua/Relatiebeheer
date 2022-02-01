@@ -1462,10 +1462,12 @@ include "partials/navbar.php";
                                                                              alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
-                                                                            <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">
+                                                                            <a style="color: #7a09e5;"
+                                                                               href="teuskip.nl/Miranda4.html">
                                                                                 Met klant besproken BTW prijs</a>
                                                                             <div class="mic-info">
-                                                                                By: <a href="#">Teus Brom</a> on 31
+                                                                                By: <a style="color: #7a09e5;"
+                                                                                       href="#">Teus Brom</a> on 31
                                                                                 Jan 2022
                                                                             </div>
                                                                         </div>
@@ -1486,14 +1488,14 @@ include "partials/navbar.php";
                                                                         </div>
                                                                         <div class="action">
                                                                             <button type="button"
-                                                                                    class="btn btn-primary btn-xs"
-                                                                                    title="Edit">
-                                                                                <span class="glyphicon glyphicon-pencil"></span>
-                                                                            </button>
-                                                                            <button type="button"
                                                                                     class="btn btn-success btn-xs"
                                                                                     title="Approved">
                                                                                 <span class="glyphicon glyphicon-ok"></span>
+                                                                            </button>
+                                                                            <button type="button"
+                                                                                    class="btn btn-primary btn-xs"
+                                                                                    title="Edit">
+                                                                                <span class="glyphicon glyphicon-pencil"></span>
                                                                             </button>
                                                                             <button type="button"
                                                                                     class="btn btn-danger btn-xs"
