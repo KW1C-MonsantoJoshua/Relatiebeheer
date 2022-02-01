@@ -1410,7 +1410,7 @@ include "partials/navbar.php";
                                                                              alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
-                                                                            <a style="color: #7a09e5;"
+                                                                            <a style="color: #7a09e5; font-size: 20px;"
                                                                                href="teuskip.nl/Miranda4.html">
                                                                                 Met klant besproken BTW prijs</a>
                                                                             <div class="mic-info">
