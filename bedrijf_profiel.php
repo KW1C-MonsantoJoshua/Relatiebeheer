@@ -1419,7 +1419,7 @@ include "partials/navbar.php";
                                                                                 Jan 2022
                                                                             </div>
                                                                         </div>
-                                                                        <div style="color: black; font-size: 16px;" class="comment-text">
+                                                                        <div style="color: black; font-size: 14px;" class="comment-text">
                                                                             met de klant veel gepraamet de klant
                                                                             veel gepraatmet de klant veel gepraatmet
                                                                             de
