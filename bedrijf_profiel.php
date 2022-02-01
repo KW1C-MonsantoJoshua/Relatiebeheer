@@ -1386,16 +1386,10 @@ include "partials/navbar.php";
                                 <div class="tab-content">
                                     <!-- General Tab -->
                                     <h1>Notities niffo</h1>
-                                    <div class="modal-footer">
-                                        <button type="reset"
-                                                data-dismiss="modal"
-                                                class="btn btn-secondary">Annuleren
-                                        </button>
                                         <input type="submit"
                                                class="btn btn-primary"
-                                               name="Instellingen"
+                                               name="nieuwenote"
                                                value="Opslaan">
-                                    </div>
                                     <div class="tab-pane active" id="general2" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
