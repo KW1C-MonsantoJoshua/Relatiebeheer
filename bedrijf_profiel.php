@@ -1194,8 +1194,7 @@ include "partials/header.php";
 include "partials/navbar.php";
 ?>
 
-<div class="wrapper"
-">
+<div class="wrapper">
 <div class="main-panel">
     <!-- BEGIN : Main Content-->
     <div class="main-content">
@@ -1610,8 +1609,6 @@ include "partials/navbar.php";
             <!-- END Notification Sidebar-->
             <div class="sidenav-overlay"></div>
             <div class="drag-target"></div>
-
-
 </body>
 
 <?php
