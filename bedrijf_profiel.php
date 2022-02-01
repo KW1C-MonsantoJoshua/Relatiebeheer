@@ -40,7 +40,7 @@ $rowC = GetCompanyInfo();
         float: right
     }
     html body.layout-dark.layout-transparent .list-group .list-group-item {
-        border-color: black;
+        border-color: black;!important;
     }
     .widget li.list-group-item {
         border-radius: 0;
