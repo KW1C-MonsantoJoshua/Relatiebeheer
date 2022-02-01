@@ -89,15 +89,6 @@ function UpdateCompanyInfo()
             $_POST['toevoeging'], $_POST['postcode'], $_POST['telefoon'], $_POST['email'],
             $_POST['kvk'], $_POST['btw'], $_POST['iban'], $_GET['membof']);
         $stmt->execute();
-        if ($stmt->affected_rows > 0){?>
-            <script>
-                $(document).ready(function(){
-                    alert("Wijzigingen opgeslage");
-                });
-            </script>
-
-                <?php
-        }
     }
 }
 
