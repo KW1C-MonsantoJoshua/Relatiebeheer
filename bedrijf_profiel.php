@@ -1633,11 +1633,11 @@ include "partials/navbar.php";
                                                    class="form-control round" placeholder="Onderwerp"
                                                    aria-invalid="false" name="onderwerp" value="">
                                         </div>
-                                        <label for="users-edit-username">Website</label>
-                                        <input type="text" id="users-edit-username"
+                                        <label for="users-edit-username">Tekst</label>
+                                        <input type="text" id="tekst"
                                                class="form-control round"
-                                               placeholder="Website" required
-                                               aria-invalid="false" name="website">
+                                               placeholder="tekst" required
+                                               aria-invalid="false" name="tekst">
                                     </div>
 
                                 </div>
