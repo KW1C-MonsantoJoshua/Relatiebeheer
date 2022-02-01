@@ -227,6 +227,7 @@ $rowC = GetCompanyInfo();
 
     .img-responsive {
         display: block;
+        height: auto;
         max-width: 100%
     }
 
@@ -1448,20 +1449,20 @@ include "partials/navbar.php";
                                                                 <div class="row1">
                                                                     <div class="col-xs-2 col-md-1">
                                                                         <img src="uploads/IMG-61e7da270b4cd2.43662757.jpg"
-                                                                             class=" avatar img-responsive"
-                                                                             alt="avatar" height="35" width="35""/></div>
+                                                                             class="img-circle img-responsive"
+                                                                             alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
-                                                                            <a style="color: #7a09e5;"
+                                                                            <a style="color: #7a09e5; font-size: 20px;"
                                                                                href="teuskip.nl/Miranda4.html">
                                                                                 Met klant besproken BTW prijs</a>
                                                                             <div class="mic-info">
-                                                                                By: <a style="color: #7a09e5;"
+                                                                                By: <a style="color: #7a09e5; font-size: 15px;"
                                                                                        href="#">Teus Brom</a> on 31
                                                                                 Jan 2022
                                                                             </div>
                                                                         </div>
-                                                                        <div class="comment-text">
+                                                                        <div style="color: black; font-size: 16px;" class="comment-text">
                                                                             met de klant veel gepraamet de klant
                                                                             veel gepraatmet de klant veel gepraatmet
                                                                             de
