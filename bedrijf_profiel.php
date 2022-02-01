@@ -1393,9 +1393,9 @@ include "partials/navbar.php";
                                         <div class="container1">
                                             <div class="row1">
                                                 <div class="panel panel-default widget">
-                                                    <div class="panel-heading" style="color: #333 !important;">
+                                                    <div  class="panel-heading">
                                                         <span class="glyphicon glyphicon-comment"></span>
-                                                        <h3 class="panel-title">
+                                                        <h3 class="panel-title" style="color: #333 !important;">
                                                             Meest recente notities</h3>
                                                         <span class="label label-info">
                     2</span>
