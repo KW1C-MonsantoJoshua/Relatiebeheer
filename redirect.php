@@ -51,12 +51,11 @@ if (isset($_GET['code'])) {
         if ($result = $stmt->affected_rows > 0){
             header("Location:googlecode.php");
         }else{
-            if ($memb_of == 0 && isset($_SESSION['rank'])){
-
-                header("Location:bedrijfs_overzicht.php");
+            if (isset($memb_of)){
+                header("Location:bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
             }else
             {
-                header("Location:bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+                header("Location:bedrijfs_overzicht.php");
             }
         }
     }elseif (!$resultData = $rows->fetch_assoc()) {
