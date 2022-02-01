@@ -227,7 +227,6 @@ $rowC = GetCompanyInfo();
 
     .img-responsive {
         display: block;
-        height: auto;
         max-width: 100%
     }
 
@@ -1458,8 +1457,8 @@ include "partials/navbar.php";
                                                                 <div class="row1">
                                                                     <div class="col-xs-2 col-md-1">
                                                                         <img src="uploads/IMG-61e7da270b4cd2.43662757.jpg"
-                                                                             class="img-circle avatar"
-                                                                             alt=""/></div>
+                                                                             class=" avatar img-responsive"
+                                                                             alt="avatar" height="35" width="35""/></div>
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
                                                                             <a style="color: #7a09e5;"
