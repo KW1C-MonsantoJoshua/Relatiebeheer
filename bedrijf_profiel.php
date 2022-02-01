@@ -54,6 +54,7 @@ $rowC = GetCompanyInfo();
         color: #666;
         font-size: 11px
     }
+
     .widget .action {
         margin-top: 5px
     }
@@ -1193,8 +1194,7 @@ include "partials/header.php";
 include "partials/navbar.php";
 ?>
 
-<div class="wrapper"
-">
+
 <div class="main-panel">
     <!-- BEGIN : Main Content-->
     <div class="main-content">
@@ -1404,30 +1404,48 @@ include "partials/navbar.php";
                                                                 <div class="row1">
                                                                     <div class="col-xs-2 col-md-1">
                                                                         <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
-                                                                             class="img-circle img-responsive" alt=""/></div>
+                                                                             class="img-circle img-responsive"
+                                                                             alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
-                                                                            <a style="color: #7a09e5;" href="teuskip.nl/Miranda4.html">
+                                                                            <a style="color: #7a09e5;"
+                                                                               href="teuskip.nl/Miranda4.html">
                                                                                 Met klant besproken BTW prijs</a>
                                                                             <div class="mic-info">
-                                                                                By: <a style="color: #7a09e5;" href="#">Teus Brom</a> on 31 Jan 2022
+                                                                                By: <a style="color: #7a09e5;"
+                                                                                       href="#">Teus Brom</a> on 31
+                                                                                Jan 2022
                                                                             </div>
                                                                         </div>
                                                                         <div class="comment-text">
-                                                                            met de klant veel gepraamet de klant veel gepraatmet de klant veel gepraatmet de
-                                                                            klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant
-                                                                            veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel
-                                                                            gepraatt met de klant veel gepraatmet de klant veel gepraatmet de klant veel
-                                                                            gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraat
+                                                                            met de klant veel gepraamet de klant
+                                                                            veel gepraatmet de klant veel gepraatmet
+                                                                            de
+                                                                            klant veel gepraatmet de klant veel
+                                                                            gepraatmet de klant veel gepraatmet de
+                                                                            klant
+                                                                            veel gepraatmet de klant veel gepraatmet
+                                                                            de klant veel gepraatmet de klant veel
+                                                                            gepraatt met de klant veel gepraatmet de
+                                                                            klant veel gepraatmet de klant veel
+                                                                            gepraatmet de klant veel gepraatmet de
+                                                                            klant veel gepraatmet de klant veel
+                                                                            gepraat
                                                                         </div>
                                                                         <div class="action">
-                                                                            <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                                                            <button type="button"
+                                                                                    class="btn btn-success btn-xs"
+                                                                                    title="Approved">
                                                                                 <span class="glyphicon glyphicon-ok"></span>
                                                                             </button>
-                                                                            <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                                                            <button type="button"
+                                                                                    class="btn btn-primary btn-xs"
+                                                                                    title="Edit">
                                                                                 <span class="glyphicon glyphicon-pencil"></span>
                                                                             </button>
-                                                                            <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                                                            <button type="button"
+                                                                                    class="btn btn-danger btn-xs"
+                                                                                    title="Delete">
                                                                                 <span class="glyphicon glyphicon-trash"></span>
                                                                             </button>
                                                                         </div>
@@ -1438,30 +1456,46 @@ include "partials/navbar.php";
                                                                 <div class="row1">
                                                                     <div class="col-xs-2 col-md-1">
                                                                         <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
-                                                                             class="img-circle img-responsive" alt=""/></div>
+                                                                             class="img-circle img-responsive"
+                                                                             alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
                                                                             <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">
                                                                                 Met klant besproken BTW prijs</a>
                                                                             <div class="mic-info">
-                                                                                By: <a href="#">Teus Brom</a> on 31 Jan 2022
+                                                                                By: <a href="#">Teus Brom</a> on 31
+                                                                                Jan 2022
                                                                             </div>
                                                                         </div>
                                                                         <div class="comment-text">
-                                                                            met de klant veel gepraamet de klant veel gepraatmet de klant veel gepraatmet de
-                                                                            klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant
-                                                                            veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel
-                                                                            gepraatt met de klant veel gepraatmet de klant veel gepraatmet de klant veel
-                                                                            gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraat
+                                                                            met de klant veel gepraamet de klant
+                                                                            veel gepraatmet de klant veel gepraatmet
+                                                                            de
+                                                                            klant veel gepraatmet de klant veel
+                                                                            gepraatmet de klant veel gepraatmet de
+                                                                            klant
+                                                                            veel gepraatmet de klant veel gepraatmet
+                                                                            de klant veel gepraatmet de klant veel
+                                                                            gepraatt met de klant veel gepraatmet de
+                                                                            klant veel gepraatmet de klant veel
+                                                                            gepraatmet de klant veel gepraatmet de
+                                                                            klant veel gepraatmet de klant veel
+                                                                            gepraat
                                                                         </div>
                                                                         <div class="action">
-                                                                            <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                                                            <button type="button"
+                                                                                    class="btn btn-primary btn-xs"
+                                                                                    title="Edit">
                                                                                 <span class="glyphicon glyphicon-pencil"></span>
                                                                             </button>
-                                                                            <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                                                            <button type="button"
+                                                                                    class="btn btn-success btn-xs"
+                                                                                    title="Approved">
                                                                                 <span class="glyphicon glyphicon-ok"></span>
                                                                             </button>
-                                                                            <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                                                            <button type="button"
+                                                                                    class="btn btn-danger btn-xs"
+                                                                                    title="Delete">
                                                                                 <span class="glyphicon glyphicon-trash"></span>
                                                                             </button>
                                                                         </div>
@@ -1609,7 +1643,9 @@ include "partials/navbar.php";
             <!-- END Notification Sidebar-->
             <div class="sidenav-overlay"></div>
             <div class="drag-target"></div>
-
+        </div>
+    </div>
+</div>
 
 </body>
 

@@ -293,7 +293,7 @@ function GetCompany()
         <tr>
             <td><?= $row["id"] ?></td>
             <td>
-                <a href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a>
+                <a data-toggle="tooltip" data-original-title="Bedrijfs instellingen" data-placement="bottom" href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a>
             </td>
             <td><?= $row["phoneNumber"] ?></td>
             <td><?= $row["email"] ?></td>
@@ -310,15 +310,15 @@ function GetCompany()
                         ?>
                         <div class="col-md-4">
                             <a href="#" data-toggle="modal" data-target="#edit<?= $row["id"] ?>">
-                                <i class="ft-edit"></i>
+                                <i class="ft-edit" data-toggle="tooltip" data-original-title="Snel bewerken" data-placement="bottom"></i>
                             </a>
                         </div>
                         <?php
                     }
                     ?>
                     <div class="col-md-4">
-                        <a data-toggle="modal" data-target="#info<?php echo $row["id"] ?>">
-                            <i class="ft-eye"></i>
+                        <a  data-toggle="modal" data-target="#info<?php echo $row["id"] ?>">
+                            <i class="ft-eye" data-toggle="tooltip" data-original-title="Info bekijken" data-placement="bottom"></i>
                         </a>
                     </div>
                     <div class="col-md-4">
