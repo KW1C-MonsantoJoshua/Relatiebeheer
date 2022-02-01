@@ -1626,7 +1626,7 @@ include "partials/navbar.php";
                     <br>
                     <fieldset class="form-group floating-label-form-group">
                             <label for="basic-form-6">Interested in</label>
-                            <select id="basic-form-6" name="interested" class="">
+                            <select id="basic-form-6" name="interested" class="form-control">
                                 <option value="none" selected disabled>Interested in</option>
                                 <option value="design">Design</option>
                                 <option value="development">Development</option>
