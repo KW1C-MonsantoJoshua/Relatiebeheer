@@ -44,6 +44,7 @@ $rowC = GetCompanyInfo();
         border-radius: 0;
         border: 0;
         border-top: 1px solid #ddd
+        border-bottom: 1px solid #ddd;
     }
 
     .widget li.list-group-item:hover {
