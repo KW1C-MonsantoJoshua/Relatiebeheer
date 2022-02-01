@@ -1458,7 +1458,7 @@ include "partials/navbar.php";
                                                                 <div class="row1">
                                                                     <div class="col-xs-2 col-md-1">
                                                                         <img src="uploads/IMG-61e7da270b4cd2.43662757.jpg"
-                                                                             class="img-circle img-responsive"
+                                                                             class="avatar img-circle img-responsive"
                                                                              alt="avatar" height="35" width="35"/></div>
 <!--                                                                    <img class="avatar"> -->
                                                                     <div class="col-xs-10 col-md-11">
