@@ -1389,7 +1389,7 @@ include "partials/navbar.php";
                                         <input type="submit"
                                                class="btn btn-primary"
                                                name="nieuwenote"
-                                               value="Opslaan">
+                                               value="Nieuwe notitie">
                                     <div class="tab-pane active" id="general2" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
