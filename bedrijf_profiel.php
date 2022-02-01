@@ -1625,7 +1625,7 @@ include "partials/navbar.php";
                         <div class="row">
                             <div class="col-2 col-md-1">
                                 <div class="form-group">
-                                    <h4>Bedrijfsgegevens</h4>
+                                    <h4>Nieuwe Notitie</h4>
                                     <div class="controls">
                                         <div class="controls ">
                                             <label for="bedrijfsnaam">Onderwerp</label>
