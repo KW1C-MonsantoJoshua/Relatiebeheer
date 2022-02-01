@@ -55,7 +55,7 @@ $rowC = GetCompanyInfo();
         font-size: 11px
     }
     .layout-transparent a {
-        color: #7a09e5;
+        color: #7a09e5;!important;
     }
     .widget .action {
         margin-top: 5px
