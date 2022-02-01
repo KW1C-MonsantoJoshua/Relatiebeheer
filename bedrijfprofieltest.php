@@ -40,6 +40,7 @@
     }
 
     .widget .comment-text {
+        color: black;
         font-size: 12px
     }
 
