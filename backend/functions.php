@@ -293,7 +293,7 @@ function GetCompany()
         <tr>
             <td><?= $row["id"] ?></td>
             <td>
-                <a href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a>
+                <a href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a>
             </td>
             <td><?= $row["phoneNumber"] ?></td>
             <td><?= $row["email"] ?></td>
@@ -324,7 +324,8 @@ function GetCompany()
                         </a>
                     </div>
                     <div class="col-md-5">
-                        <a href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><i
+                        <a href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"></a>
+                        <i
                                     class="ft-eye"></i>
                         </a>
                     </div>
