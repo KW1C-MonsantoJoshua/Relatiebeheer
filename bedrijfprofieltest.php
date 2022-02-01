@@ -1178,7 +1178,7 @@
                                     <a href="teuskip.nl/Miranda4.html">
                                         Met klant besproken BTW prijs</a>
                                     <div class="mic-info">
-                                        By: <a href="#">Teus Brom</a> on 31 Jan 2022
+                                        By: <a href="#">Teus Bromm</a> on 31 Jan 2022
                                     </div>
                                 </div>
                                 <div class="comment-text">
