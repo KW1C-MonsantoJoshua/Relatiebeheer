@@ -1462,16 +1462,16 @@ include "partials/navbar.php";
                                                                              alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
-                                                                            <a style="color: #7a09e5;"
+                                                                            <a style="color: #7a09e5; font-size: 20px;"
                                                                                href="teuskip.nl/Miranda4.html">
                                                                                 Met klant besproken BTW prijs</a>
                                                                             <div class="mic-info">
-                                                                                By: <a style="color: #7a09e5;"
+                                                                                By: <a style="color: #7a09e5; font-size: 15px;"
                                                                                        href="#">Teus Brom</a> on 31
                                                                                 Jan 2022
                                                                             </div>
                                                                         </div>
-                                                                        <div class="comment-text">
+                                                                        <div style="color: black; font-size: 16px;" class="comment-text">
                                                                             met de klant veel gepraamet de klant
                                                                             veel gepraatmet de klant veel gepraatmet
                                                                             de
