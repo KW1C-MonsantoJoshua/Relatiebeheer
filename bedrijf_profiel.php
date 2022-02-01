@@ -1450,6 +1450,7 @@ include "partials/navbar.php";
                                                                                     title="Delete">
                                                                                 <span class="glyphicon glyphicon-trash"></span>
                                                                             </button>
+                                                                        </br>
                                                                         </div>
                                                                     </div>
                                                                 </div>
