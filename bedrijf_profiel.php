@@ -1006,18 +1006,21 @@ $rowC = GetCompanyInfo();
         padding: 10px 15px;
         margin-bottom: -1px;
         background-color: #fff;
-        border: 1px solid #ddd
+        border: 1px solid #ddd;
+        border-bottom: 1px solid black;
     }
 
     .list-group-item:first-child {
         border-top-right-radius: 4px;
         border-top-left-radius: 4px
+        border-bottom: 1px solid black;
     }
 
     .list-group-item:last-child {
         margin-bottom: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px
+        border-bottom: 1px solid black;
     }
 
     a.list-group-item {
