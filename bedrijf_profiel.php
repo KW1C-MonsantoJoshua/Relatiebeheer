@@ -54,7 +54,7 @@ $rowC = GetCompanyInfo();
 
     .widget .mic-info {
         color: #666;
-        font-size: 11px
+        font-size: 15px
     }
 
     .widget .action {
