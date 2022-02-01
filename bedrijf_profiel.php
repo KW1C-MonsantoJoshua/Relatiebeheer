@@ -1247,7 +1247,7 @@ include "partials/navbar.php";
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <h4>Gegevens 1</h4>
+                                                        <h4>Adres gegevens</h4>
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
                                                                    class="sr-only">Bedrijfsnaamm</label>
@@ -1318,7 +1318,7 @@ include "partials/navbar.php";
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <h4>Gegevens 2</h4>
+                                                        <h4>Bedrijfsgegevens</h4>
                                                         <div class="form-group">
                                                             <label for="btw"
                                                                    class="sr-only">BTW
