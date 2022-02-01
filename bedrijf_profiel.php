@@ -1612,7 +1612,7 @@ include "partials/navbar.php";
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="myModalLabel35"> Modal Title</h3>
+                <h3 class="modal-title" id="myModalLabel35">Nieuwe Notitie</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                 </button>
@@ -1620,18 +1620,15 @@ include "partials/navbar.php";
             <form>
                 <div class="modal-body">
                     <fieldset class="form-group floating-label-form-group">
-                        <label for="email">Email Address</label>
-                        <input type="text" class="form-control" id="email" placeholder="Email Address">
+                        <label for="email">Omschrijving</label>
+                        <input type="text" class="form-control" id="email" placeholder="omschrijving">
                     </fieldset>
                     <fieldset class="form-group floating-label-form-group">
-                            <label for="basic-form-6">Interested in</label>
+                            <label for="basic-form-6">Keuze</label>
                             <select id="basic-form-6" name="interested" class="form-control">
-                                <option value="none" selected disabled>Interested in</option>
-                                <option value="design">Design</option>
-                                <option value="development">Development</option>
-                                <option value="illustration">Illustration</option>
-                                <option value="branding">Branding</option>
-                                <option value="video">Video</option>
+                                <option value="none" selected disabled>Keuze</option>
+                                <option value="design">Voor QCCS</option>
+                                <option value="development">Voor klant</option>
                             </select>
                     </fieldset>
                     <fieldset class="form-group floating-label-form-group">
