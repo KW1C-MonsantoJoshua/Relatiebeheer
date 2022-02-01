@@ -1608,7 +1608,7 @@ include "partials/navbar.php";
 
 
 
-<div class="modal fade text-left" id="info<?php echo $row['id'] ?>" tabindex="-1" role="dialog"
+<div class="modal fade text-left" id="#largechicken" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel17" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
