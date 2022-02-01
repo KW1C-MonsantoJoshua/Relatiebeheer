@@ -1186,6 +1186,8 @@ function editC()
                                                        required
                                                        value="<?= $row["iban_nummer"] ?>">
                                             </div>
+                                            <br>
+                                            <br>
                                             <div class="controls">
                                                 <label for="notities">Notities</label>
                                                 <textarea placeholder="Plaats hier je notities"
@@ -1388,6 +1390,8 @@ function ViewUserZ()
                                                    name="business"
                                                    value="<?= $rowCustomer["business"] ?>">
                                         </div>
+                                        <br>
+                                        <br>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
                                             <textarea placeholder="Plaats hier je notities"
@@ -1538,6 +1542,8 @@ function ViewPersonnel()
                                                    name="achternaam"
                                                    value="<?= $rowPersonnel["last_name"] ?>">
                                         </div>
+                                        <br>
+                                        <br>
                                         <div class="controls">
                                             <label for="notities">Notities</label>
                                             <textarea placeholder="Plaats hier je notities"
