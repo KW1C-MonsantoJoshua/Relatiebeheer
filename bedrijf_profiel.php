@@ -1452,7 +1452,6 @@ include "partials/navbar.php";
                                                                             </button>
                                                                         </div>
                                                                         </br>
-
                                                                     </div>
                                                                 </div>
                                                             </li>
