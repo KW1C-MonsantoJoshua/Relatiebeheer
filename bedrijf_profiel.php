@@ -1619,44 +1619,89 @@ include "partials/navbar.php";
                 </button>
             </div>
 
-            <form method="post">
-                <div class="modal-body">
-                    <section class="users-edit">
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <div class="form-group">
-                                    <h4>Bedrijfsgegevens</h4>
-                                    <div class="controls">
-                                        <div class="controls ">
-                                            <label for="bedrijfsnaam">Bedrijfsnaam</label>
-                                            <input type="text" id="bedrijfsnaam"
-                                                   class="form-control round" placeholder="Bedrijfsnaam"
-                                                   aria-invalid="false" name="bedrijfsnaam" value="">
+            <div class="col-lg-6 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Basic Form</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <p>This is the most basic and default form having inputs, labels and buttons.</p>
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-2">
+                                            <label for="basic-form-1">First Name</label>
+                                            <input type="text" id="basic-form-1" class="form-control" name="fname">
                                         </div>
-                                        <label for="users-edit-username">Website</label>
-                                        <input type="text" id="users-edit-username"
-                                               class="form-control round"
-                                               placeholder="Website" required
-                                               aria-invalid="false" name="website">
                                     </div>
-
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-2">
+                                            <label for="basic-form-2">Last Name</label>
+                                            <input type="text" id="basic-form-2" class="form-control" name="lname">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
-                                <input type="submit"
-                                       class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                       name="registreerBedrijf"
-                                       value="Bedrijf toevoegen">
-
-                                <button type="reset"
-                                        data-dismiss="modal"
-                                        class="btn btn-secondary">Cancel
-                                </button>
-                            </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-2">
+                                            <label for="basic-form-3">E-mail</label>
+                                            <input type="text" id="basic-form-3" class="form-control" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-2">
+                                            <label for="basic-form-4">Contact Number</label>
+                                            <input type="number" id="basic-form-4" class="form-control" name="phone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="basic-form-5">Company</label>
+                                    <input type="text" id="basic-form-5" class="form-control" name="company">
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-2">
+                                            <label for="basic-form-6">Interested in</label>
+                                            <select id="basic-form-6" name="interested" class="form-control">
+                                                <option value="none" selected disabled>Interested in</option>
+                                                <option value="design">Design</option>
+                                                <option value="development">Development</option>
+                                                <option value="illustration">Illustration</option>
+                                                <option value="branding">Branding</option>
+                                                <option value="video">Video</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group mb-2">
+                                            <label for="basic-form-7">Budget</label>
+                                            <select id="basic-form-7" name="budget" class="form-control">
+                                                <option value="0" selected disabled>Budget</option>
+                                                <option value="less than $5000">less than $5000</option>
+                                                <option value="$5000 - $10000">$5000 - $10000</option>
+                                                <option value="$10000 - $20000">$10000 - $20000</option>
+                                                <option value="more than $20000">more than $20000</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="basic-form-8">Select File</label>
+                                    <input type="file" class="form-control-file" id="basic-form-8">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="basic-form-9">About Project</label>
+                                    <textarea id="basic-form-9" rows="4" class="form-control" name="comment"></textarea>
+                                </div>
+                                <button type="button" class="btn btn-primary mr-2"><i class="ft-check-square mr-1"></i>Save</button>
+                                <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>
+                            </form>
                         </div>
-                    </section>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
