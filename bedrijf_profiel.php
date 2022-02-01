@@ -54,7 +54,7 @@ $rowC = GetCompanyInfo();
 
     .widget .mic-info {
         color: #666;
-        font-size: 11px
+        font-size: 15px
     }
 
     .widget .action {
@@ -1393,9 +1393,9 @@ include "partials/navbar.php";
                                         <div class="container1">
                                             <div class="row1">
                                                 <div class="panel panel-default widget">
-                                                    <div class="panel-heading" style="color: #333 !important;">
+                                                    <div  class="panel-heading">
                                                         <span class="glyphicon glyphicon-comment"></span>
-                                                        <h3 class="panel-title">
+                                                        <h3 class="panel-title" style="color: #333 !important;">
                                                             Meest recente notities</h3>
                                                         <span class="label label-info">
                     2</span>
@@ -1410,16 +1410,16 @@ include "partials/navbar.php";
                                                                              alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
-                                                                            <a style="color: #7a09e5;"
+                                                                            <a style="color: #7a09e5; font-size: 20px;"
                                                                                href="teuskip.nl/Miranda4.html">
                                                                                 Met klant besproken BTW prijs</a>
                                                                             <div class="mic-info">
-                                                                                By: <a style="color: #7a09e5;"
+                                                                                By: <a style="color: #7a09e5; font-size: 15px;"
                                                                                        href="#">Teus Brom</a> on 31
                                                                                 Jan 2022
                                                                             </div>
                                                                         </div>
-                                                                        <div class="comment-text">
+                                                                        <div style="color: black; font-size: 16px;" class="comment-text">
                                                                             met de klant veel gepraamet de klant
                                                                             veel gepraatmet de klant veel gepraatmet
                                                                             de
@@ -1457,8 +1457,8 @@ include "partials/navbar.php";
                                                             <li class="list-group-item">
                                                                 <div class="row1">
                                                                     <div class="col-xs-2 col-md-1">
-                                                                        <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
-                                                                             class="img-circle img-responsive"
+                                                                        <img src="uploads/IMG-61e7da270b4cd2.43662757.jpg"
+                                                                             class="img-circle avatar"
                                                                              alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
                                                                         <div>
