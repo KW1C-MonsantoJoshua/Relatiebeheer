@@ -1626,8 +1626,7 @@ include "partials/navbar.php";
                             <div class="col-10 col-md-10">
                                 <div class="form-group">
                                     <h4>Nieuwe Notitie</h4>
-                                    <div class="controls">
-                                        <div class="controls ">
+                                        <div class="controls col-md-5">
                                             <label for="bedrijfsnaam">Onderwerp</label>
                                             <input type="text" id="onderwerp"
                                                    class="form-control round" placeholder="Onderwerp"
@@ -1638,8 +1637,6 @@ include "partials/navbar.php";
                                                class="form-control round"
                                                placeholder="tekst" required
                                                aria-invalid="false" name="tekst">
-                                    </div>
-
                                 </div>
                             </div>
                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
