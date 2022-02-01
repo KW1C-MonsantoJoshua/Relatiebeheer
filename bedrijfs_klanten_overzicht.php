@@ -3,13 +3,12 @@
 include "backend/functions.php";
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
-ViewUserP();
-ViewUserZ();
-ViewPersonnel();
 editPersonnel();
 editUserZ();
 editUserP();
-
+ViewUserP();
+ViewUserZ();
+ViewPersonnel();
 // Controleer of iemand ingelogd is
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
