@@ -1308,9 +1308,9 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="adres"
+                                                            <label for="straat"
                                                                    class="sr-only">Adres</label>
-                                                            <input type="text" id="adres"
+                                                            <input type="text" id="straat"
                                                                    class="form-control"
                                                                    placeholder="Adres"
                                                                    name="street"
@@ -1694,7 +1694,7 @@ include "partials/footer.php";
 
         }
 
-        if (wat === "huisnummer") {
+        if (wat === "huisnr") {
             huisnr = parseFloat(waarde);
             if (!huisnr) {
                 maak_leeg();
