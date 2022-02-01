@@ -1457,7 +1457,7 @@ include "partials/navbar.php";
                                                             <li class="list-group-item">
                                                                 <div class="row1">
                                                                     <div class="col-xs-2 col-md-1">
-                                                                        <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
+                                                                        <img src="uploads/IMG-61e7da270b4cd2.43662757.jpg"
                                                                              class="img-circle img-responsive"
                                                                              alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
