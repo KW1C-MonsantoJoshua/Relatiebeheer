@@ -1628,10 +1628,10 @@ include "partials/navbar.php";
                                     <h4>Bedrijfsgegevens</h4>
                                     <div class="controls">
                                         <div class="controls ">
-                                            <label for="bedrijfsnaam">Bedrijfsnaam</label>
-                                            <input type="text" id="bedrijfsnaam"
-                                                   class="form-control round" placeholder="Bedrijfsnaam"
-                                                   aria-invalid="false" name="bedrijfsnaam" value="">
+                                            <label for="bedrijfsnaam">Onderwerp</label>
+                                            <input type="text" id="onderwerp"
+                                                   class="form-control round" placeholder="Onderwerp"
+                                                   aria-invalid="false" name="onderwerp" value="">
                                         </div>
                                         <label for="users-edit-username">Website</label>
                                         <input type="text" id="users-edit-username"
