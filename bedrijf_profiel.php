@@ -60,7 +60,8 @@ $rowC = GetCompanyInfo();
     }
 
     .widget .comment-text {
-        font-size: 12px
+        font-size: 12px;
+        color: black;
     }
 
     .widget .btn-block {
