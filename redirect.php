@@ -51,7 +51,12 @@ if (isset($_GET['code'])) {
         if ($result = $stmt->affected_rows > 0){
             header("Location:googlecode.php");
         }else{
-            header("Location:bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+            if ($memb_of == 0 ){
+                header("Location:bedrijfs_overzicht.php");
+            }else
+            {
+                header("Location:bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+            }
         }
     }elseif (!$resultData = $rows->fetch_assoc()) {
         echo $email;
