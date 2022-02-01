@@ -1632,7 +1632,8 @@ include "partials/navbar.php";
                                                    class="form-control round" placeholder="Onderwerp"
                                                    aria-invalid="false" name="onderwerp" value="">
                                         </div>
-                                        <label for="users-edit-username">Tekst</label>
+                                    <div class="controls">
+                                    <label for="users-edit-username">Tekst</label>
                                         <input type="text" id="tekst"
                                                class="form-control round"
                                                placeholder="tekst" required
