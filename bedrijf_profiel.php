@@ -39,7 +39,9 @@ $rowC = GetCompanyInfo();
     .widget .label-info {
         float: right
     }
-
+    html body.layout-dark.layout-transparent .list-group .list-group-item {
+        border-color: black;
+    }
     .widget li.list-group-item {
         border-radius: 0;
         border: 0;
