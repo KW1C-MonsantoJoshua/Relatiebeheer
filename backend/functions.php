@@ -89,6 +89,22 @@ function UpdateCompanyInfo()
             $_POST['toevoeging'], $_POST['postcode'], $_POST['telefoon'], $_POST['email'],
             $_POST['kvk'], $_POST['btw'], $_POST['iban'], $_GET['membof']);
         $stmt->execute();
+        if ($stmt->affected_rows > 0){?>
+            <script>
+                Swal.fire({
+                    title: 'Gegevens gewijzigd',
+                    text: "Gegevens gewijzigd",
+                    type: 'succes',
+                    showCancelButton: true,
+                    confirmButtonColor: '#2F8BE6',
+                    confirmButtonText: 'Okay',
+                    confirmButtonClass: 'btn btn-primary',
+                    buttonsStyling: false,
+                });
+            </script>
+
+                <?php
+        }
     }
 }
 
