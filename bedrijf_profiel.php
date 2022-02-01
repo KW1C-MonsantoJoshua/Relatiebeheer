@@ -1388,7 +1388,7 @@ include "partials/navbar.php";
                                     <h1>Notities niffo</h1>
                                         <a type="button"
                                            class="nav-link d-flex align-items-end"
-                                           data-toggle="modal" data-target="#largechicken">
+                                           data-toggle="modal" data-target="largechicken">
                                             <i class="ft-plus mr-1"></i>
                                             <span class="d-none d-sm-block">Toevoegen</span>
                                         </a>
