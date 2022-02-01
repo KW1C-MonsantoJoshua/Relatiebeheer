@@ -324,9 +324,9 @@ function GetCompany()
                         </a>
                     </div>
                     <div class="col-md-5">
-                        <a data-toggle="tooltip" data-original-title="Level omlaag" href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>">
+                        <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>">
                         <i
-                                    class="ft-eye"></i>
+                                    class="ft-arrow-down"></i>
                         </a>
                     </div>
                 </div>
