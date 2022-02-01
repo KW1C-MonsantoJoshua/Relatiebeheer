@@ -228,7 +228,7 @@ $rowC = GetCompanyInfo();
     .img-responsive {
         display: block;
         max-width: 100%;
-        height: 45px;
+        height: 40px;
     }
 
     .img-circle {
