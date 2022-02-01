@@ -293,7 +293,7 @@ function GetCompany()
         <tr>
             <td><?= $row["id"] ?></td>
             <td>
-                <a href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a>
+                <a data-toggle="tooltip" data-original-title="Bedrijfs instellingen" data-placement="bottom" href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a>
             </td>
             <td><?= $row["phoneNumber"] ?></td>
             <td><?= $row["email"] ?></td>
