@@ -382,7 +382,7 @@ $rowC = GetCompanyInfo();
     }
 
     .col-xs-2 {
-        width: 83.33333333333334%
+        width: 16.666666666666664%
     }
 
     .col-xs-3 {
@@ -414,7 +414,7 @@ $rowC = GetCompanyInfo();
     }
 
     .col-xs-10 {
-        width: 16.666666666666664%
+        width: 83.33333333333334%
     }
 
     .col-xs-11 {
@@ -1386,6 +1386,12 @@ include "partials/navbar.php";
                                 <div class="tab-content">
                                     <!-- General Tab -->
                                     <h1>Notities niffo</h1>
+                                        <a type="button"
+                                           class="nav-link d-flex align-items-end"
+                                           data-toggle="modal" data-target="#large">
+                                            <i class="ft-plus mr-1"></i>
+                                            <span class="d-none d-sm-block">Toevoegen</span>
+                                        </a>
                                     <div class="tab-pane active" id="general2" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
@@ -1395,13 +1401,15 @@ include "partials/navbar.php";
                                                     <div  class="panel-heading">
                                                         <span class="glyphicon glyphicon-comment"></span>
                                                         <h3 class="panel-title" style="color: #333 !important;">
-                                                            Meest recente notities</h3>
-                                                        <span class="label label-info">2</span>
+                                                            Meest recente notitiess</h3>
+                                                        <span class="label label-info">
+                    2</span>
                                                     </div>
                                                     <div class="panel-body">
                                                         <ul class="list-group">
                                                             <li class="list-group-item">
                                                                 <div class="row1">
+                                                                </br>
                                                                     <div class="col-xs-2 col-md-1">
                                                                         <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
                                                                              class="img-circle img-responsive"
@@ -1449,59 +1457,7 @@ include "partials/navbar.php";
                                                                                 <span class="glyphicon glyphicon-trash"></span>
                                                                             </button>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="list-group-item">
-                                                                <div class="row1">
-                                                                    <div class="col-xs-2 col-md-1">
-                                                                        <img src="uploads/IMG-61e7da270b4cd2.43662757.jpg"
-                                                                             class="avatar img-responsive"
-                                                                             alt="avatar" height="35" width="35"/></div>
-<!--                                                                    <img class="avatar"> -->
-                                                                    <div class="col-xs-10 col-md-11">
-                                                                        <div>
-                                                                            <a style="color: #7a09e5; font-size: 20px;"
-                                                                               href="teuskip.nl/Miranda4.html">
-                                                                                Met klant besproken BTW prijs</a>
-                                                                            <div class="mic-info">
-                                                                                By: <a style="color: #7a09e5; font-size: 15px;"
-                                                                                       href="#">Teus Brom</a> on 31
-                                                                                Jan 2022
-                                                                            </div>
-                                                                        </div>
-                                                                        <div style="color: black; font-size: 16px;" class="comment-text">
-                                                                            met de klant veel gepraamet de klant
-                                                                            veel gepraatmet de klant veel gepraatmet
-                                                                            de
-                                                                            klant veel gepraatmet de klant veel
-                                                                            gepraatmet de klant veel gepraatmet de
-                                                                            klant
-                                                                            veel gepraatmet de klant veel gepraatmet
-                                                                            de klant veel gepraatmet de klant veel
-                                                                            gepraatt met de klant veel gepraatmet de
-                                                                            klant veel gepraatmet de klant veel
-                                                                            gepraatmet de klant veel gepraatmet de
-                                                                            klant veel gepraatmet de klant veel
-                                                                            gepraat
-                                                                        </div>
-                                                                        <div class="action">
-                                                                            <button type="button"
-                                                                                    class="btn btn-success btn-xs"
-                                                                                    title="Approved">
-                                                                                <span class="glyphicon glyphicon-ok"></span>
-                                                                            </button>
-                                                                            <button type="button"
-                                                                                    class="btn btn-primary btn-xs"
-                                                                                    title="Edit">
-                                                                                <span class="glyphicon glyphicon-pencil"></span>
-                                                                            </button>
-                                                                            <button type="button"
-                                                                                    class="btn btn-danger btn-xs"
-                                                                                    title="Delete">
-                                                                                <span class="glyphicon glyphicon-trash"></span>
-                                                                            </button>
-                                                                        </div>
+                                                                        </br>
                                                                     </div>
                                                                 </div>
                                                             </li>
@@ -1649,6 +1605,62 @@ include "partials/navbar.php";
         </div>
     </div>
 </div>
+
+
+
+<div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17"
+     aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel34">Bedrijf toevoegen</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                </button>
+            </div>
+
+            <form method="post">
+                <div class="modal-body">
+                    <section class="users-edit">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="form-group">
+                                    <h4>Bedrijfsgegevens</h4>
+                                    <div class="controls">
+                                        <div class="controls ">
+                                            <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                                            <input type="text" id="bedrijfsnaam"
+                                                   class="form-control round" placeholder="Bedrijfsnaam"
+                                                   aria-invalid="false" name="bedrijfsnaam" value="">
+                                        </div>
+                                        <label for="users-edit-username">Website</label>
+                                        <input type="text" id="users-edit-username"
+                                               class="form-control round"
+                                               placeholder="Website" required
+                                               aria-invalid="false" name="website">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
+                                <input type="submit"
+                                       class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
+                                       name="registreerBedrijf"
+                                       value="Bedrijf toevoegen">
+
+                                <button type="reset"
+                                        data-dismiss="modal"
+                                        class="btn btn-secondary">Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 </body>
 
