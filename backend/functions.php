@@ -305,12 +305,10 @@ function GetCompany()
                 <?php } ?>            </td>
             <td>
                 <div class="row">
-                    <div class="col-md-0">
-                    </div>
                     <?php
                     if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] == 'Werknemer') {
                         ?>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <a href="#" data-toggle="modal" data-target="#edit<?= $row["id"] ?>">
                                 <i class="ft-edit"></i>
                             </a>
@@ -318,12 +316,12 @@ function GetCompany()
                         <?php
                     }
                     ?>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <a data-toggle="modal" data-target="#info<?php echo $row["id"] ?>">
                             <i class="ft-eye"></i>
                         </a>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>">
                         <i
                                     class="ft-arrow-down"></i>
