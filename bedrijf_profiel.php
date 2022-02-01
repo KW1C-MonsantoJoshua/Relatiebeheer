@@ -1388,7 +1388,7 @@ include "partials/navbar.php";
                                     <h1>Notities niffo</h1>
                                         <a type="button"
                                            class="nav-link d-flex align-items-end"
-                                           data-toggle="modal" data-target="#large">
+                                           data-toggle="modal" data-target="#largechicken">
                                             <i class="ft-plus mr-1"></i>
                                             <span class="d-none d-sm-block">Toevoegen</span>
                                         </a>
@@ -1608,7 +1608,7 @@ include "partials/navbar.php";
 
 
 
-<div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17"
+<div class="modal fade text-left" id="largechicken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17"
      aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
