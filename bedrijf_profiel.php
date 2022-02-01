@@ -1414,7 +1414,7 @@ include "partials/navbar.php";
                                                                                href="teuskip.nl/Miranda4.html">
                                                                                 Met klant besproken BTW prijs</a>
                                                                             <div class="mic-info">
-                                                                                By: <a style="color: #7a09e5;"
+                                                                                By: <a style="color: #7a09e5; font-size: 15px;"
                                                                                        href="#">Teus Brom</a> on 31
                                                                                 Jan 2022
                                                                             </div>
