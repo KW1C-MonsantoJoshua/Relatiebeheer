@@ -1635,8 +1635,8 @@ include "partials/navbar.php";
                     </fieldset>
                 </div>
                 <div class="modal-footer">
-                    <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
-                    <input type="submit" class="btn btn-primary" value="Login">
+                    <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
+                    <input type="submit" class="btn btn-primary" value="Opslaan">
                 </div>
             </form>
         </div>
