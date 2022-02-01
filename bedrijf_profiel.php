@@ -1435,7 +1435,6 @@ include "partials/navbar.php";
                                                                     </div>
                                                                 </div>
                                                             </li>
-                                                            <hr style="border-top: 1px solid red;">
                                                             <li class="list-group-item">
                                                                 <div class="row1">
                                                                     <div class="col-xs-2 col-md-1">
