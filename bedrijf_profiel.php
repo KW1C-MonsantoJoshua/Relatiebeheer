@@ -1623,29 +1623,30 @@ include "partials/navbar.php";
                 <div class="modal-body">
                     <section class="users-edit">
                         <div class="row">
-                            <div class="col-10 col-md-10">
+                            <div class="col-12 col-md-4">
                                 <div class="form-group">
-                                    <h4>Nieuwe Notitie</h4>
-                                        <div class="controls col-md-5">
-                                            <label for="bedrijfsnaam">Onderwerp</label>
-                                            <input type="text" id="onderwerp"
-                                                   class="form-control round" placeholder="Onderwerp"
-                                                   aria-invalid="false" name="onderwerp" value="">
-                                        </div>
+                                    <h4>Bedrijfsgegevens</h4>
                                     <div class="controls">
-                                        <label for="notities">Notities</label>
-                                        <textarea placeholder="Plaats hier je notities"
-                                                  id="notities"
-                                                  name="notities"
-                                                  rows="6" cols="50"
-                                                  maxlength="600"</textarea>
+                                        <div class="controls ">
+                                            <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                                            <input type="text" id="bedrijfsnaam"
+                                                   class="form-control round" placeholder="Bedrijfsnaam"
+                                                   aria-invalid="false" name="bedrijfsnaam" value="">
+                                        </div>
+                                        <label for="users-edit-username">Website</label>
+                                        <input type="text" id="users-edit-username"
+                                               class="form-control round"
+                                               placeholder="Website" required
+                                               aria-invalid="false" name="website">
                                     </div>
+
+                                </div>
                             </div>
                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
                                 <input type="submit"
                                        class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                       name="nieuwenotitie"
-                                       value="nieuwenotitie">
+                                       name="registreerBedrijf"
+                                       value="Bedrijf toevoegen">
 
                                 <button type="reset"
                                         data-dismiss="modal"
