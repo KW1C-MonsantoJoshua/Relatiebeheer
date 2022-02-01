@@ -382,7 +382,7 @@ $rowC = GetCompanyInfo();
     }
 
     .col-xs-2 {
-        width: 30.666666666666664%
+        width: 83.33333333333334%
     }
 
     .col-xs-3 {
@@ -414,7 +414,7 @@ $rowC = GetCompanyInfo();
     }
 
     .col-xs-10 {
-        width: 83.33333333333334%
+        width: 16.666666666666664%
     }
 
     .col-xs-11 {
