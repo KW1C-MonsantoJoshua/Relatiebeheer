@@ -1623,7 +1623,6 @@ include "partials/navbar.php";
                         <label for="email">Email Address</label>
                         <input type="text" class="form-control" id="email" placeholder="Email Address">
                     </fieldset>
-                    <br>
                     <fieldset class="form-group floating-label-form-group">
                             <label for="basic-form-6">Interested in</label>
                             <select id="basic-form-6" name="interested" class="form-control">
@@ -1635,7 +1634,6 @@ include "partials/navbar.php";
                                 <option value="video">Video</option>
                             </select>
                     </fieldset>
-                    <br>
                     <fieldset class="form-group floating-label-form-group">
                         <label for="title1">Description</label>
                         <textarea class="form-control" id="title1" rows="3" placeholder="Description"></textarea>
