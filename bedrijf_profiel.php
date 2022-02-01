@@ -1386,10 +1386,12 @@ include "partials/navbar.php";
                                 <div class="tab-content">
                                     <!-- General Tab -->
                                     <h1>Notities niffo</h1>
-                                        <input type="submit"
-                                               class="btn btn-primary"
-                                               name="nieuwenote"
-                                               value="Nieuwe notitie">
+                                        <a type="button"
+                                           class="nav-link d-flex align-items-end"
+                                           data-toggle="modal" data-target="#large">
+                                            <i class="ft-plus mr-1"></i>
+                                            <span class="d-none d-sm-block">Toevoegen</span>
+                                        </a>
                                     <div class="tab-pane active" id="general2" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
