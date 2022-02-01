@@ -51,10 +51,12 @@ $rowC = GetCompanyInfo();
     }
 
     .widget .mic-info {
-        color: gray;
+        color: #666;
         font-size: 11px
     }
-
+    .layout-transparent a {
+        color: #7a09e5;
+    }
     .widget .action {
         margin-top: 5px
     }
