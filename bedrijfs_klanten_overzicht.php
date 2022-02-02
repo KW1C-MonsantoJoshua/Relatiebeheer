@@ -145,8 +145,8 @@ include "partials/navbar.php";
                                                             <tr>
                                                                 <th>ID</th>
                                                                 <th>Volledige Naam</th>
+                                                                <th>Adres</th>
                                                                 <th>Telefoonnummer</th>
-                                                                <th>Email</th>
                                                                 <th>Status</th>
                                                                 <th>Handelingen</th>
                                                             </tr>

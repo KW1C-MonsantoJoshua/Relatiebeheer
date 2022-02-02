@@ -295,7 +295,7 @@ function GetCompany()
             <td>
                 <a data-toggle="tooltip" data-original-title="Bedrijfs instellingen" data-placement="bottom" href="bedrijf_profiel.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>"><?= $row["name"] ?></a>
             </td>
-            <td><?= $row["phoneNumber"] ?></td>
+            <td><a href="tel:<?= $row["phoneNumber"]?>"><?= $row["phoneNumber"]?></a></td>
             <td><a href="mailto:<?= $row["email"] ?>"><?= $row["email"] ?></a></td>
             <td><?php
                 if ($row["status"] === "Inactief") { ?>
