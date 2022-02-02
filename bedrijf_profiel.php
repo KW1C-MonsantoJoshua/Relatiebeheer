@@ -1572,7 +1572,7 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                         <div class="controls ">
-                                                            <label for="straatnaam">Straatnaam</label>
+                                                            <label for="straatnaam">Straatnaamm</label>
                                                             <input type="text" id="straat_z"
                                                                    class="form-control round"
                                                                    placeholder="Straatnaam" required
