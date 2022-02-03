@@ -1406,8 +1406,7 @@ include "partials/navbar.php";
                                                         <span class="glyphicon glyphicon-comment"></span>
                                                         <h3 class="panel-title" style="color: #333 !important;">
                                                             Meest recente notitiess</h3>
-                                                        <span class="label label-info">
-                    2</span>
+                                                        <span class="label label-info">2</span>
                                                     </div>
                                                     <div class="panel-body">
                                                         <ul class="list-group">
