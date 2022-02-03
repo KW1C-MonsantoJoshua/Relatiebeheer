@@ -6,49 +6,9 @@ $token = $_GET["token"];
 <html class="loading" lang="en">
 <!-- BEGIN : Head-->
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <meta name="description"
-          content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords"
-          content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
-    <title>Lock Screen Page - Apex responsive bootstrap 4 admin template</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../app-assets/img/ico/favicon.ico">
-    <link rel="shortcut icon" type="image/png" href="../app-assets/img/ico/favicon-32.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900"
-          rel="stylesheet">
-    <!-- BEGIN VENDOR CSS-->
-    <!-- font icons-->
-    <link rel="stylesheet" type="text/css" href="../app-assets/fonts/feather/style.min.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/fonts/simple-line-icons/style.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/perfect-scrollbar.min.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/prism.min.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/switchery.min.css">
-    <!-- END VENDOR CSS-->
-    <!-- BEGIN APEX CSS-->
-    <link rel="stylesheet" type="text/css" href="../app-assets/css-rtl/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/css-rtl/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/css-rtl/colors.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/css-rtl/components.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/css-rtl/themes/layout-dark.css">
-    <link rel="stylesheet" href="../app-assets/css-rtl/plugins/switchery.css">
-    <link rel="stylesheet" type="text/css" href="../app-assets/css-rtl/custom-rtl.css">
-    <!-- END APEX CSS-->
-    <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="../app-assets/css-rtl/core/menu/horizontal-menu.css">
-    <link rel="stylesheet" href="../app-assets/css-rtl/pages/authentication.css">
-    <!-- END Page Level CSS-->
-    <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../assets2/css/style-rtl.css">
-    <!-- END: Custom CSS-->
-</head>
+<?php
+include "partials/header.php";
+?>
 <!-- END : Head-->
 
 <!-- BEGIN : Body-->
@@ -71,7 +31,7 @@ $token = $_GET["token"];
                                     <div class="card-body auth-img">
                                         <div class="row m-0">
                                             <div class="col-lg-6 d-lg-flex justify-content-center align-items-center d-none text-center auth-img-bg p-3">
-                                                <img src="../app-assets/img/gallery/lock.png" alt="" class="img-fluid"
+                                                <img src="../assets/img/gallery/lock.png" alt="" class="img-fluid"
                                                      height="230" width="310">
                                             </div>
                                             <div class="col-lg-6 col-md-12 px-4 py-3">
