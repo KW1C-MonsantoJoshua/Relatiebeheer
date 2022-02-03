@@ -31,7 +31,7 @@ include "partials/header.php";
                                     <div class="card-body auth-img">
                                         <div class="row m-0">
                                             <div class="col-lg-6 d-lg-flex justify-content-center align-items-center d-none text-center auth-img-bg p-3">
-                                                <img src="../assets/img/gallery/lock.png" alt="" class="img-fluid"
+                                                <img src="../assets/logo2.png" alt="" class="img-fluid"
                                                      height="230" width="310">
                                             </div>
                                             <div class="col-lg-6 col-md-12 px-4 py-3">
