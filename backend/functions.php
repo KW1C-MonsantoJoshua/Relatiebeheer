@@ -2317,3 +2317,24 @@ function editUserZ()
         }
     }
 }
+
+
+
+function InsertNotes() {
+    global $mysqli;
+    if (isset($_POST['RegistreetNote'])) {
+
+                    $sql = "INSERT INTO `comments_business`(`id`,`subject`,`created_by`,`created_at`,`archived_at`,
+                                 `text`,`custof`)VALUES('',?,?,?,?,?,?)";
+                    $stmt = $mysqli->prepare($sql);
+                    $stmt->bind_param("ssssssi", $_POST['id'],
+                        $_POST['subject'], $_POST['created_by'],
+                        $_POST['created_at'], $_POST['archived_at'],
+                        $_POST['text'], $_GET["custof"]);
+                    $stmt->execute();
+                    $stmt->close();
+                    $mysqli->close();
+                    header("Location:bedrijf_profiel.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=succes");
+                    exit();
+                }
+}
