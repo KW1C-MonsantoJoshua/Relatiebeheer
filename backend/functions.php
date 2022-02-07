@@ -2343,7 +2343,7 @@ function InsertNotes() {
     global $mysqli;
     if (isset($_POST['RegistreetNote'])) {
                 $sql = "INSERT INTO `comments_business`(`subject`,`created_by`,
-                                 `text`,`custof`)VALUES(?,?,?,?)";
+                                 `text`,`customer_of`)VALUES(?,?,?,?)";
                 $stmt = $mysqli->prepare($sql);
                 $stmt->bind_param("sisi", $_POST['subject'],
                     $_SESSION['id'], $_POST['text'],
