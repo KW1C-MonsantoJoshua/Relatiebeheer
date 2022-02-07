@@ -1556,43 +1556,42 @@ include "partials/navbar.php";
                                                         <div class="card-body">
                                                             <div class="form-group">
                                                                 <div class="row">
-                                                                    <h6 class="col-12 text-bold-400 pl-0">Activity</h6>
+                                                                    <h6 class="col-12 text-bold-400 pl-0">onderwerp1 abbo</h6>
                                                                     <div class="col-12 mb-2">
                                                                         <div class="custom-control custom-switch custom-control-inline">
                                                                             <input id="switch1" type="checkbox" class="custom-control-input" checked>
-                                                                            <label for="switch1" class="custom-control-label">Email me when someone comments on my
-                                                                                article</label>
+                                                                            <label for="switch1" class="custom-control-label">Postcode checker</label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-12 mb-2">
                                                                         <div class="custom-control custom-switch custom-control-inline">
                                                                             <input id="switch2" type="checkbox" class="custom-control-input" checked>
-                                                                            <label for="switch2" class="custom-control-label">Email me when someone answers on my form</label>
+                                                                            <label for="switch2" class="custom-control-label">automatisch credit getter</label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-12 mb-2">
                                                                         <div class="custom-control custom-switch custom-control-inline">
                                                                             <input id="switch3" type="checkbox" class="custom-control-input" disabled>
-                                                                            <label for="switch3" class="custom-control-label">Email me when someone follows me</label>
+                                                                            <label for="switch3" class="custom-control-label">automatisch email sturen wanneer dat kan</label>
                                                                         </div>
                                                                     </div>
                                                                     <h6 class="col-12 text-bold-400 pl-0 mt-3">Application</h6>
                                                                     <div class="col-12 mb-2">
                                                                         <div class="custom-control custom-switch custom-control-inline">
                                                                             <input id="switch4" type="checkbox" class="custom-control-input" checked>
-                                                                            <label for="switch4" class="custom-control-label">News and announcements</label>
+                                                                            <label for="switch4" class="custom-control-label">applicatie abonnement</label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-12 mb-2">
                                                                         <div class="custom-control custom-switch custom-control-inline">
                                                                             <input id="switch5" type="checkbox" class="custom-control-input" disabled>
-                                                                            <label for="switch5" class="custom-control-label">Weekly product updates</label>
+                                                                            <label for="switch5" class="custom-control-label">super de luxe applicatie abonnement</label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-12 mb-2">
                                                                         <div class="custom-control custom-switch custom-control-inline">
                                                                             <input id="switch6" type="checkbox" class="custom-control-input" checked>
-                                                                            <label for="switch6" class="custom-control-label">Weekly blog digest</label>
+                                                                            <label for="switch6" class="custom-control-label">QCCS internet abonnement</label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
