@@ -1490,110 +1490,57 @@ include "partials/navbar.php";
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
                                         <form method="post">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <h4>Klantgegevenss</h4>
-                                                        <div class="controls">
-                                                            <label for="bedrijfsnaam"
-                                                                   class="sr-only">Bedrijfsnaamm</label>
-                                                            <input type="text" id="bedrijfsnaam"
-                                                                   class="form-control"
-                                                                   placeholder="Bedrijfsnaam"
-                                                                   name="name"
-                                                                   value="">
-                                                        </div>
-                                                        </br>
-                                                        <div class="controls">
-                                                            <label for="bedrijfsnaam"
-                                                                   class="sr-only">Bedrijfsnaamm</label>
-                                                            <input type="text" id="bedrijfsnaam"
-                                                                   class="form-control"
-                                                                   placeholder="Bedrijfsnaam"
-                                                                   name="name"
-                                                                   value="">
-                                                        </div>
-                                                        </br>
-                                                        <div class="controls">
-                                                            <label for="users-edit-username">Tussenvoegsel</label>
-                                                            <input type="text" id="users-edit-username"
-                                                                   class="form-control round"
-                                                                   pattern="[a-zA-Z]{1,10}"
-                                                                   title="Alleen letters"
-                                                                   placeholder="Tussenvoegsel"
-                                                                   aria-invalid="false" name="tussenvoegsel_z">
-                                                        </div>
-                                                        </br>
-                                                        <div class="controls">
-                                                            <label for="achternaam">Achternaamm</label>
-                                                            <input type="text" id="achternaam"
-                                                                   class="form-control round"
-                                                                   pattern="[a-zA-Z]{1,10}"
-                                                                   title="Alleen letters"
-                                                                   placeholder="Achternaam" required
-                                                                   aria-invalid="false" name="achternaam_z">
+                                            <section id="colored-switch">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title">Colored</h4>
+                                                            </div>
+                                                            <div class="card-content">
+                                                                <div class="card-body">
+                                                                    <div class="custom-switch custom-switch-primary custom-control-inline mb-1 mb-xl-0">
+                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-1" checked>
+                                                                        <label class="custom-control-label mr-1" for="color-switch-1">
+                                                                            <span>Primary</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="custom-switch custom-switch-secondary custom-control-inline mb-1 mb-xl-0">
+                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-2" checked>
+                                                                        <label class="custom-control-label mr-1" for="color-switch-2">
+                                                                            <span>Secondary</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="custom-switch custom-switch-success custom-control-inline mb-1 mb-xl-0">
+                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-3" checked>
+                                                                        <label class="custom-control-label mr-1" for="color-switch-3">
+                                                                            <span>Success</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="custom-switch custom-switch-danger custom-control-inline mb-1 mb-xl-0">
+                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-4" checked>
+                                                                        <label class="custom-control-label mr-1" for="color-switch-4">
+                                                                            <span>Danger</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="custom-switch custom-switch-warning custom-control-inline mb-1 mb-xl-0">
+                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-5" checked>
+                                                                        <label class="custom-control-label mr-1" for="color-switch-5">
+                                                                            <span>Warning</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="custom-switch custom-switch-info custom-control-inline mb-1 mb-xl-0">
+                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-6" checked>
+                                                                        <label class="custom-control-label mr-1" for="color-switch-6">
+                                                                            <span>Info</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <h4>Adresgegevens</h4>
-                                                        <div class="controls">
-                                                            <label for="bedrijfsnaam"
-                                                                   class="sr-only">Bedrijfsnaamm</label>
-                                                            <input type="text" id="bedrijfsnaam"
-                                                                   class="form-control"
-                                                                   placeholder="Bedrijfsnaam"
-                                                                   name="name"
-                                                                   value="">
-                                                        </div>
-                                                        </br>
-                                                        <div class="form-group row">
-                                                            <div class="controls col-md-6">
-                                                                <label for="huisnummer">Huisnummer</label>
-                                                                <input type="text" id="huisnr_z"
-                                                                       class="form-control round"
-                                                                       pattern="[0-9]{1,4}"
-                                                                       title="Alleen cijfers"
-                                                                       placeholder="Huisnummer" required
-                                                                       aria-invalid="false" name="huisnummer_z"
-                                                                       onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
-
-                                                            </div>
-                                                            <div class="controls col-md-6">
-                                                                <label for="users-edit-username">toevoeging</label>
-                                                                <input type="text" id="toevoeging_z"
-                                                                       class="form-control round"
-                                                                       pattern="[a-zA-Z]{1,4}"
-                                                                       placeholder="toevoeging"
-                                                                       aria-invalid="false"
-                                                                       name="huisnummertoevoeging_z"
-                                                                       onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
-                                                            </div>
-                                                        </div>
-                                                        <div class="controls ">
-                                                            <label for="straatnaam">Straatnaamm</label>
-                                                            <input type="text" id="straat_z"
-                                                                   class="form-control round"
-                                                                   placeholder="Straatnaam" required
-                                                                   aria-invalid="false" name="straatnaam_z">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </br>
-                                            </br>
-                                            <div class="modal-footer">
-                                                <button type="reset"
-                                                        data-dismiss="modal"
-                                                        class="btn btn-secondary">Cancel
-                                                </button>
-                                                <input type="submit"
-                                                       class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                       name="registreerParticulier"
-                                                       value="Relatie Toevoegen">
-
-                                            </div>
+                                            </section>
                                         </form>
                                     </div>
 
