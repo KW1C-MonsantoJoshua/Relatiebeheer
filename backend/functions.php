@@ -2324,12 +2324,12 @@ function InsertNotes() {
     global $mysqli;
     if (isset($_POST['RegistreetNote'])) {
 
-                    $sql = "INSERT INTO `comments_business`(`id`,`subject`,`created_by`,`created_at`,`archived_at`,
-                                 `text`,`custof`)VALUES('',?,?,?,?,?,?)";
+                    $sql = "INSERT INTO `comments_business`(`subject`,`created_by`,`created_at`,
+                                 `text`,`custof`)VALUES(?,?,?,?,?)";
                     $stmt = $mysqli->prepare($sql);
-                    $stmt->bind_param("ssssssi", $_POST['id'],
+                    $stmt->bind_param("ssssi",
                         $_POST['subject'], $_SESSION['id'],
-                        $_POST['created_at'], $_POST['archived_at'],
+                        $_POST['created_at'],
                         $_POST['text'], $_GET["custof"]);
                     $stmt->execute();
                     $stmt->close();
