@@ -2342,11 +2342,12 @@ function editUserZ()
 function InsertNotes() {
     global $mysqli;
     if (isset($_POST['RegistreetNote'])) {
-                $sql = "INSERT INTO `comments_business`(`subject`,`created_by`,
-                                 `text`,`customer_of`)VALUES(?,?,?,?)";
+                $sql = "INSERT INTO `comments_business`(`subject`,`created_by`, `created_at`,
+                                 `text`,`customer_of`)VALUES(?,?,?,?,?)";
                 $stmt = $mysqli->prepare($sql);
-                $stmt->bind_param("sisi", $_POST['subject'],
-                    $_SESSION['id'], $_POST['text'],
+        $dt = date("Y-m-d h:i:s");
+                $stmt->bind_param("sissi", $_POST['subject'],
+                    $_SESSION['id'], $dt, $_POST['text'],
                     $_GET["custof"]);
                 $stmt->execute();
                 $stmt->close();
