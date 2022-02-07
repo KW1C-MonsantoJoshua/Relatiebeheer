@@ -1489,57 +1489,43 @@ include "partials/navbar.php";
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
                                         <form method="post">
-                                            <section id="colored-switch">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="card">
-                                                            <div class="card-header">
-                                                                <h4 class="card-title">Colored</h4>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <div class="card-body">
-                                                                    <div class="custom-switch custom-switch-primary custom-control-inline mb-1 mb-xl-0">
-                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-1" checked>
-                                                                        <label class="custom-control-label mr-1" for="color-switch-1">
-                                                                            <span>Primary</span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <div class="custom-switch custom-switch-secondary custom-control-inline mb-1 mb-xl-0">
-                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-2" checked>
-                                                                        <label class="custom-control-label mr-1" for="color-switch-2">
-                                                                            <span>Secondary</span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <div class="custom-switch custom-switch-success custom-control-inline mb-1 mb-xl-0">
-                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-3" checked>
-                                                                        <label class="custom-control-label mr-1" for="color-switch-3">
-                                                                            <span>Success</span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <div class="custom-switch custom-switch-danger custom-control-inline mb-1 mb-xl-0">
-                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-4" checked>
-                                                                        <label class="custom-control-label mr-1" for="color-switch-4">
-                                                                            <span>Danger</span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <div class="custom-switch custom-switch-warning custom-control-inline mb-1 mb-xl-0">
-                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-5" checked>
-                                                                        <label class="custom-control-label mr-1" for="color-switch-5">
-                                                                            <span>Warning</span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <div class="custom-switch custom-switch-info custom-control-inline mb-1 mb-xl-0">
-                                                                        <input type="checkbox" class="custom-control-input" id="color-switch-6" checked>
-                                                                        <label class="custom-control-label mr-1" for="color-switch-6">
-                                                                            <span>Info</span>
-                                                                        </label>
-                                                                    </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Right Aligned</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <p>To set switchery to right, wrap <code>input[type="checkbox"]</code> within <code>.float-right</code>.</p>
+                                                            <div class="form-group">
+                                                                <div class="float-right">
+                                                                    <input type="checkbox" name="switchery" id="switchery0" class="switchery" checked>
                                                                 </div>
+                                                                <label for="switchery0">Active</label>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="float-right">
+                                                                    <input type="checkbox" name="switchery" id="switchery01" class="switchery">
+                                                                </div>
+                                                                <label for="switchery01">Inactive</label>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="float-right">
+                                                                    <input type="checkbox" name="switchery" id="switchery02" class="switchery" checked disabled>
+                                                                </div>
+                                                                <label for="switchery02">Active - disabled</label>
+                                                            </div>
+                                                            <div class="form-group m-0">
+                                                                <div class="float-right">
+                                                                    <input type="checkbox" name="switchery" id="switchery03" class="switchery" disabled>
+                                                                </div>
+                                                                <label for="switchery03">Inactive - disabled</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </section>
+                                            </div>
+                                    </div>
                                         </form>
                                     </div>
 
