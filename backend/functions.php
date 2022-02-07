@@ -2352,7 +2352,6 @@ function InsertNotes() {
                     $_POST['text'],
                     $_GET["custof"]
                 );
-
                 $stmt->execute();
                 $stmt->close();
                 $mysqli->close();
