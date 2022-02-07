@@ -1595,8 +1595,8 @@ include "partials/navbar.php";
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                                        <button type="button" class="btn btn-primary mr-sm-2 mb-1">Save changes</button>
-                                                                        <button type="button" class="btn btn-secondary mb-1">Cancel</button>
+                                                                        <button type="button" class="btn btn-primary mr-sm-2 mb-1">Opslaan</button>
+                                                                        <button type="button" class="btn btn-secondary mb-1">annuleren</button>
                                                                     </div>
                                                                 </div>
                                                         </div>
