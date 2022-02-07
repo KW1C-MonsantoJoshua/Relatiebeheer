@@ -2346,7 +2346,7 @@ function InsertNotes() {
                                  `text`,`custof`)VALUES(?,?,?,?)";
                 $stmt = $mysqli->prepare($sql);
                 $stmt->bind_param(
-                    "issi",
+                    "sisi",
                     $_POST['subject'],
                     $_SESSION['id'],
                     $_POST['text'],
