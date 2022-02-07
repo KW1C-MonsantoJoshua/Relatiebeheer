@@ -1578,7 +1578,7 @@ include "partials/navbar.php";
                     <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                 </button>
             </div>
-            <form>
+            <form method="post">
                 <div class="modal-body">
                     <fieldset class="form-group floating-label-form-group">
                         <label for="email">Onderwerp</label>
@@ -1599,7 +1599,7 @@ include "partials/navbar.php";
                 </div>
                 <div class="modal-footer">
                     <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
-                    <input type="submit" class="btn btn-primary" value="Opslaan">
+                    <input type="submit" class="btn btn-primary" name="RegistreetNote" value="Opslaan">
                 </div>
             </form>
         </div>
