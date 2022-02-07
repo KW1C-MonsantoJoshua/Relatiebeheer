@@ -1489,7 +1489,7 @@ include "partials/navbar.php";
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
                                         <form method="post">
-                                            <div class="col-md-6 col-12">
+                                            <div class="col-12">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h4 class="card-title">Right Aligned</h4>
