@@ -1575,7 +1575,7 @@ include "partials/navbar.php";
                                                                             <label for="switch3" class="custom-control-label">automatisch email sturen wanneer dat kan</label>
                                                                         </div>
                                                                     </div>
-                                                                    <h6 class="col-12 text-bold-400 pl-0 mt-3">Application</h6>
+                                                                    <h6 class="col-12 text-bold-400 pl-0 mt-3">applicatie abbo2</h6>
                                                                     <div class="col-12 mb-2">
                                                                         <div class="custom-control custom-switch custom-control-inline">
                                                                             <input id="switch4" type="checkbox" class="custom-control-input" checked>
