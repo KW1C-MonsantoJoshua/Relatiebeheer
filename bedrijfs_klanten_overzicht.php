@@ -26,9 +26,11 @@ if (!isset($_SESSION["loggedin"])) {
     /*   color: red;  !important;*/
     /*}*/
 </style>
+<head>
 <?php
 include "partials/header.php";
 ?>
+</head>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
 <body class="vertical-layout vertical-menu 2-columns  navbar-sticky layout-dark layout-transparent bg-glass-1"
