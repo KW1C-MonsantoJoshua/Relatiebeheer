@@ -13,10 +13,11 @@ if (!isset($_SESSION["loggedin"])) {
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <!-- BEGIN : Head-->
+<head>
 <?php
 include "partials/header.php";
 ?>
-
+</head>
 <!-- END : Head-->
 <!-- BEGIN : Body-->
 <body class="vertical-layout vertical-menu 2-columns  navbar-sticky layout-dark layout-transparent bg-glass-1"

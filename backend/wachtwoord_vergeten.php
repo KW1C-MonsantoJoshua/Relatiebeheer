@@ -5,7 +5,6 @@ include "backend/functions.php";
 <html>
 <?php
 include "partials/header.php";
-$dbc = new mysqli("localhost:3306", "relatebeheer", "Z1HaCog5gh6d%efu", "relatebeheer");
 ?>
 <body>
 <div class="container">
@@ -67,7 +66,7 @@ $dbc = new mysqli("localhost:3306", "relatebeheer", "Z1HaCog5gh6d%efu", "relateb
             <div class="login_form">
                 <form action="" method="POST">
                     <div class="form-group">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.6ucnHUAc0C1j7XYz5kU3dgAAAA%26pid%3DApi&f=1" class="logo img-fluid">
+                        <img src="../assets/img/logo2.png" class="logo img-fluid">
                         <br>
                         <br>
                         <?php
