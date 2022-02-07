@@ -1476,63 +1476,6 @@ include "partials/navbar.php";
                             </div>
                         </div>
                     </div>
-                    </br>
-
-                    <!-- Tab panes -->
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <div class="tab-content">
-                                    <!-- General Tab -->
-                                    <h1>Abonnementen</h1>
-                                    <div class="tab-pane active" id="general" role="tabpanel"
-                                         aria-labelledby="general-tab">
-                                        <hr class="mt-1 mt-sm-2">
-                                        <form method="post">
-                                            <div class="col-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h4 class="card-title">Swipe hier aan en uit wat je wilt</h4>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <div class="card-body">
-                                                            <div class="form-group">
-                                                                <div class="float-right">
-                                                                    <input type="checkbox" name="switchery" id="switchery0" class="switchery" checked>
-                                                                </div>
-                                                                <label for="switchery0">Active</label>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <div class="float-right">
-                                                                    <input type="checkbox" name="switchery" id="switchery01" class="switchery">
-                                                                </div>
-                                                                <label for="switchery01">Inactive</label>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <div class="float-right">
-                                                                    <input type="checkbox" name="switchery" id="switchery02" class="switchery" checked disabled>
-                                                                </div>
-                                                                <label for="switchery02">Active - disabled</label>
-                                                            </div>
-                                                            <div class="form-group m-0">
-                                                                <div class="float-right">
-                                                                    <input type="checkbox" name="switchery" id="switchery03" class="switchery" disabled>
-                                                                </div>
-                                                                <label for="switchery03">Inactive - disabled</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                    </div>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
 
                     </br>
 
