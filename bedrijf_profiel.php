@@ -1496,7 +1496,6 @@ include "partials/navbar.php";
                                                     </div>
                                                     <div class="card-content">
                                                         <div class="card-body">
-                                                            <p>To set switchery to right, wrap <code>input[type="checkbox"]</code> within <code>.float-right</code>.</p>
                                                             <div class="form-group">
                                                                 <div class="float-right">
                                                                     <input type="checkbox" name="switchery" id="switchery0" class="switchery" checked>
