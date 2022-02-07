@@ -2339,8 +2339,7 @@ function editUserZ()
 //}
 
 
-function InsertNotes()
-{
+function InsertNotes() {
     global $mysqli;
     if (isset($_POST['RegistreetNote'])) {
                 $sql = "INSERT INTO `comments_business`(`subject`,`created_by`,
