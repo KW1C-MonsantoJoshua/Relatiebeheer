@@ -1547,39 +1547,49 @@ include "partials/navbar.php";
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
                                         <form method="post">
-                                            <div class="col-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h4 class="card-title">Swipe hier aan en uit wat je wilt</h4>
+                                            <div class="row">
+                                                <h6 class="col-12 text-bold-400 pl-0">Activity</h6>
+                                                <div class="col-12 mb-2">
+                                                    <div class="custom-control custom-switch custom-control-inline">
+                                                        <input id="switch1" type="checkbox" class="custom-control-input" checked>
+                                                        <label for="switch1" class="custom-control-label">Email me when someone comments on my
+                                                            article</label>
                                                     </div>
-                                                    <div class="card-content">
-                                                        <div class="card-body">
-                                                            <div class="form-group">
-                                                                <div class="float-right">
-                                                                    <input type="checkbox" name="switchery" id="switchery0" class="switchery" checked>
-                                                                </div>
-                                                                <label for="switchery0">Active</label>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <div class="float-right">
-                                                                    <input type="checkbox" name="switchery" id="switchery01" class="switchery">
-                                                                </div>
-                                                                <label for="switchery01">Inactive</label>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <div class="float-right">
-                                                                    <input type="checkbox" name="switchery" id="switchery02" class="switchery" checked disabled>
-                                                                </div>
-                                                                <label for="switchery02">Active - disabled</label>
-                                                            </div>
-                                                            <div class="form-group m-0">
-                                                                <div class="float-right">
-                                                                    <input type="checkbox" name="switchery" id="switchery03" class="switchery" disabled>
-                                                                </div>
-                                                                <label for="switchery03">Inactive - disabled</label>
-                                                            </div>
-                                                        </div>
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <div class="custom-control custom-switch custom-control-inline">
+                                                        <input id="switch2" type="checkbox" class="custom-control-input" checked>
+                                                        <label for="switch2" class="custom-control-label">Email me when someone answers on my form</label>
                                                     </div>
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <div class="custom-control custom-switch custom-control-inline">
+                                                        <input id="switch3" type="checkbox" class="custom-control-input" disabled>
+                                                        <label for="switch3" class="custom-control-label">Email me when someone follows me</label>
+                                                    </div>
+                                                </div>
+                                                <h6 class="col-12 text-bold-400 pl-0 mt-3">Application</h6>
+                                                <div class="col-12 mb-2">
+                                                    <div class="custom-control custom-switch custom-control-inline">
+                                                        <input id="switch4" type="checkbox" class="custom-control-input" checked>
+                                                        <label for="switch4" class="custom-control-label">News and announcements</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <div class="custom-control custom-switch custom-control-inline">
+                                                        <input id="switch5" type="checkbox" class="custom-control-input" disabled>
+                                                        <label for="switch5" class="custom-control-label">Weekly product updates</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <div class="custom-control custom-switch custom-control-inline">
+                                                        <input id="switch6" type="checkbox" class="custom-control-input" checked>
+                                                        <label for="switch6" class="custom-control-label">Weekly blog digest</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                                    <button type="button" class="btn btn-primary mr-sm-2 mb-1">Save changes</button>
+                                                    <button type="button" class="btn btn-secondary mb-1">Cancel</button>
                                                 </div>
                                             </div>
                                     </div>
