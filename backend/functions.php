@@ -2320,20 +2320,20 @@ function editUserZ()
 
 
 
-function InsertNotes() {
-    global $mysqli;
-    if (isset($_POST['RegistreetNote'])) {
-
-                    $sql = "INSERT INTO `comments_business`(`subject`,`created_by`,
-                                 `text`,`custof`)VALUES(?,?,?,?)";
-                    $stmt = $mysqli->prepare($sql);
-                    $stmt->bind_param("sisi",
-                        $_POST['subject'], $_SESSION['id'],
-                        $_POST['text'], $_GET["custof"]);
-                    $stmt->execute();
-                    $stmt->close();
-                    $mysqli->close();
-                    header("Location:bedrijf_profiel.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=succes");
-                    exit();
-                }
-}
+//function InsertNotes() {
+//    global $mysqli;
+//    if (isset($_POST['RegistreetNote'])) {
+//
+//                    $sql = "INSERT INTO `comments_business`(`subject`,`created_by`,
+//                                 `text`,`custof`)VALUES(?,?,?,?)";
+//                    $stmt = $mysqli->prepare($sql);
+//                    $stmt->bind_param("sisi",
+//                        $_POST['subject'], $_SESSION['id'],
+//                        $_POST['text'], $_GET["custof"]);
+//                    $stmt->execute();
+//                    $stmt->close();
+//                    $mysqli->close();
+//                    header("Location:bedrijf_profiel.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=succes");
+//                    exit();
+//                }
+//}
