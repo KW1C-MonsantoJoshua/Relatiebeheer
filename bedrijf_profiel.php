@@ -24,10 +24,6 @@ InsertNotes();
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <style>
-    .avatar.avatar-xl img {
-        width: 70px;
-        height: 70px;
-    }
     .widget .panel-body {
         padding: 0
     }
