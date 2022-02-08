@@ -149,19 +149,6 @@ InsertNotes();
         position: static
     }
 
-    .form-group input,
-    .form-group textarea {
-        background-color: black;
-        border: 1px solid rgba(16, 46, 46, 1);
-        border-radius: 12px
-    }
-
-    form {
-        border: 1px solid rgba(16, 46, 46, 1);
-        background-color: rgba(16, 46, 46, 0.973);
-        border-radius: 5px;
-        padding: 20px
-    }
     .widget .panel-body {
         padding: 0
     }
