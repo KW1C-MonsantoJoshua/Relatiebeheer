@@ -2340,7 +2340,7 @@ while ($RowNote = $resultData->fetch_array()) {
                                                                 <div class="row1">
                                                                 </br>
                                                                     <div class="col-xs-2 col-md-1">
-                                                                        <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
+                                                                        <img src="uploads/<?= $RowNoteGebruiker['image_url'] ?>"
                                                                              class="img-circle img-responsive"
                                                                              alt=""/></div>
                                                                     <div class="col-xs-10 col-md-11">
