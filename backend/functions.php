@@ -2332,7 +2332,7 @@ while ($RowNote = $resultData->fetch_array()) {
     $stmt = $mysqli->prepare($tableData);
     $stmt->execute();
     $resultData = $stmt->get_result();
-    while ($RowNoteGebruiker = $resultData->fetch_array()) {
+    $RowNoteGebruiker = $resultData->fetch_array();
     ?>
                                                     <div class="panel-body">
                                                         <ul class="list-group">
@@ -2382,7 +2382,6 @@ while ($RowNote = $resultData->fetch_array()) {
                                                         <!--                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>-->
                                                     </div>
 <?php }
-}
 }
 
 
