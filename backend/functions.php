@@ -2350,8 +2350,7 @@ while ($RowNote = $resultData->fetch_array()) {
                                                                                 <?php echo $RowNote["subject"]; ?></a>
                                                                             <div class="mic-info">
                                                                                 By: <a style="color: #7a09e5; font-size: 15px;"
-                                                                                       href="#"><?php echo $RowNoteGebruiker["username"]; ?></a> on 31
-                                                                                Jan 2022
+                                                                                       href="#"><?php echo $RowNoteGebruiker["username"]; ?></a> <?php echo $RowNote["created_at"]; ?>
                                                                             </div>
                                                                         </div>
                                                                         <div style="color: black; font-size: 16px;" class="comment-text">
