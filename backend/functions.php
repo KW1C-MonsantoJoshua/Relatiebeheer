@@ -2349,19 +2349,7 @@ while ($RowNote = $resultData->fetch_array()) {
                                                                             </div>
                                                                         </div>
                                                                         <div style="color: black; font-size: 16px;" class="comment-text">
-                                                                            met de klant veel gepraamet de klant
-                                                                            veel gepraatmet de klant veel gepraatmet
-                                                                            de
-                                                                            klant veel gepraatmet de klant veel
-                                                                            gepraatmet de klant veel gepraatmet de
-                                                                            klant
-                                                                            veel gepraatmet de klant veel gepraatmet
-                                                                            de klant veel gepraatmet de klant veel
-                                                                            gepraatt met de klant veel gepraatmet de
-                                                                            klant veel gepraatmet de klant veel
-                                                                            gepraatmet de klant veel gepraatmet de
-                                                                            klant veel gepraatmet de klant veel
-                                                                            gepraat
+                                                                            <?php echo $RowNote["text"]; ?>
                                                                         </div>
                                                                         <div class="action">
                                                                             <button type="button"
