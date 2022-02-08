@@ -1,9 +1,29 @@
-<!------ Include the above in your HEAD tag ---------->
-<style>
-    body {
-        padding-top: 30px
-    }
+<?php
+include "backend/functions.php";
 
+
+$user = $_SESSION['name'];
+$secret = $_SESSION['secret'];
+$id = $_SESSION['id'];
+require_once 'PHPGangsta/GoogleAuthenticator.php';
+$ga = new PHPGangsta_GoogleAuthenticator();
+
+// Controleer of iemand ingelogd is
+if (!isset($_SESSION["loggedin"])) {
+    header("Location: index.php");
+}
+Changepassword();
+Updateuser();
+UploadPic1();
+UpdateCompanyInfo();
+$rowC = GetCompanyInfo();
+InsertNotes();
+
+
+?>
+<!DOCTYPE html>
+<html class="loading" lang="en">
+<style>
     .widget .panel-body {
         padding: 0
     }
@@ -19,7 +39,9 @@
     .widget .label-info {
         float: right
     }
-
+    html body.layout-dark.layout-transparent .list-group .list-group-item {
+        border-color: black!important;
+    }
     .widget li.list-group-item {
         border-radius: 0;
         border: 0;
@@ -32,7 +54,7 @@
 
     .widget .mic-info {
         color: #666;
-        font-size: 11px
+        font-size: 15px
     }
 
     .widget .action {
@@ -40,8 +62,8 @@
     }
 
     .widget .comment-text {
+        font-size: 12px;
         color: black;
-        font-size: 12px
     }
 
     .widget .btn-block {
@@ -205,8 +227,7 @@
 
     .img-responsive {
         display: block;
-        height: auto;
-        max-width: 100%
+        max-width: 100%;
     }
 
     .img-circle {
@@ -986,18 +1007,21 @@
         padding: 10px 15px;
         margin-bottom: -1px;
         background-color: #fff;
-        border: 1px solid #ddd
+        border: 1px solid #ddd;
+        border-bottom: 1px solid black;
     }
 
     .list-group-item:first-child {
         border-top-right-radius: 4px;
         border-top-left-radius: 4px
+        border-bottom: 1px solid black;
     }
 
     .list-group-item:last-child {
         margin-bottom: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px
+        border-bottom: 1px solid black;
     }
 
     a.list-group-item {
@@ -1156,55 +1180,475 @@
         border-color: #bce8f1
     }
 </style>
-<div class="container1">
-    <div class="row1">
-        <div class="panel panel-default widget">
-            <div class="panel-heading">
-                <span class="glyphicon glyphicon-comment"></span>
-                <h3 class="panel-title">
-                    Meest recente notities</h3>
-                <span class="label label-info">
-                    2</span>
-            </div>
-            <div class="panel-body">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <div class="row1">
-                            <div class="col-xs-2 col-md-1">
-                                <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
-                                     class="img-circle img-responsive" alt=""/></div>
-                            <div class="col-xs-10 col-md-11">
-                                <div>
-                                    <a href="teuskip.nl/Miranda4.html">
-                                        Met klant besproken BTW prijs</a>
-                                    <div class="mic-info">
-                                        By: <a href="#">Teus Bromm</a> on 31 Jan 2022
+<!-- BEGIN : Head-->
+
+<?php
+include "partials/header.php";
+?>
+<!-- END : Head-->
+
+<!-- BEGIN : Body-->
+
+<body class="vertical-layout vertical-menu 2-columns  navbar-static layout-dark layout-transparent bg-glass-1"
+      data-bg-img="bg-glass-1" data-menu="vertical-menu" data-col="2-columns">
+<?php
+include "partials/navbar.php";
+?>
+
+
+<div class="main-panel">
+    <!-- BEGIN : Main Content-->
+    <div class="main-content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <!--                <div class="row">-->
+            <!--                    <div class="col-12 ">-->
+            <!--                        <div class="content-header">Menu</div>-->
+            <!--                        <p class="content-sub-header mb-1">vrije keuze</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!-- Account Settings starts -->
+            <div class="row justify-content-center">
+                <!--                    <div class="sticky col-md-3 mt-3">-->
+                <!--                        <ul class=" nav flex-column nav-pills" id="myTab" role="tablist">-->
+                <!--                            <li class="nav-item">-->
+                <!--                                <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">-->
+                <!--                                    <i class="ft-settings mr-1 align-middle"></i>-->
+                <!--                                    <span class="align-middle">Bedrijf Info</span>-->
+                <!--                                </a>-->
+                <!--                            </li>-->
+                <!--                            <li class="nav-item">-->
+                <!--                                <a class="nav-link" id="change-password-tab" data-toggle="tab" href="#change-password" role="tab" aria-controls="change-password" aria-selected="false">-->
+                <!--                                    <i class="ft-lock mr-1 align-middle"></i>-->
+                <!--                                    <span class="align-middle">Notities</span>-->
+                <!--                                </a>-->
+                <!--                            </li>-->
+                <!--                            <li class="nav-item">-->
+                <!--                                <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">-->
+                <!--                                    <i class="ft-bell mr-1 align-middle"></i>-->
+                <!--                                    <span class="align-middle">Abonnementen</span>-->
+                <!--                                </a>-->
+                <!--                            </li>-->
+                <!--                        </ul>-->
+                <!--                    </div>-->
+                <div class="col-md-9">
+                    <!-- Tab panes -->
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <!-- General Tab -->
+                                    <h1>Info <?php GetCompanyName(); ?></h1>
+                                    <div class="tab-pane active" id="general1" role="tabpanel"
+                                         aria-labelledby="general-tab">
+                                        <hr class="mt-1 mt-sm-2">
+                                        <form method="post" id="Instellingen">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <h4>Gegevens 1</h4>
+                                                        <div class="form-group">
+                                                            <label for="bedrijfsnaam"
+                                                                   class="sr-only">Bedrijfsnaamm</label>
+                                                            <input type="text" id="bedrijfsnaam"
+                                                                   class="form-control"
+                                                                   placeholder="Bedrijfsnaam"
+                                                                   name="name"
+                                                                   value="<?= $rowC["name"]; ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="telefoon"
+                                                                   class="sr-only">Telefoon</label>
+                                                            <input type="text" id="telefoon"
+                                                                   class="form-control"
+                                                                   placeholder="Telefoon"
+                                                                   name="telefoon"
+                                                                   value="<?= $rowC['phoneNumber'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="email"
+                                                                   class="sr-only">Email</label>
+                                                            <input type="text" id="email"
+                                                                   class="form-control"
+                                                                   placeholder="Email"
+                                                                   name="email"
+                                                                   value="<?= $rowC['email'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="postcode"
+                                                                   class="sr-only">Postcode</label>
+                                                            <input type="text" id="postcode"
+                                                                   class="form-control"
+                                                                   placeholder="Postcode"
+                                                                   name="postcode"
+                                                                   value="<?= $rowC['postalcode'] ?>"
+                                                                   onkeyup="check_pc(&quot;postcode&quot;,this.value)">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="controls col-md-6">
+                                                                <label for="huisnummer"
+                                                                       class="sr-only">Huisnummer</label>
+                                                                <input type="text" id="huisnr"
+                                                                       class="form-control"
+                                                                       placeholder="Huisnummer"
+                                                                       name="huisnummer"
+                                                                       value="<?= $rowC['housenumber'] ?>"
+                                                                       onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
+
+                                                            </div>
+                                                            <div class="controls col-md-6">
+                                                                <label for="toevoeging"
+                                                                       class="sr-only">Toevoeging</label>
+                                                                <input type="text" id="toevoeging"
+                                                                       class="form-control"
+                                                                       placeholder="Toevoeging"
+                                                                       name="toevoeging"
+                                                                       value="<?= $rowC['housenumberAddition'] ?>"
+                                                                       onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="adres"
+                                                                   class="sr-only">Adres</label>
+                                                            <input type="text" id="straat"
+                                                                   class="form-control"
+                                                                   placeholder="Adres"
+                                                                   name="street"
+                                                                   value="<?= $rowC['street'] ?>">
+                                                        </div>
+                                                        </br>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <h4>Gegevens 2</h4>
+                                                        <div class="form-group">
+                                                            <label for="btw"
+                                                                   class="sr-only">BTW
+                                                                Nummer</label>
+                                                            <input type="text" id="btw"
+                                                                   class="form-control"
+                                                                   placeholder="BTW Nummer"
+                                                                   name="btw"
+                                                                   value="<?= $rowC['btw_nummer'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="bic"
+                                                                   class="sr-only">BIC</label>
+                                                            <input class="form-control"
+                                                                   type="text"
+                                                                   name="bic"
+                                                                   placeholder="BIC"
+                                                                   id="bic">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="kvk"
+                                                                   class="sr-only">KVK
+                                                                Nummer</label>
+                                                            <input class="form-control"
+                                                                   type="text"
+                                                                   placeholder="KVK Nummer"
+                                                                   id="kvk"
+                                                                   name="kvk"
+                                                                   value="<?= $rowC['kvk_nummer'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="iban"
+                                                                   class="sr-only">IBAN
+                                                                Nummer</label>
+                                                            <input class="form-control"
+                                                                   type="text"
+                                                                   placeholder="IBAN Nummer"
+                                                                   id="iban"
+                                                                   name="iban"
+                                                                   value="<?= $rowC['iban_nummer'] ?>">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="reset"
+                                                        data-dismiss="modal"
+                                                        class="btn btn-secondary">Annuleren
+                                                </button>
+                                                <input type="submit"
+                                                       class="btn btn-primary"
+                                                       name="Instellingen"
+                                                       value="Opslaan">
+                                            </div>
+                                        </form>
                                     </div>
-                                </div>
-                                <div class="comment-text">
-                                    met de klant veel gepraamet de klant veel gepraatmet de klant veel gepraatmet de
-                                    klant veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant
-                                    veel gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel
-                                    gepraatt met de klant veel gepraatmet de klant veel gepraatmet de klant veel
-                                    gepraatmet de klant veel gepraatmet de klant veel gepraatmet de klant veel gepraat
-                                </div>
-                                <div class="action">
-                                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
-                                        <span class="glyphicon glyphicon-pencil"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-success btn-xs" title="Approved">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
-                                        <span class="glyphicon glyphicon-trash"></span>
-                                    </button>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
-                <!--                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>-->
+                    </div>
+                    </br>
+                    <!-- Tab panes -->
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <!-- General Tab -->
+                                    <h1>Notities niffo</h1>
+                                    <a type="button"
+                                       class="nav-link d-flex align-items-end"
+                                       data-toggle="modal" data-target="#largechicken">
+                                        <i class="ft-plus mr-1"></i>
+                                        <span class="d-none d-sm-block">Toevoegen</span>
+                                    </a>
+                                    <div class="tab-pane active" id="general2" role="tabpanel"
+                                         aria-labelledby="general-tab">
+                                        <hr class="mt-1 mt-sm-2">
+                                        <div class="container1">
+                                            <div class="row1">
+                                                <div class="panel panel-default widget">
+                                                    <div  class="panel-heading">
+                                                        <span class="glyphicon glyphicon-comment"></span>
+                                                        <h3 class="panel-title" style="color: #333 !important;">
+                                                            Meest recente notitiess</h3>
+                                                        <span class="label label-info">2</span>
+                                                    </div>
+                                                    <?php ViewNote(); ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </br>
+
+                    <!-- Tab panes -->
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <!-- General Tab -->
+                                    <h1>Abonnementen</h1>
+                                    <div class="tab-pane active" id="general" role="tabpanel"
+                                         aria-labelledby="general-tab">
+                                        <hr class="mt-1 mt-sm-2">
+                                        <form method="post">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Swipe hier aan en uit wat je wilt</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <h6 class="col-12 text-bold-400 pl-0">onderwerp1 abbo</h6>
+                                                                    <div class="col-12 mb-2">
+                                                                        <div class="custom-control custom-switch custom-control-inline">
+                                                                            <input id="switch1" type="checkbox" class="custom-control-input" checked>
+                                                                            <label for="switch1" class="custom-control-label">Postcode checker</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 mb-2">
+                                                                        <div class="custom-control custom-switch custom-control-inline">
+                                                                            <input id="switch2" type="checkbox" class="custom-control-input" checked>
+                                                                            <label for="switch2" class="custom-control-label">automatisch credit getter</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 mb-2">
+                                                                        <div class="custom-control custom-switch custom-control-inline">
+                                                                            <input id="switch3" type="checkbox" class="custom-control-input" disabled>
+                                                                            <label for="switch3" class="custom-control-label">automatisch email sturen wanneer dat kan</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h6 class="col-12 text-bold-400 pl-0 mt-3">applicatie abbo2</h6>
+                                                                    <div class="col-12 mb-2">
+                                                                        <div class="custom-control custom-switch custom-control-inline">
+                                                                            <input id="switch4" type="checkbox" class="custom-control-input" checked>
+                                                                            <label for="switch4" class="custom-control-label">applicatie abonnement</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 mb-2">
+                                                                        <div class="custom-control custom-switch custom-control-inline">
+                                                                            <input id="switch5" type="checkbox" class="custom-control-input" disabled>
+                                                                            <label for="switch5" class="custom-control-label">super de luxe applicatie abonnement</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 mb-2">
+                                                                        <div class="custom-control custom-switch custom-control-inline">
+                                                                            <input id="switch6" type="checkbox" class="custom-control-input" checked>
+                                                                            <label for="switch6" class="custom-control-label">QCCS internet abonnement</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                                                        <button type="button" class="btn btn-primary mr-sm-2 mb-1">Opslaan</button>
+                                                                        <button type="button" class="btn btn-secondary mb-1">annuleren</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
             </div>
+            <!-- END Notification Sidebar-->
+            <div class="sidenav-overlay"></div>
+            <div class="drag-target"></div>
         </div>
     </div>
 </div>
+
+
+
+<div class="modal fade text-left" id="largechicken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel35">Nieuwe Notitie</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                </button>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    <fieldset class="form-group floating-label-form-group">
+                        <label for="email">Onderwerp</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp">
+                    </fieldset>
+                    <!--                    <fieldset class="form-group floating-label-form-group">-->
+                    <!--                            <label for="basic-form-6">Keuze</label>-->
+                    <!--                            <select id="basic-form-6" name="interested" class="form-control">-->
+                    <!--                                <option value="none" selected disabled>Keuze</option>-->
+                    <!--                                <option value="design">Intern</option>-->
+                    <!--                                <option value="development">Extern</option>-->
+                    <!--                            </select>-->
+                    <!--                    </fieldset>-->
+                    <fieldset class="form-group floating-label-form-group">
+                        <label for="title1">Beschrijving</label>
+                        <textarea class="form-control" id="title1" name="text" rows="9" placeholder="Beschrijving"></textarea>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
+                    <input type="submit" class="btn btn-primary" name="RegistreetNote" value="Opslaan">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    /*
+        zet script nog in apart bestand wnnr af voor de aapie
+    */
+    var e = "FbW29C_969cyVfAKrj";
+    var postcode = "";
+    var huisnr = "";
+    var toevoeging = "";
+
+    function check_pc(wat, waarde) {
+        if (wat === "postcode") {
+            var pc = waarde.trim();
+            if (pc.length < 6) {
+                maak_leeg();
+                return;
+            }					// moet minimaal 6 characters hebben
+            var num_deel = pc.substr(0, 4);
+            if (parseFloat(num_deel) < 1000) {
+                maak_leeg();
+                return;
+            }	// moet minaal 1000 zijn
+            var alpha_deel = pc.substr(-2);
+            if (alpha_deel.charCodeAt(0) < 65 || alpha_deel.charCodeAt(0) > 122 || alpha_deel.charCodeAt(1) < 65 || alpha_deel.charCodeAt(1) > 122) {
+                maak_leeg();
+                return;
+            } 	// DE LAATSTE 2 POSITIES MOETEN LETTERS ZIJN
+            alpha_deel = alpha_deel.toUpperCase();
+
+            // de checker niffo
+
+            postcode = num_deel + alpha_deel;
+            document.getElementById("postcode").value = postcode;
+        }
+
+        if (wat === "huisnr") {
+            huisnr = parseFloat(waarde);
+            if (!huisnr) {
+                maak_leeg();
+                return;
+            }
+            document.getElementById("huisnr").value = huisnr;
+        }
+
+        if (wat === "toevoeging") {
+            toevoeging = waarde.trim();
+        }
+
+        if (huisnr === 0) {
+            return;
+        }
+
+        var getadrlnk = 'https://bwnr.nl/postcode.php?pc=' + postcode + '&hn=' + huisnr + '&tv=' + toevoeging + '&tg=data&ak=' + 'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
+
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                rString = this.responseText;
+                if (rString === "Geen resultaat.") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString === "Input onvolledig.") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString === "Onbekende API Key.") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString === "Over quota") {
+                    maak_leeg();
+                    return;
+                }
+                if (rString === "Onjuiste API Key.") {
+                    maak_leeg();
+                    alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');
+                    return;
+                }
+                // 0 = straat - 1 = plaats
+                aResponse = rString.split(";");
+                document.getElementById("straat").value = aResponse[0];
+                document.getElementById("plaats").value = aResponse[1];
+            }
+        };
+
+        xmlhttp.open("GET", getadrlnk, true);
+        xmlhttp.send();
+    }
+
+    function maak_leeg() {
+        document.getElementById("").value = "";
+        document.getElementById("plaats").value = "";
+    }
+</script>
+</body>
+
+<?php
+qron();
+qroff();
+include "partials/footer.php";
+?>
+<!-- END : Body-->
+</html>
