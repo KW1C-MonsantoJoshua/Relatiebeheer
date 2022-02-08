@@ -18,7 +18,6 @@ UploadPic1();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 InsertNotes();
-ViewNote();
 
 
 ?>
@@ -1410,65 +1409,7 @@ include "partials/navbar.php";
                                                             Meest recente notitiess</h3>
                                                         <span class="label label-info">2</span>
                                                     </div>
-                                                    <div class="panel-body">
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item">
-                                                                <div class="row1">
-                                                                </br>
-                                                                    <div class="col-xs-2 col-md-1">
-                                                                        <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
-                                                                             class="img-circle img-responsive"
-                                                                             alt=""/></div>
-                                                                    <div class="col-xs-10 col-md-11">
-                                                                        <div>
-                                                                            <a style="color: #7a09e5; font-size: 20px;"
-                                                                               href="teuskip.nl/Miranda4.html">
-                                                                                Met klant besproken BTW prijs</a>
-                                                                            <div class="mic-info">
-                                                                                By: <a style="color: #7a09e5; font-size: 15px;"
-                                                                                       href="#">Teus Brom</a> on 31
-                                                                                Jan 2022
-                                                                            </div>
-                                                                        </div>
-                                                                        <div style="color: black; font-size: 16px;" class="comment-text">
-                                                                            met de klant veel gepraamet de klant
-                                                                            veel gepraatmet de klant veel gepraatmet
-                                                                            de
-                                                                            klant veel gepraatmet de klant veel
-                                                                            gepraatmet de klant veel gepraatmet de
-                                                                            klant
-                                                                            veel gepraatmet de klant veel gepraatmet
-                                                                            de klant veel gepraatmet de klant veel
-                                                                            gepraatt met de klant veel gepraatmet de
-                                                                            klant veel gepraatmet de klant veel
-                                                                            gepraatmet de klant veel gepraatmet de
-                                                                            klant veel gepraatmet de klant veel
-                                                                            gepraat
-                                                                        </div>
-                                                                        <div class="action">
-                                                                            <button type="button"
-                                                                                    class="btn btn-success btn-xs"
-                                                                                    title="Approved">
-                                                                                <span class="glyphicon glyphicon-ok"></span>
-                                                                            </button>
-                                                                            <button type="button"
-                                                                                    class="btn btn-primary btn-xs"
-                                                                                    title="Edit">
-                                                                                <span class="glyphicon glyphicon-pencil"></span>
-                                                                            </button>
-                                                                            <button type="button"
-                                                                                    class="btn btn-danger btn-xs"
-                                                                                    title="Delete">
-                                                                                <span class="glyphicon glyphicon-trash"></span>
-                                                                            </button>
-                                                                        </div>
-                                                                        </br>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                        <!--                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>-->
-                                                    </div>
+                                                    ViewNote();
                                                 </div>
                                             </div>
                                         </div>
