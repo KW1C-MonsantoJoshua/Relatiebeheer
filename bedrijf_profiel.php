@@ -1409,7 +1409,7 @@ include "partials/navbar.php";
                                                             Meest recente notitiess</h3>
                                                         <span class="label label-info">2</span>
                                                     </div>
-                                                    ViewNote();
+                                                <? ViewNote(); ?>
                                                 </div>
                                             </div>
                                         </div>
