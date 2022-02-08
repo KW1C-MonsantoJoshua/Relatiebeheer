@@ -2318,25 +2318,77 @@ function editUserZ()
     }
 }
 
-
-
-//function InsertNotes() {
-//    global $mysqli;
-//    if (isset($_POST['RegistreetNote'])) {
-//                    $sql = "INSERT INTO `comments_business`(`id`,`subject`,`created_by`,
-//                                 `text`,`custof`)VALUES(?,?,?,?,?)";
-//                    $stmt = $mysqli->prepare($sql);
-//                    $stmt->bind_param("isisi",
-//                        $_POST['id'],
-//                        $_POST['subject'], $_SESSION['id'],
-//                        $_POST['text'], $_GET["custof"]);
-//                    $stmt->execute();
-//                    $stmt->close();
-//                    $mysqli->close();
-//                    header("Location:bedrijf_profiel.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=succes");
-//                    exit();
-//                }
-//}
+function ViewNote()
+{
+global $mysqli;
+$customerofcheck = $_GET["custof"];
+$tableData = "SELECT * FROM `comments_business` where `customer_of` = '$customerofcheck'";
+$stmt = $mysqli->prepare($tableData);
+$stmt->execute();
+$resultData = $stmt->get_result();
+while ($RowNote = $resultData->fetch_array()) {
+?>
+                                                    <div class="panel-body">
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                                                <div class="row1">
+                                                                </br>
+                                                                    <div class="col-xs-2 col-md-1">
+                                                                        <img src="https://debagagedrager.nl/wp-content/uploads/2019/06/blank-profile-picture-973460_640-e1561803510819.png"
+                                                                             class="img-circle img-responsive"
+                                                                             alt=""/></div>
+                                                                    <div class="col-xs-10 col-md-11">
+                                                                        <div>
+                                                                            <a style="color: #7a09e5; font-size: 20px;"
+                                                                               href="teuskip.nl/Miranda4.html">
+                                                                                <? echo $RowNote["subject"]; ?>"></a>
+                                                                            <div class="mic-info">
+                                                                                By: <a style="color: #7a09e5; font-size: 15px;"
+                                                                                       href="#">Teus Brom</a> on 31
+                                                                                Jan 2022
+                                                                            </div>
+                                                                        </div>
+                                                                        <div style="color: black; font-size: 16px;" class="comment-text">
+                                                                            met de klant veel gepraamet de klant
+                                                                            veel gepraatmet de klant veel gepraatmet
+                                                                            de
+                                                                            klant veel gepraatmet de klant veel
+                                                                            gepraatmet de klant veel gepraatmet de
+                                                                            klant
+                                                                            veel gepraatmet de klant veel gepraatmet
+                                                                            de klant veel gepraatmet de klant veel
+                                                                            gepraatt met de klant veel gepraatmet de
+                                                                            klant veel gepraatmet de klant veel
+                                                                            gepraatmet de klant veel gepraatmet de
+                                                                            klant veel gepraatmet de klant veel
+                                                                            gepraat
+                                                                        </div>
+                                                                        <div class="action">
+                                                                            <button type="button"
+                                                                                    class="btn btn-success btn-xs"
+                                                                                    title="Approved">
+                                                                                <span class="glyphicon glyphicon-ok"></span>
+                                                                            </button>
+                                                                            <button type="button"
+                                                                                    class="btn btn-primary btn-xs"
+                                                                                    title="Edit">
+                                                                                <span class="glyphicon glyphicon-pencil"></span>
+                                                                            </button>
+                                                                            <button type="button"
+                                                                                    class="btn btn-danger btn-xs"
+                                                                                    title="Delete">
+                                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                                            </button>
+                                                                        </div>
+                                                                        </br>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <!--                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>-->
+                                                    </div>
+<?php }
+}
 
 
 function InsertNotes() {
