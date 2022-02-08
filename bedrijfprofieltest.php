@@ -1533,7 +1533,7 @@ include "partials/navbar.php";
                                                             Meest recente notitiess</h3>
                                                         <span class="label label-info">2</span>
                                                     </div>
-                                                    <div class="col-sm-5 col-md-6 col-12 pb-4">
+                                                    <div class="">
                                                         <h1>Comments</h1>
                                                         <div class="comment mt-4 text-justify float-left"> <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
                                                             <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
@@ -1563,6 +1563,57 @@ include "partials/navbar.php";
                     </div>
 
                     </br>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <!-- General Tab -->
+                                    <h1>Abonnementen</h1>
+                                    <div class="tab-pane active" id="general" role="tabpanel"
+                                         aria-labelledby="general-tab">
+                                        <hr class="mt-1 mt-sm-2">
+                                        <form method="post">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Swipe hier aan en uit wat je wilt</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="">
+                                                                        <h1>Comments</h1>
+                                                                        <div class="comment mt-4 text-justify float-left"> <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
+                                                                            <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
+                                                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                                                                        </div>
+                                                                        <div class="text-justify darker mt-4 float-right"> <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
+                                                                            <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
+                                                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                                                                        </div>
+                                                                        <div class="comment mt-4 text-justify"> <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
+                                                                            <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
+                                                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                                                                        </div>
+                                                                        <div class="darker mt-4 text-justify"> <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
+                                                                            <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
+                                                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Tab panes -->
                     <div class="card">
@@ -1638,11 +1689,9 @@ include "partials/navbar.php";
                                 </div>
                             </div>
                         </div>
-
-
-
-
                     </div>
+
+
                 </div>
             </div>
             <!-- END Notification Sidebar-->
