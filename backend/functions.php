@@ -2341,7 +2341,7 @@ while ($RowNote = $resultData->fetch_array()) {
                                                                         <div>
                                                                             <a style="color: #7a09e5; font-size: 20px;"
                                                                                href="teuskip.nl/Miranda4.html">
-                                                                                <?php echo 'hallo' ?></a>
+                                                                                <?php echo $RowNote["subject"]; ?></a>
                                                                             <div class="mic-info">
                                                                                 By: <a style="color: #7a09e5; font-size: 15px;"
                                                                                        href="#">Teus Brom</a> on 31
