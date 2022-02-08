@@ -1579,7 +1579,6 @@ include "partials/navbar.php";
                                                         <div class="card-body">
                                                             <div class="form-group">
                                                                 <div class="row">
-                                                                        <h1>Comments</h1>
                                                                         <div class="comment mt-4 text-justify float-left"> <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
                                                                             <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
                                                                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
