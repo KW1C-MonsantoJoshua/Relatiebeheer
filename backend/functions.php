@@ -2327,12 +2327,7 @@ $stmt = $mysqli->prepare($tableData);
 $stmt->execute();
 $resultData = $stmt->get_result();
 while ($RowNote = $resultData->fetch_array()) {
-    $idgebuiker = $RowNote["created_by"];
-    $tableData = "SELECT * FROM `users` where `id` = '$idgebuiker'";
-    $stmt = $mysqli->prepare($tableData);
-    $stmt->execute();
-    $resultData = $stmt->get_result();
-    $RowNoteGebruiker = $resultData->fetch_array()
+
     ?>
                                                     <div class="panel-body">
                                                         <ul class="list-group">
