@@ -2332,7 +2332,7 @@ while ($RowNote = $resultData->fetch_array()) {
     $stmt = $mysqli->prepare($tableData);
     $stmt->execute();
     $resultData = $stmt->get_result();
-    $RowNoteGebruiker = $resultData->fetch_array();
+    $RowNoteGebruiker = $resultData->fetch_array()
     ?>
                                                     <div class="panel-body">
                                                         <ul class="list-group">
