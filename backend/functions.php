@@ -2327,7 +2327,13 @@ $stmt = $mysqli->prepare($tableData);
 $stmt->execute();
 $resultData = $stmt->get_result();
 while ($RowNote = $resultData->fetch_array()) {
-?>
+    $idgebuiker = $RowNote["created_by"];
+    $tableData = "SELECT * FROM `users` where `id` = '$idgebuiker'";
+    $stmt = $mysqli->prepare($tableData);
+    $stmt->execute();
+    $resultData = $stmt->get_result();
+    while ($RowNoteGebruiker = $resultData->fetch_array()) {
+    ?>
                                                     <div class="panel-body">
                                                         <ul class="list-group">
                                                             <li class="list-group-item">
@@ -2344,7 +2350,7 @@ while ($RowNote = $resultData->fetch_array()) {
                                                                                 <?php echo $RowNote["subject"]; ?></a>
                                                                             <div class="mic-info">
                                                                                 By: <a style="color: #7a09e5; font-size: 15px;"
-                                                                                       href="#">Teus Brom</a> on 31
+                                                                                       href="#"><?php echo $RowNoteGebruiker["username"]; ?></a> on 31
                                                                                 Jan 2022
                                                                             </div>
                                                                         </div>
@@ -2376,6 +2382,7 @@ while ($RowNote = $resultData->fetch_array()) {
                                                         <!--                <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>-->
                                                     </div>
 <?php }
+}
 }
 
 
