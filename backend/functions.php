@@ -2436,7 +2436,7 @@ function EditNNote()
                         <!--                    </fieldset>-->
                         <fieldset class="form-group floating-label-form-group">
                             <label for="title1">Beschrijving</label>
-                            <textarea class="form-control" id="title1" name="text" rows="9" placeholder="Beschrijving" value="<?= $RowNote["text"] ?>"></textarea>
+                            <textarea class="form-control" id="title1" name="text" rows="9" placeholder="Beschrijving" value="<?php echo $RowNote["text"]; ?>"></textarea>
                         </fieldset>
                     </div>
                     <div class="modal-footer">
