@@ -1526,14 +1526,14 @@ include "partials/navbar.php";
                         <label for="email">Onderwerp</label>
                         <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp">
                     </fieldset>
-<!--                    <fieldset class="form-group floating-label-form-group">-->
-<!--                            <label for="basic-form-6">Keuze</label>-->
-<!--                            <select id="basic-form-6" name="interested" class="form-control">-->
-<!--                                <option value="none" selected disabled>Keuze</option>-->
-<!--                                <option value="design">Intern</option>-->
-<!--                                <option value="development">Extern</option>-->
-<!--                            </select>-->
-<!--                    </fieldset>-->
+                    <fieldset class="form-group floating-label-form-group">
+                            <label for="basic-form-6">Keuze</label>
+                            <select id="basic-form-6" name="interested" class="form-control">
+                                <option value="none" selected disabled>Keuze</option>
+                                <option value="design">Intern</option>
+                                <option value="development">Extern</option>
+                            </select>
+                    </fieldset>
                     <fieldset class="form-group floating-label-form-group">
                         <label for="title1">Beschrijving</label>
                         <textarea class="form-control" id="title1" name="text" rows="9" placeholder="Beschrijving"></textarea>
