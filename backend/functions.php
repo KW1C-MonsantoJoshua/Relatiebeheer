@@ -2367,11 +2367,11 @@ while ($RowNote = $resultData->fetch_array()) {
                                                                                     title="Edit">
                                                                                 <span class="glyphicon glyphicon-pencil"></span>
                                                                             </button></a>
-<!--                                                                            <button type="button"-->
-<!--                                                                                    class="btn btn-danger btn-xs"-->
-<!--                                                                                    title="Delete">-->
-<!--                                                                                <span class="glyphicon glyphicon-trash"></span>-->
-<!--                                                                            </button>-->
+                                                                            <button type="button"
+                                                                                    class="btn btn-danger btn-xs"
+                                                                                    title="Delete">
+                                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                                            </button>
                                                                         </div>
                                                                         </br>
                                                                     </div>
