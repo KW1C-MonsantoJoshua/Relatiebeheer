@@ -2365,7 +2365,7 @@ while ($RowNote = $resultData->fetch_array()) {
                                                                             <button type="button"
                                                                                     class="btn btn-primary btn-xs"
                                                                                     title="Edit">
-                                                                                <a href="#" data-toggle="modal" data-target="#largechicken<?= $RowNote["id"] ?>"><span class="glyphicon glyphicon-pencil"></span></a>
+                                                                                <a data-toggle="modal" data-target="#largechicken"><span class="glyphicon glyphicon-pencil"></span></a>
                                                                             </button>
                                                                             <button type="button"
                                                                                     class="btn btn-danger btn-xs"
