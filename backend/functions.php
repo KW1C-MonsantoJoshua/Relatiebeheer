@@ -2449,3 +2449,14 @@ function EditNNote()
         </div><?php
     }
 }
+
+function EditNoteExtra()
+{
+    global $mysqli;
+    if (isset($_POST['EditNote'])) {
+        $query = "UPDATE `comments_business` SET `subject`=?,`text`=? WHERE id = ?";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param('ssi', $_POST["subject"], $_POST["text"], $RowNote["id"]);
+        $stmt->execute();
+    }
+}
