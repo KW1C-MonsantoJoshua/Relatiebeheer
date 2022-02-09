@@ -19,7 +19,7 @@ UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 InsertNotes();
 EditNNote();
-
+EditNoteExtra();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
