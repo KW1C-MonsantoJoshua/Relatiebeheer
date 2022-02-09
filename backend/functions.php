@@ -2426,7 +2426,6 @@ function EditNNote()
                             <label for="email">Onderwerp</label>
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" value="<?= $RowNote["subject"] ?>">
                         </fieldset>
-                        <input type="hidden" value="<?= $RowNote["id"] ?>"
 
                         <!--                    <fieldset class="form-group floating-label-form-group">-->
                         <!--                            <label for="basic-form-6">Keuze</label>-->
@@ -2441,6 +2440,8 @@ function EditNNote()
                             <textarea class="form-control" id="title1" name="text" rows="9" placeholder="Beschrijving" > <?php echo $RowNote["text"]; ?></textarea>
                         </fieldset>
                     </div>
+                    <input type="hidden" value="<?= $RowNote["id"] ?>"
+                           name="id">
                     <div class="modal-footer">
                         <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
                         <input type="submit" class="btn btn-primary" name="EditNote" value="Opslaan">
