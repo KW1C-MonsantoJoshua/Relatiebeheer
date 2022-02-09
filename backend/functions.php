@@ -2426,6 +2426,8 @@ function EditNNote()
                             <label for="email">Onderwerp</label>
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" value="<?= $RowNote["subject"] ?>">
                         </fieldset>
+                        <input type="hidden" value="<?= $RowNote["id"] ?>"
+
                         <!--                    <fieldset class="form-group floating-label-form-group">-->
                         <!--                            <label for="basic-form-6">Keuze</label>-->
                         <!--                            <select id="basic-form-6" name="interested" class="form-control">-->
@@ -2456,7 +2458,7 @@ function EditNoteExtra()
     if (isset($_POST['EditNote'])) {
         $query = "UPDATE `comments_business` SET `subject`=?,`text`=? WHERE id = ?";
         $stmt = $mysqli->prepare($query);
-        $stmt->bind_param('ssi', $_POST["subject"], $_POST["text"], $RowNote["id"]);
+        $stmt->bind_param('ssi', $_POST["subject"], $_POST["text"], $_POST["id"]);
         $stmt->execute();
     }
 }
