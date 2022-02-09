@@ -2362,11 +2362,11 @@ while ($RowNote = $resultData->fetch_array()) {
                                                                                     title="Approved">
                                                                                 <span class="glyphicon glyphicon-ok"></span>
                                                                             </button>
-                                                                            <button type="button"
+                                                                            <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>"><button type="button"
                                                                                     class="btn btn-primary btn-xs"
                                                                                     title="Edit">
-                                                                                <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>"><span class="glyphicon glyphicon-pencil"></span></a>
-                                                                            </button>
+                                                                                <span class="glyphicon glyphicon-pencil"></span>
+                                                                            </button></a>
                                                                             <button type="button"
                                                                                     class="btn btn-danger btn-xs"
                                                                                     title="Delete">
