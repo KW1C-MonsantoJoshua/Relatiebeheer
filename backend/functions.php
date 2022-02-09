@@ -2357,11 +2357,11 @@ while ($RowNote = $resultData->fetch_array()) {
                                                                             <?php echo $RowNote["text"]; ?>
                                                                         </div>
                                                                         <div class="action">
-<!--                                                                            <button type="button"-->
-<!--                                                                                    class="btn btn-success btn-xs"-->
-<!--                                                                                    title="Approved">-->
-<!--                                                                                <span class="glyphicon glyphicon-ok"></span>-->
-<!--                                                                            </button>-->
+                                                                            <button type="button"
+                                                                                    class="btn btn-success btn-xs"
+                                                                                    title="Approved">
+                                                                                <span class="glyphicon glyphicon-ok"></span>
+                                                                            </button>
                                                                             <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>"><button type="button"
                                                                                     class="btn btn-primary btn-xs"
                                                                                     title="Edit">
