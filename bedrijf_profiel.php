@@ -1548,6 +1548,44 @@ include "partials/navbar.php";
     </div>
 </div>
 
+
+<div class="modal fade text-left" id="largechicken1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="myModalLabel35">Nieuwe Notitie</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                </button>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    <fieldset class="form-group floating-label-form-group">
+                        <label for="email">Onderwerp</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp">
+                    </fieldset>
+                    <!--                    <fieldset class="form-group floating-label-form-group">-->
+                    <!--                            <label for="basic-form-6">Keuze</label>-->
+                    <!--                            <select id="basic-form-6" name="interested" class="form-control">-->
+                    <!--                                <option value="none" selected disabled>Keuze</option>-->
+                    <!--                                <option value="design">Intern</option>-->
+                    <!--                                <option value="development">Extern</option>-->
+                    <!--                            </select>-->
+                    <!--                    </fieldset>-->
+                    <fieldset class="form-group floating-label-form-group">
+                        <label for="title1">Beschrijving</label>
+                        <textarea class="form-control" id="title1" name="text" rows="9" placeholder="Beschrijving"></textarea>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
+                    <input type="submit" class="btn btn-primary" name="RegistreetNote" value="Opslaan">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <script>
     /*
         zet script nog in apart bestand wnnr af voor de aapie
