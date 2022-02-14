@@ -1801,6 +1801,40 @@ include "partials/navbar.php";
         document.getElementById("plaats").value = "";
     }
 </script>
+
+<?php
+if(isset($_GET['m'])){ ?>
+    <div class="flash-data" data-flashdata="<?php echo $_GET['m'];?>"></div>
+<?php } ?>
+<script>
+    $('.second').on('click',function(e){
+        e.preventDefault();
+        const href = $(this).attr('href')
+        Swal.fire({
+            title: 'Weet je zeker niffo?',
+            text: "Patron doe rustig anders is ie weg!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Delete gwn swa!'
+        }).then((result) => {
+            if (result.value) {
+                document.location.href = href;
+
+            }
+        })
+    })
+
+    const flashdata = $('.flash-data').data('flashdata')
+    if(flashdata){
+        swal.fire({
+            type : 'success',
+            title : 'Record Deleted',
+            text : 'Record has been deleted'
+        })
+    }
+</script>
 </body>
 
 <?php
