@@ -1,6 +1,8 @@
 <?php
 include "backend/db.php";
     $id = $_GET['id'];
+    $custof = $_GET['custof'];
+    $membof = $_GET['membof'];
 global $mysqli;
 
 $stmt = $mysqli->prepare("DELETE FROM comments_business WHERE id = ?");
@@ -44,7 +46,7 @@ if ( false === $exec ) {
 }
 
 // Close the prepared statement
-header('Location:bedrijfprofieltest.php?custof=$_GET["custof"]&membof=$_GET["memof"]&m=1');
+header("Location:bedrijfprofieltest.php?custof=$custof&membof=$membof&m=1");
 
 $stmt->close();
 
