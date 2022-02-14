@@ -1,6 +1,6 @@
 <?php
 include "backend/db.php";
-    $id=$_GET['id'];
+    $id = $_GET['id'];
     global $mysqli;
     $query = "DELETE * FROM `comments_business` WHERE id = ?";
     $stmt = $mysqli->prepare($query);
