@@ -1807,6 +1807,12 @@ include "partials/navbar.php";
 if(isset($_GET['m'])){ ?>
     <div class="flash-data" data-flashdata="<?php echo $_GET['m'];?>"></div>
 <?php } ?>
+
+<?php
+if(isset($_GET['k'])){ ?>
+    <div class="flash-data2" data-flashdata="<?php echo $_GET['m'];?>"></div>
+<?php } ?>
+
 <script>
     $('.second').on('click',function(e){
         e.preventDefault();
@@ -1828,6 +1834,14 @@ if(isset($_GET['m'])){ ?>
     })
 
     const flashdata = $('.flash-data').data('flashdata')
+    if(flashdata){
+        swal.fire({
+            type : 'success',
+            title : 'Snelle get hij is weg',
+            text : 'Ga maar weer verder met werken'
+        })
+    }
+    const flashdata = $('.flash-data2').data('flashdata')
     if(flashdata){
         swal.fire({
             type : 'success',

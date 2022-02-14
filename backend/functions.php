@@ -2514,10 +2514,13 @@ function EditNoteExtra()
 {
     global $mysqli;
     if (isset($_POST['EditNote'])) {
+        $custof = $_GET['custof'];
+        $membof = $_GET['membof'];
         $query = "UPDATE `comments_business` SET `subject`=?,`text`=? WHERE id = ?";
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('ssi', $_POST["subject"], $_POST["text"], $_POST["id"]);
         $stmt->execute();
+        header("Location:bedrijf_profiel.php?custof=$custof&membof=$membof&k=1");
     }
 }
 
