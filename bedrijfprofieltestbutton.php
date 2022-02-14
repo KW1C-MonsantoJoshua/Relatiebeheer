@@ -44,7 +44,7 @@ if ( false === $exec ) {
 }
 
 // Close the prepared statement
-header('Location:bedrijfprofieltest.php?custof=1&membof=1&m=1');
+header('Location:bedrijfprofieltest.php?custof=$_GET["custof"]&membof=$_GET["memof"]&m=1');
 
 $stmt->close();
 
