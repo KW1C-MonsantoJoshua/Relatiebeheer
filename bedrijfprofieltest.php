@@ -1792,8 +1792,12 @@ include "partials/navbar.php";
     }
 </script>
 
+<?php
+if(isset($_GET['m'])){ ?>
+    <div class="flash-data" data-flashdata="<?php echo $_GET['m'];?>"></div>
+<?php } ?>
 <script>
-        $('.del-btn').on('click',function(e){
+        $('.second').on('click',function(e){
         e.preventDefault();
         const href = $(this).attr('href')
         Swal.fire({
