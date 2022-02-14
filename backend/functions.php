@@ -2420,12 +2420,20 @@ function ViewNote2()
                                                                                                                  title="Edit">
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </button></a>
+
                                 <table>
-                                <tr>
-                                <td><a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>" class="second">
-                                </a></td>
-                                <tr>
+                                    <tr>
+                                        <td><a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>" class="btn btn-danger btn-xs second">
+                                            </a></td>
+                                    <tr>
                                 </table>
+
+                                <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>">
+                                <button type="button"
+                                        class="btn btn-danger btn-xs second"
+                                        title="Delete">
+                                    <span class="glyphicon glyphicon-trash"></span></button>
+                                </a>
                             </div>
                         </div>
 
