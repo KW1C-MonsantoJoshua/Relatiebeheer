@@ -1564,7 +1564,7 @@ include "partials/navbar.php";
                     </br>
                     <div class="card">
                         <div class="card-content">
-                            <div class="">
+                            <div class="card-body">
                                 <div class="tab-content">
                                     <!-- General Tab -->
                                     <h1>Abonnementen</h1>
@@ -1575,7 +1575,6 @@ include "partials/navbar.php";
                                             <div class="col-12">
                                                 <div class="card">
                                                     <div class="card-content">
-                                                        <div class="card-body">
                                                             <div class="form-group">
                                                                 <div class="row">
                                                                         <div class="comment mt-4 text-justify float-left"> <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
@@ -1586,7 +1585,6 @@ include "partials/navbar.php";
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </form>
