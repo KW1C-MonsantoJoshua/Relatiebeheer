@@ -1564,7 +1564,6 @@ include "partials/navbar.php";
                     </br>
                     <div class="card">
                         <div class="card-content">
-                            <div class="card-body">
                                 <div class="tab-content">
                                     <!-- General Tab -->
                                     <h1>Abonnementen</h1>
@@ -1586,7 +1585,6 @@ include "partials/navbar.php";
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </form>
