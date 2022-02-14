@@ -2428,7 +2428,7 @@ function ViewNote2()
                                     <tr>
                                 </table>
 
-                                <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>">
+                                <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>" class="second">
                                 <button type="button"
                                         class="btn btn-danger btn-xs second"
                                         title="Delete">
