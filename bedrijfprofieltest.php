@@ -99,7 +99,7 @@ InsertNotes();
     }
 
     .comment {
-        border: 1px solid;
+        border: 1px solid transparent;
         float: left;
         border-radius: 5px;
         padding-left: 40px;
