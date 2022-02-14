@@ -2463,3 +2463,55 @@ function EditNoteExtra()
         $stmt->execute();
     }
 }
+
+function ViewNote2()
+{
+global $mysqli;
+$customerofcheck = $_GET["custof"];
+$tableData = "SELECT * FROM `comments_business` where `customer_of` = '$customerofcheck'";
+$stmt = $mysqli->prepare($tableData);
+$stmt->execute();
+$resultData = $stmt->get_result();
+while ($RowNote = $resultData->fetch_array()) {
+    $idgebuiker = $RowNote["created_by"];
+    $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
+    $stmt1 = $mysqli->prepare($tableData1);
+    $stmt1->execute();
+    $resultData1 = $stmt1->get_result();
+    $RowNoteGebruiker = $resultData1->fetch_array()
+    ?>
+    <div class="card">
+        <div class="card-content">
+            <div class="form-group">
+                <div class="row">
+                    <div class="comment mt-4 text-justify float-left"> <img src="uploads/<?= $RowNoteGebruiker['image_url'] ?>" alt="" class="rounded-circle" width="40" height="40">
+                        <h4><?php echo $RowNoteGebruiker["username"]; ?></h4> <span><?php echo $RowNote["created_at"]; ?></span> <br>
+                        <p><?php echo $RowNote["text"]; ?></p>
+                        <div class="action">
+                            <button type="button"
+                                    class="btn btn-success btn-xs"
+                                    title="Approved">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </button>
+                            <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>"><button type="button"
+                                                                                                             class="btn btn-primary btn-xs"
+                                                                                                             title="Edit">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button></a>
+                            <button type="button"
+                                    class="btn btn-danger btn-xs"
+                                    title="Delete">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="BRB" style="line-height:20%;"> </br> </div>
+<?php }
+}
