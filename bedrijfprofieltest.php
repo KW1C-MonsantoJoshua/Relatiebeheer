@@ -1791,25 +1791,8 @@ include "partials/navbar.php";
 </script>
 
 <script>
-    $(".remove2").click(function(){
-        var id = $(this).parents("span").attr("id");
-
-
-        if(confirm('Are you sure to remove this record ?'))
-        {
-            $.ajax({
-                url: '/delete.php',
-                type: 'GET',
-                data: {id: id},
-                error: function() {
-                    alert('Something is wrong');
-                },
-                success: function(data) {
-                    $("#"+id).remove();
-                    alert("Record removed successfully");
-                }
-            });
-        }
+    document.querySelector(".second").addEventListener('click', function(){
+        Swal.fire("Our First Alert", "With some body text!");
     });
 
 
