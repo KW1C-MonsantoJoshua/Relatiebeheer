@@ -2421,7 +2421,7 @@ function ViewNote2()
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </button></a>
                                 <table>
-                                <tr id="<?php $RowNote["id"] ?>">
+                                <tr id="<?php echo $RowNote["id"] ?>">
                                 <td> <button type="button"
                                         class="btn btn-danger btn-xs"
                                         title="Delete">
