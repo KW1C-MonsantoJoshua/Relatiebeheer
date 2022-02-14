@@ -1421,6 +1421,35 @@ include "partials/navbar.php";
 
                     </br>
 
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <!-- General Tab -->
+                                    <h1>Notities niffo</h1>
+                                    <a type="button"
+                                       class="nav-link d-flex align-items-end"
+                                       data-toggle="modal" data-target="#largechicken">
+                                        <i class="ft-plus mr-1"></i>
+                                        <span class="d-none d-sm-block">Toevoegen</span>
+                                    </a>
+                                    <div class="tab-pane active" id="general2" role="tabpanel"
+                                         aria-labelledby="general-tab">
+                                        <hr class="mt-1 mt-sm-2">
+                                        <div class="container1">
+                                            <div class="row1">
+                                                <?php ViewNote2(); ?>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </br>
+
                     <!-- Tab panes -->
                     <div class="card">
                         <div class="card-content">
