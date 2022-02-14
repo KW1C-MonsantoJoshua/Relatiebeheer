@@ -17,7 +17,6 @@ Updateuser();
 UploadPic1();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
-GetCompany();
 InsertNotes();
 EditNNote();
 EditNoteExtra();
