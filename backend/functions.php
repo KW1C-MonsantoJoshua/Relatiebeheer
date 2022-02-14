@@ -2481,7 +2481,7 @@ function EditNNote()
                     <div class="modal-body">
                         <fieldset class="form-group floating-label-form-group">
                             <label for="email">Onderwerp</label>
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" value="<?= $RowNote["subject"] ?>">
+                            <input type="text" class="form-control"  name="subject" placeholder="Onderwerp" value="<?= $RowNote["subject"] ?>">
                         </fieldset>
 
                         <!--                    <fieldset class="form-group floating-label-form-group">-->
