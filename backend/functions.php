@@ -2420,11 +2420,15 @@ function ViewNote2()
                                                                                                                  title="Edit">
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </button></a>
+                                <tr id="<?php $RowNote["id"] ?>">
+                                <td>
                                 <button type="button"
                                         class="btn btn-danger btn-xs"
                                         title="Delete">
                                     <span class="glyphicon glyphicon-trash"></span>
                                 </button>
+                                </td>
+                                </tr>
                             </div>
                         </div>
 
