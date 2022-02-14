@@ -1793,8 +1793,6 @@ include "partials/navbar.php";
 </script>
 
 <script>
-    function del()
-    {
         $(document).delegate(".second", function() {
 
 
@@ -1834,7 +1832,6 @@ include "partials/navbar.php";
 
 
         });
-    }
 </script>
 </body>
 
