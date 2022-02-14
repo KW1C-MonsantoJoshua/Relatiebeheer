@@ -2422,7 +2422,7 @@ function ViewNote2()
                                     </button></a>
                                 <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>">
                                 <button type="button"
-                                        class="btn btn-danger btn-xs second"
+                                        class="btn btn-danger btn-xs seond"
                                         title="Delete">
                                     <span class="glyphicon glyphicon-trash"></span></button>
                                 </a>
