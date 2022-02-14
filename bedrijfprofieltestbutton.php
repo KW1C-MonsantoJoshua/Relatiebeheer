@@ -8,4 +8,5 @@ if(isset($_GET['id'])){
     $stmt->bind_param('s',$id);
     $stmt->execute();
     header('bedrijfprofieltest.php?custof=1&membof=1&m=1');
-}
+};
+?>
