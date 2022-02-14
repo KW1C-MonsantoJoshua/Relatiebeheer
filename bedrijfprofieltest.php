@@ -1795,7 +1795,7 @@ include "partials/navbar.php";
 <script>
     function del()
     {
-        $(document).delegate(".second", "click", function() {
+        $(document).delegate(".second", function() {
 
 
             Swal.fire({
