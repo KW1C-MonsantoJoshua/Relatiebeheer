@@ -18,6 +18,9 @@ UploadPic1();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 InsertNotes();
+EditNNote();
+EditNoteExtra();
+
 
 
 ?>
