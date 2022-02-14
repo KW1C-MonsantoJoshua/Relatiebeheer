@@ -1801,13 +1801,13 @@ if(isset($_GET['m'])){ ?>
         e.preventDefault();
         const href = $(this).attr('href')
         Swal.fire({
-        title: 'Are you sure to delete?',
-        text: "You won't be able to revert this!",
+        title: 'Weet je zeker niffo?',
+        text: "Patron doe rustig anders is ie weg!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Delete gwn swa!'
     }).then((result) => {
         if (result.value) {
         document.location.href = href;
