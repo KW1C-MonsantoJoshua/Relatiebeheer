@@ -1793,9 +1793,33 @@ include "partials/navbar.php";
 </script>
 
 <script>
-    document.querySelector(".second").addEventListener('click', function(){
-        Swal.fire("Our First Alert", "With some body text!");
-    });
+        $('.del-btn').on('click',function(e){
+        e.preventDefault();
+        const href = $(this).attr('href')
+        Swal.fire({
+        title: 'Are you sure to delete?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.value) {
+        document.location.href = href;
+
+    }
+    })
+    })
+
+        const flashdata = $('.flash-data').data('flashdata')
+        if(flashdata){
+        swal.fire({
+            type : 'success',
+            title : 'Record Deleted',
+            text : 'Record has been deleted'
+        })
+    }
 </script>
 </body>
 
