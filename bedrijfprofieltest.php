@@ -1789,7 +1789,7 @@ include "partials/navbar.php";
 
 <script>
     $(".remove").click(function(){
-        var id = $(this).parents("div").attr("id");
+        var id = $(this).parents("tr").attr("id");
 
 
         if(confirm('Are you sure to remove this record ?'))
