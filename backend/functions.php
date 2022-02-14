@@ -2407,7 +2407,7 @@ function ViewNote2()
                             <h4><?php echo $RowNoteGebruiker["username"]; ?></h4> <span><?php echo $RowNote["created_at"]; ?></span> <br>
                             <div class="BRC" style="line-height:5%;"> </br> </div>
                             <h4><?php echo $RowNote["subject"]; ?></h4>
-
+                            <div class="BRC" style="line-height:5%;"> </br> </div>
                             <p><?php echo $RowNote["text"]; ?></p>
                             <div class="action">
                                 <button type="button"
