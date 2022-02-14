@@ -1517,7 +1517,6 @@ include "partials/navbar.php";
 <!--                        <div class="card-content">-->
 <!--                            <div class="card-body">-->
 <!--                                <div class="tab-content">-->
-<!--                                    <!-- General Tab -->-->
 <!--                                    <h1>Notities niffo</h1>-->
 <!--                                        <a type="button"-->
 <!--                                           class="nav-link d-flex align-items-end"-->
