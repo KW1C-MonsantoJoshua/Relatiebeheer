@@ -1831,8 +1831,8 @@ if(isset($_GET['m'])){ ?>
     if(flashdata){
         swal.fire({
             type : 'success',
-            title : 'Record Deleted',
-            text : 'Record has been deleted'
+            title : 'Snelle get hij is weg',
+            text : 'Ga maar weer verder met werken'
         })
     }
 </script>
