@@ -1788,8 +1788,8 @@ include "partials/navbar.php";
 </script>
 
 <script>
-    $(".remove").click(function(){
-        var id = $(this).parents("tr").attr("id");
+    $(".remove2").click(function(){
+        var id = $(this).parents("span").attr("id");
 
 
         if(confirm('Are you sure to remove this record ?'))
