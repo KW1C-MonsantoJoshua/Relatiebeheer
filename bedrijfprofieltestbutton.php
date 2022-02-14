@@ -44,13 +44,13 @@ if ( false === $exec ) {
 }
 
 // Close the prepared statement
+header('bedrijfprofieltest.php?custof=1&membof=1&m=1');
 
 $stmt->close();
 
 // Close connection
 
 $mysqli->close();
-header('bedrijfprofieltest.php?custof=1&membof=1&m=1');
 
 
 
