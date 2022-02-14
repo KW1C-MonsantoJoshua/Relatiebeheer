@@ -2506,8 +2506,7 @@ function EditNNote()
                 </form>
             </div>
         </div>
-        </div><?php         header_remove();
-
+        </div><?php
     }
 }
 
