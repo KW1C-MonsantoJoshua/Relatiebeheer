@@ -1610,7 +1610,7 @@ include "partials/navbar.php";
                                                     <div class="card-content">
                                                         <div class="form-group">
                                                             <div class="row">
-                                                                <div class="comment mt-4 text-justify float-left"> <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
+                                                                <div class="comment mt-4 text-justify float-left"> <img src="https://wow.olympus.eu/webfile/img/1632/oly_testwow_stage.jpg?x=1024" alt="" class="rounded-circle" width="40" height="40">
                                                                     <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
                                                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
                                                                     <div class="action">
