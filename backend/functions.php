@@ -2506,7 +2506,8 @@ function EditNNote()
                 </form>
             </div>
         </div>
-        </div><?php
+        </div><?php         header_remove();
+
     }
 }
 
@@ -2520,7 +2521,6 @@ function EditNoteExtra()
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('ssi', $_POST["subject"], $_POST["text"], $_POST["id"]);
         $stmt->execute();
-        header_remove();
         header("Location:bedrijf_profiel.php?custof=$custof&membof=$membof&k=1");
     }
 }
