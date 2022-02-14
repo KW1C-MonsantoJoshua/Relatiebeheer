@@ -1605,7 +1605,7 @@ include "partials/navbar.php";
 
                                                             </div>
                                                         </div>
-                                            </br>
+                                                <br style="line-height:40vh"/>
                                                 <div class="card">
                                                     <div class="card-content">
                                                         <div class="form-group">
