@@ -1605,6 +1605,39 @@ include "partials/navbar.php";
 
                                                             </div>
                                                         </div>
+
+                                                <div class="card">
+                                                    <div class="card-content">
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="comment mt-4 text-justify float-left"> <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
+                                                                    <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
+                                                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                                                                    <div class="action">
+                                                                        <button type="button"
+                                                                                class="btn btn-success btn-xs"
+                                                                                title="Approved">
+                                                                            <span class="glyphicon glyphicon-ok"></span>
+                                                                        </button>
+                                                                        <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>"><button type="button"
+                                                                                                                                                         class="btn btn-primary btn-xs"
+                                                                                                                                                         title="Edit">
+                                                                                <span class="glyphicon glyphicon-pencil"></span>
+                                                                            </button></a>
+                                                                        <button type="button"
+                                                                                class="btn btn-danger btn-xs"
+                                                                                title="Delete">
+                                                                            <span class="glyphicon glyphicon-trash"></span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
                                                 </div>
                                             </div>
                                         </form>
