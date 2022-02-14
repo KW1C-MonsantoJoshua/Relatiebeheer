@@ -1793,11 +1793,48 @@ include "partials/navbar.php";
 </script>
 
 <script>
-    document.querySelector(".second").addEventListener('click', function(){
-        Swal.fire("Our First Alert", "With some body text!");
-    });
+    function del()
+    {
+        $(document).delegate(".second", "click", function() {
 
 
+            Swal.fire({
+                icon: 'warning',
+                title: 'Are you sure you want to delete this record?',
+                showDenyButton: false,
+                showCancelButton: true,
+                confirmButtonText: 'Yes'
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+
+                    var employeeId = $(this).attr('data-id');
+
+                    // Ajax config
+                    $.ajax({
+                        type: "GET", //we are using GET method to get data from server side
+                        url: 'delete.php', // get the route value
+                        data: {employee_id:employeeId}, //set data
+                        beforeSend: function () {//We add this before send to disable the button once we submit it so that we prevent the multiple click
+
+                        },
+                        success: function (response) {//once the request successfully process to the server side it will return result here
+                            // Reload lists of employees
+                            all();
+
+                            Swal.fire('Success.', response, 'success')
+                        }
+                    });
+
+
+                } else if (result.isDenied) {
+                    Swal.fire('Changes are not saved', '', 'info')
+                }
+            });
+
+
+        });
+    }
 </script>
 </body>
 
