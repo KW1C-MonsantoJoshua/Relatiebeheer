@@ -2424,7 +2424,7 @@ function ViewNote2()
                                 <button type="button"
                                         class="btn btn-danger btn-xs second"
                                         title="Delete">
-                                    <span class="glyphicon glyphicon-trash"></span></button>
+                                    </button>
                                 </a>
                             </div>
                         </div>
