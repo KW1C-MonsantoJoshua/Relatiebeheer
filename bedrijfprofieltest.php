@@ -99,8 +99,7 @@ InsertNotes();
     }
 
     .comment {
-        border: 1px solid rgba(16, 46, 46, 1);
-        background-color: rgba(16, 46, 46, 0.973);
+        border: 1px solid;
         float: left;
         border-radius: 5px;
         padding-left: 40px;
