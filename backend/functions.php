@@ -2422,7 +2422,7 @@ function ViewNote2()
                                     </button></a>
 
 
-                                <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>&custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>" class="second">
+                                <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>&custof=<?php echo $_GET["custof"]; ?>&membof=<?php echo $_GET["membof"];?>" class="second">
                                 <button type="button"
                                         class="btn btn-danger btn-xs second"
                                         title="Delete">
