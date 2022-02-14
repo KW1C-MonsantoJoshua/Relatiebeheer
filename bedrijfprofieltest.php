@@ -1583,6 +1583,23 @@ include "partials/navbar.php";
                                                                         </div>
                                                                 </div>
                                                                 </div>
+                                                        <div class="action">
+                                                            <button type="button"
+                                                                    class="btn btn-success btn-xs"
+                                                                    title="Approved">
+                                                                <span class="glyphicon glyphicon-ok"></span>
+                                                            </button>
+                                                            <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>"><button type="button"
+                                                                                                                                             class="btn btn-primary btn-xs"
+                                                                                                                                             title="Edit">
+                                                                    <span class="glyphicon glyphicon-pencil"></span>
+                                                                </button></a>
+                                                            <button type="button"
+                                                                    class="btn btn-danger btn-xs"
+                                                                    title="Delete">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </button>
+                                                        </div>
                                                             </div>
                                                         </div>
                                                 </div>
