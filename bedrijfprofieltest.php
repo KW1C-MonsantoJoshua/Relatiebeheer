@@ -118,7 +118,7 @@ InsertNotes();
     .comment span,
     .darker p,
     .darker span {
-        color: rgb(184, 183, 183)
+        color: white;
     }
 
     h1,
