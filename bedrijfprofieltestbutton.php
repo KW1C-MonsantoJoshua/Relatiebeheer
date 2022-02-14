@@ -7,5 +7,5 @@ if(isset($_GET['id'])){
     $stmt = $mysqli->prepare($query);
     $stmt->bind_param('s',$id);
     $stmt->execute();
-    header('https://relatiebeheer.qccstest.nl/bedrijfprofieltest.php?custof=1&membof=1&m=1');
+    header('bedrijfprofieltest.php?custof=1&membof=1&m=1');
 }
