@@ -1541,7 +1541,13 @@ include "partials/navbar.php";
                             <div class="card-body">
                                 <div class="tab-content">
                                     <!-- General Tab -->
-                                    <h1>Abonnementen</h1>
+                                    <h1>Notities niffo</h1>
+                                    <a type="button"
+                                       class="nav-link d-flex align-items-end"
+                                       data-toggle="modal" data-target="#largechicken">
+                                        <i class="ft-plus mr-1"></i>
+                                        <span class="d-none d-sm-block">Toevoegen</span>
+                                    </a>
                                     <div class="tab-pane active" id="general" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
