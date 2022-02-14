@@ -2485,7 +2485,7 @@ while ($RowNote = $resultData->fetch_array()) {
             <div class="form-group">
                 <div class="row">
                     <div class="comment mt-4 text-justify float-left"> <img src="uploads/<?= $RowNoteGebruiker['image_url'] ?>" alt="" class="rounded-circle" width="40" height="40">
-                        <h4><?php echo $RowNoteGebruiker["username"]; ?></h4> <span><?php echo $RowNote["created_at"]; ?></span> <h6><?php echo $RowNote["subject"]; ?></h6><br>
+                        <h4><?php echo $RowNoteGebruiker["username"]; ?></h4> <span><?php echo $RowNote["created_at"]; ?></span> <br>
                         <p><?php echo $RowNote["text"]; ?></p>
                         <div class="action">
                             <button type="button"
