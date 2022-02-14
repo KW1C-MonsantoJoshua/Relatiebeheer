@@ -2421,12 +2421,6 @@ function ViewNote2()
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </button></a>
 
-                                <table>
-                                    <tr>
-                                        <td><a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>" class="btn btn-danger btn-xs second">
-                                            </a></td>
-                                    <tr>
-                                </table>
 
                                 <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>" class="second">
                                 <button type="button"
