@@ -50,6 +50,7 @@ $stmt->close();
 // Close connection
 
 $mysqli->close();
+header('bedrijfprofieltest.php?custof=1&membof=1&m=1');
 
 
 
