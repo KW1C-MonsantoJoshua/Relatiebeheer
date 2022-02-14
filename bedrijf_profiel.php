@@ -1841,14 +1841,14 @@ if(isset($_GET['k'])){ ?>
             text : 'Ga maar weer verder met werken'
         })
     }
-    const flashdata = $('.flash-data2').data('flashdata')
-    if(flashdata){
-        swal.fire({
-            type : 'success',
-            title : 'Snelle get hij is weg',
-            text : 'Ga maar weer verder met werken'
-        })
-    }
+    // const flashdata = $('.flash-data2').data('flashdata')
+    // if(flashdata){
+    //     swal.fire({
+    //         type : 'success',
+    //         title : 'Snelle get hij is weg',
+    //         text : 'Ga maar weer verder met werken'
+    //     })
+    // }
 </script>
 </body>
 
