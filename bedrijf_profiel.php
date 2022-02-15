@@ -1859,7 +1859,7 @@ if(isset($_GET['k'])){ ?>
     if(flashdata3){
         swal.fire({
             type : 'success',
-            title : 'Goeie get patron hij is toegevoegd',
+            title : 'Goeie get patron hij is bijgewerkt',
             text : 'Ga maar weer verder met werken'
         })
     }
