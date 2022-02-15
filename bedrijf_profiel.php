@@ -1841,7 +1841,7 @@ if(isset($_GET['k'])){ ?>
             text : 'Ga maar weer verder met werken'
         })
     }
-    const flashdata2 = $('.flash-data2').data('flashdata2')
+    const flashdata2 = $('.flash-data2').data('flashdata')
     if(flashdata2){
         swal.fire({
             type : 'success',
