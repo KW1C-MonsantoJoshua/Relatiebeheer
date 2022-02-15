@@ -1371,7 +1371,7 @@ include "partials/navbar.php";
                                     <div class="tab-pane active" id="general1" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
-                                        <form method="post" id="Instellingen">
+                                        <form method="post" id="Instellingen" action="bedrijf_profiel.php?custof=<?=$_GET["custof"]?>&membof=<?=$_GET["membof"]?>&u=1">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
