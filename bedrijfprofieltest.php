@@ -112,7 +112,7 @@ EditNoteExtra();
         padding-left: 40px;
         padding-right: 30px;
         padding-top: 10px;
-        width: max-content;
+        width: fit-content;
     }
 
     .comment h4,
