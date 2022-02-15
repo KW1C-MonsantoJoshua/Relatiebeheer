@@ -47,7 +47,6 @@ EditNoteExtra();
     .darker h4,
     .darker span {
         display: inline;
-        width: fit-content;
     }
 
     .navbar-nav {
