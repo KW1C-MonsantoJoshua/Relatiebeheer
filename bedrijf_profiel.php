@@ -29,26 +29,10 @@ EditNoteExtra();
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 <style>
-    .float-parent-element {
-        width: 50%;
+    .chicken1 {
+        margin-left: auto;
+        margin-right: 0;
     }
-    .float-child-element {
-        float: left;
-        width: 50%;
-    }
-    .red {
-        background-color: red;
-        margin-left: 50%;
-        height: 100px;
-    }
-    .yellow {
-        margin-left: 50%;
-        height: 100px;
-        background-color: yellow;
-    }
-
-
-
 
 
     .navbar-nav {
