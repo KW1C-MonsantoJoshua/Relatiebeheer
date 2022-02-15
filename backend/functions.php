@@ -2501,7 +2501,7 @@ function EditNNote()
                            name="id">
                     <div class="modal-footer">
                         <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
-                        <input type="submit" class="btn btn-primary" name="EditNote" value="Opslaan" onclick="window.location='/my/link/location';">
+                        <input onclick="window.location='/my/link/location';" type="submit" class="btn btn-primary" name="EditNote" value="Opslaan">
                     </div>
                 </form>
             </div>
