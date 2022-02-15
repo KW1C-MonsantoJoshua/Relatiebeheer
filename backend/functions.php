@@ -2454,7 +2454,8 @@ function InsertNotes() {
                 $stmt->execute();
                 $stmt->close();
                 $mysqli->close();
-        header("Location:bedrijf_profiel.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"]);
+                $
+        header("Location:bedrijf_profiel.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] );
             }
 }
 
