@@ -34,6 +34,16 @@ EditNoteExtra();
         width: fit-content;
     }
 
+    .comment5 {
+        border: 1px solid black;
+        float: left;
+        border-radius: 5px;
+        padding-left: 40px;
+        padding-right: 30px;
+        padding-top: 10px;
+        position: absolute;
+        width: fit-content;
+    }
 
     .navbar-nav {
         width: 100%
