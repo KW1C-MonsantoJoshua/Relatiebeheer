@@ -2528,8 +2528,9 @@ function EditNoteExtra()
 function SnelleFix()
 {
     if (isset($_POST['EditNote'])) {
-        if ( ! headers_sent() ) {
-            header_remove();
+        if (!headers_sent()) {
+            foreach (headers_list() as $header)
+                header_remove($header);
         }
         $custof = $_GET['custof'];
         $membof = $_GET['membof'];
