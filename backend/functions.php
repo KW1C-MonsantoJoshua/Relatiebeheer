@@ -2480,10 +2480,10 @@ function EditNNote()
                 </div>
                 <form method="post">
                     <div class="modal-body">
-                        <fieldset class="form-group floating-label-form-group">
-                            <label for="subject">Onderwerp</label>
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" value="<?= $RowNote["subject"] ?>">
-                        </fieldset>
+<!--                        <fieldset class="form-group floating-label-form-group">-->
+<!--                            <label for="subject">Onderwerp</label>-->
+<!--                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" value="--><?//= $RowNote["subject"] ?><!--">-->
+<!--                        </fieldset>-->
 
                         <!--                    <fieldset class="form-group floating-label-form-group">-->
                         <!--                            <label for="basic-form-6">Keuze</label>-->
