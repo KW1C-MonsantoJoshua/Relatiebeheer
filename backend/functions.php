@@ -2470,9 +2470,6 @@ function EditNNote()
     while ($RowNote = $resultData->fetch_array()) {
         ?>
     <div class="modal fade text-left" id="largechicken1<?= $RowNote["id"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-        <?php if ( ! headers_sent() ) {
-            header_remove();
-        } ?>
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -2486,14 +2483,7 @@ function EditNNote()
                         <fieldset class="form-group floating-label-form-group">
                             <label for="subject">Onderwerp</label>
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" value="<?= $RowNote["subject"] ?>">
-                            <?php if ( ! headers_sent() ) {
-                                header_remove();
-                            } ?>
                         </fieldset>
-                        <?php if ( ! headers_sent() ) {
-                            header_remove();
-                        } ?>
-
                         <!--                    <fieldset class="form-group floating-label-form-group">-->
                         <!--                            <label for="basic-form-6">Keuze</label>-->
                         <!--                            <select id="basic-form-6" name="interested" class="form-control">-->
@@ -2511,6 +2501,7 @@ function EditNNote()
                            name="id">
                     <div class="modal-footer">
                         <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
+                        <a href="http://www.google.com"></a>
                         <input type="submit" class="btn btn-primary" name="EditNote" value="Opslaan">
                     </div>
                 </form>

@@ -1810,6 +1810,11 @@ if(isset($_GET['m'])){ ?>
 <?php } ?>
 
 <?php
+if(isset($_GET['u'])){ ?>
+    <div class="flash-data3" data-flashdata="<?php echo $_GET['u'];?>"></div>
+<?php } ?>
+
+<?php
 if(isset($_GET['k'])){ ?>
     <div class="flash-data2" data-flashdata="<?php echo $_GET['k'];?>"></div>
 <?php } ?>
@@ -1844,6 +1849,14 @@ if(isset($_GET['k'])){ ?>
     }
     const flashdata2 = $('.flash-data2').data('flashdata')
     if(flashdata2){
+        swal.fire({
+            type : 'success',
+            title : 'Goeie get patron hij is toegevoegd',
+            text : 'Ga maar weer verder met werken'
+        })
+    }
+    const flashdata3 = $('.flash-data3').data('flashdata')
+    if(flashdata3){
         swal.fire({
             type : 'success',
             title : 'Goeie get patron hij is toegevoegd',
