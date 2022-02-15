@@ -20,7 +20,6 @@ $rowC = GetCompanyInfo();
 InsertNotes();
 EditNNote();
 EditNoteExtra();
-//SnelleFix();
 
 
 ?>
