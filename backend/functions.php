@@ -2478,7 +2478,7 @@ function EditNNote()
                         <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                     </button>
                 </div>
-                <form method="post">
+                <form method="post" action="/my/link/location">
                     <div class="modal-body">
                         <fieldset class="form-group floating-label-form-group">
                             <label for="subject">Onderwerp</label>
@@ -2501,7 +2501,7 @@ function EditNNote()
                            name="id">
                     <div class="modal-footer">
                         <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
-                        <input onclick="window.location='/my/link/location';" type="submit" class="btn btn-primary" name="EditNote" value="Opslaan">
+                        <input  type="submit" class="btn btn-primary" name="EditNote" value="Opslaan">
                     </div>
                 </form>
             </div>
