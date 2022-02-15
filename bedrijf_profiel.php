@@ -31,7 +31,7 @@ EditNoteExtra();
 <style>
     .kip1 {
         float:right;
-        width: max-content;
+        width: fit-content;
     }
 
 
