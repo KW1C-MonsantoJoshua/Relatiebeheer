@@ -2478,7 +2478,7 @@ function EditNNote()
                         <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                     </button>
                 </div>
-                <form method="post" action="bedrijf_profiel.php?custof=1&membof=1&u=1?">
+                <form method="post" action="bedrijf_profiel.php?custof=<?=$_GET["custof"]?>&membof=<?=$_GET["membof"]?>&u=1?">
                     <div class="modal-body">
                         <fieldset class="form-group floating-label-form-group">
                             <label for="subject">Onderwerp</label>
