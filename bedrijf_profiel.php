@@ -29,9 +29,8 @@ EditNoteExtra();
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 <style>
-    .chicken1 {
-        margin-left: auto;
-        margin-right: 0;
+    .kip1 {
+        float:right;
     }
 
 

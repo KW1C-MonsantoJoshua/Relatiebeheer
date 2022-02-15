@@ -2402,11 +2402,11 @@ function ViewNote2()
         <div class="card">
             <div class="card-content">
                 <div class="form-group">
-                    <div class="row5">
+                    <div class="row">
                         <div class="comment mt-4 text-justify float-left"> <img src="uploads/<?= $RowNoteGebruiker['image_url'] ?>" alt="" class="rounded-circle" width="40" height="40">
 
                             <h4><?php echo $RowNoteGebruiker["username"]; ?></h4>
-                            <div style="float:right">
+                            <div class="kip1">
                             <span><?php echo $RowNote["created_at"]; ?></span>
                             </div>
 
