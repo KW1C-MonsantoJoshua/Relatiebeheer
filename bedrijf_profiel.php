@@ -41,7 +41,7 @@ EditNoteExtra();
         padding-left: 40px;
         padding-right: 30px;
         padding-top: 10px;
-        width: fit-content;
+        width: 850px;
     }
     .comment5 h4,
     .comment5 span,
