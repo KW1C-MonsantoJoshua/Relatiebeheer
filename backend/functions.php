@@ -2501,8 +2501,9 @@ function EditNNote()
                            name="id">
                     <div class="modal-footer">
                         <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
-                        <a href="http://www.google.com"></a>
+                        <a href="http://www.google.com">
                         <input type="submit" class="btn btn-primary" name="EditNote" value="Opslaan">
+                        </a>
                     </div>
                 </form>
             </div>
