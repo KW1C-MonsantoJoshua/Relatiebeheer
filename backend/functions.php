@@ -2526,11 +2526,11 @@ function EditNoteExtra()
     }
 }
 
-function SnelleFix()
-{
-    if (isset($_POST['EditNote'])) {
-        $custof = $_GET['custof'];
-        $membof = $_GET['membof'];
-        header("Location:bedrijf_profiel.php?custof=$custof&membof=$membof&k=1");
-    }
-}
+//function SnelleFix()
+//{
+//    if (isset($_POST['EditNote'])) {
+//        $custof = $_GET['custof'];
+//        $membof = $_GET['membof'];
+//        header("Location:bedrijf_profiel.php?custof=$custof&membof=$membof&k=1");
+//    }
+//}
