@@ -2480,10 +2480,10 @@ function EditNNote()
                 </div>
                 <form method="post">
                     <div class="modal-body">
-<!--                        <fieldset class="form-group floating-label-form-group">-->
-<!--                            <label for="subject">Onderwerp</label>-->
-<!--                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" value="--><?//= $RowNote["subject"] ?><!--">-->
-<!--                        </fieldset>-->
+                        <fieldset class="form-group floating-label-form-group">
+                            <label for="subject">Onderwerp</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" value="<?= $RowNote["subject"] ?>">
+                        </fieldset>
 
                         <!--                    <fieldset class="form-group floating-label-form-group">-->
                         <!--                            <label for="basic-form-6">Keuze</label>-->
@@ -2521,6 +2521,8 @@ function EditNoteExtra()
         $stmt = $mysqli->prepare($query);
         $stmt->bind_param('ssi', $_POST["subject"], $_POST["text"], $_POST["id"]);
         $stmt->execute();
+        $stmt->close();
+        $mysqli->close();
         header("Location:bedrijf_profiel.php?custof=$custof&membof=$membof&k=1");
     }
 }
