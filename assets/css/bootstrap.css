@@ -496,7 +496,7 @@ pre {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  width: max-content;
+  width: fit-content;
 
 }
 
