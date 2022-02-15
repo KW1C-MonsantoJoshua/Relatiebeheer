@@ -40,7 +40,8 @@ EditNoteExtra();
         border-radius: 5px;
         padding-left: 40px;
         padding-right: 30px;
-        padding-top: 10px
+        padding-top: 10px;
+        width: fit-content;
     }
     .comment5 h4,
     .comment5 span,
