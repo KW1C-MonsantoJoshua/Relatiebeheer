@@ -2409,12 +2409,13 @@ function ViewNote2()
                             <h4><?php echo $RowNote["subject"]; ?></h4>
                             <div class="BRC" style="line-height:15%;"> </br> </div>
                             <p><?php echo $RowNote["text"]; ?></p>
+                            <a>
                             <div class="action">
                                 <button type="button"
                                         class="btn btn-success btn-xs"
                                         title="Approved">
                                     <span class="glyphicon glyphicon-ok"></span>
-                                </button>
+                                </button></a>
                                 <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>"><button type="button"
                                                                                                                  class="btn btn-primary btn-xs"
                                                                                                                  title="Edit">
