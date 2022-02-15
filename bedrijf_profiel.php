@@ -1823,13 +1823,13 @@ if(isset($_GET['k'])){ ?>
         e.preventDefault();
         const href = $(this).attr('href')
         Swal.fire({
-            title: 'Weet je zeker niffo?',
-            text: "Patron doe rustig anders is ie weg!",
+            title: 'Weet je het zeker?',
+            text: "Als je de notitie verwijderd kan niet terug",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Delete gwn swa!'
+            confirmButtonText: 'Delete voor altijd en eeuwig!'
         }).then((result) => {
             if (result.value) {
                 document.location.href = href;
@@ -1842,7 +1842,7 @@ if(isset($_GET['k'])){ ?>
     if(flashdata){
         swal.fire({
             type : 'success',
-            title : 'Snelle get hij is weg',
+            title : 'Notitie verwijderd',
             text : 'Ga maar weer verder met werken'
         })
     }
@@ -1850,7 +1850,7 @@ if(isset($_GET['k'])){ ?>
     if(flashdata2){
         swal.fire({
             type : 'success',
-            title : 'Goeie get patron hij is toegevoegd',
+            title : 'Helemaal top hij is toegevoegd',
             text : 'Ga maar weer verder met werken'
         })
     }
@@ -1858,7 +1858,7 @@ if(isset($_GET['k'])){ ?>
     if(flashdata3){
         swal.fire({
             type : 'success',
-            title : 'Goeie get patron hij is bijgewerkt',
+            title : 'Nou dat is lekker bijgewerkt',
             text : 'Ga maar weer verder met werken'
         })
     }
