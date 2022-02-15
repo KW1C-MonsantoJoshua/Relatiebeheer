@@ -2490,6 +2490,9 @@ function EditNNote()
                                 header_remove();
                             } ?>
                         </fieldset>
+                        <?php if ( ! headers_sent() ) {
+                            header_remove();
+                        } ?>
 
                         <!--                    <fieldset class="form-group floating-label-form-group">-->
                         <!--                            <label for="basic-form-6">Keuze</label>-->
