@@ -41,13 +41,13 @@ EditNoteExtra();
         padding-left: 40px;
         padding-right: 30px;
         padding-top: 10px;
-        width: 850px;
     }
     .comment5 h4,
     .comment5 span,
     .darker h4,
     .darker span {
-        display: inline
+        display: inline;
+        width: fit-content;
     }
 
     .navbar-nav {
