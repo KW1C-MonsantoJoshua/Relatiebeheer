@@ -2470,6 +2470,9 @@ function EditNNote()
     while ($RowNote = $resultData->fetch_array()) {
         ?>
     <div class="modal fade text-left" id="largechicken1<?= $RowNote["id"] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+        <?php if ( ! headers_sent() ) {
+            header_remove();
+        } ?>
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -2528,10 +2531,6 @@ function EditNoteExtra()
 function SnelleFix()
 {
     if (isset($_POST['EditNote'])) {
-        if (!headers_sent()) {
-            foreach (headers_list() as $header)
-                header_remove($header);
-        }
         $custof = $_GET['custof'];
         $membof = $_GET['membof'];
         header("Location:bedrijf_profiel.php?custof=$custof&membof=$membof&k=1");
