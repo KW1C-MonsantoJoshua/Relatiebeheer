@@ -2406,7 +2406,7 @@ function ViewNote2()
                         <div class="comment mt-4 text-justify float-left"> <img src="uploads/<?= $RowNoteGebruiker['image_url'] ?>" alt="" class="rounded-circle" width="40" height="40">
                             <h4><?php echo $RowNoteGebruiker["username"]; ?></h4>
                             <div style="display: flex; justify-content: flex-end">
-                                <span><?php echo $RowNote["created_at"]; ?></span>
+                                <div><?php echo $RowNote["created_at"]; ?></div>
                             </div>
 
                             </div>
