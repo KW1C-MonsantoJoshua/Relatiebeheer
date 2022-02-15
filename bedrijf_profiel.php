@@ -1810,7 +1810,7 @@ if(isset($_GET['m'])){ ?>
 
 <?php
 if(isset($_GET['k'])){ ?>
-    <div class="flash-data2" data-flashdata="<?php echo $_GET['m'];?>"></div>
+    <div class="flash-data2" data-flashdata="<?php echo $_GET['k'];?>"></div>
 <?php } ?>
 
 <script>
