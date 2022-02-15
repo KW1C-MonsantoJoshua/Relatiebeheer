@@ -106,7 +106,7 @@ EditNoteExtra();
     }
 
     .comment {
-        border: 1px solid transparent;
+        border: 1px solid black;
         float: left;
         border-radius: 5px;
         padding-left: 40px;
