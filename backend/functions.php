@@ -2403,11 +2403,12 @@ function ViewNote2()
             <div class="card-content">
                 <div class="form-group">
                     <div class="row">
-                        <div class="kip1">
                         <div class="comment mt-4 text-justify float-left"> <img src="uploads/<?= $RowNoteGebruiker['image_url'] ?>" alt="" class="rounded-circle" width="40" height="40">
+
+
                             <h4><?php echo $RowNoteGebruiker["username"]; ?></h4>
                             <span><?php echo $RowNote["created_at"]; ?></span>
-                        </div>
+
                             <br>
                             <div class="BRC" style="line-height:15%;"> </br> </div>
                             <h4><?php echo $RowNote["subject"]; ?></h4>
