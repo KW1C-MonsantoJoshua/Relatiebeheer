@@ -489,7 +489,14 @@ pre {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  width: max-content;
+
+}
+.row5 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  width: fit-content;
 
 }
 
