@@ -2414,7 +2414,9 @@ function ViewNote2()
                             <div class="BRC" style="line-height:15%;"> </br> </div>
                             <h4><?php echo $RowNote["subject"]; ?></h4>
                             <div class="BRC" style="line-height:15%;"> </br> </div>
+                            <div class="num1"
                             <p><?php echo $RowNote["text"]; ?></p>
+                        </div>
                             <a>
 
                             <div class="action">
