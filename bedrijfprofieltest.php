@@ -105,7 +105,7 @@ EditNoteExtra();
         padding-top: 10px
     }
 
-    .comment {
+    .comment5 {
         border: 1px solid black;
         float: left;
         border-radius: 5px;
