@@ -2486,6 +2486,9 @@ function EditNNote()
                         <fieldset class="form-group floating-label-form-group">
                             <label for="subject">Onderwerp</label>
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" value="<?= $RowNote["subject"] ?>">
+                            <?php if ( ! headers_sent() ) {
+                                header_remove();
+                            } ?>
                         </fieldset>
 
                         <!--                    <fieldset class="form-group floating-label-form-group">-->
