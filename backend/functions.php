@@ -2528,6 +2528,9 @@ function EditNoteExtra()
 function SnelleFix()
 {
     if (isset($_POST['EditNote'])) {
+        if ( ! headers_sent() ) {
+            header_remove();
+        }
         $custof = $_GET['custof'];
         $membof = $_GET['membof'];
         header("Location:bedrijf_profiel.php?custof=$custof&membof=$membof&k=1");
