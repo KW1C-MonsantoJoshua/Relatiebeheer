@@ -2522,7 +2522,6 @@ function EditNoteExtra()
         $stmt->bind_param('ssi', $_POST["subject"], $_POST["text"], $_POST["id"]);
         $stmt->execute();
         $stmt->close();
-        $mysqli->close();
         header("Location:bedrijf_profiel.php?custof=$custof&membof=$membof&k=1");
     }
 }
