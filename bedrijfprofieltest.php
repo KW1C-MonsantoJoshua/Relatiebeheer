@@ -1890,7 +1890,7 @@ if(isset($_GET['k'])){ ?>
 
 
 
-    <div style="{
+    <div style="
             height: 400px;
             background-color: green;">
 <div style="
