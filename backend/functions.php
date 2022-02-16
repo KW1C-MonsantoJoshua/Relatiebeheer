@@ -2395,8 +2395,7 @@ function ViewNote2()
     $kip4 = array_reverse($kip3, true);
     var_dump($kip3);
     var_dump($kip4);
-    $x = count($kip4);
-    foreach($kip4 as $RowNote => $x)
+    while ($RowNote = $resultData->fetch_array())
     {
         $idgebuiker = $RowNote["created_by"];
         $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
