@@ -2393,12 +2393,7 @@ function ViewNote2()
     $resultData = $stmt->get_result();
     $resultDate = $resultData->fetch_array();
     foreach ($resultDate as $RowNote) {
-        $idgebuiker = $RowNote["created_by"];
-        $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
-        $stmt1 = $mysqli->prepare($tableData1);
-        $stmt1->execute();
-        $resultData1 = $stmt1->get_result();
-        $RowNoteGebruiker = $resultData1->fetch_array();
+
         ?>
         <div class="card">
             <div class="card-content">
