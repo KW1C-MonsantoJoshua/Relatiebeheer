@@ -2392,8 +2392,18 @@ function ViewNote2()
     $stmt->execute();
     $resultData = $stmt->get_result();
     $kip4 = $resultData->fetch_array();
-    $kip5 = $resultData->fetchAll(\PDO::FETCH_ASSOC);
-    while ($RowNote = $kip5) {
+    $Items = array();
+    foreach($kip4 as $RowNote) {
+        $Items[] = array(
+            'id' => $RowNote['id'],
+            'subject'  => $RowNote['subject'],
+            'created_at'  => $RowNote['created_at'],
+            'created_by'  => $RowNote['created_by'],
+            'archived_at'  => $RowNote['archived_at'],
+            'customer_of'  => $RowNote['customer_of'],
+            'text'  => $RowNote['text']
+        );
+
     $idgebuiker = $RowNote["created_by"];
         $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
         $stmt1 = $mysqli->prepare($tableData1);
