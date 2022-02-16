@@ -2392,7 +2392,7 @@ function ViewNote2()
     $stmt->execute();
     $resultData = $stmt->get_result();
     while ($RowNote = $resultData->fetch_array())
-        $RowNote[] = $resultData;
+        $RowNote1[] = $resultData;
     {
         $idgebuiker = $RowNote["created_by"];
         $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
