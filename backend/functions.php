@@ -2428,14 +2428,16 @@ function ViewNote2()
                                 <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>">
                                     <button type="button"
                                             class="btn btn-primary btn-xs"
-                                            style="padding-bottom: 10px;"
+                                            style="padding-bottom: 10px;
+                                                    margin-right: 5px;"
                                             title="Edit">
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </button></a>
                                 <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>&custof=<?php echo $_GET["custof"]; ?>&membof=<?php echo $_GET["membof"];?>" class="second">
                                 <button type="button"
                                         class="btn btn-danger btn-xs second"
-                                        style="padding-bottom: 10px;"
+                                        style="padding-bottom: 10px;
+                                                margin-right: 5px;"
                                         title="Delete">
                                     <span class="glyphicon glyphicon-trash"></span></button>
                                 </a>
