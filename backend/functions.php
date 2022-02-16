@@ -2460,7 +2460,7 @@ function InsertNotes() {
                 $sql = "INSERT INTO `comments_business`(`subject`,`created_by`, `created_at`,
                                  `text`,`customer_of`)VALUES(?,?,?,?,?)";
                 $stmt = $mysqli->prepare($sql);
-        $dt = date("d-m-Y h:i");
+        $dt = date("d-m-Y h:i:s");
                 $stmt->bind_param("sissi", $_POST['subject'],
                     $_SESSION['id'], $dt, $_POST['text'],
                     $_GET["custof"]);
