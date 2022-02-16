@@ -22,15 +22,36 @@ EditNNote();
 EditNoteExtra();
 
 
-
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
-<head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
-    <style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+<style>
+    .kip1 {
+        float:right;
+        width: fit-content;
+    }
+    .num1 {
+        background-color: yellow;
+        width: 100%;
+    }
+    .comment5 {
+        border: 1px solid transparent;
+        float: left;
+        border-radius: 5px;
+        padding-left: 40px;
+        padding-right: 30px;
+        padding-top: 10px;
+    }
+    .comment5 h4,
+    .comment5 span,
+    .darker h4,
+    .darker span {
+        display: inline;
+    }
+
     .navbar-nav {
         width: 100%
     }
@@ -105,15 +126,13 @@ EditNoteExtra();
         padding-top: 10px
     }
 
-    .comment5 {
-        border: 1px solid black;
+    .comment {
+        border: 1px solid transparent;
         float: left;
         border-radius: 5px;
         padding-left: 40px;
         padding-right: 30px;
-        padding-top: 10px;
-        position: absolute;
-        width: fit-content;
+        padding-top: 10px
     }
 
     .comment h4,
@@ -1313,7 +1332,6 @@ EditNoteExtra();
         border-color: #bce8f1
     }
 </style>
-    </head>
 <!-- BEGIN : Head-->
 
 <?php
@@ -1376,7 +1394,7 @@ include "partials/navbar.php";
                                     <div class="tab-pane active" id="general1" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
-                                        <form method="post" id="Instellingen">
+                                        <form method="post" id="Instellingen" action="bedrijf_profiel.php?custof=<?=$_GET["custof"]?>&membof=<?=$_GET["membof"]?>&u=1">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
@@ -1518,6 +1536,42 @@ include "partials/navbar.php";
                     </div>
                     </br>
                     <!-- Tab panes -->
+                    <!--                    <div class="card">-->
+                    <!--                        <div class="card-content">-->
+                    <!--                            <div class="card-body">-->
+                    <!--                                <div class="tab-content">-->
+                    <!--                                    <h1>Notities niffo</h1>-->
+                    <!--                                        <a type="button"-->
+                    <!--                                           class="nav-link d-flex align-items-end"-->
+                    <!--                                           data-toggle="modal" data-target="#largechicken">-->
+                    <!--                                            <i class="ft-plus mr-1"></i>-->
+                    <!--                                            <span class="d-none d-sm-block">Toevoegen</span>-->
+                    <!--                                        </a>-->
+                    <!--                                    <div class="tab-pane active" id="general2" role="tabpanel"-->
+                    <!--                                         aria-labelledby="general-tab">-->
+                    <!--                                        <hr class="mt-1 mt-sm-2">-->
+                    <!--                                        <div class="container1">-->
+                    <!--                                            <div class="row1">-->
+                    <!--                                                <div class="panel panel-default widget">-->
+                    <!--                                                    <div  class="panel-heading">-->
+                    <!--                                                        <span class="glyphicon glyphicon-comment"></span>-->
+                    <!--                                                        <h3 class="panel-title" style="color: #333 !important;">-->
+                    <!--                                                            Meest recente notitiess</h3>-->
+                    <!--                                                        <span class="label label-info">2</span>-->
+                    <!--                                                    </div>-->
+                    <!--                                                --><?php //ViewNote(); ?>
+                    <!--                                                </div>-->
+                    <!--                                            </div>-->
+                    <!--                                        </div>-->
+                    <!--                                    </div>-->
+                    <!---->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+
+                    </br>
+
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
@@ -1546,32 +1600,6 @@ include "partials/navbar.php";
                     </div>
 
                     </br>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <div class="tab-content">
-                                    <!-- General Tab -->
-                                    <h1>Notities niffo</h1>
-                                    <a type="button"
-                                       class="nav-link d-flex align-items-end"
-                                       data-toggle="modal" data-target="#largechicken">
-                                        <i class="ft-plus mr-1"></i>
-                                        <span class="d-none d-sm-block">Toevoegen</span>
-                                    </a>
-                                    <div class="tab-pane active" id="general" role="tabpanel"
-                                         aria-labelledby="general-tab">
-                                        <hr class="mt-1 mt-sm-2">
-                                        <form method="post">
-                                            <div class="col-12">
-                                                <?php ViewNote2(); ?>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Tab panes -->
                     <div class="card">
@@ -1647,9 +1675,11 @@ include "partials/navbar.php";
                                 </div>
                             </div>
                         </div>
+
+
+
+
                     </div>
-
-
                 </div>
             </div>
             <!-- END Notification Sidebar-->
@@ -1673,20 +1703,20 @@ include "partials/navbar.php";
             <form method="post">
                 <div class="modal-body">
                     <fieldset class="form-group floating-label-form-group">
-                        <label for="email">Onderwerp</label>
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp">
+                        <label for="subject">Onderwerp</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" required>
                     </fieldset>
-                    <!--                    <fieldset class="form-group floating-label-form-group">-->
-                    <!--                            <label for="basic-form-6">Keuze</label>-->
-                    <!--                            <select id="basic-form-6" name="interested" class="form-control">-->
-                    <!--                                <option value="none" selected disabled>Keuze</option>-->
-                    <!--                                <option value="design">Intern</option>-->
-                    <!--                                <option value="development">Extern</option>-->
-                    <!--                            </select>-->
-                    <!--                    </fieldset>-->
+                    <fieldset class="form-group floating-label-form-group">
+                        <label for="basic-form-6">Keuze</label>
+                        <select id="basic-form-6" name="interested" class="form-control">
+                            <option value="none" selected disabled>Keuze</option>
+                            <option value="design">Intern</option>
+                            <option value="development">Extern</option>
+                        </select>
+                    </fieldset>
                     <fieldset class="form-group floating-label-form-group">
                         <label for="title1">Beschrijving</label>
-                        <textarea class="form-control" id="title1" name="text" rows="9" placeholder="Beschrijving"></textarea>
+                        <textarea class="form-control" id="title1" name="text" rows="9" placeholder="Beschrijving" required></textarea>
                     </fieldset>
                 </div>
                 <div class="modal-footer">
@@ -1697,6 +1727,8 @@ include "partials/navbar.php";
         </div>
     </div>
 </div>
+
+
 
 <script>
     /*
@@ -1798,32 +1830,59 @@ include "partials/navbar.php";
 if(isset($_GET['m'])){ ?>
     <div class="flash-data" data-flashdata="<?php echo $_GET['m'];?>"></div>
 <?php } ?>
+
+<?php
+if(isset($_GET['u'])){ ?>
+    <div class="flash-data3" data-flashdata="<?php echo $_GET['u'];?>"></div>
+<?php } ?>
+
+<?php
+if(isset($_GET['k'])){ ?>
+    <div class="flash-data2" data-flashdata="<?php echo $_GET['k'];?>"></div>
+<?php } ?>
+
 <script>
-        $('.second').on('click',function(e){
+    $('.second').on('click',function(e){
         e.preventDefault();
         const href = $(this).attr('href')
         Swal.fire({
-        title: 'Weet je zeker niffo?',
-        text: "Patron doe rustig anders is ie weg!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Delete gwn swa!'
-    }).then((result) => {
-        if (result.value) {
-        document.location.href = href;
+            title: 'Weet je het zeker?',
+            text: "Als je de notitie verwijderd kan niet terug",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Delete voor altijd en eeuwig!'
+        }).then((result) => {
+            if (result.value) {
+                document.location.href = href;
 
-    }
-    })
+            }
+        })
     })
 
-        const flashdata = $('.flash-data').data('flashdata')
-        if(flashdata){
+    const flashdata = $('.flash-data').data('flashdata')
+    if(flashdata){
         swal.fire({
             type : 'success',
-            title : 'Record Deleted',
-            text : 'Record has been deleted'
+            title : 'Notitie verwijderd',
+            text : 'Ga maar weer verder met werken'
+        })
+    }
+    const flashdata2 = $('.flash-data2').data('flashdata')
+    if(flashdata2){
+        swal.fire({
+            type : 'success',
+            title : 'Helemaal top hij is toegevoegd',
+            text : 'Ga maar weer verder met werken'
+        })
+    }
+    const flashdata3 = $('.flash-data3').data('flashdata')
+    if(flashdata3){
+        swal.fire({
+            type : 'success',
+            title : 'Nou dat is lekker bijgewerkt',
+            text : 'Ga maar weer verder met werken'
         })
     }
 </script>
