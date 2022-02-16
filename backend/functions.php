@@ -2425,16 +2425,17 @@ function ViewNote2()
                                         title="Approved">
                                     <span class="glyphicon glyphicon-ok"></span>
                                 </button></a>
-                                <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>"><button type="button"
-                                                                                                                 class="btn btn-primary btn-xs"
-                                                                                                                 title="Edit">
+                                <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>">
+                                    <button type="button"
+                                            class="btn btn-primary btn-xs"
+                                            style="padding-bottom: 12px;"
+                                            title="Edit">
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </button></a>
-
-
                                 <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>&custof=<?php echo $_GET["custof"]; ?>&membof=<?php echo $_GET["membof"];?>" class="second">
                                 <button type="button"
                                         class="btn btn-danger btn-xs second"
+                                        style="padding-bottom: 12px;"
                                         title="Delete">
                                     <span class="glyphicon glyphicon-trash"></span></button>
                                 </a>
