@@ -2457,7 +2457,7 @@ function ViewNote2()
             </div>
         </div>
         <div class="BRB" style="line-height:20%;"> </br> </div>
-    <?php }
+    <?php
 }
 
 function InsertNotes() {
