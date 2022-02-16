@@ -2391,7 +2391,7 @@ function ViewNote2()
     $stmt = $mysqli->prepare($tableData);
     $stmt->execute();
     $resultData = $stmt->get_result();
-    while ($RowNote = $resultData->fetch_array()) {
+    while ($RowNote = array_reverse($resultData)->fetch_array()) {
         $idgebuiker = $RowNote["created_by"];
         $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
         $stmt1 = $mysqli->prepare($tableData1);
