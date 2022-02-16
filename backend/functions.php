@@ -2393,8 +2393,11 @@ function ViewNote2()
     $resultData = $stmt->get_result();
     $kip45 = $resultData->fetch_array();
     $Items = array();
+    while($RowNote = $resultData->fetch_array()) {
+        $Items[] = $RowNote;
+    }
 
-    foreach($Items as $RowNote) {
+    foreach(array_reverse($Items, true) as $RowNote) {
         $items4[] = array(
             'id' => $RowNote['id'],
             'subject'  => $RowNote['subject'],
