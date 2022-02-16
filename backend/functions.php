@@ -2403,7 +2403,7 @@ function ViewNote2()
             <div class="card-content">
                 <div class="form-group">
                     <div class="row5">
-                        <div class="comment5 mt-4 text-justify float-left"> <img src="uploads/<?= $RowNoteGebruiker['image_url'] ?>" alt="" class="rounded-circle" width="40" height="40">
+                        <div class="comment5 mt-4 text-justify float-left" style="width: 100%;"> <img src="uploads/<?= $RowNoteGebruiker['image_url'] ?>" alt="" class="rounded-circle" width="40" height="40">
 
                             <h4><?php echo $RowNoteGebruiker["username"]; ?></h4>
                             <div class="kip1">
