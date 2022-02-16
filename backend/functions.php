@@ -2421,14 +2421,14 @@ function ViewNote2()
 
                             <div class="action">
                                 <button type="button"
-                                        class="btn btn-success btn-xs" style="padding-bottom: 12px;"
+                                        class="btn btn-success btn-xs" style="padding-bottom: 10px;"
                                         title="Approved">
                                     <span class="glyphicon glyphicon-ok"></span>
                                 </button></a>
                                 <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>">
                                     <button type="button"
                                             class="btn btn-primary btn-xs"
-                                            style="padding-bottom: 12px;"
+                                            style="padding-bottom: 10px;"
                                             title="Edit">
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </button></a>
