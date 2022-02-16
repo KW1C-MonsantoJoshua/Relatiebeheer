@@ -2424,7 +2424,7 @@ function ViewNote2()
 
                             <h4><?php echo $RowNoteGebruiker["username"]; ?></h4>
                             <div class="kip1">
-                                <span style="margin-right: 10px;"><b><?php echo $RowNote["keuze"]; ?></b></span>
+                                <span style="margin-right: 10px; font-size: 20px;"><b><?php echo $RowNote["keuze"]; ?></b></span>
                             <span><?php echo $creation_time = date('d-m-Y h:i', strtotime($RowNote['created_at'])); ?></span>
                             </div>
 

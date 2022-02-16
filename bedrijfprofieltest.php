@@ -32,7 +32,6 @@ EditNoteExtra();
     .kip1 {
         float:right;
         width: fit-content;
-        font-size: 20px;
     }
     /*.num1 {*/
     /*    background-color: yellow;*/
