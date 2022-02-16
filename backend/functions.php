@@ -2394,6 +2394,8 @@ function ViewNote2()
     $kip3 = $resultData->fetch_array();
     $kip4 = array_reverse($kip3, true);
     var_dump($kip3);
+    var_dump($kip4);
+
     while ($RowNote = $resultData->fetch_array())
     {
         $idgebuiker = $RowNote["created_by"];
