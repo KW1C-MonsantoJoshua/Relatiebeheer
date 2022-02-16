@@ -2421,7 +2421,7 @@ function ViewNote2()
 
                             <div class="action">
                                 <button type="button"
-                                        class="btn btn-success btn-xs" style="padding-bottom: 10px;"
+                                        class="btn btn-success btn-xs" style="padding-bottom: 10px; margin-right: 5px;"
                                         title="Approved">
                                     <span class="glyphicon glyphicon-ok"></span>
                                 </button></a>
