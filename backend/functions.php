@@ -2392,13 +2392,13 @@ function ViewNote2()
     $stmt->execute();
     $resultData = $stmt->get_result();
     while ($RowNote = $resultData->fetch_array()) {
-        $RowNote = array_reverse($RowNote);
         $idgebuiker = $RowNote["created_by"];
         $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
         $stmt1 = $mysqli->prepare($tableData1);
         $stmt1->execute();
         $resultData1 = $stmt1->get_result();
         $RowNoteGebruiker = $resultData1->fetch_array();
+        $RowNote = array_reverse($RowNote);
         ?>
         <div class="card">
             <div class="card-content">
