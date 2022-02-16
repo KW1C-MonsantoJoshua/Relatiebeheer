@@ -2393,10 +2393,17 @@ function ViewNote2()
     $resultData = $stmt->get_result();
     $kip45 = $resultData->fetch_array();
     $Items = array();
-    while($RowNote = $resultData->fetch_array()) {
-        $Items[] = $RowNote;
-    }
 
+    foreach($Items as $RowNote) {
+        $items4[] = array(
+            'id' => $RowNote['id'],
+            'subject'  => $RowNote['subject'],
+            'created_at'  => $RowNote['created_at'],
+            'created_by'  => $RowNote['created_by'],
+            'archived_at'  => $RowNote['archived_at'],
+            'customer_of'  => $RowNote['customer_of'],
+            'text'  => $RowNote['text']
+        );
 
     $idgebuiker = $RowNote["created_by"];
         $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
@@ -2457,7 +2464,7 @@ function ViewNote2()
             </div>
         </div>
         <div class="BRB" style="line-height:20%;"> </br> </div>
-    <?php
+    <?php }
 }
 
 function InsertNotes() {
