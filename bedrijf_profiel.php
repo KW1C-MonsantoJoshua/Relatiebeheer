@@ -42,7 +42,7 @@ EditNoteExtra();
         float: left;
         border-radius: 5px;
         padding-left: 40px;
-        padding-right: 30px;
+        padding-right: 40px;
         padding-top: 5px;
     }
     .comment5 h4,
