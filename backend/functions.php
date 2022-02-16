@@ -2391,7 +2391,7 @@ function ViewNote2()
     $stmt = $mysqli->prepare($tableData);
     $stmt->execute();
     $resultData = $stmt->get_result();
-    while ($resultData->fetch_array())
+    while ($RowNote = $resultData->fetch_array())
         $RowNote[] = $resultData;
     {
         $idgebuiker = $RowNote["created_by"];
