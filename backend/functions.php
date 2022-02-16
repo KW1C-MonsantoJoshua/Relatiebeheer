@@ -2397,7 +2397,8 @@ function ViewNote2()
         $stmt1 = $mysqli->prepare($tableData1);
         $stmt1->execute();
         $resultData1 = $stmt1->get_result();
-        $RowNoteGebruiker = $resultData1->fetch_array()
+        $RowNoteGebruiker = $resultData1->fetch_array();
+        echo $creation_time = date('Y-m-d', strtotime($RowNote['created_at']));
         ?>
         <div class="card">
             <div class="card-content">
