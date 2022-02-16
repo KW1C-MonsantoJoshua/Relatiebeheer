@@ -2421,14 +2421,14 @@ function ViewNote2()
 
                             <div class="action">
                                 <button type="button"
-                                        class="btn btn-success btn-xs" style="padding-bottom: 9px; margin-right: 5px;"
+                                        class="btn btn-success btn-xs" style="padding-bottom: 10px; margin-right: 5px;"
                                         title="Approved">
                                     <span class="glyphicon glyphicon-ok"></span>
                                 </button></a>
                                 <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>">
                                     <button type="button"
                                             class="btn btn-primary btn-xs"
-                                            style="padding-bottom: 9px;
+                                            style="padding-bottom: 10px;
                                                     margin-right: 5px;"
                                             title="Edit">
                                         <span class="glyphicon glyphicon-pencil"></span>
@@ -2436,7 +2436,7 @@ function ViewNote2()
                                 <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>&custof=<?php echo $_GET["custof"]; ?>&membof=<?php echo $_GET["membof"];?>" class="second">
                                 <button type="button"
                                         class="btn btn-danger btn-xs second"
-                                        style="padding-bottom: 9px;
+                                        style="padding-bottom: 10px;
                                                 margin-right: 5px;"
                                         title="Delete">
                                     <span class="glyphicon glyphicon-trash"></span></button>
