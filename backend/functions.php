@@ -2398,7 +2398,7 @@ function ViewNote2()
         $stmt1->execute();
         $resultData1 = $stmt1->get_result();
         $RowNoteGebruiker = $resultData1->fetch_array();
-        echo $creation_time = date('d-m-Y h:i', strtotime($RowNote['created_at']));
+
         ?>
         <div class="card">
             <div class="card-content">
@@ -2408,7 +2408,7 @@ function ViewNote2()
 
                             <h4><?php echo $RowNoteGebruiker["username"]; ?></h4>
                             <div class="kip1">
-                            <span><?php echo $RowNote["created_at"]; ?></span>
+                            <span><?php echo $creation_time = date('d-m-Y h:i', strtotime($RowNote['created_at'])); ?></span>
                             </div>
 
                             <br>
