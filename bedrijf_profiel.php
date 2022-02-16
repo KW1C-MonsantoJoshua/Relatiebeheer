@@ -1710,8 +1710,8 @@ include "partials/navbar.php";
                             <label for="basic-form-6">Keuze</label>
                             <select required id="basic-form-6" name="keuze" class="form-control">
                                 <option value="" selected disabled>Keuze</option>
-                                <option value="intern">Intern</option>
-                                <option value="extern">Extern</option>
+                                <option value="Intern">Intern</option>
+                                <option value="Extern">Extern</option>
                             </select>
                     </fieldset>
                     <fieldset class="form-group floating-label-form-group">
