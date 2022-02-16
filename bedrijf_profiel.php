@@ -45,6 +45,18 @@ EditNoteExtra();
         padding-right: 40px;
         padding-top: 5px;
     }
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 0 solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.35rem;
+        padding-bottom: 5px;
+    }
     .comment5 h4,
     .comment5 span,
     .darker h4,
