@@ -2391,7 +2391,7 @@ function ViewNote2()
     $stmt = $mysqli->prepare($tableData);
     $stmt->execute();
     $resultData = $stmt->get_result();
-    $resultData[] = array_reverse($resultData,true);
+    $resultData = array_reverse($resultData, true);
     while ($RowNote = $resultData->fetch_array())
     {
         $idgebuiker = $RowNote["created_by"];
@@ -2527,4 +2527,77 @@ function EditNoteExtra()
         $stmt->execute();
         $stmt->close();
     }
+}
+
+
+function ViewNote3()
+{
+    global $mysqli;
+    $customerofcheck = $_GET["custof"];
+    $tableData = "SELECT * FROM `comments_business` where `customer_of` = '$customerofcheck'";
+    $stmt = $mysqli->prepare($tableData);
+    $stmt->execute();
+    $resultData = $stmt->get_result();
+    while ($RowNote = $resultData->fetch_array())
+    {
+        $idgebuiker = $RowNote["created_by"];
+        $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
+        $stmt1 = $mysqli->prepare($tableData1);
+        $stmt1->execute();
+        $resultData1 = $stmt1->get_result();
+        $RowNoteGebruiker = $resultData1->fetch_array();
+        ?>
+        <div class="card">
+            <div class="card-content">
+                <div class="form-group">
+                    <div class="row5">
+                        <div class="comment5 mt-4 text-justify float-left" style="width: 100%;"> <img src="uploads/<?= $RowNoteGebruiker['image_url'] ?>" alt="" class="rounded-circle" width="40" height="40">
+
+                            <h4><?php echo $RowNoteGebruiker["username"]; ?></h4>
+                            <div class="kip1">
+                                <span><?php echo $creation_time = date('d-m-Y h:i', strtotime($RowNote['created_at'])); ?></span>
+                            </div>
+
+                            <br>
+                            <div class="BRC" style="line-height:15%;"> </br> </div>
+                            <h4><?php echo $RowNote["subject"]; ?></h4>
+                            <div class="BRC" style="line-height:15%;"> </br> </div>
+                            <div class="num1"
+                            <p><?php echo $RowNote["text"]; ?></p>
+                        </div>
+                        <a>
+
+                            <div class="action">
+                                <button type="button"
+                                        class="btn btn-success btn-xs" style="padding-bottom: 10px; margin-right: 5px;"
+                                        title="Approved">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                </button></a>
+                        <a data-toggle="modal" data-target="#largechicken1<?= $RowNote["id"] ?>">
+                            <button type="button"
+                                    class="btn btn-primary btn-xs"
+                                    style="padding-bottom: 10px;
+                                                    margin-right: 5px;"
+                                    title="Edit">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button></a>
+                        <a href="bedrijfprofieltestbutton.php?id=<?php echo $RowNote['id'];?>&custof=<?php echo $_GET["custof"]; ?>&membof=<?php echo $_GET["membof"];?>" class="second">
+                            <button type="button"
+                                    class="btn btn-danger btn-xs second"
+                                    style="padding-bottom: 10px;
+                                                margin-right: 5px;"
+                                    title="Delete">
+                                <span class="glyphicon glyphicon-trash"></span></button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+        </div>
+        <div class="BRB" style="line-height:20%;"> </br> </div>
+    <?php }
 }
