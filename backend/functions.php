@@ -2423,6 +2423,7 @@ function ViewNote2()
 
                             <h4><?php echo $RowNoteGebruiker["username"]; ?></h4>
                             <div class="kip1">
+                                <span></span>
                             <span><?php echo $creation_time = date('d-m-Y h:i', strtotime($RowNote['created_at'])); ?></span>
                             </div>
 
@@ -2474,12 +2475,12 @@ function InsertNotes() {
     global $mysqli;
     if (isset($_POST['RegistreetNote'])) {
                 $sql = "INSERT INTO `comments_business`(`subject`,`created_by`, `created_at`,
-                                 `text`,`customer_of`)VALUES(?,?,?,?,?)";
+                                 `text`,`customer_of`, `keuze`)VALUES(?,?,?,?,?,?)";
                 $stmt = $mysqli->prepare($sql);
         $dt = date("Y-m-d h:i:s");
-                $stmt->bind_param("sissi", $_POST['subject'],
+                $stmt->bind_param("sissis", $_POST['subject'],
                     $_SESSION['id'], $dt, $_POST['text'],
-                    $_GET["custof"]);
+                    $_GET["custof"], $_POST['keuze']);
                 $stmt->execute();
                 $stmt->close();
                 $mysqli->close();
