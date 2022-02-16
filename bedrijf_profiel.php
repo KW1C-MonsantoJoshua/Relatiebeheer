@@ -33,10 +33,10 @@ EditNoteExtra();
         float:right;
         width: fit-content;
     }
-    .num1 {
-        background-color: yellow;
-        width: 100%;
-    }
+    /*.num1 {*/
+    /*    background-color: yellow;*/
+    /*    width: 100%;*/
+    /*}*/
     .comment5 {
         border: 1px solid transparent;
         float: left;
