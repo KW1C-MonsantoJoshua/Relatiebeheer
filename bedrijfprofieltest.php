@@ -888,7 +888,8 @@ EditNoteExtra();
         padding: 5px 10px;
         font-size: 12px;
         line-height: 1.5;
-        border-radius: 10px
+        border-radius: 3px;
+        margin-right: 20px;
     }
 
     .btn-xs {
