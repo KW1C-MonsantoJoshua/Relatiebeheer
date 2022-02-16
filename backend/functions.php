@@ -2392,7 +2392,8 @@ function ViewNote2()
     $stmt->execute();
     $resultData = $stmt->get_result();
     $kip4 = $resultData->fetch_array();
-    foreach ($kip4 as $RowNote) {
+    $kip5 = $resultData->fetchAll(\PDO::FETCH_ASSOC);
+    while ($RowNote = $kip5) {
     $idgebuiker = $RowNote["created_by"];
         $tableData1 = "SELECT * FROM `users` where `id` = '$idgebuiker'";
         $stmt1 = $mysqli->prepare($tableData1);
