@@ -2391,7 +2391,6 @@ function ViewNote2()
     $stmt = $mysqli->prepare($tableData);
     $stmt->execute();
     $resultData = $stmt->get_result();
-    $kip45 = $resultData->fetch_array();
     $Items = array();
     while($RowNote = $resultData->fetch_array()) {
         $Items[] = $RowNote;
