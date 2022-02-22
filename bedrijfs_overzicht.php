@@ -1,13 +1,9 @@
 <?php
-
-if (!isset($_SESSION["loggedin"])) {
-    header("Location: index.php");
-}
 require_once "backend/functions.php";
+
 InsertBedrijf();
 ViewC();
 editC();
-
 
 // Controleer of iemand ingelogd is
 
