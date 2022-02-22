@@ -7,10 +7,7 @@ require_once "backend/functions.php";
 InsertBedrijf();
 ViewC();
 editC();
-if (!isset($_SESSION['memb_of']) == 0) {
-    $memb_of = $_SESSION['memb_of'];
-    header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-}
+
 
 // Controleer of iemand ingelogd is
 
