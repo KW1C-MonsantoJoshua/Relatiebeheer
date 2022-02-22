@@ -4,8 +4,6 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 $row2 = Getuser();
-$kip1 = $row2['authentication_level'];
-$kip2 = 'Bedrijfsleider';
 if (!($row2['authentication_level'] === 'Admin')) {
     if ($row2['authentication_level'] === 'Bedrijfsleider') {
         $memb_of = $row2['member_of'];
