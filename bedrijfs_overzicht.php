@@ -12,7 +12,7 @@ if (!$_SESSION['memb_of'] == 0) {
     header("Location:../bedrijfs_klanten_overzicht?custof=$memb_of&membof=$memb_of");
 } else {
     $memb_of = $_SESSION['memb_of'];
-    header("Location:../klanten_overzicht?custof=$memb_of&membof=$memb_of");
+    header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
 }
 InsertBedrijf();
 ViewC();
