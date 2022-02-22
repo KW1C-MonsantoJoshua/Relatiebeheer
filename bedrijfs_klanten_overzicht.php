@@ -5,6 +5,10 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 $row2 = Getuser();
+if ($row2['authentication_level'] === 'Werknemer') {
+    $memb_of = $row2['member_of'];
+    header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+}
 if (!($row2['member_of'] == $_GET['membof'])) {
     $memb_of = $row2['member_of'];
     header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
