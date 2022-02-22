@@ -4,7 +4,6 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 if ($_SESSION['memb_of'] == 0) {
-    header("Location:../bedrijfs_overzicht.php?");
     require_once "backend/functions.php";
     InsertBedrijf();
     ViewC();
