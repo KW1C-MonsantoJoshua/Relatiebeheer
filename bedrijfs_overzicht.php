@@ -3,15 +3,13 @@ require_once "backend/functions.php";
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
-if (!isset($_SESSION["loggedin"])) {
-    header("Location: index.php");
-}
-if (!$_SESSION['memb_of'] == 0) {
-    if ($_SESSION['authentication_level'] === 'Bedrijfsleider')
-    $memb_of = $_SESSION['memb_of'];
+$rowuser = Getuser();
+if (!$rowuser['memb_of'] == 0) {
+    if ($rowuser['authentication_level'] === 'Bedrijfsleider')
+    $memb_of = $rowuser['memb_of'];
     header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
 } else {
-    $memb_of = $_SESSION['memb_of'];
+    $memb_of = $rowuser['memb_of'];
     header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
 }
 InsertBedrijf();
