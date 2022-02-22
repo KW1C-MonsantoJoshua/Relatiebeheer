@@ -7,7 +7,7 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 $row2 = Getuser();
-if (!$row2['memb_of'] == 0) {
+if (!$row2['member_of'] == 0) {
     if ($_SESSION['authentication_level'] === 'Bedrijfsleider1')
     $memb_of = $_SESSION['memb_of'];
     header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
