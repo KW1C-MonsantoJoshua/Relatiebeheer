@@ -6,7 +6,9 @@ ViewC();
 editC();
 
 // Controleer of iemand ingelogd is
-
+if (!isset($_SESSION["loggedin"])) {
+    header("Location: index.php");
+}
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
