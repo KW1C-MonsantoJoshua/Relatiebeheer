@@ -4,6 +4,7 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 $rowuser = Getuser();
+echo $rowuser['memb_of'];
 if (!$rowuser['memb_of'] == 0) {
     if ($rowuser['authentication_level'] === 'Bedrijfsleider')
     $memb_of = $rowuser['memb_of'];
