@@ -9,6 +9,12 @@ editC();
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
+if ($_SESSION['memb_of'] == 0) {
+    header("Location:../bedrijfs_overzicht.php?");
+} else {
+    $memb_of = $_SESSION['memb_of'];
+    header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+}
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
