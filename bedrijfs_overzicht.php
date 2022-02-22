@@ -3,11 +3,8 @@ require_once "backend/functions.php";
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
-if (!isset($_SESSION["loggedin"])) {
-    header("Location: index.php");
-}
 $row2 = Getuser();
-if (!$row2['authentication_level'] == 0) {
+if (!$row2['authentication_level'] === 'Admin') {
     if ($row2['authentication_level'] === 'Bedrijfsleider') {
         $memb_of = $row2['member_of'];
         header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
