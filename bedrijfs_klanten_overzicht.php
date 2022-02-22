@@ -1,6 +1,17 @@
 <!--Op deze pagina komt een overzicht met alle bedrijven die de applicatie gebruiken-->
 <?php
 include "backend/functions.php";
+if (!isset($_SESSION["loggedin"])) {
+    header("Location: index.php");
+}
+$row2 = Getuser();
+if (!($row2['member_of'] === $_GET['membof'])) {
+    $memb_of = $row2['member_of'];
+    header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+} else if (!($row2['member_of'] === $_GET['custof'])) {
+    $memb_of = $row2['member_of'];
+    header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+}
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 editPersonnel();
@@ -10,17 +21,7 @@ ViewUserP();
 ViewUserZ();
 ViewPersonnel();
 // Controleer of iemand ingelogd is
-if (!isset($_SESSION["loggedin"])) {
-    header("Location: index.php");
-}
-$row2 = Getuser();
-if (!($row2['member_of'] === $_GET['membof'])) {
-    $memb_of = $row2['member_of'];
-        header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-    } else if (!($row2['member_of'] === $_GET['custof'])) {
-    $memb_of = $row2['member_of'];
-    header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-}
+
 
 ?>
 <!DOCTYPE html>
