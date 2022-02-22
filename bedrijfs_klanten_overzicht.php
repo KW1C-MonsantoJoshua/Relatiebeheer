@@ -1118,7 +1118,7 @@ include "partials/navbar.php";
                                                                 </br>
                                                                 <div class="controls">
                                                                     <label for="auth_level">Functie</label>
-                                                                    <select id="auth_level" required name="function" class="form-control">
+                                                                    <select id="auth_level" required name="keuze" class="form-control">
                                                                         <option value="" selected disabled>Select Role</option>
                                                                         <option value="Bedrijfsleider">Bedrijfsleider</option>
                                                                         <option value="Werknemer">Werknemer</option>

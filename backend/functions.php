@@ -414,12 +414,12 @@ function InsertPersonnel1()
                 } elseif ($result->num_rows == 0) {
 
                     $sql = "INSERT INTO `personnel`(`first_name`, `last_name_prefix`, `last_name`, `street`,
-                                   `housenumber`,`postalcode`, `phoneNumber`, `email`, `authentication_level`,  `member_of`) VALUES (?,?,?,?,?,?,?,?,?,?)";
+                                   `housenumber`,`postalcode`, `phoneNumber`, `email`, `authentication_level`, `member_of`) VALUES (?,?,?,?,?,?,?,?,?,?)";
 
                     $stmt = $mysqli->prepare($sql);
                     $voornaam = ucwords($_POST['voornaam']);
                     $achternaam = ucwords($_POST['achternaam']);
-                    $stmt->bind_param("ssssisisii", $voornaam, $_POST['tussenvoegsel'], $achternaam, $_POST['straat'], $_POST['huisnummer'], $_POST['postcode'], $_POST['telefoonnummer'], $_POST['email'], $_POST['function'], $_GET["membof"]);
+                    $stmt->bind_param("ssssisisii", $voornaam, $_POST['tussenvoegsel'], $achternaam, $_POST['straat'], $_POST['huisnummer'], $_POST['postcode'], $_POST['telefoonnummer'], $_POST['email'], $_POST['keuze'], $_GET["membof"]);
 
                     $stmt->execute();
                     $stmt->close();
