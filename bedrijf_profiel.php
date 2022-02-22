@@ -1589,7 +1589,7 @@ include "partials/navbar.php";
                             <div class="card-body">
                                 <div class="tab-content">
                                     <!-- General Tab -->
-                                    <h1>Notities niffo</h1>
+                                    <h1>Notities</h1>
                                     <a type="button"
                                        class="nav-link d-flex align-items-end"
                                        data-toggle="modal" data-target="#largechicken">
