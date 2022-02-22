@@ -1,11 +1,4 @@
 <?php
-require_once "backend/functions.php";
-
-InsertBedrijf();
-ViewC();
-editC();
-
-// Controleer of iemand ingelogd is
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
@@ -15,6 +8,14 @@ if ($_SESSION['memb_of'] == 0) {
     $memb_of = $_SESSION['memb_of'];
     header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
 }
+require_once "backend/functions.php";
+
+InsertBedrijf();
+ViewC();
+editC();
+
+// Controleer of iemand ingelogd is
+
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
