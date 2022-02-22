@@ -8,9 +8,10 @@ if (!isset($_SESSION["loggedin"])) {
 }
 $row2 = Getuser();
 if (!$row2['member_of'] == 0) {
-    if ($_SESSION['authentication_level'] === 'Bedrijfsleider1')
-    $memb_of = $_SESSION['memb_of'];
-    header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+    if ($row2['authentication_level'] === 'Bedrijfsleider1') {
+        $memb_of = $row2['memb_of'];
+        header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+    }
 }
 InsertBedrijf();
 ViewC();
