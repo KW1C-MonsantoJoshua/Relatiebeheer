@@ -115,7 +115,7 @@ include "partials/navbar.php";
                                     <div class="tab-content">
 
 
-                                        <div class="tab-pane fade mt-2 show " id="Werknemers" role="tabpanel"
+                                        <div class="tab-pane fade mt-2 show active" id="Werknemers" role="tabpanel"
                                              aria-labelledby="account-tab">
                                             <div class="row">
                                                 <div class="col-12">
