@@ -200,13 +200,8 @@ $row = Getuser();
                         <a class="" href="<?php
                         echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
                         ?>">
-                            <div class="fonticon-wrap">
-                                <i class="icon-speech">
-                                </i>
-                                <span class="text">Communicatie</span>
-                            </div>
-<!--                            <i class="icon-speech"></i>-->
-<!--                            <span class="text">Communicatie</span>-->
+                            <i class="icon-speech"></i>
+                            <span class="text">Communicatie</span>
                         </a>
                         <?php
 
