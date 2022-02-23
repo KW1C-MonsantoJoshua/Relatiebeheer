@@ -232,9 +232,9 @@ include "partials/navbar.php";
                                             <!-- Account content ends -->
 
                                             <!-- Information content starts -->
-                                            <div class="tab-pane fade mt-2 show" id="relatie_werknemers"
+                                            <div class="tab-pane fade mt-2 show active" id="relatie_werknemers"
                                                  role="tabpanel"
-                                                 aria-labelledby="Zakelijk-tab">
+                                                 aria-labelledby="account-tab">
                                                 <!-- Media object starts -->
                                                 <!-- Media object ends -->
                                                 <form method="post">
