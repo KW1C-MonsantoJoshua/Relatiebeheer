@@ -157,7 +157,9 @@ $row = Getuser();
                     ?>
                 </li>
                 <li class="nav-item">
-                    <?php if ($row["authentication_level"] === 'Admin' || 'Bedrijfsleider') {
+                    <?php
+                    if ( preg_match('/^\d+$/', $_GET['custof']) ) {
+                    if ($row["authentication_level"] === 'Admin' || 'Bedrijfsleider') {
                         ?>
                         <a class="" href="bedrijfs_overzicht.php">
                             <i class="ft-align-justify"></i>
@@ -165,6 +167,7 @@ $row = Getuser();
                         </a>
                         <?php
                    }
+                    }
                    ?>
                 </li>
             </ul>
