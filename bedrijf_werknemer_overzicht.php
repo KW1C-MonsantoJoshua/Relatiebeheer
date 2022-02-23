@@ -88,22 +88,6 @@ include "partials/navbar.php";
                                 <section id="file-export">
                                     <ul class="nav nav-tabs" role="tablist" id="tabs">
                                         <li class="nav-item active">
-                                            <a href="#Particulier" role="tab" id="account-tab"
-                                               class="nav-link d-flex align-items-center active" data-toggle="tab"
-                                               aria-controls="account" aria-selected="true">
-                                                <i class="ft-user mr-1"></i>
-                                                <span class="d-none d-sm-block">Particulier</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#Zakelijk" role="tab" id="information-tab"
-                                               class="nav-link d-flex align-items-center " data-toggle="tab"
-                                               aria-controls="information" aria-selected="false">
-                                                <i class="ft-info mr-1"></i>
-                                                <span class="d-none d-sm-block">Zakelijk</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item active">
                                             <a href="#Werknemers" role="tab" id="account-tab"
                                                class="nav-link d-flex align-items-center " data-toggle="tab"
                                                aria-controls="account" aria-selected="true">
@@ -1210,8 +1194,6 @@ include "partials/footer.php";
             // de checker niffo
 
             postcode = num_deel + alpha_deel;
-            document.getElementById("postcode_p").value = postcode;
-            document.getElementById("postcode_z").value = postcode;
             document.getElementById("postcode_w").value = postcode;
         }
 
@@ -1221,15 +1203,11 @@ include "partials/footer.php";
                 maak_leeg();
                 return;
             }
-            document.getElementById("huisnr_p").value = huisnr;
-            document.getElementById("huisnr_z").value = huisnr;
             document.getElementById("huisnr_w").value = huisnr;
         }
 
         if (wat === "toevoeging") {
             toevoeging = waarde.trim();
-            document.getElementById("toevoeging_p").value = toevoeging;
-            document.getElementById("toevoeging_z").value = toevoeging;
             document.getElementById("toevoeging_w").value = toevoeging;
         }
 
@@ -1267,11 +1245,7 @@ include "partials/footer.php";
                 }
                 // 0 = straat - 1 = plaats
                 aResponse = rString.split(";");
-                document.getElementById("straat_p").value = aResponse[0];
-                document.getElementById("straat_z").value = aResponse[0];
                 document.getElementById("straat_w").value = aResponse[0];
-                document.getElementById("plaats_p").value = aResponse[1];
-                document.getElementById("plaats_z").value = aResponse[1];
                 document.getElementById("plaats_w").value = aResponse[1];
             }
         };
@@ -1281,10 +1255,6 @@ include "partials/footer.php";
     }
 
     function maak_leeg() {
-        document.getElementById("straat_p").value = "";
-        document.getElementById("plaats_p").value = "";
-        document.getElementById("straat_z").value = "";
-        document.getElementById("plaats_z").value = "";
         document.getElementById("straat_w").value = "";
         document.getElementById("plaats_w").value = "";
     }
