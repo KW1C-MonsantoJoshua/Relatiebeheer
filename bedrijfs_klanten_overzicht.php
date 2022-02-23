@@ -1206,7 +1206,8 @@ include "partials/footer.php";
             // de checker niffo
 
             postcode = num_deel + alpha_deel;
-            document.getElementById("postcode_w").value = postcode;
+            document.getElementById("postcode_p").value = postcode;
+            document.getElementById("postcode_z").value = postcode;
         }
 
         if (wat === "huisnr") {
@@ -1215,12 +1216,14 @@ include "partials/footer.php";
                 maak_leeg();
                 return;
             }
-            document.getElementById("huisnr_w").value = huisnr;
+            document.getElementById("huisnr_p").value = huisnr;
+            document.getElementById("huisnr_z").value = huisnr;
         }
 
         if (wat === "toevoeging") {
             toevoeging = waarde.trim();
-            document.getElementById("toevoeging_w").value = toevoeging;
+            document.getElementById("toevoeging_p").value = toevoeging;
+            document.getElementById("toevoeging_z").value = toevoeging;
         }
 
         if (huisnr === 0) {
@@ -1257,8 +1260,10 @@ include "partials/footer.php";
                 }
                 // 0 = straat - 1 = plaats
                 aResponse = rString.split(";");
-                document.getElementById("straat_w").value = aResponse[0];
-                document.getElementById("plaats_w").value = aResponse[1];
+                document.getElementById("straat_p").value = aResponse[0];
+                document.getElementById("straat_z").value = aResponse[0];
+                document.getElementById("plaats_p").value = aResponse[1];
+                document.getElementById("plaats_z").value = aResponse[1];
             }
         };
 
@@ -1267,8 +1272,10 @@ include "partials/footer.php";
     }
 
     function maak_leeg() {
-        document.getElementById("straat_w").value = "";
-        document.getElementById("plaats_w").value = "";
+        document.getElementById("straat_p").value = "";
+        document.getElementById("plaats_p").value = "";
+        document.getElementById("straat_z").value = "";
+        document.getElementById("plaats_z").value = "";
     }
 </script>
 
