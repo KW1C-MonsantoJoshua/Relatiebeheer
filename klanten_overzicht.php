@@ -11,7 +11,7 @@ $row2 = Getuser();
 //    }
 //if (!($row2['authentication_level'] === "Admin")) {
     if(!($row2['authentication_level'] === "Admin")){
-        if($row2['member_of'] === $_GET['member_of']){
+        if($row2['member_of'] === $_GET['membof']){
             $membof = $row2['member_of'];
             header("Location:../bedrijfs_klanten_overzicht.php?custof=$membof&membof=$membof");
         }
