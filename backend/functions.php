@@ -257,7 +257,7 @@ function Getpersonnel()
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="klanten_overzicht.php?custof=<?= $rowPersonnel["id"] ?>&membof=<?= $rowPersonnel["id"] ?>">
+                        <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="klanten_overzicht.php?custof=<?= $_GET["membof"] ?>&membof=<?= $_GET["membof"] ?>">
                             <i
                                     class="ft-arrow-down"></i>
                         </a>
