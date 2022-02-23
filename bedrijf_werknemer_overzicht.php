@@ -242,7 +242,6 @@ include "partials/navbar.php";
                                                                         <input type="hidden" name="membof"
                                                                                value="<?= $_GET["membof"] ?>">
                                                                     </div>
-                                                                    </br>
                                                                     <div class="controls">
                                                                     <label for="users-edit-username">Voornaam</label>
                                                                     <input type="text" id="users-edit-username"
