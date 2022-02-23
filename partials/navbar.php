@@ -198,7 +198,7 @@ $row = Getuser();
                         $memb_of = $_GET['membof'];
                         ?>
                         <a class="" href="<?php
-                        echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
+                        echo "communicatie.php?custof=$memb_of&membof=$memb_of";
                         ?>">
                             <i class="icon-speech"></i>
                             <span class="text">Communicatie</span>
