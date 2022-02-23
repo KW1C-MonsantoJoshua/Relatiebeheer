@@ -119,14 +119,14 @@ include "partials/navbar.php";
                                                 <span class="d-none d-sm-block">Toevoegen</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item active">
-                                            <a href="#Settings" role="tab" id="account-tab"
-                                               class="nav-link d-flex align-items-center " data-toggle="tab"
-                                               aria-controls="account" aria-selected="true">
-                                                <i class="ft-settings mr-1"></i>
-                                                <span class="d-none d-sm-block">Instellingen</span>
-                                            </a>
-                                        </li>
+<!--                                        <li class="nav-item active">-->
+<!--                                            <a href="#Settings" role="tab" id="account-tab"-->
+<!--                                               class="nav-link d-flex align-items-center " data-toggle="tab"-->
+<!--                                               aria-controls="account" aria-selected="true">-->
+<!--                                                <i class="ft-settings mr-1"></i>-->
+<!--                                                <span class="d-none d-sm-block">Instellingen</span>-->
+<!--                                            </a>-->
+<!--                                        </li>-->
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane fade mt-2 show active" id="Particulier" role="tabpanel"
