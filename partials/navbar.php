@@ -165,7 +165,7 @@ $row = Getuser();
                             <a class="" href="<?php
                             echo "bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of";
                             ?>">
-                                <i class="ft-align-justify"></i>
+                                <i class="ft-book-justify "></i>
                                 <span class="text">Relaties</span>
                             </a>
                             <?php
