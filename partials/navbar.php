@@ -160,8 +160,11 @@ $row = Getuser();
                     <?php
                     if(isset($_GET['membof'])) {
                     if ($row["authentication_level"] === 'Admin' || 'Bedrijfsleider') {
+                        $memb_of = $_GET['membof'];
                         ?>
-                        <a class="" href="bedrijfs_overzicht.php">
+                        <a class="" href="<?
+                        echo "bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of";
+                        ?>">
                             <i class="ft-align-justify"></i>
                             <span class="text">Instellingen</span>
                         </a>
