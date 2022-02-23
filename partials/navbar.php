@@ -233,7 +233,7 @@ $row = Getuser();
                             $memb_of = $_GET['membof'];
                             ?>
                             <a class="" href="<?php
-                            echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
+                            echo "bedrijf_instellingen.php?custof=$memb_of&membof=$memb_of";
                             ?>">
                                 <i class="icon-settings"></i>
                                 <span class="text">Instellingen</span>
