@@ -219,23 +219,6 @@ include "partials/navbar.php";
                                         <!-- Nav-tabs -->
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class="nav-item">
-                                                <a href="#relatie_particulier" role="tab" id="account-tab"
-                                                   class="nav-link d-flex align-items-center active"
-                                                   data-toggle="tab"
-                                                   aria-controls="account" aria-selected="true">
-                                                    <i class="ft-user mr-1"></i>
-                                                    <span class="d-none d-sm-block">Particulier</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#relatie_zakelijk" role="tab" id="information-tab"
-                                                   class="nav-link d-flex align-items-center" data-toggle="tab"
-                                                   aria-controls="information" aria-selected="false">
-                                                    <i class="ft-info mr-1"></i>
-                                                    <span class="d-none d-sm-block">Zakelijk</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
                                                 <a href="#relatie_werknemers" role="tab" id="information-tab"
                                                    class="nav-link d-flex align-items-center" data-toggle="tab"
                                                    aria-controls="information" aria-selected="false">
