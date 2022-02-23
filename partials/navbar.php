@@ -180,7 +180,7 @@ $row = Getuser();
                             $memb_of = $_GET['membof'];
                             ?>
                             <a class="" href="<?php
-                            echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
+                            echo "bedrijf_werknemer_overzicht.php?custof=$memb_of&membof=$memb_of";
                             ?>">
                                 <i class="ft-book"></i>
                                 <span class="text">Werknemers</span>
