@@ -182,7 +182,7 @@ $row = Getuser();
                             <a class="" href="<?php
                             echo "bedrijf_werknemer_overzicht.php?custof=$memb_of&membof=$memb_of";
                             ?>">
-                                <i class="ft-book"></i>
+                                <i class="icon-users"></i>
                                 <span class="text">Werknemers</span>
                             </a>
                             <?php
