@@ -229,58 +229,58 @@ include "partials/navbar.php";
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade mt-2 show " id="Werknemers" role="tabpanel"
-                                             aria-labelledby="account-tab">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="table-responsive">
-                                                        <div>
-                                                            <?php
-                                                            if (isset($_GET["toevoegenMemb"])) {
-                                                                if ($_GET["toevoegenMemb"] == "empty") {
-                                                                    echo "<p class='text-danger'>Vul alle velden in aub</p>";
-                                                                } elseif ($_GET["toevoegenMemb"] == "namefout") {
-                                                                    echo "<p class='text-danger'>Voornaam heeft foute tekens</p>";
-                                                                } elseif ($_GET["toevoegenMemb"] == "telfout") {
-                                                                    echo "<p class='text-danger'>Telefoonnummer klopt niet</p>";
-                                                                } elseif ($_GET["toevoegenMemb"] == "mailfout") {
-                                                                    echo "<p class='text-danger'>Email klopt niet</p>";
-                                                                } elseif ($_GET["toevoegenMemb"] == "emaildupli") {
-                                                                    echo "<p class='text-danger'>Email bestaat al</p>";
-                                                                } elseif ($_GET["toevoegenMemb"] == "straatfout") {
-                                                                    echo "<p class='text-danger'>Straatnaam mag geen nummers bevatten!</p>";
-                                                                } elseif ($_GET["toevoegenMemb"] == "postcodefout") {
-                                                                    echo "<p class='text-danger'>Ongeldige postcode !</p>";
-                                                                }
-                                                                if ($_GET["toevoegenMemb"] == "succes") {
-                                                                    echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
-                                                                }
-                                                            }
-                                                            ?>
-                                                        </div>
-                                                        <table class="table table-striped table-bordered file-export">
-                                                            <thead>
-                                                            <tr>
-                                                                <th>ID</th>
-                                                                <th>Voornaam</th>
-                                                                <th>Email</th>
-                                                                <th>Telefoonnummer</th>
-                                                                <th>Niveau</th>
-                                                                <th>Handelingen</th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <?php
-                                                            GetPersonnel();
-                                                            //GetCompanyPersonneel();
-
-                                                            ?>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+<!--                                        <div class="tab-pane fade mt-2 show " id="Werknemers" role="tabpanel"-->
+<!--                                             aria-labelledby="account-tab">-->
+<!--                                            <div class="row">-->
+<!--                                                <div class="col-12">-->
+<!--                                                    <div class="table-responsive">-->
+<!--                                                        <div>-->
+<!--                                                            --><?php
+//                                                            if (isset($_GET["toevoegenMemb"])) {
+//                                                                if ($_GET["toevoegenMemb"] == "empty") {
+//                                                                    echo "<p class='text-danger'>Vul alle velden in aub</p>";
+//                                                                } elseif ($_GET["toevoegenMemb"] == "namefout") {
+//                                                                    echo "<p class='text-danger'>Voornaam heeft foute tekens</p>";
+//                                                                } elseif ($_GET["toevoegenMemb"] == "telfout") {
+//                                                                    echo "<p class='text-danger'>Telefoonnummer klopt niet</p>";
+//                                                                } elseif ($_GET["toevoegenMemb"] == "mailfout") {
+//                                                                    echo "<p class='text-danger'>Email klopt niet</p>";
+//                                                                } elseif ($_GET["toevoegenMemb"] == "emaildupli") {
+//                                                                    echo "<p class='text-danger'>Email bestaat al</p>";
+//                                                                } elseif ($_GET["toevoegenMemb"] == "straatfout") {
+//                                                                    echo "<p class='text-danger'>Straatnaam mag geen nummers bevatten!</p>";
+//                                                                } elseif ($_GET["toevoegenMemb"] == "postcodefout") {
+//                                                                    echo "<p class='text-danger'>Ongeldige postcode !</p>";
+//                                                                }
+//                                                                if ($_GET["toevoegenMemb"] == "succes") {
+//                                                                    echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
+//                                                                }
+//                                                            }
+//                                                            ?>
+<!--                                                        </div>-->
+<!--                                                        <table class="table table-striped table-bordered file-export">-->
+<!--                                                            <thead>-->
+<!--                                                            <tr>-->
+<!--                                                                <th>ID</th>-->
+<!--                                                                <th>Voornaam</th>-->
+<!--                                                                <th>Email</th>-->
+<!--                                                                <th>Telefoonnummer</th>-->
+<!--                                                                <th>Niveau</th>-->
+<!--                                                                <th>Handelingen</th>-->
+<!--                                                            </tr>-->
+<!--                                                            </thead>-->
+<!--                                                            <tbody>-->
+<!--                                                            --><?php
+//                                                            GetPersonnel();
+//                                                            //GetCompanyPersonneel();
+//
+//                                                            ?>
+<!--                                                            </tbody>-->
+<!--                                                        </table>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
                                         <div class="tab-pane fade mt-2 show " id="Settings" role="tabpanel"
                                              aria-labelledby="account-tab">
                                             <div class="row justify-content-center">
