@@ -2487,7 +2487,7 @@ function InsertNotes() {
                 $stmt->close();
                 $mysqli->close();
                 $k = 1;
-        header("Location:bedrijf_profiel.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&k=1");
+        header("Location:communicatie.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&k=1");
             }
 }
 
