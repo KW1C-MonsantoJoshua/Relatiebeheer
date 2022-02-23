@@ -10,9 +10,11 @@ $row2 = Getuser();
 //        header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
 //    }
 //if (!($row2['authentication_level'] === "Admin")) {
-    if($row2['authentication_level'] === "Werknemer") {
-        $membof = $row2['member_of'];
-        header("Location:../bedrijfs_klanten_overzicht.php?custof=$membof&membof=$membof");
+    if(!($row2['authentication_level'] === "Admin")){
+        if($row2['member_of'] === $_GET['member_of']){
+            $membof = $row2['member_of'];
+            header("Location:../bedrijfs_klanten_overzicht.php?custof=$membof&membof=$membof");
+        }
     }
 //}
 //if (!($row2['member_of'] == $_GET['custof'])) {
