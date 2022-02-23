@@ -219,7 +219,7 @@ $row = Getuser();
                             echo "error bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
                             ?>">
                                 <i class="ft-file-text"></i>
-                                <span class="text">Facturen (Dayal)</span>
+                                <span class="text">Facturen (Dayal) Ga werken swa</span>
                             </a>
                             <?php
 
