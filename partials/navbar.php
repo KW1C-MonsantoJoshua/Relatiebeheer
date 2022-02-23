@@ -142,14 +142,14 @@ $row = Getuser();
                             ?>
                             <a class=""
                                href="bedrijfs_klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
-                                <i class="ft-align-justify"></i>
+                                <i class="ft-bar-chart-2"></i>
                                 <span class="text">Relaties</span>
                             </a>
                         <?php } elseif ($_SESSION['auth'] == "Werknemer") {
                             ?>
                             <a class=""
                                href="klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
-                                <i class="ft-align-justify"></i>
+                                <i class="ft-bar-chart-2"></i>
                                 <span class="text">Relaties</span>
                             </a>
                         <?php }
