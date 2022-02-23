@@ -183,7 +183,7 @@ $row = Getuser();
                         echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
                         ?>">
                             <i class="ft-book"></i>
-                            <span class="text">Instellingen</span>
+                            <span class="text"><?php echo $row['authentication_level']; ?>Instellingen</span>
                         </a>
                         <?php
                    }
