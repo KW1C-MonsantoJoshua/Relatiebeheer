@@ -214,7 +214,6 @@ include "partials/navbar.php";
                     <section class="users-edit">
                         <div class="row">
                             <div class="col-12">
-                                <div class="">
                                     <div class="card-content">
                                         <!-- Nav-tabs -->
                                         <div class="tab-content">
@@ -376,7 +375,6 @@ include "partials/navbar.php";
                                             <!-- Information content ends -->
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </section>
