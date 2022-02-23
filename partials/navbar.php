@@ -156,6 +156,17 @@ $row = Getuser();
                     }
                     ?>
                 </li>
+                <li class="nav-item">
+                    <?php if ($row["authentication_level"] === 'Admin' || 'Bedrijfsleider') {
+                        ?>
+                        <a class="" href="bedrijfs_overzicht.php">
+                            <i class="ft-align-justify"></i>
+                            <span class="text">Instellingen</span>
+                        </a>
+                        <?php
+                   }
+                   ?>
+                </li>
             </ul>
         </div>
     </div>
