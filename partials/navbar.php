@@ -186,7 +186,8 @@ $row = Getuser();
                             <span class="text"><?php echo $row['authentication_level']; ?>Instellingen</span>
                         </a>
                         <?php
-                   }
+
+                    }
                     }
                    ?>
                 </li>
