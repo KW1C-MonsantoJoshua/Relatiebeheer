@@ -235,7 +235,7 @@ $row = Getuser();
                             <a class="" href="<?php
                             echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
                             ?>">
-                                <i class="ft-book"></i>
+                                <i class="icon-settings"></i>
                                 <span class="text">Instellingen</span>
                             </a>
                             <?php
