@@ -176,7 +176,7 @@ $row = Getuser();
                 <li class="nav-item">
                     <?php
                     if(isset($_GET['membof'])) {
-                    if ($row['authentication_level'] === 'Werknemer') {
+                    if ($row['authentication_level'] === 'Admin') {
                         $memb_of = $_GET['membof'];
                         ?>
                         <a class="" href="<?php
