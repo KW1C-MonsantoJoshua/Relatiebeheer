@@ -1367,35 +1367,155 @@ include "partials/navbar.php";
         <div class="content-wrapper">
             <div class="row justify-content-center">
                 <div class="col-md-9">
-<!--                    <div class="card">-->
-<!--                        <div class="card-content">-->
-<!--                            <div class="card-body">-->
-<!--                                <div class="tab-content">-->
-<!--                                    <!-- General Tab -->-->
-<!--                                    <h1>Notities</h1>-->
-<!--                                    <a type="button"-->
-<!--                                       class="nav-link d-flex align-items-end"-->
-<!--                                       data-toggle="modal" data-target="#largechicken">-->
-<!--                                        <i class="ft-plus mr-1"></i>-->
-<!--                                        <span class="d-none d-sm-block">Toevoegen</span>-->
-<!--                                    </a>-->
-<!--                                    <div class="tab-pane active" id="general2" role="tabpanel"-->
-<!--                                         aria-labelledby="general-tab">-->
-<!--                                        <hr class="mt-1 mt-sm-2">-->
-<!--                                        <div class="container1">-->
-<!--                                            <div class="row1">-->
-<!--                                                --><?php //ViewNote2(); ?>
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!---->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!---->
-<!--                    </br>-->
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <!-- General Tab -->
+                                    <h1>Info <?php GetCompanyName(); ?></h1>
+                                    <div class="tab-pane active" id="general1" role="tabpanel"
+                                         aria-labelledby="general-tab">
+                                        <hr class="mt-1 mt-sm-2">
+                                        <form method="post" id="Instellingen" action="bedrijf_profiel.php?custof=<?=$_GET["custof"]?>&membof=<?=$_GET["membof"]?>&u=1">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <h4>Gegevens 1</h4>
+                                                        <div class="form-group">
+                                                            <label for="bedrijfsnaam"
+                                                                   class="sr-only">Bedrijfsnaamm</label>
+                                                            <input type="text" id="bedrijfsnaam"
+                                                                   class="form-control"
+                                                                   placeholder="Bedrijfsnaam"
+                                                                   name="name"
+                                                                   value="<?= $rowC["name"]; ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="telefoon"
+                                                                   class="sr-only">Telefoon</label>
+                                                            <input type="text" id="telefoon"
+                                                                   class="form-control"
+                                                                   placeholder="Telefoon"
+                                                                   name="telefoon"
+                                                                   value="<?= $rowC['phoneNumber'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="email"
+                                                                   class="sr-only">Email</label>
+                                                            <input type="text" id="email"
+                                                                   class="form-control"
+                                                                   placeholder="Email"
+                                                                   name="email"
+                                                                   value="<?= $rowC['email'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="postcode"
+                                                                   class="sr-only">Postcode</label>
+                                                            <input type="text" id="postcode"
+                                                                   class="form-control"
+                                                                   placeholder="Postcode"
+                                                                   name="postcode"
+                                                                   value="<?= $rowC['postalcode'] ?>"
+                                                                   onkeyup="check_pc(&quot;postcode&quot;,this.value)">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="controls col-md-6">
+                                                                <label for="huisnummer"
+                                                                       class="sr-only">Huisnummer</label>
+                                                                <input type="text" id="huisnr"
+                                                                       class="form-control"
+                                                                       placeholder="Huisnummer"
+                                                                       name="huisnummer"
+                                                                       value="<?= $rowC['housenumber'] ?>"
+                                                                       onkeyup="check_pc(&quot;huisnr&quot;,this.value)">
 
+                                                            </div>
+                                                            <div class="controls col-md-6">
+                                                                <label for="toevoeging"
+                                                                       class="sr-only">Toevoeging</label>
+                                                                <input type="text" id="toevoeging"
+                                                                       class="form-control"
+                                                                       placeholder="Toevoeging"
+                                                                       name="toevoeging"
+                                                                       value="<?= $rowC['housenumberAddition'] ?>"
+                                                                       onkeyup="check_pc(&quot;toevoeging&quot;,this.value)">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="adres"
+                                                                   class="sr-only">Adres</label>
+                                                            <input type="text" id="straat"
+                                                                   class="form-control"
+                                                                   placeholder="Adres"
+                                                                   name="street"
+                                                                   value="<?= $rowC['street'] ?>">
+                                                        </div>
+                                                        </br>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <h4>Gegevens 2</h4>
+                                                        <div class="form-group">
+                                                            <label for="btw"
+                                                                   class="sr-only">BTW
+                                                                Nummer</label>
+                                                            <input type="text" id="btw"
+                                                                   class="form-control"
+                                                                   placeholder="BTW Nummer"
+                                                                   name="btw"
+                                                                   value="<?= $rowC['btw_nummer'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="bic"
+                                                                   class="sr-only">BIC</label>
+                                                            <input class="form-control"
+                                                                   type="text"
+                                                                   name="bic"
+                                                                   placeholder="BIC"
+                                                                   id="bic">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="kvk"
+                                                                   class="sr-only">KVK
+                                                                Nummer</label>
+                                                            <input class="form-control"
+                                                                   type="text"
+                                                                   placeholder="KVK Nummer"
+                                                                   id="kvk"
+                                                                   name="kvk"
+                                                                   value="<?= $rowC['kvk_nummer'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="iban"
+                                                                   class="sr-only">IBAN
+                                                                Nummer</label>
+                                                            <input class="form-control"
+                                                                   type="text"
+                                                                   placeholder="IBAN Nummer"
+                                                                   id="iban"
+                                                                   name="iban"
+                                                                   value="<?= $rowC['iban_nummer'] ?>">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="reset"
+                                                        data-dismiss="modal"
+                                                        class="btn btn-secondary">Annuleren
+                                                </button>
+                                                <input type="submit"
+                                                       class="btn btn-primary"
+                                                       name="Instellingen"
+                                                       value="Opslaan">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Tab panes -->
                     <div class="card">
                         <div class="card-content">
