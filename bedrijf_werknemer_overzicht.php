@@ -205,7 +205,7 @@ include "partials/navbar.php";
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel17">Relatie toevoegen</h4>
+                    <h4 class="modal-title" id="myModalLabel17">Werknemer toevoegen</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                     </button>
