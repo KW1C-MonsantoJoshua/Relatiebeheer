@@ -720,14 +720,14 @@ include "partials/navbar.php";
                                                     <span class="d-none d-sm-block">Zakelijk</span>
                                                 </a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a href="#relatie_werknemers" role="tab" id="information-tab"
-                                                   class="nav-link d-flex align-items-center" data-toggle="tab"
-                                                   aria-controls="information" aria-selected="false">
-                                                    <i class="ft-info mr-1"></i>
-                                                    <span class="d-none d-sm-block">Werknemers</span>
-                                                </a>
-                                            </li>
+<!--                                            <li class="nav-item">-->
+<!--                                                <a href="#relatie_werknemers" role="tab" id="information-tab"-->
+<!--                                                   class="nav-link d-flex align-items-center" data-toggle="tab"-->
+<!--                                                   aria-controls="information" aria-selected="false">-->
+<!--                                                    <i class="ft-info mr-1"></i>-->
+<!--                                                    <span class="d-none d-sm-block">Werknemers</span>-->
+<!--                                                </a>-->
+<!--                                            </li>-->
                                         </ul>
                                         <div class="tab-content">
                                             <!-- Account content starts -->
