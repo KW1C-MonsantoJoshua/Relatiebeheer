@@ -245,15 +245,21 @@ function Getpersonnel()
                 <div class="row">
                     <div class="col-md-0">
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <a href="#" data-toggle="modal" data-target="#editPersonnel<?= $rowPersonnel["id"] ?>">
                             <i class="ft-edit"></i>
                         </a>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <a data-toggle="modal" data-target="#info<?= $rowPersonnel["id"] ?>"
                            href="modals.php?<?= $rowPersonnel["id"] ?>">
                             <i class="ft-eye"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="klanten_overzicht.php?custof=<?= $rowPersonnel["id"] ?>&membof=<?= $rowPersonnel["id"] ?>">
+                            <i
+                                    class="ft-arrow-down"></i>
                         </a>
                     </div>
                 </div>
