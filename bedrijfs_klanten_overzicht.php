@@ -103,14 +103,14 @@ include "partials/navbar.php";
                                                 <span class="d-none d-sm-block">Zakelijk</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item active">
-                                            <a href="#Werknemers" role="tab" id="account-tab"
-                                               class="nav-link d-flex align-items-center " data-toggle="tab"
-                                               aria-controls="account" aria-selected="true">
-                                                <i class="ft-user mr-1"></i>
-                                                <span class="d-none d-sm-block">Werknemers</span>
-                                            </a>
-                                        </li>
+<!--                                        <li class="nav-item active">-->
+<!--                                            <a href="#Werknemers" role="tab" id="account-tab"-->
+<!--                                               class="nav-link d-flex align-items-center " data-toggle="tab"-->
+<!--                                               aria-controls="account" aria-selected="true">-->
+<!--                                                <i class="ft-user mr-1"></i>-->
+<!--                                                <span class="d-none d-sm-block">Werknemers</span>-->
+<!--                                            </a>-->
+<!--                                        </li>-->
                                         <li class="nav-tabs">
                                             <a type="button"
                                                class="nav-link d-flex align-items-end"
