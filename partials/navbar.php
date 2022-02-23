@@ -183,7 +183,7 @@ $row = Getuser();
                         echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
                         ?>">
                             <i class="ft-book"></i>
-                            <span class="text"><?php echo $row['authentication_level']; ?>Instellingen</span>
+                            <span class="text">Communicatie</span>
                         </a>
                         <?php
 
@@ -191,7 +191,41 @@ $row = Getuser();
                     }
                    ?>
                 </li>
+                <li class="nav-item">
+                    <?php
+                    if(isset($_GET['membof'])) {
+                        if ($row['authentication_level'] === 'Admin' || $row['authentication_level'] === 'Bedrijfsleider') {
+                            $memb_of = $_GET['membof'];
+                            ?>
+                            <a class="" href="<?php
+                            echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
+                            ?>">
+                                <i class="ft-book"></i>
+                                <span class="text">Facturen</span>
+                            </a>
+                            <?php
 
+                        }
+                    }
+                    ?>
+                <li class="nav-item">
+                    <?php
+                    if(isset($_GET['membof'])) {
+                        if ($row['authentication_level'] === 'Admin' || $row['authentication_level'] === 'Bedrijfsleider') {
+                            $memb_of = $_GET['membof'];
+                            ?>
+                            <a class="" href="<?php
+                            echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
+                            ?>">
+                                <i class="ft-book"></i>
+                                <span class="text">Instellingen</span>
+                            </a>
+                            <?php
+
+                        }
+                    }
+                    ?>
+                </li>
             </ul>
         </div>
     </div>
