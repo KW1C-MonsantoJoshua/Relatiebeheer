@@ -231,7 +231,6 @@ include "partials/navbar.php";
                                                         <div class="col-12 col-md-4">
                                                             <div class="form-group">
                                                                 <h4>Klantgegevens</h4>
-                                                                <div class="controls">
                                                                     <div class="controls" style="display: none;">
                                                                         <label for="bedrijfsnaam">Bedrijfsnaam</label>
                                                                         <input type="text" id="bedrijfsnaam"
@@ -244,6 +243,7 @@ include "partials/navbar.php";
                                                                                value="<?= $_GET["membof"] ?>">
                                                                     </div>
                                                                     </br>
+                                                                    <div class="controls">
                                                                     <label for="users-edit-username">Voornaam</label>
                                                                     <input type="text" id="users-edit-username"
                                                                            class="form-control round"
