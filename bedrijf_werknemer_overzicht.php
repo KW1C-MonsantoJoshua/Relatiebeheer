@@ -232,7 +232,7 @@ include "partials/navbar.php";
                                                             <div class="form-group">
                                                                 <h4>Klantgegevens</h4>
                                                                     <div class="controls" style="display: none;">
-                                                                        <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                                                                        <label for="bedrijfsnaam">Werknemer</label>
                                                                         <input type="text" id="bedrijfsnaam"
                                                                                class="form-control round"
                                                                                pattern="[a-zA-Z\s\.0-9]{1,15}"
