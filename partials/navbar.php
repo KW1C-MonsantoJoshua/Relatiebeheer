@@ -158,7 +158,7 @@ $row = Getuser();
                 </li>
                 <li class="nav-item">
                     <?php
-                    if(isset($_GET['member_of'])) {
+                    if(isset($_GET['membof'])) {
                     if ($row["authentication_level"] === 'Admin' || 'Bedrijfsleider') {
                         ?>
                         <a class="" href="bedrijfs_overzicht.php">
