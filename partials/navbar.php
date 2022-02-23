@@ -173,6 +173,23 @@ $row = Getuser();
                     }
                    ?>
                 </li>
+                <li class="nav-item">
+                    <?php
+                    if(isset($_GET['membof'])) {
+                        if ($row["authentication_level"] === 'Admin' || 'Bedrijfsleider') {
+                            $memb_of = $_GET['membof'];
+                            ?>
+                            <a class="" href="<?php
+                            echo "bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of";
+                            ?>">
+                                <i class="ft-align-justify"></i>
+                                <span class="text">Instellingen</span>
+                            </a>
+                            <?php
+                        }
+                    }
+                    ?>
+                </li>
             </ul>
         </div>
     </div>
