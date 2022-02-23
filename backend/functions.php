@@ -764,7 +764,7 @@ function GetCustomerP()
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="klanten_overzicht.php?custof=<?= $_GET['custof'] ?>&membof=<?= $_GET["custof"] ?>">
+                        <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="klanten_overzicht.php?custof=<?= $rowCustomerP["id"] ?>&membof=<?= $rowCustomerP["id"] ?>">
                             <i
                                     class="ft-arrow-down"></i>
                         </a>
