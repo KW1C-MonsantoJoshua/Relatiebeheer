@@ -749,7 +749,7 @@ function GetCustomerP()
                     <?php
                     if ($_SESSION['auth'] == "Bedrijfsleider" || $_SESSION['auth'] == "Admin" || $_SESSION['auth'] = "Werknemer") {
                         ?>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <a href="#" data-toggle="modal" data-target="#editP<?= $rowCustomerP["id"] ?>">
                                 <i class="ft-edit"></i>
                             </a>
@@ -757,13 +757,13 @@ function GetCustomerP()
                         <?php
                     }
                     ?>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <a data-toggle="modal" data-target="#info<?= $rowCustomerP["id"] ?>"
                            href="modals.php?<?= $rowCustomerP["id"] ?>">
                             <i class="ft-eye"></i>
                         </a>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <a data-toggle="tooltip" data-original-title="Level omlaag" data-placement="bottom" href="bedrijfs_klanten_overzicht.php?custof=<?= $row["id"] ?>&membof=<?= $row["id"] ?>">
                             <i
                                     class="ft-arrow-down"></i>
