@@ -1,4 +1,5 @@
 <?php
+
 include "backend/functions.php";
 
 
@@ -31,9 +32,10 @@ EditNoteExtra();
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 <style>
     .kip1 {
-        float:right;
+        float: right;
         width: fit-content;
     }
+
     /*.num1 {*/
     /*    background-color: yellow;*/
     /*    width: 100%;*/
@@ -46,6 +48,7 @@ EditNoteExtra();
         padding-right: 40px;
         padding-top: 5px;
     }
+
     .card {
         position: relative;
         display: flex;
@@ -58,6 +61,7 @@ EditNoteExtra();
         border-radius: 0.35rem;
         padding-bottom: 5px;
     }
+
     .comment5 h4,
     .comment5 span,
     .darker h4,
@@ -69,13 +73,13 @@ EditNoteExtra();
         width: 100%
     }
 
-    @media(min-width:568px) {
+    @media (min-width: 568px) {
         .end {
             margin-left: auto
         }
     }
 
-    @media(max-width:768px) {
+    @media (max-width: 768px) {
         #post {
             width: 100%
         }
@@ -204,9 +208,11 @@ EditNoteExtra();
     .widget .label-info {
         float: right
     }
+
     html body.layout-dark.layout-transparent .list-group .list-group-item {
-        border-color: black!important;
+        border-color: black !important;
     }
+
     .widget li.list-group-item {
         border-radius: 0;
         border: 0;
@@ -1398,69 +1404,69 @@ include "partials/navbar.php";
                 <!--                    </div>-->
                 <div class="col-md-9">
                     <!-- Tab panes -->
-<!--                        <section id="horizontal-form-layout">-->
-<!--                            <div class="row match-height">-->
-<!--                                <div class="col-12">-->
-<!--                                    <div class="card">-->
-<!--                                        <div class="card-header">-->
-<!--                                            <h4 class="card-title">Facturen Maken</h4>-->
-<!--                                        </div>-->
-<!--                                        <div class="card-content">-->
-<!--                                            <div class="card-body">-->
-<!--                                                <form method="post">-->
-<!--                                                    <div class="row">-->
-<!--                                                        <div class="col-md-6 col-12">-->
-<!--                                                            <div class="form-group row">-->
-<!--                                                                <label class="col-md-3 col-form-label" for="horizontal-form-1">Header</label>-->
-<!--                                                                <div class="col-md-9">-->
-<!--                                                                    <input type="text" class="form-control square" id="horizontal-form-1" name="Header">-->
-<!--                                                                </div>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                        <div class="col-md-6 col-12">-->
-<!--                                                            <div class="form-group row">-->
-<!--                                                                <label class="col-md-3 col-form-label" for="horizontal-form-2">Footer</label>-->
-<!--                                                                <div class="col-md-9">-->
-<!--                                                                    <input type="text" class="form-control square" id="horizontal-form-2" name="Footer">-->
-<!--                                                                </div>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                    <div class="row mb-md-3">-->
-<!--                                                        <div class="col-md-6 col-12">-->
-<!--                                                            <div class="form-group row">-->
-<!--                                                                <label class="col-md-3 col-form-label" for="horizontal-form-3">Datum</label>-->
-<!--                                                                <div class="col-md-9">-->
-<!--                                                                    <input type="text" class="form-control square" id="horizontal-form-3" name="Datum">-->
-<!--                                                                </div>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                        <div class="col-md-6 col-12">-->
-<!--                                                            <div class="form-group row">-->
-<!--                                                                <label class="col-md-3 col-form-label" for="horizontal-form-4">Factuur naam</label>-->
-<!--                                                                <div class="col-md-9">-->
-<!--                                                                    <input type="text" class="form-control square" id="horizontal-form-4" name="Factuur naam">-->
-<!--                                                                </div>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                    <div class="modal-footer">-->
-<!--                                                        <button type="reset"-->
-<!--                                                                data-dismiss="modal"-->
-<!--                                                                class="btn btn-secondary">Annuleren-->
-<!--                                                        </button>-->
-<!--                                                        <input type="submit"-->
-<!--                                                               class="btn btn-primary"-->
-<!--                                                               name="factuur"-->
-<!--                                                               value="Opslaan">-->
-<!--                                                    </div>-->
-<!--                                                </form>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </section>-->
+                    <!--                        <section id="horizontal-form-layout">-->
+                    <!--                            <div class="row match-height">-->
+                    <!--                                <div class="col-12">-->
+                    <!--                                    <div class="card">-->
+                    <!--                                        <div class="card-header">-->
+                    <!--                                            <h4 class="card-title">Facturen Maken</h4>-->
+                    <!--                                        </div>-->
+                    <!--                                        <div class="card-content">-->
+                    <!--                                            <div class="card-body">-->
+                    <!--                                                <form method="post">-->
+                    <!--                                                    <div class="row">-->
+                    <!--                                                        <div class="col-md-6 col-12">-->
+                    <!--                                                            <div class="form-group row">-->
+                    <!--                                                                <label class="col-md-3 col-form-label" for="horizontal-form-1">Header</label>-->
+                    <!--                                                                <div class="col-md-9">-->
+                    <!--                                                                    <input type="text" class="form-control square" id="horizontal-form-1" name="Header">-->
+                    <!--                                                                </div>-->
+                    <!--                                                            </div>-->
+                    <!--                                                        </div>-->
+                    <!--                                                        <div class="col-md-6 col-12">-->
+                    <!--                                                            <div class="form-group row">-->
+                    <!--                                                                <label class="col-md-3 col-form-label" for="horizontal-form-2">Footer</label>-->
+                    <!--                                                                <div class="col-md-9">-->
+                    <!--                                                                    <input type="text" class="form-control square" id="horizontal-form-2" name="Footer">-->
+                    <!--                                                                </div>-->
+                    <!--                                                            </div>-->
+                    <!--                                                        </div>-->
+                    <!--                                                    </div>-->
+                    <!--                                                    <div class="row mb-md-3">-->
+                    <!--                                                        <div class="col-md-6 col-12">-->
+                    <!--                                                            <div class="form-group row">-->
+                    <!--                                                                <label class="col-md-3 col-form-label" for="horizontal-form-3">Datum</label>-->
+                    <!--                                                                <div class="col-md-9">-->
+                    <!--                                                                    <input type="text" class="form-control square" id="horizontal-form-3" name="Datum">-->
+                    <!--                                                                </div>-->
+                    <!--                                                            </div>-->
+                    <!--                                                        </div>-->
+                    <!--                                                        <div class="col-md-6 col-12">-->
+                    <!--                                                            <div class="form-group row">-->
+                    <!--                                                                <label class="col-md-3 col-form-label" for="horizontal-form-4">Factuur naam</label>-->
+                    <!--                                                                <div class="col-md-9">-->
+                    <!--                                                                    <input type="text" class="form-control square" id="horizontal-form-4" name="Factuur naam">-->
+                    <!--                                                                </div>-->
+                    <!--                                                            </div>-->
+                    <!--                                                        </div>-->
+                    <!--                                                    </div>-->
+                    <!--                                                    <div class="modal-footer">-->
+                    <!--                                                        <button type="reset"-->
+                    <!--                                                                data-dismiss="modal"-->
+                    <!--                                                                class="btn btn-secondary">Annuleren-->
+                    <!--                                                        </button>-->
+                    <!--                                                        <input type="submit"-->
+                    <!--                                                               class="btn btn-primary"-->
+                    <!--                                                               name="factuur"-->
+                    <!--                                                               value="Opslaan">-->
+                    <!--                                                    </div>-->
+                    <!--                                                </form>-->
+                    <!--                                            </div>-->
+                    <!--                                        </div>-->
+                    <!--                                    </div>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </section>-->
                     <section id="action-form-layout">
                         <div class="row match-height">
                             <div class="col-12">
@@ -1470,29 +1476,40 @@ include "partials/navbar.php";
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
-                                            <p>You can use form actions on top & bottom and can also align them inside the form.</p>
+                                            <p>You can use form actions on top & bottom and can also align them inside
+                                                the form.</p>
                                             <form>
-                                                <button type="button" class="btn btn-primary mb-2 mr-2"><i class="ft-check-square mr-1"></i>Save</button>
-                                                <button type="button" class="btn btn-secondary mb-2"><i class="ft-x mr-1"></i>Cancel</button>
+                                                <button type="button" class="btn btn-primary mb-2 mr-2"><i
+                                                            class="ft-check-square mr-1"></i>Save
+                                                </button>
+                                                <button type="button" class="btn btn-secondary mb-2"><i
+                                                            class="ft-x mr-1"></i>Cancel
+                                                </button>
                                                 <div class="form-group">
                                                     <label for="form-action-1">Issue Title</label>
-                                                    <input type="text" id="form-action-1" class="form-control" name="issue-title">
+                                                    <input type="text" id="form-action-1" class="form-control"
+                                                           name="issue-title">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="form-action-2">Opened By</label>
-                                                    <input type="text" id="form-action-2" class="form-control" name="opened-by">
+                                                    <input type="text" id="form-action-2" class="form-control"
+                                                           name="opened-by">
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group position-relative">
                                                             <label for="form-action-3">Issue Opened</label>
-                                                            <input type="text" id="form-action-3" class="form-control pickadate" placeholder="Opened Date" name="date-opened">
+                                                            <input type="text" id="form-action-3"
+                                                                   class="form-control pickadate"
+                                                                   placeholder="Opened Date" name="date-opened">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group position-relative">
                                                             <label for="form-action-4">Issue Closed</label>
-                                                            <input type="text" id="form-action-4" class="form-control pickadate" placeholder="Closed Date" name="date-closed">
+                                                            <input type="text" id="form-action-4"
+                                                                   class="form-control pickadate"
+                                                                   placeholder="Closed Date" name="date-closed">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1509,16 +1526,22 @@ include "partials/navbar.php";
                                                     <select id="form-action-6" name="status" class="form-control">
                                                         <option value="Not started">Not started</option>
                                                         <option value="Started">Started</option>
-                                                        <option value="Started but not fixed">Started but not fixed</option>
+                                                        <option value="Started but not fixed">Started but not fixed
+                                                        </option>
                                                         <option value="Fixed">Fixed</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="form-action-7">Comment</label>
-                                                    <textarea id="form-action-7" rows="4" class="form-control" name="comment4"></textarea>
+                                                    <textarea id="form-action-7" rows="4" class="form-control"
+                                                              name="comment4"></textarea>
                                                 </div>
-                                                <button type="button" class="btn btn-primary mr-2"><i class="ft-check-square mr-1"></i>Save</button>
-                                                <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>
+                                                <button type="button" class="btn btn-primary mr-2"><i
+                                                            class="ft-check-square mr-1"></i>Save
+                                                </button>
+                                                <button type="button" class="btn btn-secondary"><i
+                                                            class="ft-x mr-1"></i>Cancel
+                                                </button>
                                             </form>
                                         </div>
                                     </div>
@@ -1526,287 +1549,307 @@ include "partials/navbar.php";
                             </div>
                         </div>
                     </section>
-
-
                     <?php
 
-require "pdf/vendor/autoload.php";
+                    require "pdf/vendor/autoload.php";
 
-class CustomPdfGenerator extends TCPDF
-{
-    public function Header()
-    {
-        $image_file = 'logo2.png';
-        $this->Image($image_file, 20, 3, 45, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
-        $this->SetFont('helvetica', 'B', 20);
-        $this->Cell(0, 15, '', 0, false, 'C', 0, '', 0, false, 'M', 'M');
-        $this->Ln();
-        $this->Cell(0, 15, $_POST['Header'], 0, false, 'R', 0, '', 0, false, 'M', 'M');
-    }
+                    class CustomPdfGenerator extends TCPDF
+                    {
+                        public function Header()
+                        {
+                            $image_file = 'logo2.png';
+                            $this->Image(
+                                $image_file,
+                                20,
+                                3,
+                                45,
+                                '',
+                                'PNG',
+                                '',
+                                'T',
+                                false,
+                                300,
+                                '',
+                                false,
+                                false,
+                                0,
+                                false,
+                                false,
+                                false
+                            );
+                            $this->SetFont('helvetica', 'B', 20);
+                            $this->Cell(0, 15, '', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+                            $this->Ln();
+                            $this->Cell(0, 15, $_POST['Header'], 0, false, 'R', 0, '', 0, false, 'M', 'M');
+                        }
 
-    public function Footer()
-    {
-        $this->SetY(-15);
-        $this->SetFont('helvetica', 'I', 15);
-        $this->Cell(0, 10,  $_POST['Footer'], 0, false, 'C', 0, '', 0, false, 'T', 'M');
-    }
+                        public function Footer()
+                        {
+                            $this->SetY(-15);
+                            $this->SetFont('helvetica', 'I', 15);
+                            $this->Cell(0, 10, $_POST['Footer'], 0, false, 'C', 0, '', 0, false, 'T', 'M');
+                        }
 
-    public function printTable($header, $data)
-    {
-        $this->SetFillColor(0, 0, 0);
-        $this->SetTextColor(255);
-        $this->SetDrawColor(128, 0, 0);
-        $this->SetLineWidth(0.3);
-        $this->SetFont('', 'B', 12);
+                        public function printTable($header, $data)
+                        {
+                            $this->SetFillColor(0, 0, 0);
+                            $this->SetTextColor(255);
+                            $this->SetDrawColor(128, 0, 0);
+                            $this->SetLineWidth(0.3);
+                            $this->SetFont('', 'B', 12);
 
-        $w = array(110, 17, 25, 30);
-        $num_headers = count($header);
-        for ($i = 0; $i < $num_headers; ++$i) {
-            $this->Cell($w[$i], 7, $header[$i], 1, 0, 'C', 1);
-        }
-        $this->Ln();
+                            $w = array(110, 17, 25, 30);
+                            $num_headers = count($header);
+                            for ($i = 0; $i < $num_headers; ++$i) {
+                                $this->Cell($w[$i], 7, $header[$i], 1, 0, 'C', 1);
+                            }
+                            $this->Ln();
 
-        // Color and font restoration
-        $this->SetFillColor(224, 235, 255);
-        $this->SetTextColor(0);
-        $this->SetFont('');
+                            // Color and font restoration
+                            $this->SetFillColor(224, 235, 255);
+                            $this->SetTextColor(0);
+                            $this->SetFont('');
 
-        // table data
-        $fill = 0;
-        $total = 0;
+                            // table data
+                            $fill = 0;
+                            $total = 0;
 
-        foreach ($data as $row) {
-            $this->Cell($w[0], 6, $row[0], 'LR', 0, 'L', $fill);
-            $this->Cell($w[1], 6, $row[1], 'LR', 0, 'R', $fill);
-            $this->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R', $fill);
-            $this->Cell($w[3], 6, number_format($row[3]), 'LR', 0, 'R', $fill);
-            $this->Ln();
-            $fill = !$fill;
-            $total += $row[3];
-        }
+                            foreach ($data as $row) {
+                                $this->Cell($w[0], 6, $row[0], 'LR', 0, 'L', $fill);
+                                $this->Cell($w[1], 6, $row[1], 'LR', 0, 'R', $fill);
+                                $this->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R', $fill);
+                                $this->Cell($w[3], 6, number_format($row[3]), 'LR', 0, 'R', $fill);
+                                $this->Ln();
+                                $fill = !$fill;
+                                $total += $row[3];
+                            }
 
-        $this->Cell($w[0], 6, '', 'LR', 0, 'L', $fill);
-        $this->Cell($w[1], 6, '', 'LR', 0, 'R', $fill);
-        $this->Cell($w[2], 6, '', 'LR', 0, 'L', $fill);
-        $this->Cell($w[3], 6, '', 'LR', 0, 'R', $fill);
-        $this->Ln();
+                            $this->Cell($w[0], 6, '', 'LR', 0, 'L', $fill);
+                            $this->Cell($w[1], 6, '', 'LR', 0, 'R', $fill);
+                            $this->Cell($w[2], 6, '', 'LR', 0, 'L', $fill);
+                            $this->Cell($w[3], 6, '', 'LR', 0, 'R', $fill);
+                            $this->Ln();
 
-        $this->Cell($w[0], 6, '', 'LR', 0, 'L', $fill);
-        $this->Cell($w[1], 6, '', 'LR', 0, 'R', $fill);
-        $this->Cell($w[2], 6, 'TOTAL:', 'LR', 0, 'L', $fill);
-        $this->Cell($w[3], 6, $total, 'LR', 0, 'R', $fill);
-        $this->Ln();
+                            $this->Cell($w[0], 6, '', 'LR', 0, 'L', $fill);
+                            $this->Cell($w[1], 6, '', 'LR', 0, 'R', $fill);
+                            $this->Cell($w[2], 6, 'TOTAL:', 'LR', 0, 'L', $fill);
+                            $this->Cell($w[3], 6, $total, 'LR', 0, 'R', $fill);
+                            $this->Ln();
 
-        $this->Cell(array_sum($w), 0, '', 'T');
-    }
-}
+                            $this->Cell(array_sum($w), 0, '', 'T');
+                        }
+                    }
 
-Createinvoice();
+                    Createinvoice();
 
-?>
-
-
-<div class="modal fade text-left" id="largechicken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title" id="myModalLabel35">Nieuwe Notitie</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                </button>
-            </div>
-            <form method="post">
-                <div class="modal-body">
-                    <fieldset class="form-group floating-label-form-group">
-                        <label for="subject">Onderwerp</label>
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Onderwerp" required>
-                    </fieldset>
-                    <fieldset class="form-group floating-label-form-group">
-                        <label for="basic-form-6">Keuze</label>
-                        <select required id="basic-form-6" name="keuze" class="form-control">
-                            <option value="" selected disabled>Keuze</option>
-                            <option value="Intern">Intern</option>
-                            <option value="Extern">Extern</option>
-                        </select>
-                    </fieldset>
-                    <fieldset class="form-group floating-label-form-group">
-                        <label for="title1">Beschrijving</label>
-                        <textarea class="form-control" id="title1" name="text" rows="9" placeholder="Beschrijving" required></textarea>
-                    </fieldset>
-                </div>
-                <div class="modal-footer">
-                    <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Sluiten">
-                    <input type="submit" class="btn btn-primary" name="RegistreetNote" value="Opslaan">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+                    ?>
 
 
+                    <div class="modal fade text-left" id="largechicken" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel35" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="myModalLabel35">Nieuwe Notitie</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                                    </button>
+                                </div>
+                                <form method="post">
+                                    <div class="modal-body">
+                                        <fieldset class="form-group floating-label-form-group">
+                                            <label for="subject">Onderwerp</label>
+                                            <input type="text" class="form-control" id="subject" name="subject"
+                                                   placeholder="Onderwerp" required>
+                                        </fieldset>
+                                        <fieldset class="form-group floating-label-form-group">
+                                            <label for="basic-form-6">Keuze</label>
+                                            <select required id="basic-form-6" name="keuze" class="form-control">
+                                                <option value="" selected disabled>Keuze</option>
+                                                <option value="Intern">Intern</option>
+                                                <option value="Extern">Extern</option>
+                                            </select>
+                                        </fieldset>
+                                        <fieldset class="form-group floating-label-form-group">
+                                            <label for="title1">Beschrijving</label>
+                                            <textarea class="form-control" id="title1" name="text" rows="9"
+                                                      placeholder="Beschrijving" required></textarea>
+                                        </fieldset>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="reset" class="btn bg-light-secondary" data-dismiss="modal"
+                                               value="Sluiten">
+                                        <input type="submit" class="btn btn-primary" name="RegistreetNote"
+                                               value="Opslaan">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
-<script>
-    /*
-        zet script nog in apart bestand wnnr af voor de aapie
-    */
-    var e = "FbW29C_969cyVfAKrj";
-    var postcode = "";
-    var huisnr = "";
-    var toevoeging = "";
 
-    function check_pc(wat, waarde) {
-        if (wat === "postcode") {
-            var pc = waarde.trim();
-            if (pc.length < 6) {
-                maak_leeg();
-                return;
-            }					// moet minimaal 6 characters hebben
-            var num_deel = pc.substr(0, 4);
-            if (parseFloat(num_deel) < 1000) {
-                maak_leeg();
-                return;
-            }	// moet minaal 1000 zijn
-            var alpha_deel = pc.substr(-2);
-            if (alpha_deel.charCodeAt(0) < 65 || alpha_deel.charCodeAt(0) > 122 || alpha_deel.charCodeAt(1) < 65 || alpha_deel.charCodeAt(1) > 122) {
-                maak_leeg();
-                return;
-            } 	// DE LAATSTE 2 POSITIES MOETEN LETTERS ZIJN
-            alpha_deel = alpha_deel.toUpperCase();
+                    <script>
+                        /*
+                            zet script nog in apart bestand wnnr af voor de aapie
+                        */
+                        var e = "FbW29C_969cyVfAKrj";
+                        var postcode = "";
+                        var huisnr = "";
+                        var toevoeging = "";
 
-            // de checker niffo
+                        function check_pc(wat, waarde) {
+                            if (wat === "postcode") {
+                                var pc = waarde.trim();
+                                if (pc.length < 6) {
+                                    maak_leeg();
+                                    return;
+                                }					// moet minimaal 6 characters hebben
+                                var num_deel = pc.substr(0, 4);
+                                if (parseFloat(num_deel) < 1000) {
+                                    maak_leeg();
+                                    return;
+                                }	// moet minaal 1000 zijn
+                                var alpha_deel = pc.substr(-2);
+                                if (alpha_deel.charCodeAt(0) < 65 || alpha_deel.charCodeAt(0) > 122 || alpha_deel.charCodeAt(1) < 65 || alpha_deel.charCodeAt(1) > 122) {
+                                    maak_leeg();
+                                    return;
+                                } 	// DE LAATSTE 2 POSITIES MOETEN LETTERS ZIJN
+                                alpha_deel = alpha_deel.toUpperCase();
 
-            postcode = num_deel + alpha_deel;
-            document.getElementById("postcode").value = postcode;
-        }
+                                // de checker niffo
 
-        if (wat === "huisnr") {
-            huisnr = parseFloat(waarde);
-            if (!huisnr) {
-                maak_leeg();
-                return;
-            }
-            document.getElementById("huisnr").value = huisnr;
-        }
+                                postcode = num_deel + alpha_deel;
+                                document.getElementById("postcode").value = postcode;
+                            }
 
-        if (wat === "toevoeging") {
-            toevoeging = waarde.trim();
-        }
+                            if (wat === "huisnr") {
+                                huisnr = parseFloat(waarde);
+                                if (!huisnr) {
+                                    maak_leeg();
+                                    return;
+                                }
+                                document.getElementById("huisnr").value = huisnr;
+                            }
 
-        if (huisnr === 0) {
-            return;
-        }
+                            if (wat === "toevoeging") {
+                                toevoeging = waarde.trim();
+                            }
 
-        var getadrlnk = 'https://bwnr.nl/postcode.php?pc=' + postcode + '&hn=' + huisnr + '&tv=' + toevoeging + '&tg=data&ak=' + 'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
+                            if (huisnr === 0) {
+                                return;
+                            }
 
-        var xmlhttp = new XMLHttpRequest();
+                            var getadrlnk = 'https://bwnr.nl/postcode.php?pc=' + postcode + '&hn=' + huisnr + '&tv=' + toevoeging + '&tg=data&ak=' + 'FbW29C_969cyVfAKrj';	// e moet uw apikey bevattten.
 
-        xmlhttp.onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                rString = this.responseText;
-                if (rString === "Geen resultaat.") {
-                    maak_leeg();
-                    return;
-                }
-                if (rString === "Input onvolledig.") {
-                    maak_leeg();
-                    return;
-                }
-                if (rString === "Onbekende API Key.") {
-                    maak_leeg();
-                    return;
-                }
-                if (rString === "Over quota") {
-                    maak_leeg();
-                    return;
-                }
-                if (rString === "Onjuiste API Key.") {
-                    maak_leeg();
-                    alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');
-                    return;
-                }
-                // 0 = straat - 1 = plaats
-                aResponse = rString.split(";");
-                document.getElementById("straat").value = aResponse[0];
-                document.getElementById("plaats").value = aResponse[1];
-            }
-        };
+                            var xmlhttp = new XMLHttpRequest();
 
-        xmlhttp.open("GET", getadrlnk, true);
-        xmlhttp.send();
-    }
+                            xmlhttp.onreadystatechange = function () {
+                                if (this.readyState === 4 && this.status === 200) {
+                                    rString = this.responseText;
+                                    if (rString === "Geen resultaat.") {
+                                        maak_leeg();
+                                        return;
+                                    }
+                                    if (rString === "Input onvolledig.") {
+                                        maak_leeg();
+                                        return;
+                                    }
+                                    if (rString === "Onbekende API Key.") {
+                                        maak_leeg();
+                                        return;
+                                    }
+                                    if (rString === "Over quota") {
+                                        maak_leeg();
+                                        return;
+                                    }
+                                    if (rString === "Onjuiste API Key.") {
+                                        maak_leeg();
+                                        alert('Alleen functioneel indien geopend vanuit de API pagina. Ga terug naar de API pagina en probeer opnieuw.');
+                                        return;
+                                    }
+                                    // 0 = straat - 1 = plaats
+                                    aResponse = rString.split(";");
+                                    document.getElementById("straat").value = aResponse[0];
+                                    document.getElementById("plaats").value = aResponse[1];
+                                }
+                            };
 
-    function maak_leeg() {
-        document.getElementById("").value = "";
-        document.getElementById("plaats").value = "";
-    }
-</script>
+                            xmlhttp.open("GET", getadrlnk, true);
+                            xmlhttp.send();
+                        }
 
-<?php
-if(isset($_GET['m'])){ ?>
-    <div class="flash-data" data-flashdata="<?php echo $_GET['m'];?>"></div>
-<?php } ?>
+                        function maak_leeg() {
+                            document.getElementById("").value = "";
+                            document.getElementById("plaats").value = "";
+                        }
+                    </script>
 
-<?php
-if(isset($_GET['u'])){ ?>
-    <div class="flash-data3" data-flashdata="<?php echo $_GET['u'];?>"></div>
-<?php } ?>
+                    <?php
+                    if (isset($_GET['m'])) { ?>
+                        <div class="flash-data" data-flashdata="<?php echo $_GET['m']; ?>"></div>
+                    <?php } ?>
 
-<?php
-if(isset($_GET['k'])){ ?>
-    <div class="flash-data2" data-flashdata="<?php echo $_GET['k'];?>"></div>
-<?php } ?>
+                    <?php
+                    if (isset($_GET['u'])) { ?>
+                        <div class="flash-data3" data-flashdata="<?php echo $_GET['u']; ?>"></div>
+                    <?php } ?>
 
-<script>
-    $('.second').on('click',function(e){
-        e.preventDefault();
-        const href = $(this).attr('href')
-        Swal.fire({
-            title: 'Weet je het zeker?',
-            text: "Als je de notitie verwijderd kan niet terug",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Delete voor altijd en eeuwig!'
-        }).then((result) => {
-            if (result.value) {
-                document.location.href = href;
+                    <?php
+                    if (isset($_GET['k'])) { ?>
+                        <div class="flash-data2" data-flashdata="<?php echo $_GET['k']; ?>"></div>
+                    <?php } ?>
 
-            }
-        })
-    })
+                    <script>
+                        $('.second').on('click', function (e) {
+                            e.preventDefault();
+                            const href = $(this).attr('href')
+                            Swal.fire({
+                                title: 'Weet je het zeker?',
+                                text: "Als je de notitie verwijderd kan niet terug",
+                                icon: 'warning',
+                                showCancelButton: true,
+                                confirmButtonColor: '#3085d6',
+                                cancelButtonColor: '#d33',
+                                confirmButtonText: 'Delete voor altijd en eeuwig!'
+                            }).then((result) => {
+                                if (result.value) {
+                                    document.location.href = href;
 
-    const flashdata = $('.flash-data').data('flashdata')
-    if(flashdata){
-        swal.fire({
-            type : 'success',
-            title : 'Notitie verwijderd',
-            text : 'Ga maar weer verder met werken'
-        })
-    }
-    const flashdata2 = $('.flash-data2').data('flashdata')
-    if(flashdata2){
-        swal.fire({
-            type : 'success',
-            title : 'Helemaal top hij is toegevoegd',
-            text : 'Ga maar weer verder met werken'
-        })
-    }
-    const flashdata3 = $('.flash-data3').data('flashdata')
-    if(flashdata3){
-        swal.fire({
-            type : 'success',
-            title : 'Nou dat is lekker bijgewerkt',
-            text : 'Ga maar weer verder met werken'
-        })
-    }
-</script>
+                                }
+                            })
+                        })
+
+                        const flashdata = $('.flash-data').data('flashdata')
+                        if (flashdata) {
+                            swal.fire({
+                                type: 'success',
+                                title: 'Notitie verwijderd',
+                                text: 'Ga maar weer verder met werken'
+                            })
+                        }
+                        const flashdata2 = $('.flash-data2').data('flashdata')
+                        if (flashdata2) {
+                            swal.fire({
+                                type: 'success',
+                                title: 'Helemaal top hij is toegevoegd',
+                                text: 'Ga maar weer verder met werken'
+                            })
+                        }
+                        const flashdata3 = $('.flash-data3').data('flashdata')
+                        if (flashdata3) {
+                            swal.fire({
+                                type: 'success',
+                                title: 'Nou dat is lekker bijgewerkt',
+                                text: 'Ga maar weer verder met werken'
+                            })
+                        }
+                    </script>
 </body>
 
 <?php
 qron();
 qroff();
-include "partials/footer.php";
+//include "partials/footer.php";
 ?>
 <!-- END : Body-->
 </html>
