@@ -1625,7 +1625,6 @@ include "partials/navbar.php";
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="modal-footer">
                                                     <button type="reset"
                                                             data-dismiss="modal"
                                                             class="btn btn-secondary">Annuleren
@@ -1634,7 +1633,6 @@ include "partials/navbar.php";
                                                            class="btn btn-primary"
                                                            name="Instellingen"
                                                            value="Opslaan">
-                                                </div>
                                             </form>
                                         </div>
                                     </div>
