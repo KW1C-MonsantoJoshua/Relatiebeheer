@@ -2613,8 +2613,8 @@ function Createinvoice()
 
 // save pdf file
 
-        ob_clean();
+//        $pdf->Output('public_html/app/admin/facturen/filename.pdf', 'F');
+        $pdf->Output($_SERVER['DOCUMENT_ROOT'] . 'output.pdf', 'F');
 
-        $pdf->Output('public_html/app/admin/facturen/filename.pdf', 'F');
     }else echo "fout1";
 }
