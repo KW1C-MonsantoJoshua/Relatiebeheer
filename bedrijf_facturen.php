@@ -1462,7 +1462,6 @@ include "partials/navbar.php";
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button type="submit" name="factuur" class="btn btn-primary mr-2"><i class="ft-check-square mr-1"></i>Save</button>
                                                 <button name="factuur" type="submit" class="btn btn-primary">Submit</button>
                                                 <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>
                                             </form>
