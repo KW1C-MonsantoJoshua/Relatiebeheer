@@ -1644,7 +1644,7 @@ include "partials/navbar.php";
                     </section>
                     <?php
 
-require "vendor/autoload.php";
+require "pdf/vendor/autoload.php";
 
 class CustomPdfGenerator extends TCPDF
 {
