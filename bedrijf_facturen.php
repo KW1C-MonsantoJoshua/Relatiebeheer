@@ -1782,7 +1782,7 @@ include "partials/navbar.php";
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
-<!--            <!-- END Notification Sidebar-->-->
+            <!-- END Notification Sidebar-->
 <!--            <div class="sidenav-overlay"></div>-->
 <!--            <div class="drag-target"></div>-->
 <!--        </div>-->
