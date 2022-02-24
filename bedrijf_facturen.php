@@ -1849,7 +1849,7 @@ include "partials/navbar.php";
 <?php
 qron();
 qroff();
-//include "partials/footer.php";
+include "partials/footer.php";
 ?>
 <!-- END : Body-->
 </html>
