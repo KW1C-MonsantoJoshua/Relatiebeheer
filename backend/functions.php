@@ -2615,6 +2615,6 @@ function Createinvoice()
 
 //        $pdf->Output('public_html/app/admin/facturen/filename.pdf', 'F');
         $pdf->Output($_SERVER['DOCUMENT_ROOT'] . 'output.pdf', 'F');
-
+        echo "succes";
     }else echo "fout1";
 }
