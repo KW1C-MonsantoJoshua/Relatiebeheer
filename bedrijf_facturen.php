@@ -1462,16 +1462,9 @@ include "partials/navbar.php";
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="reset"
-                                                            data-dismiss="modal"
-                                                            class="btn btn-secondary">Annuleren
-                                                    </button>
-                                                    <input type="submit"
-                                                           class="btn btn-primary"
-                                                           name="factuur"
-                                                           value="Opslaan">
-                                                </div>
+                                                <button type="button" class="btn btn-primary mr-2"><i class="ft-check-square mr-1"></i>Save</button>
+                                                <button name="factuur" type="submit" class="btn btn-primary">Submit</button>
+                                                <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>
                                             </form>
                                         </div>
                                     </div>
