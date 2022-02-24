@@ -1672,122 +1672,122 @@ include "partials/navbar.php";
 
                     </br>
 
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <div class="tab-content">
-                                    <!-- General Tab -->
-                                    <h1>Notities</h1>
-                                    <a type="button"
-                                       class="nav-link d-flex align-items-end"
-                                       data-toggle="modal" data-target="#largechicken">
-                                        <i class="ft-plus mr-1"></i>
-                                        <span class="d-none d-sm-block">Toevoegen</span>
-                                    </a>
-                                    <div class="tab-pane active" id="general2" role="tabpanel"
-                                         aria-labelledby="general-tab">
-                                        <hr class="mt-1 mt-sm-2">
-                                        <div class="container1">
-                                            <div class="row1">
-                                                <?php ViewNote2(); ?>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    </br>
-
-                    <!-- Tab panes -->
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <div class="tab-content">
-                                    <!-- General Tab -->
-                                    <h1>Abonnementen</h1>
-                                    <div class="tab-pane active" id="general" role="tabpanel"
-                                         aria-labelledby="general-tab">
-                                        <hr class="mt-1 mt-sm-2">
-                                        <form method="post">
-                                            <div class="col-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h4 class="card-title">Swipe hier aan en uit wat je wilt</h4>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <div class="card-body">
-                                                            <div class="form-group">
-                                                                <div class="row">
-                                                                    <h6 class="col-12 text-bold-400 pl-0">onderwerp1 abbo</h6>
-                                                                    <div class="col-12 mb-2">
-                                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                                            <input id="switch1" type="checkbox" class="custom-control-input" checked>
-                                                                            <label for="switch1" class="custom-control-label">Postcode checker</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 mb-2">
-                                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                                            <input id="switch2" type="checkbox" class="custom-control-input" checked>
-                                                                            <label for="switch2" class="custom-control-label">automatisch credit getter</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 mb-2">
-                                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                                            <input id="switch3" type="checkbox" class="custom-control-input" disabled>
-                                                                            <label for="switch3" class="custom-control-label">automatisch email sturen wanneer dat kan</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <h6 class="col-12 text-bold-400 pl-0 mt-3">applicatie abbo2</h6>
-                                                                    <div class="col-12 mb-2">
-                                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                                            <input id="switch4" type="checkbox" class="custom-control-input" checked>
-                                                                            <label for="switch4" class="custom-control-label">applicatie abonnement</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 mb-2">
-                                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                                            <input id="switch5" type="checkbox" class="custom-control-input" disabled>
-                                                                            <label for="switch5" class="custom-control-label">super de luxe applicatie abonnement</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 mb-2">
-                                                                        <div class="custom-control custom-switch custom-control-inline">
-                                                                            <input id="switch6" type="checkbox" class="custom-control-input" checked>
-                                                                            <label for="switch6" class="custom-control-label">QCCS internet abonnement</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
-                                                                        <button type="button" class="btn btn-primary mr-sm-2 mb-1">Opslaan</button>
-                                                                        <button type="button" class="btn btn-secondary mb-1">annuleren</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
-                </div>
-            </div>
-            <!-- END Notification Sidebar-->
-            <div class="sidenav-overlay"></div>
-            <div class="drag-target"></div>
-        </div>
-    </div>
-</div>
+<!--                    <div class="card">-->
+<!--                        <div class="card-content">-->
+<!--                            <div class="card-body">-->
+<!--                                <div class="tab-content">-->
+<!--                                    <!-- General Tab -->-->
+<!--                                    <h1>Notities</h1>-->
+<!--                                    <a type="button"-->
+<!--                                       class="nav-link d-flex align-items-end"-->
+<!--                                       data-toggle="modal" data-target="#largechicken">-->
+<!--                                        <i class="ft-plus mr-1"></i>-->
+<!--                                        <span class="d-none d-sm-block">Toevoegen</span>-->
+<!--                                    </a>-->
+<!--                                    <div class="tab-pane active" id="general2" role="tabpanel"-->
+<!--                                         aria-labelledby="general-tab">-->
+<!--                                        <hr class="mt-1 mt-sm-2">-->
+<!--                                        <div class="container1">-->
+<!--                                            <div class="row1">-->
+<!--                                                --><?php //ViewNote2(); ?>
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!---->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!---->
+<!--                    </br>-->
+<!---->
+<!--                    <!-- Tab panes -->-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-content">-->
+<!--                            <div class="card-body">-->
+<!--                                <div class="tab-content">-->
+<!--                                    <!-- General Tab -->-->
+<!--                                    <h1>Abonnementen</h1>-->
+<!--                                    <div class="tab-pane active" id="general" role="tabpanel"-->
+<!--                                         aria-labelledby="general-tab">-->
+<!--                                        <hr class="mt-1 mt-sm-2">-->
+<!--                                        <form method="post">-->
+<!--                                            <div class="col-12">-->
+<!--                                                <div class="card">-->
+<!--                                                    <div class="card-header">-->
+<!--                                                        <h4 class="card-title">Swipe hier aan en uit wat je wilt</h4>-->
+<!--                                                    </div>-->
+<!--                                                    <div class="card-content">-->
+<!--                                                        <div class="card-body">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <div class="row">-->
+<!--                                                                    <h6 class="col-12 text-bold-400 pl-0">onderwerp1 abbo</h6>-->
+<!--                                                                    <div class="col-12 mb-2">-->
+<!--                                                                        <div class="custom-control custom-switch custom-control-inline">-->
+<!--                                                                            <input id="switch1" type="checkbox" class="custom-control-input" checked>-->
+<!--                                                                            <label for="switch1" class="custom-control-label">Postcode checker</label>-->
+<!--                                                                        </div>-->
+<!--                                                                    </div>-->
+<!--                                                                    <div class="col-12 mb-2">-->
+<!--                                                                        <div class="custom-control custom-switch custom-control-inline">-->
+<!--                                                                            <input id="switch2" type="checkbox" class="custom-control-input" checked>-->
+<!--                                                                            <label for="switch2" class="custom-control-label">automatisch credit getter</label>-->
+<!--                                                                        </div>-->
+<!--                                                                    </div>-->
+<!--                                                                    <div class="col-12 mb-2">-->
+<!--                                                                        <div class="custom-control custom-switch custom-control-inline">-->
+<!--                                                                            <input id="switch3" type="checkbox" class="custom-control-input" disabled>-->
+<!--                                                                            <label for="switch3" class="custom-control-label">automatisch email sturen wanneer dat kan</label>-->
+<!--                                                                        </div>-->
+<!--                                                                    </div>-->
+<!--                                                                    <h6 class="col-12 text-bold-400 pl-0 mt-3">applicatie abbo2</h6>-->
+<!--                                                                    <div class="col-12 mb-2">-->
+<!--                                                                        <div class="custom-control custom-switch custom-control-inline">-->
+<!--                                                                            <input id="switch4" type="checkbox" class="custom-control-input" checked>-->
+<!--                                                                            <label for="switch4" class="custom-control-label">applicatie abonnement</label>-->
+<!--                                                                        </div>-->
+<!--                                                                    </div>-->
+<!--                                                                    <div class="col-12 mb-2">-->
+<!--                                                                        <div class="custom-control custom-switch custom-control-inline">-->
+<!--                                                                            <input id="switch5" type="checkbox" class="custom-control-input" disabled>-->
+<!--                                                                            <label for="switch5" class="custom-control-label">super de luxe applicatie abonnement</label>-->
+<!--                                                                        </div>-->
+<!--                                                                    </div>-->
+<!--                                                                    <div class="col-12 mb-2">-->
+<!--                                                                        <div class="custom-control custom-switch custom-control-inline">-->
+<!--                                                                            <input id="switch6" type="checkbox" class="custom-control-input" checked>-->
+<!--                                                                            <label for="switch6" class="custom-control-label">QCCS internet abonnement</label>-->
+<!--                                                                        </div>-->
+<!--                                                                    </div>-->
+<!--                                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">-->
+<!--                                                                        <button type="button" class="btn btn-primary mr-sm-2 mb-1">Opslaan</button>-->
+<!--                                                                        <button type="button" class="btn btn-secondary mb-1">annuleren</button>-->
+<!--                                                                    </div>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </form>-->
+<!--                                    </div>-->
+<!---->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!---->
+<!---->
+<!---->
+<!---->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <!-- END Notification Sidebar-->-->
+<!--            <div class="sidenav-overlay"></div>-->
+<!--            <div class="drag-target"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 
