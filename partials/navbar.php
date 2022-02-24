@@ -216,10 +216,10 @@ $row = Getuser();
                             $memb_of = $_GET['membof'];
                             ?>
                             <a class="" href="<?php
-                            echo "error bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
+                            echo "bedrijf_profiel.php?custof=$memb_of&membof=$memb_of";
                             ?>">
                                 <i class="ft-file-text"></i>
-                                <span class="text">Facturen (Dayal) Ga werken swa</span>
+                                <span class="text">Facturen</span>
                             </a>
                             <?php
 
