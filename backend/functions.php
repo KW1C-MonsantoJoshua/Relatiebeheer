@@ -2612,6 +2612,6 @@ function Createinvoice()
         $pdf->writeHTML("Katie A Falk, (07) 4050 2235, katie@sks.com", true, false, false, false, 'C');
 
 // save pdf file
-        $pdf->Output(__DIR__ . '/invoice#12.pdf', 'F');
+        $pdf->Output(__DIR__ . '../facturen/invoice#12.pdf', 'F');
     }
 }
