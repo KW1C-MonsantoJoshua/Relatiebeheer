@@ -1701,7 +1701,7 @@ include "partials/navbar.php";
 <!---->
 <!--                    </br>-->
 <!---->
-<!--                    <!-- Tab panes -->-->
+                    <!-- Tab panes -->
 <!--                    <div class="card">-->
 <!--                        <div class="card-content">-->
 <!--                            <div class="card-body">-->
