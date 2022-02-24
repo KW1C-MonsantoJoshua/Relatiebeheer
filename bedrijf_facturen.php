@@ -21,7 +21,6 @@ $rowC = GetCompanyInfo();
 InsertNotes();
 EditNNote();
 EditNoteExtra();
-Createinvoice();
 
 
 ?>
@@ -1713,6 +1712,9 @@ class CustomPdfGenerator extends TCPDF
         $this->Cell(array_sum($w), 0, '', 'T');
     }
 }
+
+Createinvoice();
+
 ?>
 
 
