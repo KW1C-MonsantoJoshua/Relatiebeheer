@@ -5,6 +5,7 @@ include "backend/functions.php";
 $user = $_SESSION['name'];
 $secret = $_SESSION['secret'];
 $id = $_SESSION['id'];
+require "pdf/vendor/autoload.php";
 require_once 'PHPGangsta/GoogleAuthenticator.php';
 $ga = new PHPGangsta_GoogleAuthenticator();
 
