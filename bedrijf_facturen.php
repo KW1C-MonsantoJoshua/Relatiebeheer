@@ -1562,7 +1562,7 @@ include "partials/navbar.php";
                                                         <div class="form-group row">
                                                             <label class="col-md-3 col-form-label" for="horizontal-form-1">Header</label>
                                                             <div class="col-md-9">
-                                                                <input type="text" class="form-control square" id="horizontal-form-1" name="first-name">
+                                                                <input type="text" class="form-control square" id="horizontal-form-1" name="Header">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1570,7 +1570,7 @@ include "partials/navbar.php";
                                                         <div class="form-group row">
                                                             <label class="col-md-3 col-form-label" for="horizontal-form-2">Footer</label>
                                                             <div class="col-md-9">
-                                                                <input type="text" class="form-control square" id="horizontal-form-2" name="last-name">
+                                                                <input type="text" class="form-control square" id="horizontal-form-2" name="Footer">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1580,7 +1580,7 @@ include "partials/navbar.php";
                                                         <div class="form-group row">
                                                             <label class="col-md-3 col-form-label" for="horizontal-form-3">Datum</label>
                                                             <div class="col-md-9">
-                                                                <input type="text" class="form-control square" id="horizontal-form-3" name="username">
+                                                                <input type="text" class="form-control square" id="horizontal-form-3" name="Datum">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1588,7 +1588,7 @@ include "partials/navbar.php";
                                                         <div class="form-group row">
                                                             <label class="col-md-3 col-form-label" for="horizontal-form-4">Factuur naam</label>
                                                             <div class="col-md-9">
-                                                                <input type="text" class="form-control square" id="horizontal-form-4" name="nick-name">
+                                                                <input type="text" class="form-control square" id="horizontal-form-4" name="Factuur naam">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1630,7 +1630,7 @@ include "partials/navbar.php";
                                                     </button>
                                                     <input type="submit"
                                                            class="btn btn-primary"
-                                                           name="Instellingen"
+                                                           name="factuur"
                                                            value="Opslaan">
                                                 </div>
                                             </form>
