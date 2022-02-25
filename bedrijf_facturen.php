@@ -1538,10 +1538,10 @@ include "partials/navbar.php";
                                                             <div class="col-md-9">
 <!--                                                                <input type="text" class="form-control square"-->
 <!--                                                                       id="horizontal-form-3" name="Datum">-->
-                                                                <input type="text" class="form-control required" name="Datum" data-date-format="<?php echo DATE_FORMAT ?>" />
+                                                                <input type="text" class="form-control required" name="Datum" placeholder="Due Date" />
                                                                 <span class="input-group-addon">
-				                    <span class="glyphicon glyphicon-calendar"></span>
-				                </span>
+				                                                    <span class="glyphicon glyphicon-calendar"></span>
+				                                                </span>
                                                             </div>
                                                         </div>
                                                     </div>
