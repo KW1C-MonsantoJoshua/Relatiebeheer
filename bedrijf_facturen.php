@@ -20,7 +20,7 @@ UploadPic1();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 InsertNotes();
-EditNNote();
+//EditNNote();
 EditNoteExtra();
 
 ini_set('display_errors', 1);
