@@ -1499,15 +1499,6 @@ include "partials/navbar.php";
                 <div class="col-md-9">
                     <!-- Tab panes -->
                     <section id="horizontal-form-layout">
-                        <div>
-                            <?php
-                            if (isset($_GET["toevoegenFac"])) {
-                                if ($_GET["toevoegenFac"] == "succes") {
-                                    echo "<p class='text-success'>Facturen succesvol toegevoegd !</p>";
-                                }
-                            }
-                            ?>
-                        </div>
                         <div class="row match-height">
                             <div class="col-12">
                                 <div class="card">
@@ -1560,6 +1551,15 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div>
+                                                    <?php
+                                                    if (isset($_GET["toevoegenFac"])) {
+                                                        if ($_GET["toevoegenFac"] == "succes") {
+                                                            echo "<p class='text-success'>Facturen succesvol toegevoegd !</p>";
+                                                        }
+                                                    }
+                                                    ?>
                                                 </div>
                                                 <button name="factuur" type="submit" class="btn btn-primary">Submit</button>
                                                 <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>
