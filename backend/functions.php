@@ -2573,7 +2573,7 @@ function Createinvoice()
 // date and invoice no
         $pdf->Write(0, "\n", '', 0, 'C', true, 0, false, false, 0);
         $pdf->writeHTML("<br><br>");
-        $pdf->writeHTML("<b>DATE:</b> 01/01/2021");
+        $pdf->writeHTML("<b>DATE:</b>" . $datum);
         $pdf->writeHTML("<b>INVOICE#</b>12");
         $pdf->Write(0, "\n", '', 0, 'C', true, 0, false, false, 0);
 
