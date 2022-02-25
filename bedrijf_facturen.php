@@ -1499,6 +1499,15 @@ include "partials/navbar.php";
                 <div class="col-md-9">
                     <!-- Tab panes -->
                     <section id="horizontal-form-layout">
+                        <div>
+                            <?php
+                            if (isset($_GET["toevoegenFac"])) {
+                                if ($_GET["toevoegenFac"] == "succes") {
+                                    echo "<p class='text-success'>Facturen succesvol toegevoegd !</p>";
+                                }
+                            }
+                            ?>
+                        </div>
                         <div class="row match-height">
                             <div class="col-12">
                                 <div class="card">

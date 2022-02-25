@@ -2617,5 +2617,5 @@ function Createinvoice()
 //        $pdf->Output($_SERVER['DOCUMENT_ROOT'] . '/facturen/' . 'output.pdf', 'F');
 //        echo "succes";
         header("Location:bedrijf_facturen.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenFac=succes");
-    }else echo "fout1";
+    }
 }
