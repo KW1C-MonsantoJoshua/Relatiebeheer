@@ -2615,6 +2615,7 @@ function Createinvoice()
 
         $pdf->Output('/var/www/vhosts/relatiebeheer.qccstest.nl/httpdocs/facturen/filename.pdf', 'F');
 //        $pdf->Output($_SERVER['DOCUMENT_ROOT'] . '/facturen/' . 'output.pdf', 'F');
-        echo "succes";
+//        echo "succes";
+        header("Location:bedrijfs_facturen.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenFac=succes");
     }else echo "fout1";
 }
