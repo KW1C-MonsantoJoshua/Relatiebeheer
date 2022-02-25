@@ -2556,9 +2556,6 @@ function Createinvoice()
 {
     if (isset($_POST['factuur'])) {
 
-        $datum = $_POST['Datum'];
-        $naam = $_POST['Factuurnaam'];
-
         $pdf = new CustomPdfGenerator(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
         $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
@@ -2573,8 +2570,8 @@ function Createinvoice()
 // date and invoice no
         $pdf->Write(0, "\n", '', 0, 'C', true, 0, false, false, 0);
         $pdf->writeHTML("<br><br>");
-        $pdf->writeHTML("<b>DATE:</b>" . $datum);
-        $pdf->writeHTML("<b>FACTUREN#</b> " . $naam);
+        $pdf->writeHTML("<b>DATE:</b> 01/01/2021");
+        $pdf->writeHTML("<b>INVOICE#</b>12");
         $pdf->Write(0, "\n", '', 0, 'C', true, 0, false, false, 0);
 
 // address
@@ -2617,7 +2614,7 @@ function Createinvoice()
 
 // save pdf file
 
-        $pdf->Output('/var/www/vhosts/relatiebeheer.qccstest.nl/httpdocs/facturen/' . $naam . '.pdf', 'F');
+        $pdf->Output('/var/www/vhosts/relatiebeheer.qccstest.nl/httpdocs/facturen/filename.pdf', 'F');
 //        $pdf->Output($_SERVER['DOCUMENT_ROOT'] . '/facturen/' . 'output.pdf', 'F');
 //        echo "succes";
         header("Location:bedrijf_facturen.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenFac=succes");
