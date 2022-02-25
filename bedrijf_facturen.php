@@ -1536,12 +1536,8 @@ include "partials/navbar.php";
                                                             <label class="col-md-3 col-form-label"
                                                                    for="horizontal-form-3">Datum</label>
                                                             <div class="col-md-9">
-<!--                                                                <input type="text" class="form-control square"-->
-<!--                                                                       id="horizontal-form-3" name="Datum">-->
-                                                                <input type="text" class="form-control required" name="Datum" placeholder="Due Date" />
-                                                                <span class="input-group-addon">
-				                                                    <span class="glyphicon glyphicon-calendar"></span>
-				                                                </span>
+                                                                <input type="text" class="form-control square"
+                                                                       id="horizontal-form-3" name="Datum">
                                                             </div>
                                                         </div>
                                                     </div>
