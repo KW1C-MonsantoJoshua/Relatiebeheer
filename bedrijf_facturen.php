@@ -1480,7 +1480,7 @@ include "partials/navbar.php";
                     {
                         public function Header()
                         {
-                            $image_file = 'logo2.png';
+                            $image_file = 'assets/img/logo2.png';
                             $this->Image(
                                 $image_file,
                                 20,
