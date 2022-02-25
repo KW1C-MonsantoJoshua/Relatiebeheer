@@ -2556,6 +2556,9 @@ function Createinvoice()
 {
     if (isset($_POST['factuur'])) {
 
+        $datum = $_POST['Datum'];
+        $naam = $_POST['Factuur naam'];
+
         $pdf = new CustomPdfGenerator(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
         $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
         $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
