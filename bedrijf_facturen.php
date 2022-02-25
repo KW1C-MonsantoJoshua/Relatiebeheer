@@ -22,6 +22,8 @@ $rowC = GetCompanyInfo();
 InsertNotes();
 //EditNNote();
 EditNoteExtra();
+Createinvoice();
+
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -29,6 +31,7 @@ error_reporting(E_ALL)
 
 
 ?>
+<!DOCTYPE html>
 <html class="loading" lang="en">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
@@ -1561,9 +1564,6 @@ include "partials/navbar.php";
                             $this->Cell(array_sum($w), 0, '', 'T');
                         }
                     }
-
-                    Createinvoice();
-
                     ?>
 </body>
 
