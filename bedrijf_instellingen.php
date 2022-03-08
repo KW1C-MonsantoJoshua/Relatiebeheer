@@ -1613,6 +1613,47 @@ include "partials/navbar.php";
                     </div>
                 </br>
 
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <!-- General Tab -->
+                                    <h1>Facturen Maken</h1>
+                                    <div class="tab-pane active" id="general1" role="tabpanel"
+                                         aria-labelledby="general-tab">
+                                        <hr class="mt-1 mt-sm-2">
+                                        <form method="post">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <h4>Bedrijfsgegevens</h4>
+                                                        <div class="form-group">
+                                                            <label for="bedrijfsnaam"
+                                                                   class="">Bedrijfsnaamm</label>
+                                                            <input type="text" id="bedrijfsnaam"
+                                                                   class="form-control"
+                                                                   placeholder="Bedrijfsnaam"
+                                                                   name="name"
+                                                                   value="<?= $rowC["name"]; ?>">
+                                                        </div>
+                                            </div>
+                                                    <div class="modal-footer">
+                                                        <button type="reset"
+                                                                data-dismiss="modal"
+                                                                class="btn btn-secondary">Annuleren
+                                                        </button>
+                                                        <input type="submit"
+                                                               class="btn btn-primary"
+                                                               name="factuur"
+                                                               value="Opslaan">
+                                                    </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
                                 <div class="card">
                                     <div class="card-header">
                                         <h1>Facturen Maken</h1>
@@ -1653,10 +1694,9 @@ include "partials/navbar.php";
                                                     </button>
                                                     <input type="submit"
                                                            class="btn btn-primary"
-                                                           name="Instellingen"
+                                                           name="factuur"
                                                            value="Opslaan">
                                                 </div>
-
                                             </form>
                                         </div>
                                     </div>
@@ -1715,17 +1755,17 @@ include "partials/navbar.php";
 <!--                                                </div>-->
 <!--                                                <button name="factuur" type="submit" class="btn btn-primary">Submit</button>-->
 <!--                                                <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>-->
-<!--                                                <div class="modal-footer">-->
-<!--                                                    <button type="reset"-->
-<!--                                                            data-dismiss="modal"-->
-<!--                                                            class="btn btn-secondary">Annuleren-->
-<!--                                                    </button>-->
-<!--                                                    <input type="submit"-->
-<!--                                                           class="btn btn-primary"-->
-<!--                                                           name="factuur"-->
-<!--                                                           value="Opslaan">-->
-<!--                                                </div>-->
-<!--                                            </form>-->
+                                                <div class="modal-footer">
+                                                    <button type="reset"
+                                                            data-dismiss="modal"
+                                                            class="btn btn-secondary">Annuleren
+                                                    </button>
+                                                    <input type="submit"
+                                                           class="btn btn-primary"
+                                                           name="factuur"
+                                                           value="Opslaan">
+                                                </div>
+                                            </form>
 <!--                                        </div>-->
 <!--                                    </div>-->
 <!--                                </div>-->
