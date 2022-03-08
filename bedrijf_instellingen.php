@@ -1619,6 +1619,7 @@ include "partials/navbar.php";
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
+                                            <div class="tab-content">
                                             <form method="post">
                                                 <div class="row">
                                                     <div class="col-md-12">
@@ -1657,6 +1658,7 @@ include "partials/navbar.php";
                                                 </div>
 
                                             </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
