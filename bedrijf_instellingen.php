@@ -102,7 +102,7 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 Createinvoice();
-GetFactuurInfo();
+$rowf = GetFactuurInfo();
 Changepassword();
 Updateuser();
 UploadPic1();
@@ -1636,7 +1636,7 @@ include "partials/navbar.php";
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
                                                                    name="Header"
-                                                                   value="<?= $rowC["name"]; ?>">
+                                                                   value="<?= $rowf["header"]; ?>">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
@@ -1645,7 +1645,7 @@ include "partials/navbar.php";
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
                                                                    name="Footer"
-                                                                   value="<?= $rowC["name"]; ?>">
+                                                                   value="<?= $rowf["footer"]; ?>">
                                                         </div>
                                             </div>
 
@@ -1669,80 +1669,6 @@ include "partials/navbar.php";
                     </div>
 
                     </br>
-
-
-<!--                    <div class="col-md-6 col-12">-->
-<!--                        <div class="form-group row">-->
-<!--                            <label class="col-md-3 col-form-label"-->
-<!--                                   for="horizontal-form-1">Header</label>-->
-<!--                            <div class="col-md-9">-->
-<!--                                <input type="text" class="form-control square"-->
-<!--                                       id="horizontal-form-1" name="Header" value="--><?php //if (isset($_POST['factuur'])){echo $_POST['Header'];}?><!--">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-6 col-12">-->
-<!--                        <div class="form-group row">-->
-<!--                            <label class="col-md-3 col-form-label"-->
-<!--                                   for="horizontal-form-2">Footer</label>-->
-<!--                            <div class="col-md-9">-->
-<!--                                <input type="text" class="form-control square"-->
-<!--                                       id="horizontal-form-2" name="Footer" value="--><?php //if (isset($_POST['factuur'])){echo $_POST['Footer'];}?><!--">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                                                <div class="row mb-md-3">-->
-<!--                                                    <div class="col-md-6 col-12">-->
-<!--                                                        <div class="form-group row">-->
-<!--                                                            <label class="col-md-3 col-form-label"-->
-<!--                                                                   for="horizontal-form-3">Datum</label>-->
-<!--                                                            <div class="col-md-9">-->
-<!--                                                                <input type="text" class="form-control square"-->
-<!--                                                                       id="horizontal-form-3" name="Datum" value="--><?php //if (isset($_POST['factuur'])){echo $_POST['Datum'];}?><!--">-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                    <div class="col-md-6 col-12">-->
-<!--                                                        <div class="form-group row">-->
-<!--                                                            <label class="col-md-3 col-form-label"-->
-<!--                                                                   for="horizontal-form-4">Factuur naam</label>-->
-<!--                                                            <div class="col-md-9">-->
-<!--                                                                <input type="text" class="form-control square"-->
-<!--                                                                       id="horizontal-form-4" name="Factuur_naam" value="--><?php //if (isset($_POST['factuur'])){echo $_POST['Factuur_naam'];}?><!--">-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                                <div>-->
-<!--                                                    --><?php
-//                                                    if (isset($_GET["toevoegenFac"])) {
-//                                                        if ($_GET["toevoegenFac"] == "succes") {
-//                                                            echo "<p class='text-success'>Facturen succesvol toegevoegd !</p>";
-//                                                        }
-//                                                    }
-//                                                    ?>
-<!--                                                </div>-->
-<!--                                                <button name="factuur" type="submit" class="btn btn-primary">Submit</button>-->
-<!--                                                <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>-->
-<!--                                                <div class="modal-footer">-->
-<!--                                                    <button type="reset"-->
-<!--                                                            data-dismiss="modal"-->
-<!--                                                            class="btn btn-secondary">Annuleren-->
-<!--                                                    </button>-->
-<!--                                                    <input type="submit"-->
-<!--                                                           class="btn btn-primary"-->
-<!--                                                           name="factuur"-->
-<!--                                                           value="Opslaan">-->
-<!--                                                </div>-->
-<!--                                            </form>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </section>-->
-
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body">
