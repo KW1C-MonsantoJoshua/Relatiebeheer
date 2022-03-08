@@ -2633,7 +2633,7 @@ function Insertfactuur()
         $stmtFactuur->bind_param("i",$_GET['membof']);
         $stmtFactuur->execute();
 
-        if(1 > 0) {
+        if($stmtFactuur->num_rows() > 0) {
             $stmtFactuur->close();
             $sql = "UPDATE factuur SET header = ?, footer = ? WHERE member_of = ?";
             $stmtFactuur = $mysqli->prepare($sql);
