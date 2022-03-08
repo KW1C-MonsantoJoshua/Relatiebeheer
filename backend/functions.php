@@ -2638,7 +2638,7 @@ function Insertfactuur()
         {
             $sql = "UPDATE factuur SET header = ?, footer = ? WHERE member_of = ?";
             $stmt = $mysqli->prepare($sql);
-            $stmt->bind_param('ssi', $_POST['Header'], $_POST['Header'], $_GET['memb_of']
+            $stmt->bind_param('ssi', $_POST['Header'], $_POST['Header'], $_GET['membof']
             );
             $stmt->execute();
         }
@@ -2649,7 +2649,7 @@ function Insertfactuur()
                 "ssi",
                 $_POST['Header'],
                 $_POST['Header'],
-                $_GET['memb_of']
+                $_GET['membof']
             );
             $stmt->execute();
             $stmt->close();
