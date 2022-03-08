@@ -1392,7 +1392,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="btw"
-                                                                   class="sr-only">BTW
+                                                                   class="">BTW
                                                                 Nummer</label>
                                                             <input type="text" id="btw"
                                                                    class="form-control"
@@ -1402,7 +1402,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="bic"
-                                                                   class="sr-only">BIC</label>
+                                                                   class="">BIC</label>
                                                             <input class="form-control"
                                                                    type="text"
                                                                    name="bic"
@@ -1411,7 +1411,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="kvk"
-                                                                   class="sr-only">KVK
+                                                                   class="">KVK
                                                                 Nummer</label>
                                                             <input class="form-control"
                                                                    type="text"
@@ -1422,7 +1422,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="iban"
-                                                                   class="sr-only">IBAN
+                                                                   class="">IBAN
                                                                 Nummer</label>
                                                             <input class="form-control"
                                                                    type="text"
