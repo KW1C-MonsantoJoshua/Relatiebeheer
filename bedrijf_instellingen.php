@@ -1378,7 +1378,7 @@ include "partials/navbar.php";
                                         <hr class="mt-1 mt-sm-2">
                                         <form method="post" id="Instellingen" action="bedrijf_profiel.php?custof=<?=$_GET["custof"]?>&membof=<?=$_GET["membof"]?>&u=1">
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-8">
                                                     <div class="form-group">
                                                         <h4>Gegevens 1</h4>
                                                         <div class="form-group">
@@ -1453,7 +1453,7 @@ include "partials/navbar.php";
                                                         </br>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-8">
                                                     <div class="form-group">
                                                         <h4>Gegevens 2</h4>
                                                         <div class="form-group">
@@ -1499,7 +1499,7 @@ include "partials/navbar.php";
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-8">
                                                     <div class="form-group">
                                                         <h4>Gegevens 2</h4>
                                                         <div class="form-group">
