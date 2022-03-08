@@ -1390,6 +1390,13 @@ include "partials/navbar.php";
                                                                    name="name"
                                                                    value="<?= $rowC["name"]; ?>">
                                                         </div>
+
+                                                        </br>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <h4>Adresgegevens</h4>
                                                         <div class="form-group">
                                                             <label for="postcode"
                                                                    class="">Postcode</label>
@@ -1432,12 +1439,6 @@ include "partials/navbar.php";
                                                                    name="street"
                                                                    value="<?= $rowC['street'] ?>">
                                                         </div>
-                                                        </br>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <h4>Adresgegevens</h4>
                                                         <div class="form-group">
                                                             <label for="btw"
                                                                    class="sr-only">BTW
