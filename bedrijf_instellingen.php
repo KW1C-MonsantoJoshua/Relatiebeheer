@@ -1619,7 +1619,7 @@ include "partials/navbar.php";
                                 <div class="tab-content">
                                     <!-- General Tab -->
                                     <h1>Facturen Maken</h1>
-                                    <div class="tab-pane active" id="general1" role="tabpanel"
+                                    <div class="tab-pane active" id="general12" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
                                         <form method="post">
