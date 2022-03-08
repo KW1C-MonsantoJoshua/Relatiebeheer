@@ -1613,9 +1613,9 @@ include "partials/navbar.php";
                     </div>
                 </br>
                     <!-- Tab panes -->
-                    <section id="horizontal-form-layout">
-                        <div class="row match-height">
-                            <div class="col-12">
+<!--                    <section id="horizontal-form-layout">-->
+<!--                        <div class="row match-height">-->
+<!--                            <div class="col-12">-->
                                 <div class="card">
                                     <div class="card-header">
                                         <h4 class="card-title">Facturen Maken</h4>
@@ -1667,34 +1667,34 @@ include "partials/navbar.php";
 <!--                                                        </div>-->
 <!--                                                    </div>-->
 <!--                                                </div>-->
-                                                <div>
-                                                    <?php
-                                                    if (isset($_GET["toevoegenFac"])) {
-                                                        if ($_GET["toevoegenFac"] == "succes") {
-                                                            echo "<p class='text-success'>Facturen succesvol toegevoegd !</p>";
-                                                        }
-                                                    }
-                                                    ?>
-                                                </div>
+<!--                                                <div>-->
+<!--                                                    --><?php
+//                                                    if (isset($_GET["toevoegenFac"])) {
+//                                                        if ($_GET["toevoegenFac"] == "succes") {
+//                                                            echo "<p class='text-success'>Facturen succesvol toegevoegd !</p>";
+//                                                        }
+//                                                    }
+//                                                    ?>
+<!--                                                </div>-->
 <!--                                                <button name="factuur" type="submit" class="btn btn-primary">Submit</button>-->
 <!--                                                <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>-->
-                                                <div class="modal-footer">
-                                                    <button type="reset"
-                                                            data-dismiss="modal"
-                                                            class="btn btn-secondary">Annuleren
-                                                    </button>
-                                                    <input type="submit"
-                                                           class="btn btn-primary"
-                                                           name="factuur"
-                                                           value="Opslaan">
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+<!--                                                <div class="modal-footer">-->
+<!--                                                    <button type="reset"-->
+<!--                                                            data-dismiss="modal"-->
+<!--                                                            class="btn btn-secondary">Annuleren-->
+<!--                                                    </button>-->
+<!--                                                    <input type="submit"-->
+<!--                                                           class="btn btn-primary"-->
+<!--                                                           name="factuur"-->
+<!--                                                           value="Opslaan">-->
+<!--                                                </div>-->
+<!--                                            </form>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </section>-->
 
                     <div class="card">
                         <div class="card-content">
