@@ -109,6 +109,7 @@ $rowC = GetCompanyInfo();
 InsertNotes();
 EditNNote();
 EditNoteExtra();
+Createinvoice();
 
 
 ?>
