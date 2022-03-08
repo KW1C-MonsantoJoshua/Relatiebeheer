@@ -1612,10 +1612,7 @@ include "partials/navbar.php";
                         </div>
                     </div>
                 </br>
-                    <!-- Tab panes -->
-<!--                    <section id="horizontal-form-layout">-->
-<!--                        <div class="row match-height">-->
-<!--                            <div class="col-12">-->
+
                                 <div class="card">
                                     <div class="card-header">
                                         <h4 class="card-title">Facturen Maken</h4>
@@ -1624,31 +1621,66 @@ include "partials/navbar.php";
                                         <div class="card-body">
                                             <form method="post">
                                                 <div class="row">
-                                                    <div class="col-md-6 col-12">
-                                                        <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label"
-                                                                   for="horizontal-form-1">Header</label>
-                                                            <div class="col-md-9">
-                                                                <input type="text" class="form-control square"
-                                                                       id="horizontal-form-1" name="Header" value="<?php if (isset($_POST['factuur'])){echo $_POST['Header'];}?>">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <h4>Contactgegevens</h4>
+                                                            <div class="form-group">
+                                                                <label for="telefoon"
+                                                                       class="">Telefoon</label>
+                                                                <input type="text" id="telefoon"
+                                                                       class="form-control"
+                                                                       placeholder="Telefoon"
+                                                                       name="telefoon"
+                                                                       value="<?= $rowC['phoneNumber'] ?>">
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-12">
-                                                        <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label"
-                                                                   for="horizontal-form-2">Footer</label>
-                                                            <div class="col-md-9">
-                                                                <input type="text" class="form-control square"
-                                                                       id="horizontal-form-2" name="Footer" value="<?php if (isset($_POST['factuur'])){echo $_POST['Footer'];}?>">
+                                                            <div class="form-group">
+                                                                <label for="email"
+                                                                       class="">Email</label>
+                                                                <input type="text" id="email"
+                                                                       class="form-control"
+                                                                       placeholder="Email"
+                                                                       name="email"
+                                                                       value="<?= $rowC['email'] ?>">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="modal-footer">
+                                                    <button type="reset"
+                                                            data-dismiss="modal"
+                                                            class="btn btn-secondary">Annuleren
+                                                    </button>
+                                                    <input type="submit"
+                                                           class="btn btn-primary"
+                                                           name="Instellingen"
+                                                           value="Opslaan">
+                                                </div>
+
                                             </form>
                                         </div>
                                     </div>
                                 </div>
+<!--                    <div class="col-md-6 col-12">-->
+<!--                        <div class="form-group row">-->
+<!--                            <label class="col-md-3 col-form-label"-->
+<!--                                   for="horizontal-form-1">Header</label>-->
+<!--                            <div class="col-md-9">-->
+<!--                                <input type="text" class="form-control square"-->
+<!--                                       id="horizontal-form-1" name="Header" value="--><?php //if (isset($_POST['factuur'])){echo $_POST['Header'];}?><!--">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6 col-12">-->
+<!--                        <div class="form-group row">-->
+<!--                            <label class="col-md-3 col-form-label"-->
+<!--                                   for="horizontal-form-2">Footer</label>-->
+<!--                            <div class="col-md-9">-->
+<!--                                <input type="text" class="form-control square"-->
+<!--                                       id="horizontal-form-2" name="Footer" value="--><?php //if (isset($_POST['factuur'])){echo $_POST['Footer'];}?><!--">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
 <!--                                                <div class="row mb-md-3">-->
 <!--                                                    <div class="col-md-6 col-12">-->
 <!--                                                        <div class="form-group row">-->
