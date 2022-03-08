@@ -101,8 +101,8 @@ $ga = new PHPGangsta_GoogleAuthenticator();
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
-//Createinvoice();
-//GetFactuurInfo();
+Createinvoice();
+GetFactuurInfo();
 Changepassword();
 Updateuser();
 UploadPic1();
