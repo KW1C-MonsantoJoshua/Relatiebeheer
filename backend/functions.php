@@ -2645,11 +2645,11 @@ function Insertfactuur()
         else{
             global $mysqli;
             $sql1 = "INSERT INTO `factuur`(`header`,`footer`,`member_of`)VALUES(?,?,?)";
-            $stmt = $mysqli->prepare($sql1);
-            $stmt->bind_param("ssi", $_POST['Header'], $_POST['Footer'], $_GET['membof']
+            $stmt1 = $mysqli->prepare($sql1);
+            $stmt1->bind_param("ssi", $_POST['Header'], $_POST['Footer'], $_GET['membof']
             );
-            $stmt->execute();
-            $stmt->close();
+            $stmt1->execute();
+            $stmt1->close();
             $mysqli->close();
         }
     }else {
