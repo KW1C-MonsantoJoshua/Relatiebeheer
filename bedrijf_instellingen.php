@@ -1604,7 +1604,7 @@ include "partials/navbar.php";
                                                 </button>
                                                 <input type="submit"
                                                        class="btn btn-primary"
-                                                       name="factuur"
+                                                       name="Instellingen"
                                                        value="Opslaan">
                                             </div>
                                         </form>
