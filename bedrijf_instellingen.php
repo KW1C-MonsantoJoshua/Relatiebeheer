@@ -1631,18 +1631,20 @@ include "partials/navbar.php";
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
                                                                    class="">Header</label>
-                                                            <input type="text" id="Header"
+                                                            <input type="text" id="bedrijfsnaam"
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
                                                                    name="Header"
+                                                                   value="<?= $rowC["name"]; ?>">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
                                                                    class="">Footer</label>
-                                                            <input type="text" id="Footer"
+                                                            <input type="text" id="bedrijfsnaam"
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
                                                                    name="Footer"
+                                                                   value="<?= $rowC["name"]; ?>">
                                                         </div>
                                             </div>
                                                     <div>
