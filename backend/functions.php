@@ -2633,25 +2633,26 @@ function Insertfactuur()
         $stmt->bind_param("i",$_GET['memb_of']
         );
         $stmt->execute();
+        $stmt->close();
+
 
 
         if($stmt->num_rows() > 0)
         {
             $sql = "UPDATE factuur SET header = ?, footer = ? WHERE member_of = ?";
-            $stmt = $mysqli->prepare($sql);
-            $stmt->bind_param('ssi', $_POST['Header'], $_POST['Footer'], $_GET['membof']
+            $stmtFactuur = $mysqli->prepare($sql);
+            $stmtFactuur->bind_param('ssi', $_POST['Header'], $_POST['Footer'], $_GET['membof']
             );
-            $stmt->execute();
+            $stmtFactuur->execute();
+            $stmtFactuur->close();
         }
         else{
-            $stmt->close();
-            global $mysqli;
             $sql = "INSERT INTO `factuur`(`header`,`footer`,`member_of`)VALUES(?,?,?)";
-            $stmt = $mysqli->prepare($sql);
-            $stmt->bind_param("ssi", $_POST['Header'], $_POST['Footer'], $_GET['membof']
+            $stmtFactuur = $mysqli->prepare($sql);
+            $stmtFactuur->bind_param("ssi", $_POST['Header'], $_POST['Footer'], $_GET['membof']
             );
-            $stmt->execute();
-            $stmt->close();
+            $stmtFactuur->execute();
+            $stmtFactuur->close();
             $mysqli->close();
         }
     }else {
