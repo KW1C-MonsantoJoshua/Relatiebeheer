@@ -1392,7 +1392,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="telefoon"
-                                                                   class="sr-only">Telefoon</label>
+                                                                   class="">Telefoon</label>
                                                             <input type="text" id="telefoon"
                                                                    class="form-control"
                                                                    placeholder="Telefoon"
@@ -1401,7 +1401,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="email"
-                                                                   class="sr-only">Email</label>
+                                                                   class="">Email</label>
                                                             <input type="text" id="email"
                                                                    class="form-control"
                                                                    placeholder="Email"
@@ -1410,7 +1410,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="postcode"
-                                                                   class="sr-only">Postcode</label>
+                                                                   class="">Postcode</label>
                                                             <input type="text" id="postcode"
                                                                    class="form-control"
                                                                    placeholder="Postcode"
@@ -1421,7 +1421,7 @@ include "partials/navbar.php";
                                                         <div class="form-group row">
                                                             <div class="controls col-md-6">
                                                                 <label for="huisnummer"
-                                                                       class="sr-only">Huisnummer</label>
+                                                                       class="">Huisnummer</label>
                                                                 <input type="text" id="huisnr"
                                                                        class="form-control"
                                                                        placeholder="Huisnummer"
@@ -1432,7 +1432,7 @@ include "partials/navbar.php";
                                                             </div>
                                                             <div class="controls col-md-6">
                                                                 <label for="toevoeging"
-                                                                       class="sr-only">Toevoeging</label>
+                                                                       class="">Toevoeging</label>
                                                                 <input type="text" id="toevoeging"
                                                                        class="form-control"
                                                                        placeholder="Toevoeging"
@@ -1443,7 +1443,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="adres"
-                                                                   class="sr-only">Adres</label>
+                                                                   class="">Adres</label>
                                                             <input type="text" id="straat"
                                                                    class="form-control"
                                                                    placeholder="Adres"
