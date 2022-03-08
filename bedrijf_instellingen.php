@@ -1383,7 +1383,7 @@ include "partials/navbar.php";
                                                         <h4>Gegevens 1</h4>
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
-                                                                   class="sr-only">Bedrijfsnaamm</label>
+                                                                   class="">Bedrijfsnaamm</label>
                                                             <input type="text" id="bedrijfsnaam"
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
