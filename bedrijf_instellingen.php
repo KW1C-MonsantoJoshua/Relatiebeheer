@@ -1574,16 +1574,6 @@ include "partials/navbar.php";
                                                                 <input type="text" class="form-control square"
                                                                        id="horizontal-form-4" name="Factuur naam">
                                                             </div>
-                                                            <div class="modal-footer">
-                                                                <button type="reset"
-                                                                        data-dismiss="modal"
-                                                                        class="btn btn-secondary">Annuleren
-                                                                </button>
-                                                                <input type="submit"
-                                                                       class="btn btn-primary"
-                                                                       name="Factuur naam"
-                                                                       value="Opslaan">
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1598,6 +1588,16 @@ include "partials/navbar.php";
                                                 </div>
                                                 <button name="factuur" type="submit" class="btn btn-primary">Submit</button>
                                                 <button type="button" class="btn btn-secondary"><i class="ft-x mr-1"></i>Cancel</button>
+                                                <div class="modal-footer">
+                                                    <button type="reset"
+                                                            data-dismiss="modal"
+                                                            class="btn btn-secondary">Annuleren
+                                                    </button>
+                                                    <input type="submit"
+                                                           class="btn btn-primary"
+                                                           name="factuur"
+                                                           value="Opslaan">
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
