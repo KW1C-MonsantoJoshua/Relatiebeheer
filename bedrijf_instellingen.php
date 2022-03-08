@@ -1615,7 +1615,7 @@ include "partials/navbar.php";
 
                                 <div class="card">
                                     <div class="card-header">
-                                        <h1 class="card-title">Facturen Maken</h1>
+                                        <h1>Facturen Maken</h1>
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
