@@ -2631,8 +2631,7 @@ function Insertfactuur()
         $sql = "SELECT member_of from factuur where member_of = ?";
         $stmtFactuur = $mysqli->prepare($sql);
         $stmtFactuur->bind_param("i",$_GET['membof']);
-        $member1 = $_GET['membof'];
-        $stmtFactuur->execute([$member1]);
+        $stmtFactuur->execute();
         $check = $stmtFactuur->fetch();
         if($check) {
             $stmtFactuur->close();
