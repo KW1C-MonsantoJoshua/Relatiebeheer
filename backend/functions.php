@@ -2633,6 +2633,8 @@ function Insertfactuur()
         $stmt->bind_param("i",$_GET['memb_of']
         );
         $stmt->execute();
+        $stmt->close();
+        $mysqli->close();
 
         if($stmt->num_rows() > 0)
         {
@@ -2644,12 +2646,12 @@ function Insertfactuur()
         }
         else{
             global $mysqli;
-            $sql1 = "INSERT INTO `factuur`(`header`,`footer`,`member_of`)VALUES(?,?,?)";
-            $stmt1 = $mysqli->prepare($sql1);
-            $stmt1->bind_param("ssi", $_POST['Header'], $_POST['Footer'], $_GET['membof']
+            $sql = "INSERT INTO `factuur`(`header`,`footer`,`member_of`)VALUES(?,?,?)";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param("ssi", $_POST['Header'], $_POST['Footer'], $_GET['membof']
             );
-            $stmt1->execute();
-            $stmt1->close();
+            $stmt->execute();
+            $stmt->close();
             $mysqli->close();
         }
     }else {
