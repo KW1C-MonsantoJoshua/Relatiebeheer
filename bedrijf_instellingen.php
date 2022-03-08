@@ -1624,12 +1624,20 @@ include "partials/navbar.php";
                                         <hr class="mt-1 mt-sm-2">
                                         <form method="post">
                                             <div class="row">
-                                                <div class="col-md-4">
+                                                <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <h4>Bedrijfsgegevens</h4>
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
-                                                                   class="">Bedrijfsnaamm</label>
+                                                                   class="">Header</label>
+                                                            <input type="text" id="bedrijfsnaam"
+                                                                   class="form-control"
+                                                                   placeholder="Bedrijfsnaam"
+                                                                   name="name"
+                                                                   value="<?= $rowC["name"]; ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="bedrijfsnaam"
+                                                                   class="">Footer</label>
                                                             <input type="text" id="bedrijfsnaam"
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
@@ -1654,6 +1662,8 @@ include "partials/navbar.php";
                         </div>
                     </div>
                     </br>
+
+
                                 <div class="card">
                                     <div class="card-header">
                                         <h1>Facturen Maken</h1>
