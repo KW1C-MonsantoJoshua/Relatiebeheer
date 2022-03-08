@@ -2628,13 +2628,12 @@ function Insertfactuur()
 {
     if (isset($_POST['factuur'])) {
         global $mysqli;
-
         $sql = "SELECT member_of from factuur where member_of = ?";
         $stmtFactuur = $mysqli->prepare($sql);
         $stmtFactuur->bind_param("i",$_GET['membof']);
         $stmtFactuur->execute();
 
-        if($stmtFactuur->num_rows() > 0) {
+        if(1 > 0) {
             $sql = "UPDATE factuur SET header = ?, footer = ? WHERE member_of = ?";
             $stmtFactuur = $mysqli->prepare($sql);
             $stmtFactuur->bind_param('ssi', $_POST['Header'], $_POST['Footer'], $_GET['membof']
