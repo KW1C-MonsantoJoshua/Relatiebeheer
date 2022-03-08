@@ -1645,6 +1645,10 @@ include "partials/navbar.php";
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
 <!--                                                <div class="row mb-md-3">-->
 <!--                                                    <div class="col-md-6 col-12">-->
 <!--                                                        <div class="form-group row">-->
