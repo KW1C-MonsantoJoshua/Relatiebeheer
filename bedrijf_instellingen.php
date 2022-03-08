@@ -1645,28 +1645,28 @@ include "partials/navbar.php";
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row mb-md-3">
-                                                    <div class="col-md-6 col-12">
-                                                        <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label"
-                                                                   for="horizontal-form-3">Datum</label>
-                                                            <div class="col-md-9">
-                                                                <input type="text" class="form-control square"
-                                                                       id="horizontal-form-3" name="Datum" value="<?php if (isset($_POST['factuur'])){echo $_POST['Datum'];}?>">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-12">
-                                                        <div class="form-group row">
-                                                            <label class="col-md-3 col-form-label"
-                                                                   for="horizontal-form-4">Factuur naam</label>
-                                                            <div class="col-md-9">
-                                                                <input type="text" class="form-control square"
-                                                                       id="horizontal-form-4" name="Factuur_naam" value="<?php if (isset($_POST['factuur'])){echo $_POST['Factuur_naam'];}?>">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+<!--                                                <div class="row mb-md-3">-->
+<!--                                                    <div class="col-md-6 col-12">-->
+<!--                                                        <div class="form-group row">-->
+<!--                                                            <label class="col-md-3 col-form-label"-->
+<!--                                                                   for="horizontal-form-3">Datum</label>-->
+<!--                                                            <div class="col-md-9">-->
+<!--                                                                <input type="text" class="form-control square"-->
+<!--                                                                       id="horizontal-form-3" name="Datum" value="--><?php //if (isset($_POST['factuur'])){echo $_POST['Datum'];}?><!--">-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                    <div class="col-md-6 col-12">-->
+<!--                                                        <div class="form-group row">-->
+<!--                                                            <label class="col-md-3 col-form-label"-->
+<!--                                                                   for="horizontal-form-4">Factuur naam</label>-->
+<!--                                                            <div class="col-md-9">-->
+<!--                                                                <input type="text" class="form-control square"-->
+<!--                                                                       id="horizontal-form-4" name="Factuur_naam" value="--><?php //if (isset($_POST['factuur'])){echo $_POST['Factuur_naam'];}?><!--">-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
                                                 <div>
                                                     <?php
                                                     if (isset($_GET["toevoegenFac"])) {
