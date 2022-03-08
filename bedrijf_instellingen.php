@@ -1647,15 +1647,7 @@ include "partials/navbar.php";
                                                                    value="<?= $rowC["name"]; ?>">
                                                         </div>
                                             </div>
-                                                    <div>
-                                                        <?php
-                                                        if (isset($_GET["toevoegenFac"])) {
-                                                            if ($_GET["toevoegenFac"] == "succes") {
-                                                                echo "<p class='text-success'>Facturen succesvol toegevoegd !</p>";
-                                                            }
-                                                        }
-                                                        ?>
-                                                    </div>
+
                                                     <div class="modal-footer">
                                                         <button type="reset"
                                                                 data-dismiss="modal"
