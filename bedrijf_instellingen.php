@@ -102,16 +102,16 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 Createinvoice();
-//Insertfactuur();
+Insertfactuur();
 //GetFactuurInfo();
-Changepassword();
-Updateuser();
-UploadPic1();
+//Changepassword();
+//Updateuser();
+//UploadPic1();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
-InsertNotes();
-EditNNote();
-EditNoteExtra();
+//InsertNotes();
+//EditNNote();
+//EditNoteExtra();
 
 
 ?>
