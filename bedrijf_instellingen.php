@@ -1655,13 +1655,15 @@ include "partials/navbar.php";
                                                                name="factuur"
                                                                value="Opslaan">
                                                     </div>
+                                                </div>
+                                            </div>
                                         </form>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     </br>
 
 
