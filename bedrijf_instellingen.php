@@ -1635,7 +1635,6 @@ include "partials/navbar.php";
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
                                                                    name="Header"
-                                                                   value="<?= $rowC["name"]; ?>">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
@@ -1644,7 +1643,6 @@ include "partials/navbar.php";
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
                                                                    name="Footer"
-                                                                   value="<?= $rowC["name"]; ?>">
                                                         </div>
                                             </div>
                                                     <div>
