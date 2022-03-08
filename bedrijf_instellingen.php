@@ -1657,6 +1657,7 @@ include "partials/navbar.php";
                                                     </div>
                                         </form>
                                     </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
