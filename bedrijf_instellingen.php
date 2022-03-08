@@ -1624,40 +1624,6 @@ include "partials/navbar.php";
                                         <div class="card-body">
                                             <form method="post">
                                                 <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <h4>mogool1</h4>
-                                                            <div class="form-group">
-                                                                <label for="bedrijfsnaam"
-                                                                       class="">Header</label>
-                                                                <input type="text" id="bedrijfsnaam"
-                                                                       class="form-control"
-                                                                       placeholder="Bedrijfsnaam"
-                                                                       name="name"
-                                                                       value="<?= $rowC["name"]; ?>">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="bedrijfsnaam"
-                                                                       class="">Footer</label>
-                                                                <input type="text" id="bedrijfsnaam"
-                                                                       class="form-control"
-                                                                       placeholder="Bedrijfsnaam"
-                                                                       name="name"
-                                                                       value="<?= $rowC["name"]; ?>">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-
-
-
-
-
-
-
                                                     <div class="col-md-6 col-12">
                                                         <div class="form-group row">
                                                             <label class="col-md-3 col-form-label"
