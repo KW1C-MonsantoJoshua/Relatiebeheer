@@ -1623,7 +1623,6 @@ include "partials/navbar.php";
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <h4>Contactgegevens</h4>
                                                             <div class="form-group">
                                                                 <label for="telefoon"
                                                                        class="">Telefoon</label>
