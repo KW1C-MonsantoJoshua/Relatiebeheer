@@ -104,14 +104,14 @@ if (!isset($_SESSION["loggedin"])) {
 Createinvoice();
 Insertfactuur();
 GetFactuurInfo();
-//Changepassword();
-//Updateuser();
-//UploadPic1();
+Changepassword();
+Updateuser();
+UploadPic1();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
-//InsertNotes();
-//EditNNote();
-//EditNoteExtra();
+InsertNotes();
+EditNNote();
+EditNoteExtra();
 
 
 ?>
