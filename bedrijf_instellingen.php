@@ -1662,7 +1662,7 @@ include "partials/navbar.php";
                                                                    for="horizontal-form-4">Factuur naam</label>
                                                             <div class="col-md-9">
                                                                 <input type="text" class="form-control square"
-                                                                       id="horizontal-form-4" name="Factuur naam">
+                                                                       id="horizontal-form-4" name="Factuur_naam">
                                                             </div>
                                                         </div>
                                                     </div>
