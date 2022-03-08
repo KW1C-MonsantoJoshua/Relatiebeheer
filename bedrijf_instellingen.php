@@ -1625,7 +1625,7 @@ include "partials/navbar.php";
                                                         <div class="form-group">
                                                             <div class="form-group">
                                                                 <label for="telefoon"
-                                                                       class="">Telefoon</label>
+                                                                       class="">Header</label>
                                                                 <input type="text" id="telefoon"
                                                                        class="form-control"
                                                                        placeholder="Telefoon"
@@ -1634,7 +1634,7 @@ include "partials/navbar.php";
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="email"
-                                                                       class="">Email</label>
+                                                                       class="">Footer</label>
                                                                 <input type="text" id="email"
                                                                        class="form-control"
                                                                        placeholder="Email"
