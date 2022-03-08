@@ -1621,7 +1621,7 @@ include "partials/navbar.php";
                                         <div class="card-body">
                                             <form method="post">
                                                 <div class="row">
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
                                                             <h4>Contactgegevens</h4>
                                                             <div class="form-group">
