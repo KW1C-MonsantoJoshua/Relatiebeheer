@@ -1631,7 +1631,7 @@ include "partials/navbar.php";
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
                                                                    class="">Header</label>
-                                                            <input type="text" id="bedrijfsnaam"
+                                                            <input type="text" id="Header"
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
                                                                    name="Header"
@@ -1639,7 +1639,7 @@ include "partials/navbar.php";
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
                                                                    class="">Footer</label>
-                                                            <input type="text" id="bedrijfsnaam"
+                                                            <input type="text" id="Footer"
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
                                                                    name="Footer"
