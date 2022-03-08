@@ -1626,8 +1626,7 @@ include "partials/navbar.php";
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <h4>Bedrijfsgegevens</h4>
-                                                            <<label class="col-md-3 col-form-label"
+                                                            <label class="col-md-3 col-form-label"
                                                                     for="horizontal-form-1">Header</label>
                                                             <div class="col-md-9">
                                                                 <input type="text" class="form-control square"
@@ -1636,8 +1635,7 @@ include "partials/navbar.php";
                                                     </div>
                                                         <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <h4>Bedrijfsgegevens</h4>
-                                                            <<div class="form-group row">
+                                                            <div class="form-group row">
                                                                 <label class="col-md-3 col-form-label"
                                                                        for="horizontal-form-1">Header</label>
                                                                 <div class="col-md-9">
