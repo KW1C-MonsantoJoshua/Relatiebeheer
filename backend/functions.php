@@ -2643,6 +2643,7 @@ function Insertfactuur()
             $stmt->execute();
         }
         else{
+            global $mysqli;
             $sql = "INSERT INTO `factuur`(`header`,`footer`,`member_of`)VALUES(?,?,?)";
             $stmt = $mysqli->prepare($sql);
             $stmt->bind_param("ssi", $_POST['Header'], $_POST['Footer'], $_GET['membof']
