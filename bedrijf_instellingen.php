@@ -103,7 +103,7 @@ if (!isset($_SESSION["loggedin"])) {
 }
 Createinvoice();
 Insertfactuur();
-//GetFactuurInfo();
+GetFactuurInfo();
 //Changepassword();
 //Updateuser();
 //UploadPic1();
