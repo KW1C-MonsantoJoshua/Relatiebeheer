@@ -2623,3 +2623,48 @@ function Createinvoice()
         header("Location:bedrijf_instellingen.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenFac=succes");
     }
 }
+
+function Insertfactuur()
+{
+    if (isset($_POST['factuur'])) {
+        global $mysqli;
+
+        $stmt = $mysqli->prepare("SELECT member_of from factuur where member_of = ?");
+        $stmt->bind_param("i",$_GET['memb_of']
+        );
+        $stmt->execute();
+
+        if($stmt->num_rows() > 0)
+        {
+            $sql = "UPDATE factuur SET header = ?, footer = ? WHERE member_of = ?";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param('ssi', $_POST['Header'], $_POST['Header'], $_GET['memb_of']
+            );
+            $stmt->execute();
+        }
+        else{
+            $sql = "INSERT INTO `factuur`(`header`,`footer`,`member_of` )VALUES(?,?,?)";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param(
+                "ssi",
+                $_POST['Header'],
+                $_POST['Header'],
+                $_GET['memb_of']
+            );
+            $stmt->execute();
+            $stmt->close();
+            $mysqli->close();
+        }
+    }
+}
+
+function GetFactuurInfo()
+{
+    global $mysqli;
+    $sql = "SELECT * FROM `factuur` WHERE id = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("i", $_GET["membof"]);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_array();
+}

@@ -102,6 +102,8 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 Createinvoice();
+Insertfactuur();
+GetFactuurInfo();
 Changepassword();
 Updateuser();
 UploadPic1();
@@ -1632,7 +1634,7 @@ include "partials/navbar.php";
                                                             <input type="text" id="bedrijfsnaam"
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
-                                                                   name="name"
+                                                                   name="Header"
                                                                    value="<?= $rowC["name"]; ?>">
                                                         </div>
                                                         <div class="form-group">
@@ -1641,7 +1643,7 @@ include "partials/navbar.php";
                                                             <input type="text" id="bedrijfsnaam"
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
-                                                                   name="name"
+                                                                   name="Footer"
                                                                    value="<?= $rowC["name"]; ?>">
                                                         </div>
                                             </div>
