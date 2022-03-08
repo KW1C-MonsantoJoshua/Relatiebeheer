@@ -1629,7 +1629,16 @@ include "partials/navbar.php";
                                                             <h4>mogool1</h4>
                                                             <div class="form-group">
                                                                 <label for="bedrijfsnaam"
-                                                                       class="">Bedrijfsnaamm</label>
+                                                                       class="">Header</label>
+                                                                <input type="text" id="bedrijfsnaam"
+                                                                       class="form-control"
+                                                                       placeholder="Bedrijfsnaam"
+                                                                       name="name"
+                                                                       value="<?= $rowC["name"]; ?>">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="bedrijfsnaam"
+                                                                       class="">Footer</label>
                                                                 <input type="text" id="bedrijfsnaam"
                                                                        class="form-control"
                                                                        placeholder="Bedrijfsnaam"
