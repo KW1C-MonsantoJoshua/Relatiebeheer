@@ -2658,7 +2658,7 @@ function Insertfactuur()
 function GetFactuurInfo()
 {
     global $mysqli;
-    $sql = "SELECT * FROM `factuur` WHERE id = ?";
+    $sql = "SELECT * FROM `factuur` WHERE member_of = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("i", $_GET["membof"]);
     $stmt->execute();
