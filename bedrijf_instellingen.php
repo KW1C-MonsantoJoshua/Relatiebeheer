@@ -1664,53 +1664,6 @@ include "partials/navbar.php";
                     </br>
 
 
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h1>Facturen Maken</h1>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-body">
-                                            <hr class="mt-1 mt-sm-2">
-                                            <form method="post">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <div class="form-group">
-                                                                <label for="telefoon"
-                                                                       class="">Header</label>
-                                                                <input type="text" id="telefoon"
-                                                                       class="form-control"
-                                                                       placeholder="Telefoon"
-                                                                       name="telefoon"
-                                                                       value="<?= $rowC['phoneNumber'] ?>">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="email"
-                                                                       class="">Footer</label>
-                                                                <input type="text" id="email"
-                                                                       class="form-control"
-                                                                       placeholder="Email"
-                                                                       name="email"
-                                                                       value="<?= $rowC['email'] ?>">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </br>
-                                                <div class="modal-footer">
-                                                    <button type="reset"
-                                                            data-dismiss="modal"
-                                                            class="btn btn-secondary">Annuleren
-                                                    </button>
-                                                    <input type="submit"
-                                                           class="btn btn-primary"
-                                                           name="factuur"
-                                                           value="Opslaan">
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
 <!--                    <div class="col-md-6 col-12">-->
 <!--                        <div class="form-group row">-->
 <!--                            <label class="col-md-3 col-form-label"-->
