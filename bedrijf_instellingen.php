@@ -1624,7 +1624,7 @@ include "partials/navbar.php";
                                         <div class="card-body">
                                             <form method="post">
                                                 <div class="row">
-                                                    <div class="col-md-8">
+                                                    <div class="col-md-10">
                                                         <div class="form-group">
                                                             <h4>mogool1</h4>
                                                             <div class="form-group">
