@@ -1624,7 +1624,7 @@ include "partials/navbar.php";
                                     <div class="tab-pane active" id="general12" role="tabpanel"
                                          aria-labelledby="general-tab">
                                         <hr class="mt-1 mt-sm-2">
-                                        <form method="post" action="/backend/functions.php">
+                                        <form method="post" action="#">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
