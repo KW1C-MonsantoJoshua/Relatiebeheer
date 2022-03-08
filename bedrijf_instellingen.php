@@ -1499,6 +1499,52 @@ include "partials/navbar.php";
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <h4>Gegevens 2</h4>
+                                                        <div class="form-group">
+                                                            <label for="btw"
+                                                                   class="sr-only">BTW
+                                                                Nummer</label>
+                                                            <input type="text" id="btw"
+                                                                   class="form-control"
+                                                                   placeholder="BTW Nummer"
+                                                                   name="btw"
+                                                                   value="<?= $rowC['btw_nummer'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="bic"
+                                                                   class="sr-only">BIC</label>
+                                                            <input class="form-control"
+                                                                   type="text"
+                                                                   name="bic"
+                                                                   placeholder="BIC"
+                                                                   id="bic">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="kvk"
+                                                                   class="sr-only">KVK
+                                                                Nummer</label>
+                                                            <input class="form-control"
+                                                                   type="text"
+                                                                   placeholder="KVK Nummer"
+                                                                   id="kvk"
+                                                                   name="kvk"
+                                                                   value="<?= $rowC['kvk_nummer'] ?>">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="iban"
+                                                                   class="sr-only">IBAN
+                                                                Nummer</label>
+                                                            <input class="form-control"
+                                                                   type="text"
+                                                                   placeholder="IBAN Nummer"
+                                                                   id="iban"
+                                                                   name="iban"
+                                                                   value="<?= $rowC['iban_nummer'] ?>">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="reset"
