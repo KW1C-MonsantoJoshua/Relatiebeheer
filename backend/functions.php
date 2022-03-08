@@ -2645,7 +2645,6 @@ function Insertfactuur()
         }
         else{
             $stmt->close();
-            $mysqli->close();
             global $mysqli;
             $sql = "INSERT INTO `factuur`(`header`,`footer`,`member_of`)VALUES(?,?,?)";
             $stmt = $mysqli->prepare($sql);
