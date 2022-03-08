@@ -1574,6 +1574,16 @@ include "partials/navbar.php";
                                                                 <input type="text" class="form-control square"
                                                                        id="horizontal-form-4" name="Factuur naam">
                                                             </div>
+                                                            <div class="modal-footer">
+                                                                <button type="reset"
+                                                                        data-dismiss="modal"
+                                                                        class="btn btn-secondary">Annuleren
+                                                                </button>
+                                                                <input type="submit"
+                                                                       class="btn btn-primary"
+                                                                       name="Factuur naam"
+                                                                       value="Opslaan">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
