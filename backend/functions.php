@@ -2633,8 +2633,7 @@ function Insertfactuur()
         $stmt->bind_param("i",$_GET['memb_of']
         );
         $stmt->execute();
-        $stmt->close();
-        $mysqli->close();
+
 
         if($stmt->num_rows() > 0)
         {
@@ -2643,6 +2642,8 @@ function Insertfactuur()
             $stmt->bind_param('ssi', $_POST['Header'], $_POST['Footer'], $_GET['membof']
             );
             $stmt->execute();
+            $stmt->close();
+            $mysqli->close();
         }
         else{
             global $mysqli;
