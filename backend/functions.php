@@ -2629,9 +2629,9 @@ function Insertfactuur()
     if (isset($_POST['factuur'])) {
         global $mysqli;
 
-        $stmtFactuur = $mysqli->prepare("SELECT member_of from factuur where member_of = ?");
-        $stmtFactuur->bind_param("i",$_GET['membof']
-        );
+        $sql = "SELECT member_of from factuur where member_of = ?";
+        $stmtFactuur = $mysqli->prepare($sql);
+        $stmtFactuur->bind_param("i",$_GET['membof']);
         $stmtFactuur->execute();
 
         if($stmtFactuur->num_rows() > 0) {
