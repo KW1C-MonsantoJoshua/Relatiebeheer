@@ -1391,24 +1391,6 @@ include "partials/navbar.php";
                                                                    value="<?= $rowC["name"]; ?>">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="telefoon"
-                                                                   class="">Telefoon</label>
-                                                            <input type="text" id="telefoon"
-                                                                   class="form-control"
-                                                                   placeholder="Telefoon"
-                                                                   name="telefoon"
-                                                                   value="<?= $rowC['phoneNumber'] ?>">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="email"
-                                                                   class="">Email</label>
-                                                            <input type="text" id="email"
-                                                                   class="form-control"
-                                                                   placeholder="Email"
-                                                                   name="email"
-                                                                   value="<?= $rowC['email'] ?>">
-                                                        </div>
-                                                        <div class="form-group">
                                                             <label for="postcode"
                                                                    class="">Postcode</label>
                                                             <input type="text" id="postcode"
@@ -1503,45 +1485,22 @@ include "partials/navbar.php";
                                                     <div class="form-group">
                                                         <h4>Contactgegevens</h4>
                                                         <div class="form-group">
-                                                            <label for="btw"
-                                                                   class="sr-only">BTW
-                                                                Nummer</label>
-                                                            <input type="text" id="btw"
+                                                            <label for="telefoon"
+                                                                   class="">Telefoon</label>
+                                                            <input type="text" id="telefoon"
                                                                    class="form-control"
-                                                                   placeholder="BTW Nummer"
-                                                                   name="btw"
-                                                                   value="<?= $rowC['btw_nummer'] ?>">
+                                                                   placeholder="Telefoon"
+                                                                   name="telefoon"
+                                                                   value="<?= $rowC['phoneNumber'] ?>">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="bic"
-                                                                   class="sr-only">BIC</label>
-                                                            <input class="form-control"
-                                                                   type="text"
-                                                                   name="bic"
-                                                                   placeholder="BIC"
-                                                                   id="bic">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="kvk"
-                                                                   class="sr-only">KVK
-                                                                Nummer</label>
-                                                            <input class="form-control"
-                                                                   type="text"
-                                                                   placeholder="KVK Nummer"
-                                                                   id="kvk"
-                                                                   name="kvk"
-                                                                   value="<?= $rowC['kvk_nummer'] ?>">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="iban"
-                                                                   class="sr-only">IBAN
-                                                                Nummer</label>
-                                                            <input class="form-control"
-                                                                   type="text"
-                                                                   placeholder="IBAN Nummer"
-                                                                   id="iban"
-                                                                   name="iban"
-                                                                   value="<?= $rowC['iban_nummer'] ?>">
+                                                            <label for="email"
+                                                                   class="">Email</label>
+                                                            <input type="text" id="email"
+                                                                   class="form-control"
+                                                                   placeholder="Email"
+                                                                   name="email"
+                                                                   value="<?= $rowC['email'] ?>">
                                                         </div>
                                                     </div>
                                                 </div>
