@@ -2630,7 +2630,7 @@ function Insertfactuur()
         global $mysqli;
 
         $stmtFactuur = $mysqli->prepare("SELECT member_of from factuur where member_of = ?");
-        $stmtFactuur->bind_param("i",$_GET['memb_of']
+        $stmtFactuur->bind_param("i",$_GET['membof']
         );
         $stmtFactuur->execute();
 
