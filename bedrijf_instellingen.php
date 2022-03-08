@@ -102,8 +102,8 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 Createinvoice();
-Insertfactuur();
-GetFactuurInfo();
+//Insertfactuur();
+//GetFactuurInfo();
 Changepassword();
 Updateuser();
 UploadPic1();
