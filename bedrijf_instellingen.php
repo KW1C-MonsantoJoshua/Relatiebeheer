@@ -1380,7 +1380,7 @@ include "partials/navbar.php";
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h4>Gegevens 1</h4>
+                                                        <h4>Bedrijfsgegevens</h4>
                                                         <div class="form-group">
                                                             <label for="bedrijfsnaam"
                                                                    class="">Bedrijfsnaamm</label>
@@ -1420,7 +1420,7 @@ include "partials/navbar.php";
                                                         </div>
                                                         <div class="form-group row">
                                                             <div class="controls col-md-6">
-                                                                <label for="huisnummer"
+                                                                <label for="huisnr"
                                                                        class="">Huisnummer</label>
                                                                 <input type="text" id="huisnr"
                                                                        class="form-control"
@@ -1442,7 +1442,7 @@ include "partials/navbar.php";
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="adres"
+                                                            <label for="straat"
                                                                    class="">Adres</label>
                                                             <input type="text" id="straat"
                                                                    class="form-control"
@@ -1455,7 +1455,7 @@ include "partials/navbar.php";
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h4>Gegevens 2</h4>
+                                                        <h4>Adresgegevens</h4>
                                                         <div class="form-group">
                                                             <label for="btw"
                                                                    class="sr-only">BTW
@@ -1501,7 +1501,7 @@ include "partials/navbar.php";
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h4>Gegevens 2</h4>
+                                                        <h4>Contactgegevens</h4>
                                                         <div class="form-group">
                                                             <label for="btw"
                                                                    class="sr-only">BTW
