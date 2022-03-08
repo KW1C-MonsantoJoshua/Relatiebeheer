@@ -2649,7 +2649,6 @@ function Insertfactuur()
             );
             $stmtFactuur->execute();
             $stmtFactuur->close();
-            $mysqli->close();
         }
     }else {
         echo "fout1";
