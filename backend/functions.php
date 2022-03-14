@@ -510,6 +510,8 @@ function InsertCustomerIndividual()
                         $_POST['huisnummer_p'], $_POST['huisnummertoevoeging_p'],
                         $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p']
                         , $_GET["custof"]);
+                    $stmt->execute();
+                    $stmt->close();
                     $token = bin2hex(random_bytes(50));
                     $sql = "INSERT INTO `customers_individual`(`reset_token`)VALUES(?)";
                     $stmt = $mysqli->prepare($sql);
