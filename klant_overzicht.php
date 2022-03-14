@@ -59,15 +59,6 @@ include "partials/navbar.php";
                                         <div class="card-body text-center p-md-5">
                                             <h1 class="mb-2 kb-title">How can we help you today?</h1>
                                             <p class="mb-4">Algolia helps businesses across industries quickly create relevant, scalable, and lightning fast search and discovery experiences.</p>
-                                            <form>
-                                                <div class="form-group position-relative w-50 mx-auto kb-search-input">
-                                                    <input type="text" class="form-control form-control-lg shadow round p-3 font-medium-1" id="searchbar" placeholder="Find from talk..">
-                                                    <button class="btn btn-primary round position-absolute" type="button">
-                                                        <span class="d-none d-sm-block">Search</span>
-                                                        <i class="ft-search d-block d-sm-none"></i>
-                                                    </button>
-                                                </div>
-                                            </form>
                                         </div>
                                     </div>
                                 </div>
