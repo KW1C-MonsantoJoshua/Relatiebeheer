@@ -52,17 +52,17 @@ include "partials/navbar.php";
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title"><?php GetCompanyName();?></h4>
-
-                            <ul class="breadcrumb bg-transparent">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>
-                                <!--                                <li class="breadcrumb-item">--><?php
-                                //                                    $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
-                                //                                    foreach($crumbs as $crumb){
-                                //                                        echo ucfirst(str_replace(array(".php","_"),array(""," "),$crumb) . ' ');
-                                //                                    }
-                                //                                    ?><!--</li>-->
-                            </ul>
+<!---->
+<!--                            <ul class="breadcrumb bg-transparent">-->
+<!--                                <li class="breadcrumb-item"><a href="#">Home</a></li>-->
+<!--                                <li class="breadcrumb-item"><a href="bedrijfs_overzicht.php">CRM Relaties</a></li>-->
+<!--                                                                <li class="breadcrumb-item">--><?php
+//                                                                    $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
+//                                                                    foreach($crumbs as $crumb){
+//                                                                        echo ucfirst(str_replace(array(".php","_"),array(""," "),$crumb) . ' ');
+//                                                                    }
+//                                                                    ?><!--</li>-->
+<!--                            </ul>-->
                         </div>
 
                         <div class="card-content">
