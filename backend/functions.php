@@ -514,7 +514,7 @@ function InsertCustomerIndividual()
                     $stmt->execute();
                     $stmt->close();
                     $mysqli->close();
-                    header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=succes");
+                    header("Location:bedrijfs_klanten_overzicht.php?custofee=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=succes");
                     exit();
                 }
             }
