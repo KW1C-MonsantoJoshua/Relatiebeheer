@@ -181,4 +181,5 @@ include "partials/navbar.php";
 include "partials/footer.php";
 ?>
 </body>
+</html>
 <!-- END : Body-->
