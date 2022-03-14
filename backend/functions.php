@@ -517,8 +517,6 @@ function InsertCustomerIndividual()
                         "s",
                         $token
                     );
-                    $stmt->execute();
-                    $stmt->close();
                     $email = $_POST["email_p"];
                     if ($email > 0) {
                         $to = $email;
