@@ -26,6 +26,7 @@ editUserP();
 ViewUserP();
 ViewUserZ();
 ViewPersonnel();
+InsertUser();
 // Controleer of iemand ingelogd is
 
 
@@ -857,7 +858,7 @@ include "partials/navbar.php";
                                                         </button>
                                                         <input type="submit"
                                                                class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                               name="registreerParticulier"
+                                                               name="gebruiker"
                                                                value="Relatie Toevoegen">
                                                     </div>
                                                 </form>
