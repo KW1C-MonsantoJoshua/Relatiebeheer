@@ -522,8 +522,8 @@ function InsertCustomerIndividual()
                     $email = $_POST["email_p"];
                     if ($email > 0) {
                         $to = $email;
-                        $subject = "Wachtwoord vergeten";
-                        $msg = "Your password reset link <br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . " <br> Reset your password with this link .Click or open in new tab<br>";
+                        $subject = "Email verifieren en wachtwoord instellen";
+                        $msg = "Je wachtwoord instellen link </br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . " </br> Stel je wachtwoord in met deze link. klik of open in een nieuwe tab</br>";
                         $msg = wordwrap($msg, 70);
                         $headers = "From: Admin@qccs.nl";
                         mail($to, $subject, $msg, $headers);
