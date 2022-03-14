@@ -56,7 +56,7 @@ include "partials/navbar.php";
                             <div class="col-12">
                                 <div class="card bg-transparent shadow-none kb-header py-3">
                                     <div class="card-content">
-                                        <div style=".p-md-5: padding: 0 !important;" class="card-body text-center p-md-5">
+                                        <div style="padding: 0 !important;" class="card-body text-center p-md-5">
                                             <h1 class="mb-2 kb-title">How can we help you today?</h1>
                                             <p class="mb-4">Algolia helps businesses across industries quickly create relevant, scalable, and lightning fast search and discovery experiences.</p>
                                         </div>
