@@ -510,11 +510,28 @@ function InsertCustomerIndividual()
                         $_POST['huisnummer_p'], $_POST['huisnummertoevoeging_p'],
                         $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p']
                         , $_GET["custof"]);
-
+                    $token = bin2hex(random_bytes(50));
+                    $sql = "INSERT INTO `customers_individual`(`reset_token`)VALUES(?)";
+                    $stmt = $mysqli->prepare($sql);
+                    $stmt->bind_param(
+                        "s",
+                        $token
+                    );
+                    $stmt->execute();
+                    $stmt->close();
+                    $email = $_POST["email_p"];
+                    if ($email > 0) {
+                        $to = $email;
+                        $subject = "Wachtwoord vergeten";
+                        $msg = "Your password reset link <br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . " <br> Reset your password with this link .Click or open in new tab<br>";
+                        $msg = wordwrap($msg, 70);
+                        $headers = "From: Admin@qccs.nl";
+                        mail($to, $subject, $msg, $headers);
+                    } else echo "'$email' komt niet voor in de database";
                     $stmt->execute();
                     $stmt->close();
                     $mysqli->close();
-                    header("Location:bedrijfs_klanten_overzicht.php?custofee=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=succes");
+                    header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=succes");
                     exit();
                 }
             }
