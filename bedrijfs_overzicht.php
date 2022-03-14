@@ -13,6 +13,10 @@ if ($row2['authentication_level'] !== 'Admin') {
         $memb_of = $row2['member_of'];
         header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
     }
+    if ($row2['authentication_level'] === 'Admin1') {
+        $memb_of = $row2['member_of'];
+        header("Location:../klant_overzicht.php?custof=$memb_of&membof=$memb_of");
+    }
 }
 InsertBedrijf();
 ViewC();
