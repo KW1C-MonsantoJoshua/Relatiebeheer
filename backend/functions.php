@@ -523,7 +523,7 @@ function InsertCustomerIndividual()
                     if ($email > 0) {
                         $to = $email;
                         $subject = "Email verifieren en wachtwoord instellen";
-                        $msg = "Je wachtwoord instellen link </br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . " </br> Stel je wachtwoord in met deze link. klik of open in een nieuwe tab</br>";
+                        $msg = "Je wachtwoord instellen link <br></br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . "Stel je wachtwoord in met deze link. klik of open in een nieuwe tab";
                         $msg = wordwrap($msg, 70);
                         $headers = "From: Admin@qccs.nl";
                         mail($to, $subject, $msg, $headers);
