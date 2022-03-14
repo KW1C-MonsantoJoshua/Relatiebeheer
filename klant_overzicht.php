@@ -56,8 +56,8 @@ include "partials/navbar.php";
                                 <div class="card bg-transparent shadow-none kb-header py-3">
                                     <div class="card-content">
                                         <div style="padding: 0 !important;" class="card-body text-center p-md-5">
-                                            <h1 class="mb-2 kb-title">Goede morgen Teus</h1>
-                                            <p class="mb-4">Klik op een van de vakken om verder te gaan.</p>
+                                            <h1 class="mb-2 kb-title">How can we help you today?</h1>
+                                            <p class="mb-4">Algolia helps businesses across industries quickly create relevant, scalable, and lightning fast search and discovery experiences.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -74,8 +74,8 @@ include "partials/navbar.php";
                                         <div class="card-body text-center p-4">
                                             <a href="page-knowledge-categories.html">
                                                 <i class="ft-user"></i>
-                                                <h5 class="mt-2">Mijn Acccount</h5>
-                                                <p class="m-0 text-muted">Account gegevens wijzigen of bekijken</p>
+                                                <h5 class="mt-2">My Account</h5>
+                                                <p class="m-0 text-muted">But students more often neglect fact it is much more</p>
                                             </a>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@ include "partials/navbar.php";
                                             <a href="page-knowledge-categories.html">
                                                 <i class="ft-link"></i>
                                                 <h5 class="mt-2">Connect</h5>
-                                                <p class="m-0 text-muted">Voer hier je connecties zoals google en linked in</p>
+                                                <p class="m-0 text-muted">But students more often neglect fact it is much more</p>
                                             </a>
                                         </div>
                                     </div>
@@ -100,8 +100,8 @@ include "partials/navbar.php";
                                         <div class="card-body text-center p-4">
                                             <a href="page-knowledge-categories.html">
                                                 <i class="ft-dollar-sign"></i>
-                                                <h5 class="mt-2">Facturen en betalingen</h5>
-                                                <p class="m-0 text-muted">Factuur en betaalgegevens bekijken</p>
+                                                <h5 class="mt-2">Charges & Refunds</h5>
+                                                <p class="m-0 text-muted">But students more often neglect fact it is much more</p>
                                             </a>
                                         </div>
                                     </div>
@@ -113,8 +113,8 @@ include "partials/navbar.php";
                                         <div class="card-body text-center p-4">
                                             <a href="page-knowledge-categories.html">
                                                 <i class="ft-globe"></i>
-                                                <h5 class="mt-2">Hulp vragen</h5>
-                                                <p class="m-0 text-muted">Vraag om hulp of bekijk de videos</p>
+                                                <h5 class="mt-2">International</h5>
+                                                <p class="m-0 text-muted">But students more often neglect fact it is much more</p>
                                             </a>
                                         </div>
                                     </div>
@@ -139,8 +139,8 @@ include "partials/navbar.php";
                                         <div class="card-body text-center p-4">
                                             <a href="page-knowledge-categories.html">
                                                 <i class="ft-alert-circle"></i>
-                                                <h5 class="mt-2">Opmerkingen</h5>
-                                                <p class="m-0 text-muted">Bekijk hier alle opmerkingen</p>
+                                                <h5 class="mt-2">Disputes & Fraud</h5>
+                                                <p class="m-0 text-muted">But students more often neglect fact it is much more</p>
                                             </a>
                                         </div>
                                     </div>
