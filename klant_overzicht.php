@@ -44,6 +44,7 @@ include "partials/navbar.php";
 
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 
+    <div class="main-panel">
         <!-- BEGIN : Main Content-->
         <div class="main-content">
             <div class="content-overlay"></div>
