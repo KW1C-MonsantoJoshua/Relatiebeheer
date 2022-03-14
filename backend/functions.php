@@ -497,28 +497,22 @@ function InsertCustomerIndividual()
                     header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=emaildupli");
                     exit();
                 } elseif ($result->num_rows == 0) {
-
+                    $token = bin2hex(random_bytes(50));
                     $sql = "INSERT INTO `customers_individual`(`id`, `first_name`,`last_name_prefix`, `last_name`, `street`,
                                    `housenumber`, `housenumberAddition`,
-                                   `postalcode`, `phoneNumber`,email,customer_of) VALUES ('',?,?,?,?,?,?,?,?,?,?)";
+                                   `postalcode`, `phoneNumber`,email,customer_of,reset_token) VALUES ('',?,?,?,?,?,?,?,?,?,?,?)";
 
                     $stmt = $mysqli->prepare($sql);
                     $voornaam = ucwords($_POST['voornaam_p']);
                     $achternaam = ucwords($_POST['achternaam_p']);
-                    $stmt->bind_param("sssssssssi", $voornaam,
+                    $stmt->bind_param("sssssssssis", $voornaam,
                         $_POST['tussenvoegsel_p'], $achternaam, $_POST['straatnaam_p'],
                         $_POST['huisnummer_p'], $_POST['huisnummertoevoeging_p'],
                         $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p']
-                        , $_GET["custof"]);
+                        , $_GET["custof"], $token);
                     $stmt->execute();
                     $stmt->close();
-                    $token = bin2hex(random_bytes(50));
-                    $sql = "INSERT INTO `customers_individual`(`reset_token`)VALUES(?)";
-                    $stmt = $mysqli->prepare($sql);
-                    $stmt->bind_param(
-                        "s",
-                        $token
-                    );
+                    $mysqli->close();
                     $email = $_POST["email_p"];
                     $name = $_POST["voornaam_p"];
                     if ($email > 0) {
@@ -529,9 +523,6 @@ function InsertCustomerIndividual()
                         $headers = "From: Admin@qccs.nl";
                         mail($to, $subject, $msg, $headers);
                     } else echo "'$email' komt niet voor in de database";
-                    $stmt->execute();
-                    $stmt->close();
-                    $mysqli->close();
                     header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=succes");
                     exit();
                 }
