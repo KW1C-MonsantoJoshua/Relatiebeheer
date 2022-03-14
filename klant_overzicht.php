@@ -56,8 +56,8 @@ include "partials/navbar.php";
                                 <div class="card bg-transparent shadow-none kb-header py-3">
                                     <div class="card-content">
                                         <div style="padding: 0 !important;" class="card-body text-center p-md-5">
-                                            <h1 class="mb-2 kb-title">How can we help you today?</h1>
-                                            <p class="mb-4">Algolia helps businesses across industries quickly create relevant, scalable, and lightning fast search and discovery experiences.</p>
+                                            <h1 class="mb-2 kb-title">Goede morgen Teus</h1>
+                                            <p class="mb-4">Klik op een van de vakken om verder te gaan.</p>
                                         </div>
                                     </div>
                                 </div>
