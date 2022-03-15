@@ -269,7 +269,7 @@ $row = Getuser();
                             $memb_of = $_GET['membof'];
                             ?>
                             <a class="" href="<?php
-                            echo "page_account_settings.php?custof=$memb_of&membof=$memb_of";
+                            echo "page-account-settings.php";
                             ?>">
                                 <i class="icon-settings"></i>
                                 <span class="text">Mijn account</span>
