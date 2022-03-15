@@ -18,6 +18,7 @@ if (!($row2['authentication_level'] === 'Admin')) {
         header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
     }
 }
+InsertCustomerIndividual();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 editUserZ();
@@ -26,7 +27,6 @@ ViewUserP();
 ViewUserZ();
 ViewPersonnel();
 InsertUserZakelijk();
-InsertCustomerIndividual();
 
 // Controleer of iemand ingelogd is
 
