@@ -515,10 +515,10 @@ function InsertCustomerIndividual()
 
                     $sql = "INSERT INTO `users`(`id`, `username`, `authentication_level`,  `first_name`,`last_name_prefix`, `last_name`, `street`,
                                    `housenumber`, `housenumberAddition`,
-                                   `postalcode`, `phoneNumber`,email,customer_of,reset_token) VALUES ('',?,?,?,?,?,?,?,?,?,?,?,?)";
+                                   `postalcode`, `phoneNumber`,email,customer_of,reset_token) VALUES ('',?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                    $stmt = $mysqli->prepare($sql);
                     $token = bin2hex(random_bytes(50));
                     $authentication = 'user';
-                    $stmt = $mysqli->prepare($sql);
                     $voornaam = ucwords($_POST['voornaam_p']);
                     $achternaam = ucwords($_POST['achternaam_p']);
                     $stmt->bind_param("isssssssssis", $_POST['id'], $voornaam, $authentication, $voornaam,
