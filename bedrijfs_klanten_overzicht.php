@@ -18,12 +18,18 @@ if ($row2['authentication_level'] !== 'Admin') {
             header("Location:../klant_overzicht.php?custof=$memb_of&membof=$memb_of");
         }
     }
-    echo $row2['member_of'];
+    $kip1 = $row2['member_of'];
+    $kip2 = $_GET['membof'];
+    if ($kip1 !== $kip2) {
+        $memb_of = $row2['member_of'];
+        header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+    }
+}
+
+
 //    if ($row2['member_of'] !== $memb_of) {
 //        header("Location:../klant_overzicht.php?custof=$memb_of&membof=$memb_of");
 //    }
-}
-    echo $_GET['membof'];
 //    if (3 === $_GET['membof']) {
 //        $memb_of = $row2['member_of'];
 //        header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
