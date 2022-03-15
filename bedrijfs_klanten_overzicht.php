@@ -21,7 +21,7 @@ if ($row2['authentication_level'] !== 'Admin') {
     $kip1 = $row2['member_of'];
     $kip2 = $_GET['membof'];
     if ($kip1 === $kip2) {
-        exit();
+        echo $kip1;
     }
 }
 
