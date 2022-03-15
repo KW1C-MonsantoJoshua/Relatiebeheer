@@ -13,15 +13,6 @@ $row2 = Getuser();
 //    }
 //}
 
-
-UpdateCompanyInfo();
-$rowC = GetCompanyInfo();
-ViewUserP();
-ViewUserZ();
-ViewPersonnel();
-editPersonnel();
-editUserZ();
-editUserP();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
