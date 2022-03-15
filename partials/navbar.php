@@ -254,7 +254,7 @@ $row = Getuser();
                             echo "klant_bedrijf_info.php?custof=$memb_of&membof=$memb_of";
                             ?>">
                                 <i class="icon-settings"></i>
-                                <span class="text">Instellingen</span>
+                                <span class="text">Bedrijf Info</span>
                             </a>
                             <?php
 
@@ -269,10 +269,10 @@ $row = Getuser();
                             $memb_of = $_GET['membof'];
                             ?>
                             <a class="" href="<?php
-                            echo "bedrijf_instellingen.php?custof=$memb_of&membof=$memb_of";
+                            echo "page_account_settings.php?custof=$memb_of&membof=$memb_of";
                             ?>">
                                 <i class="icon-settings"></i>
-                                <span class="text">Instellingen</span>
+                                <span class="text">Mijn account</span>
                             </a>
                             <?php
 
