@@ -7,7 +7,7 @@ if (!isset($_SESSION["loggedin"])) {
 $row2 = Getuser();
 
 if ($row2['authentication_level'] !== "Admin") {
-    if ($row2['authentication_level'] !== "user") {
+    if ($row2['authentication_level'] === "user") {
         $memb_of = $row2['member_of'];
         header("Location:../klant_overzicht.php?custof=$memb_of&membof=$memb_of");
     }
