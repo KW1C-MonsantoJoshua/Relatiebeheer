@@ -513,7 +513,7 @@ function InsertCustomerIndividual()
                     $stmt->close();
 
 
-                    $sql = "INSERT INTO `users`(`id`, `username`, `authentication_level`,  `name`, `email`, `member_of`, `reset_token`) VALUES (?,?,?,?,?,?,?)";
+                    $sql = "INSERT INTO `users`(`id`, `username`, `authentication_level`,  `name`, `member_of`, `reset_token`) VALUES (?,?,?,?,?,?,?)";
                     $stmt = $mysqli->prepare($sql);
                     $token = bin2hex(random_bytes(50));
                     $authentication = 'user';
