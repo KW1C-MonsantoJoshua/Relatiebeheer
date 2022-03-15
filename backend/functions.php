@@ -467,10 +467,10 @@ function InsertCustomerIndividual()
             header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=empty");
             exit();
         } else {
-            if (!preg_match("/^[a-zA-Z]+$/", $_POST['voornaam_p']) && !preg_match("/^[a-zA-Z]+$/", $_POST['achternaam_p'])) {
-                header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=namefout");
-                exit();
-            } elseif (preg_match($re, $_POST['telefoonnummer_p'])) {
+//            if (!preg_match("/^[a-zA-Z]+$/", $_POST['voornaam_p']) && !preg_match("/^[a-zA-Z]+$/", $_POST['achternaam_p'])) {
+//                header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=namefout");
+//                exit(); }
+            if (preg_match($re, $_POST['telefoonnummer_p'])) {
                 header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=telfout");
                 exit();
             } elseif (preg_match($pattern, $_POST['email_p']) === 0) {
@@ -479,9 +479,9 @@ function InsertCustomerIndividual()
             } elseif (preg_match($reStraat, $_POST["straatnaam_p"])) {
                 header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=straatfout");
                 exit();
-            } elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode_p'])) {
-                header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=postcodefout");
-                exit();
+//            } elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode_p'])) {
+//                header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=postcodefout");
+//                exit();
             } else {
                 $query = "SELECT * FROM `customers_individual` WHERE email = ?";
                 $stmt = $mysqli->prepare($query);
