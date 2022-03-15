@@ -251,6 +251,24 @@ $row = Getuser();
                             $memb_of = $_GET['membof'];
                             ?>
                             <a class="" href="<?php
+                            echo "klant_overzicht.php?custof=$memb_of&membof=$memb_of";
+                            ?>">
+                                <i class="icon-settings"></i>
+                                <span class="text">Home</span>
+                            </a>
+                            <?php
+
+                        }
+                    }
+                    ?>
+                </li>
+                <li class="nav-item">
+                    <?php
+                    if(isset($_GET['membof'])) {
+                        if ($row['authentication_level'] === 'user') {
+                            $memb_of = $_GET['membof'];
+                            ?>
+                            <a class="" href="<?php
                             echo "klant_bedrijf_info.php?custof=$memb_of&membof=$memb_of";
                             ?>">
                                 <i class="icon-settings"></i>
