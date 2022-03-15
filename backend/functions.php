@@ -80,7 +80,7 @@ function GetCompanyInfo()
 function GetCompanyInfoCustomer1()
 {
     global $mysqli;
-    $sql = "SELECT * FROM `customers_business` WHERE id = ?";
+    $sql = "SELECT * FROM `customers_individual` WHERE id = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("i", $_SESSION['id']);
     $stmt->execute();
