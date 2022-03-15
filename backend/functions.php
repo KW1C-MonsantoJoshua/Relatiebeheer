@@ -518,7 +518,7 @@ function InsertCustomerIndividual()
                     $token = bin2hex(random_bytes(50));
                     $authentication = 'user';
                     $voornaam = ucwords($_POST['voornaam_p']);
-                    $stmt->bind_param("isssis", $_POST['id'], $voornaam, $authentication, $voornaam , $_GET["custof"], $token);
+                    $stmt->bind_param("isssis", $_POST['id'], $voornaam, $authentication, $voornaam , $_GET["membof"], $token);
                     $stmt->execute();
                     $stmt->close();
                     $mysqli->close();
