@@ -511,7 +511,6 @@ function InsertCustomerIndividual()
                         , $_GET["custof"]);
                     $stmt->execute();
                     $stmt->close();
-                    $mysqli->close();
 
 
                     $sql = "INSERT INTO `users`(`id`, `username`, `authentication_level`,  `first_name`,`last_name_prefix`, `last_name`, `street`,
