@@ -535,7 +535,7 @@ function InsertCustomerIndividual()
                         $headers = "From: Admin@qccs.nl";
                         mail($to, $subject, $msg, $headers);
                     } else echo "'$email' komt niet voor in de database";
-//                    header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=succes");
+                    header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=succes");
                     exit();
                 }
             }
