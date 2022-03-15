@@ -58,9 +58,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             if (isset($_SESSION['auth']) && isset($_SESSION['memb_of'])) {
                                 if ($_SESSION['auth'] == "Werknemer") {
                                     header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-                                } else {
+                                } else if ($_SESSION['auth'] == "Bedrijfsleider") {
                                     header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
-
+                                }  else if ($_SESSION['auth'] == "user") {
+                                    header("Location:../klant_overzicht.php?custof=$memb_of&membof=$memb_of");
                                 }
                             }
                         }
