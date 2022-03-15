@@ -513,16 +513,14 @@ function InsertCustomerIndividual()
                     $stmt->close();
 
 
-                    $sql = "INSERT INTO `users`(`id`, `username`, `authentication_level`,  `name`, `street`,
+                    $sql = "INSERT INTO `users`(`id`, `username`, `authentication_level`,  `name`,
                                    `housenumber`, `housenumberAddition`,
-                                   `postalcode`, `phoneNumber`,email,customer_of,reset_token) VALUES ('',?,?,?,?,?,?,?,?,?,?,?)";
-
+                                   `postalcode`, `phoneNumber`,email,customer_of,reset_token) VALUES ('',?,?,?,?,?,?,?,?,?,?)";
                     $stmt = $mysqli->prepare($sql);
                     $token = bin2hex(random_bytes(50));
                     $authentication = 'user';
                     $voornaam = ucwords($_POST['voornaam_p']);
                     $stmt->bind_param("isssssssssis", $_POST['id'], $voornaam, $authentication, $voornaam,
-                        $_POST['straatnaam_p'],
                         $_POST['huisnummer_p'], $_POST['huisnummertoevoeging_p'],
                         $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p']
                         , $_GET["custof"], $token);
