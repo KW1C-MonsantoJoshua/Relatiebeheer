@@ -27,6 +27,8 @@ ViewUserP();
 ViewUserZ();
 ViewPersonnel();
 InsertUserZakelijk();
+InsertCustomerIndividual();
+
 // Controleer of iemand ingelogd is
 
 

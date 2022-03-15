@@ -550,7 +550,6 @@ function InsertCustomerIndividual()
     }
 }
 
-InsertCustomerIndividual();
 
 function InsertCustomerBusiness()
 {
