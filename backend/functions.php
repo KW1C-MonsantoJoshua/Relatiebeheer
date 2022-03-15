@@ -521,7 +521,6 @@ function InsertCustomerIndividual()
                     $token = bin2hex(random_bytes(50));
                     $authentication = 'user';
                     $voornaam = ucwords($_POST['voornaam_p']);
-                    $achternaam = ucwords($_POST['achternaam_p']);
                     $stmt->bind_param("isssssssssis", $_POST['id'], $voornaam, $authentication, $voornaam,
                         $_POST['straatnaam_p'],
                         $_POST['huisnummer_p'], $_POST['huisnummertoevoeging_p'],
