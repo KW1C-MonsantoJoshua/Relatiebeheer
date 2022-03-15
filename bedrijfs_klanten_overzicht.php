@@ -26,7 +26,7 @@ editUserP();
 ViewUserP();
 ViewUserZ();
 ViewPersonnel();
-InsertUser();
+InsertUserZakelijk();
 // Controleer of iemand ingelogd is
 
 
