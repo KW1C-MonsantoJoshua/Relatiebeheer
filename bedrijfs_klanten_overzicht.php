@@ -20,9 +20,8 @@ if ($row2['authentication_level'] !== 'Admin') {
     }
     $kip1 = $row2['member_of'];
     $kip2 = $_GET['membof'];
-    if ($kip1 !== $kip2) {
-        $memb_of = $row2['member_of'];
-        header("Location:../klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
+    if ($kip1 === $kip2) {
+        exit();
     }
 }
 
