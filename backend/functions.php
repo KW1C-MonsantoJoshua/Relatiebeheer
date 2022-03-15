@@ -523,13 +523,20 @@ function InsertCustomerIndividual()
                     $stmt->execute();
                     $stmt->close();
 
+                    $sql = "SELECT * FROM `customers_individual` WHERE email=?";
+                    $stmt = $mysqli->prepare($sql);
+                    $stmt->bind_param("s", $_POST['email_p']);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $rowID = $result->fetch_assoc();
+                    $stmt->close();
 
                     $sql = "INSERT INTO `users`(`id`, `email`, `username`, `authentication_level`, `name`, `member_of`, `reset_token`) VALUES (?,?,?,?,?,?,?)";
                     $stmt = $mysqli->prepare($sql);
                     $token = bin2hex(random_bytes(50));
                     $authentication = 'user';
                     $voornaam = ucwords($_POST['voornaam_p']);
-                    $stmt->bind_param("issssis", $_POST['id'], $_POST['email_p'], $voornaam, $authentication, $voornaam, $_GET["membof"], $token);
+                    $stmt->bind_param("issssis", $rowID['id'], $_POST['email_p'], $voornaam, $authentication, $voornaam, $_GET["membof"], $token);
                     $stmt->execute();
                     $stmt->close();
                     $mysqli->close();
