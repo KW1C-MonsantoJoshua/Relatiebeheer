@@ -1383,7 +1383,7 @@ include "partials/navbar.php";
                                                                    class="form-control"
                                                                    placeholder="Bedrijfsnaam"
                                                                    name="name"
-                                                                   value="<?= $rowC["name"]; ?>">
+                                                                   value="<?= $rowC["first_name"]; ?>">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="btw"
