@@ -1861,10 +1861,7 @@ if(isset($_GET['k'])){ ?>
     }
 </script>
 </body>
-
 <?php
-qron();
-qroff();
 include "partials/footer.php";
 ?>
 <!-- END : Body-->
