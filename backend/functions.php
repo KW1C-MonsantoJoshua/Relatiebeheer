@@ -497,15 +497,32 @@ function InsertCustomerIndividual()
                     header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=emaildupli");
                     exit();
                 } elseif ($result->num_rows == 0) {
-                    $token = bin2hex(random_bytes(50));
                     $sql = "INSERT INTO `customers_individual`(`id`, `first_name`,`last_name_prefix`, `last_name`, `street`,
                                    `housenumber`, `housenumberAddition`,
-                                   `postalcode`, `phoneNumber`,email,customer_of,reset_token) VALUES ('',?,?,?,?,?,?,?,?,?,?,?)";
+                                   `postalcode`, `phoneNumber`,email,customer_of) VALUES ('',?,?,?,?,?,?,?,?,?,?)";
 
                     $stmt = $mysqli->prepare($sql);
                     $voornaam = ucwords($_POST['voornaam_p']);
                     $achternaam = ucwords($_POST['achternaam_p']);
-                    $stmt->bind_param("sssssssssis", $voornaam,
+                    $stmt->bind_param("sssssssssi", $voornaam,
+                        $_POST['tussenvoegsel_p'], $achternaam, $_POST['straatnaam_p'],
+                        $_POST['huisnummer_p'], $_POST['huisnummertoevoeging_p'],
+                        $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p']
+                        , $_GET["custof"]);
+                    $stmt->execute();
+                    $stmt->close();
+                    $mysqli->close();
+
+
+                    $sql = "INSERT INTO `users`(`id`, `username`, `authentication_level`,  `first_name`,`last_name_prefix`, `last_name`, `street`,
+                                   `housenumber`, `housenumberAddition`,
+                                   `postalcode`, `phoneNumber`,email,customer_of,reset_token) VALUES ('',?,?,?,?,?,?,?,?,?,?,?,?)";
+                    $token = bin2hex(random_bytes(50));
+                    $authentication = 'user';
+                    $stmt = $mysqli->prepare($sql);
+                    $voornaam = ucwords($_POST['voornaam_p']);
+                    $achternaam = ucwords($_POST['achternaam_p']);
+                    $stmt->bind_param("isssssssssis", $_POST['id'], $voornaam, $authentication, $voornaam,
                         $_POST['tussenvoegsel_p'], $achternaam, $_POST['straatnaam_p'],
                         $_POST['huisnummer_p'], $_POST['huisnummertoevoeging_p'],
                         $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p']
@@ -513,6 +530,8 @@ function InsertCustomerIndividual()
                     $stmt->execute();
                     $stmt->close();
                     $mysqli->close();
+
+
                     $email = $_POST["email_p"];
                     $name = $_POST["voornaam_p"];
                     if ($email > 0) {
