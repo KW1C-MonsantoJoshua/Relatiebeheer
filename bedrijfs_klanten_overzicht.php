@@ -20,6 +20,7 @@ if (!($row2['authentication_level'] === 'Admin')) {
 }
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
+editPersonnel();
 editUserZ();
 editUserP();
 ViewUserP();
@@ -857,7 +858,7 @@ include "partials/navbar.php";
                                                         </button>
                                                         <input type="submit"
                                                                class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                               name="gebruiker"
+                                                               name="registreerParticulier"
                                                                value="Relatie Toevoegen">
                                                     </div>
                                                 </form>
@@ -1000,7 +1001,7 @@ include "partials/navbar.php";
                                                         </button>
                                                         <input type="submit"
                                                                class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                               name="registreerParticulier"
+                                                               name="registreerZakelijk"
                                                                value="Relatie Toevoegen">
 
                                                     </div>
