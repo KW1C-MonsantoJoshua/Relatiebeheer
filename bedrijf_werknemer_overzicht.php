@@ -26,6 +26,9 @@ editUserP();
 ViewUserP();
 ViewUserZ();
 ViewPersonnel();
+Getpersonnel1();
+InsertPersonnel1();
+
 // Controleer of iemand ingelogd is
 
 

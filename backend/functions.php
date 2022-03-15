@@ -437,7 +437,6 @@ function InsertPersonnel1()
     }
 }
 
-InsertPersonnel1();
 function Getpersonnel1()
 {
     global $mysqli;
@@ -449,7 +448,6 @@ function Getpersonnel1()
     return $resultpersonnel->fetch_array();
 }
 
-Getpersonnel1();
 
 function InsertCustomerIndividual()
 {
