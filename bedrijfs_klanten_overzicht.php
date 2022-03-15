@@ -4,6 +4,8 @@ include "backend/functions.php";
 if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
+
+// Authentication Teus test fase
 $row2 = Getuser();
 if ($row2['authentication_level'] !== 'Admin') {
     if ($row2['authentication_level'] !== 'Bedrijfsleider') {
@@ -25,6 +27,7 @@ if ($row2['authentication_level'] !== 'Admin') {
         header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
     }
 }
+
 InsertCustomerIndividual();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
