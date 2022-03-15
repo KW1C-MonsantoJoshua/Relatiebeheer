@@ -15,8 +15,8 @@ $row2 = Getuser();
 
 
 UpdateCompanyInfo();
-//$rowC = GetCompanyInfo();
-$rowC = GetCompanyInfoCustomer();
+$rowC = GetCompanyInfo();
+$rowC = GetCompanyInfoCustomer1();
 ?>
 <!DOCTYPE html>
 <html class="loading" lang="en">

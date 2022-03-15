@@ -77,12 +77,13 @@ function GetCompanyInfo()
     return $result->fetch_array();
 }
 
-function GetCompanyInfoCustomer()
+function GetCompanyInfoCustomer1()
 {
     global $mysqli;
     $sql = "SELECT * FROM `customers_business` WHERE id = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("i", $_SESSION['id']);
+    $sdsdfs = 1052;
+    $stmt->bind_param("i", $sdsdfs);
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array();
