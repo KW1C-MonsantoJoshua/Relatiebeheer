@@ -106,7 +106,7 @@ $row = Getuser();
                         <div class="logo-img"><img src="../assets/img/logo.png"/></div>
                         <span class="text">CRM</span>
                     </a>
-                <?php } elseif ($_SESSION['auth'] == "Werknemer") {
+                <?php } elseif ($_SESSION['auth'] == "Werknemer" || $row['authentication_level'] === 'user') {
                     ?>
                     <a class="logo-text float-left"
                        href="klanten_overzicht.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
