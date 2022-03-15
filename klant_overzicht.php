@@ -75,7 +75,7 @@ include "partials/navbar.php";
                                 <div class="card">
                                     <div class="card-content">
                                         <div class="card-body text-center p-4">
-                                            <a href="page-knowledge-categories.html">
+                                            <a href="page-account-settings.php">
                                                 <i class="ft-user"></i>
                                                 <h5 class="mt-2">Mijn Acccount</h5>
                                                 <p class="m-0 text-muted">Account gegevens wijzigen of bekijken</p>
@@ -88,10 +88,10 @@ include "partials/navbar.php";
                                 <div class="card">
                                     <div class="card-content">
                                         <div class="card-body text-center p-4">
-                                            <a href="page-knowledge-categories.html">
+                                            <a href="klant_bedrijf_info.php?custof=<?= $_SESSION["memb_of"] ?>&membof=<?= $_SESSION["memb_of"] ?>">
                                                 <i class="ft-link"></i>
-                                                <h5 class="mt-2">Connect</h5>
-                                                <p class="m-0 text-muted">Voer hier je connecties zoals google en linked in</p>
+                                                <h5 class="mt-2">Verzend info</h5>
+                                                <p class="m-0 text-muted">Bekijk hier je verzend info</p>
                                             </a>
                                         </div>
                                     </div>
