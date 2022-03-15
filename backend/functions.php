@@ -1673,6 +1673,37 @@ function ViewCompanyPersonnel()
     }
 }
 
+function InsertUserZakelijk() {
+    if (isset($_POST['gebruiker'])) {
+        global $mysqli;
+        $token = bin2hex(random_bytes(50));
+        $rowPersonnel1 = Getpersonnel1();
+        $email = $rowPersonnel1['email'];
+        $sql = "INSERT INTO `users`(`username`,`name`,`email`,`reset_token`,`member_of`)VALUES(?,?,?,?,?)";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param(
+            "ssssi",
+            $rowPersonnel1['first_name'],
+            $rowPersonnel1['first_name'],
+            $rowPersonnel1['email'],
+            $token,
+            $_GET['memb_of']
+        );
+
+        $stmt->execute();
+        $stmt->close();
+        $mysqli->close();
+        if ($email > 0) {
+            $to = $email;
+            $subject = "Wachtwoord vergeten";
+            $msg = "Your password reset link <br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . $token . " <br> Reset your password with this link .Click or open in new tab<br>";
+            $msg = wordwrap($msg, 70);
+            $headers = "From: Admin@qccs.nl";
+            mail($to, $subject, $msg, $headers);
+            header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"]);
+        } else echo "'$email' komt niet voor in de database";
+    }
+}
 
 function InsertUser()
 {
