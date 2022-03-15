@@ -1757,7 +1757,6 @@ function InsertUser()
 
 function editPersonnel()
 {
-
     global $mysqli;
     $DataCustomer = "SELECT personnel.id,personnel.first_name,personnel.last_name_prefix,
     personnel.last_name,personnel.street,personnel.housenumber,personnel.email,

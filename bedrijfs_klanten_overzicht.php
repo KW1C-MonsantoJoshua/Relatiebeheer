@@ -20,7 +20,6 @@ if (!($row2['authentication_level'] === 'Admin')) {
 }
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
-editPersonnel();
 editUserZ();
 editUserP();
 ViewUserP();
