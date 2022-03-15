@@ -59,7 +59,7 @@ include "partials/navbar.php";
                                 <div style="padding-bottom: 0 !important;" class="card bg-transparent shadow-none kb-header py-3">
                                     <div class="card-content">
                                         <div style="padding: 0 !important;" class="card-body text-center p-md-5">
-                                            <h1 class="mb-2 kb-title">Goedemorgen Teus</h1>
+                                            <h1 class="mb-2 kb-title">Goedemorgen <?php echo $row2['username']; ?></h1>
                                             <p class="mb-4">Kies een van de vakken om verder te gaan</p>
                                         </div>
                                     </div>
