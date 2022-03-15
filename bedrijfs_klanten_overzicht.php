@@ -18,11 +18,11 @@ if ($row2['authentication_level'] !== 'Admin') {
         header("Location:../klant_overzicht.php?custof=$memb_of&membof=$memb_of");
     }
     }
-    if ($row2['member_of'] !== $_GET['membof']) {
+    if (!($row2['member_of'] === $_GET['membof'])) {
         $memb_of = $row2['member_of'];
         header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
     }
-    if ($row2['member_of'] !== $_GET['custof']) {
+    if (!($row2['member_of'] === $_GET['custof'])) {
         $memb_of = $row2['member_of'];
         header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
     }
