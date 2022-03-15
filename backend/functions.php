@@ -513,12 +513,12 @@ function InsertCustomerIndividual()
                     $stmt->close();
 
 
-                    $sql = "INSERT INTO `users`(`id`, `email` `username`, `authentication_level`, `member_of`, `reset_token`) VALUES (?,?,?,?,?,?)";
+                    $sql = "INSERT INTO `users`(`id`, `email`, `username`, `authentication_level`, `name`, `member_of`, `reset_token`) VALUES (?,?,?,?,?,?)";
                     $stmt = $mysqli->prepare($sql);
                     $token = bin2hex(random_bytes(50));
                     $authentication = 'user';
                     $voornaam = ucwords($_POST['voornaam_p']);
-                    $stmt->bind_param("issssis", $_POST['id'], $_POST['email_p'], $voornaam, $authentication, $_GET["membof"], $token);
+                    $stmt->bind_param("issssis", $_POST['id'], $_POST['email_p'], $voornaam, $authentication, $voornaam, $_GET["membof"], $token);
                     $stmt->execute();
                     $stmt->close();
                     $mysqli->close();
