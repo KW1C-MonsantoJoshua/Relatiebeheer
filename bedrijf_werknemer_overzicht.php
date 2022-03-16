@@ -22,6 +22,7 @@ if ($row2['authentication_level'] !== 'Admin') {
         header("Location:../bedrijfs_klanten_overzicht.php?custof=$memb_of&membof=$memb_of");
     }
 }
+Updateuser();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 editPersonnel();
