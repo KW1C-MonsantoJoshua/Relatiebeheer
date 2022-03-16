@@ -20,7 +20,7 @@ if ($row2['authentication_level'] !== "Admin") {
     }
 }
 
-updateUser();
+Updateuser();
 UpdateCompanyInfo();
 $rowC = GetCompanyInfo();
 ViewUserP();
