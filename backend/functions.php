@@ -1,7 +1,7 @@
 <?php
 include "db.php";
 session_start();
-include "error.php";
+//include "error.php";
 function Updateuser()
 {
     global $mysqli;
