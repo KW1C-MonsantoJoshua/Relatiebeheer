@@ -2716,8 +2716,6 @@ function Insertfactuur()
             $stmtFactuur->execute();
             $stmtFactuur->close();
         }
-    }else {
-        echo "fout1";
     }
 }
 

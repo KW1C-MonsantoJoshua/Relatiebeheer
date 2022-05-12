@@ -140,6 +140,14 @@ include "partials/navbar.php";
                                                 <span class="d-none d-sm-block">Toevoegen</span>
                                             </a>
                                         </li>
+                                        <li class="nav-tabs">
+                                            <a type="button"
+                                               class="nav-link d-flex align-items-end"
+                                               data-toggle="modal" data-target="#inlineForm">
+                                                <i class="ft-plus mr-1"></i>
+                                                <span class="d-none d-sm-block">Formulier</span>
+                                            </a>
+                                        </li>
 <!--                                        <li class="nav-item active">-->
 <!--                                            <a href="#Settings" role="tab" id="account-tab"-->
 <!--                                               class="nav-link d-flex align-items-center " data-toggle="tab"-->
@@ -706,6 +714,37 @@ include "partials/navbar.php";
 <div class="col-lg-3 col-md-6 col-12">
     <!-- Button trigger modal -->
     <!-- Modal -->
+
+    <div class="modal fade text-left" id="inlineForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label class="modal-title text-text-bold-600" id="myModalLabel33">Inline Login Form</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                    </button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
+                        <label>Email: </label>
+                        <div class="form-group">
+                            <input type="text" placeholder="Email Address" class="form-control">
+                        </div>
+
+                        <label>Password: </label>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
+                        <input type="submit" class="btn btn-primary" value="Login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade text-left" id="large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17"
          aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
