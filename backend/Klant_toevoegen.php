@@ -19,7 +19,6 @@ class userActions
     }
 
     function registerUsersP($first_name, $last_name_prefix, $last_name, $street, $housenumber, $postalcode, $phoneNumber, $email, $customer_of){
-        global $mysqli;
         $query = $this->conn->prepare("INSERT INTO `customers_individual`(`first_name`,`last_name_prefix`, `last_name`, `street`,
                                    `housenumber`,
                                    `postalcode`, `phoneNumber`,email,customer_of) VALUES (?,?,?,?,?,?,?,?,?)");
@@ -27,7 +26,6 @@ class userActions
         $query->execute();
     }
     function registerUsersZ($first_name, $last_name_prefix, $last_name, $street, $housenumber, $postalcode, $phoneNumber, $email, $business, $customer_of){
-        global $mysqli;
         $query = $this->conn->prepare("INSERT INTO `customers_business`(`first_name`,`last_name_prefix`,`last_name`,`street`,
                                  `housenumber`,`postalcode`,`phoneNumber`,
                                  `email`,`business`,`customer_of`)VALUES(?,?,?,?,?,?,?,?,?,?)");
