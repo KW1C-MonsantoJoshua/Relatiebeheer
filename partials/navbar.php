@@ -98,7 +98,8 @@ $row = Getuser();
                     <span class="text">CRM</span>
                 </a>
                 <?php
-            } }elseif ($_SESSION["memb_of"] > 0) {
+            }
+            }if (isset($_SESSION["memb_of"])) {if ($_SESSION["memb_of"] > 0) {
                 if ($_SESSION['auth'] == "Bedrijfsleider") {
                     ?>
                     <a class="logo-text float-left"
@@ -114,6 +115,7 @@ $row = Getuser();
                         <span class="text">CRM</span>
                     </a>
                 <?php }
+            }
             }
             ?>
             <a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i
