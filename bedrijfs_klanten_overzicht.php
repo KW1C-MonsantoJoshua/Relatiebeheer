@@ -5,6 +5,16 @@ if (!isset($_SESSION["loggedin"])) {
     header("Location: index.php");
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['Email'];
+    $to = $email;
+    $subject = "Wachtwoord vergeten";
+    $msg = "Your password reset link <br>https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . " <br> Reset your password with this link .Click or open in new tab<br>";
+    $msg = wordwrap($msg, 70);
+    $headers = "From: Admin@qccs.nl";
+    mail($to, $subject, $msg, $headers);
+} else echo "'$email' komt niet voor in de database";
+
 // Authentication Teus test fase
 // Checked of de user toegang heeft tot de pagina.
 // Als user geen toegang heeft wordt hij verstuurd naar correcte pagina.
@@ -724,17 +734,17 @@ include "partials/navbar.php";
                         <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                     </button>
                 </div>
-                <form action="#">
+                <form method="post">
                     <div class="modal-body">
                         <label>Email: </label>
                         <div class="form-group">
-                            <input type="text" placeholder="Email Address" class="form-control">
+                            <input type="text" name="Email" placeholder="Email Address" class="form-control">
                         </div>
 
                     </div>
                     <div class="modal-footer">
                         <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
-                        <input type="submit" class="btn btn-primary" value="Login">
+                        <input type="submit" class="btn btn-primary" name="Verzenden" value="Verzenden">
                     </div>
                 </form>
             </div>
