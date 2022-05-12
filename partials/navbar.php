@@ -132,7 +132,7 @@ $row = Getuser();
         <div class="nav-container">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="nav-item">
-                    <?php if ($_SESSION["memb_of"] == 0) {
+                    <?php if (isset($_SESSION["memb_of"])) { if ($_SESSION["memb_of"] == 0) {
                         ?>
                         <a class="" href="bedrijfs_overzicht.php">
                             <i class="ft-align-justify"></i>
@@ -155,6 +155,7 @@ $row = Getuser();
                                 <span class="text">Relaties</span>
                             </a>
                         <?php }
+                    }
                     }
                     ?>
                 </li>
