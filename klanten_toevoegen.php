@@ -16,10 +16,10 @@ require_once('backend/Klant_toevoegen.php');
 $users = new userActions();
 
 if (isset($_POST['registreerParticulier'])) {
-    echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p']);
+    echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_POST['bedrijf']);
 }
 if (isset($_POST['registreerZakelijk'])) {
-    echo $users->registerUsersZ('bob', 'dave123', '127.0.0.1');
+    echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_POST['bedrijf']);
 }
 ?>
 <!-- END : Head-->
@@ -231,6 +231,13 @@ if (isset($_POST['registreerZakelijk'])) {
                                                                            class="form-control round"
                                                                            placeholder="Achternaam" required
                                                                            aria-invalid="false" name="achternaam_z">
+                                                                </div>
+                                                                <div class="controls">
+                                                                    <label for="tussenvoegsel">Tussenvoegsel</label>
+                                                                    <input type="text" id="tussenvoegsel"
+                                                                           class="form-control round"
+                                                                           placeholder="Tussenvoegsel" required
+                                                                           aria-invalid="false" name="tussenvoegsel_z">
                                                                 </div>
                                                                 <div class="controls">
                                                                     <label for="email">E-mail</label>

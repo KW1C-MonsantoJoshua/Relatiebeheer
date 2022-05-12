@@ -14,18 +14,18 @@ class userActions
         return $this->link;
     }
 
-    function registerUsersP($first_name, $last_name_prefix, $last_name, $street, $housenumber, $housenumberAddition, $postalcode, $phoneNumber, $email, $customer_of){
+    function registerUsersP($first_name, $last_name_prefix, $last_name, $street, $housenumber, $postalcode, $phoneNumber, $email, $customer_of){
         $query = $this->link->prepare("INSERT INTO `customers_individual`(`first_name`,`last_name_prefix`, `last_name`, `street`,
-                                   `housenumber`, `housenumberAddition`,
-                                   `postalcode`, `phoneNumber`,email,customer_of) VALUES (?,?,?,?,?,?,?,?,?,?)");
-        $query->bind_param("sssssssssi", $first_name, $last_name_prefix, $last_name, $street, $housenumber, $housenumberAddition, $postalcode, $phoneNumber, $email, $customer_of);
+                                   `housenumber`,
+                                   `postalcode`, `phoneNumber`,email,customer_of) VALUES (?,?,?,?,?,?,?,?,?)");
+        $query->bind_param("ssssssssi", $first_name, $last_name_prefix, $last_name, $street, $housenumber, $postalcode, $phoneNumber, $email, $customer_of);
         $query->execute();
     }
-    function registerUsersZ($first_name, $last_name_prefix, $last_name, $street, $housenumber, $housenumberAddition, $postalcode, $phoneNumber, $email, $business, $customer_of){
+    function registerUsersZ($first_name, $last_name_prefix, $last_name, $street, $housenumber, $postalcode, $phoneNumber, $email, $business, $customer_of){
         $query = $this->link->prepare("INSERT INTO `customers_business`(`first_name`,`last_name_prefix`,`last_name`,`street`,
-                                 `housenumber`,`housenumberAddition`,`postalcode`,`phoneNumber`,
-                                 `email`,`business`,`customer_of`)VALUES(?,?,?,?,?,?,?,?,?,?,?)");
-        $query->bind_param("ssssssssssi", $first_name, $last_name_prefix, $last_name, $street, $housenumber, $housenumberAddition, $postalcode, $phoneNumber, $email, $business, $customer_of);
+                                 `housenumber`,`postalcode`,`phoneNumber`,
+                                 `email`,`business`,`customer_of`)VALUES(?,?,?,?,?,?,?,?,?,?)");
+        $query->bind_param("sssssssssi", $first_name, $last_name_prefix, $last_name, $street, $housenumber, $postalcode, $phoneNumber, $email, $business, $customer_of);
         $query->execute();
     }
 }
