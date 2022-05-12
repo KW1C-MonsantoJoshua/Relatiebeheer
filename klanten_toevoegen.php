@@ -200,29 +200,26 @@ echo $_POST['bedrijf_z'];
                                                 </form>
                                                 <!-- Account form ends -->
                                             </div>
-                                            <!-- Account content ends -->
 
-                                            <!-- Information content starts -->
-                                            <div class="tab-pane fade mt-2 show" id="Zakelijk" role="tabpanel"
-                                                 aria-labelledby="Zakelijk-tab">
-                                                <!-- Media object starts -->
-                                                <!-- Media object ends -->
+                                            <div class="tab-pane fade mt-2 show active" id="Zakelijk" role="tabpanel"
+                                                 aria-labelledby="account-tab">
+                                                <!-- Account form starts -->
                                                 <form method="post">
                                                     <div>
                                                         <?php
-                                                        if (isset($_GET["toevoegenZak"])) {
-                                                            if ($_GET["toevoegenZak"] == "empty") {
+                                                        if (isset($_GET["toevoegenPart"])) {
+                                                            if ($_GET["toevoegenPart"] == "empty") {
                                                                 echo "<p class='text-danger'>Vul alle velden in aub</p>";
-                                                            } elseif ($_GET["toevoegenZak"] == "namefout") {
+                                                            } elseif ($_GET["toevoegenPart"] == "namefout") {
                                                                 echo "<p class='text-danger'>Voornaam heeft foute tekens</p>";
-                                                            } elseif ($_GET["toevoegenZak"] == "telfout") {
+                                                            } elseif ($_GET["toevoegenPart"] == "telfout") {
                                                                 echo "<p class='text-danger'>Telefoonnummer klopt niet</p>";
-                                                            } elseif ($_GET["toevoegenZak"] == "mailfout") {
+                                                            } elseif ($_GET["toevoegenPart"] == "mailfout") {
                                                                 echo "<p class='text-danger'>Email klopt niet</p>";
-                                                            } elseif ($_GET["toevoegenZak"] == "emaildupli") {
+                                                            } elseif ($_GET["toevoegenPart"] == "emaildupli") {
                                                                 echo "<p class='text-danger'>Email bestaat al</p>";
                                                             }
-                                                            if ($_GET["toevoegenZak"] == "succes") {
+                                                            if ($_GET["toevoegenPart"] == "succes") {
                                                                 echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
                                                             }
                                                         }
@@ -238,35 +235,35 @@ echo $_POST['bedrijf_z'];
                                                                     <input type="text" id="users-edit-username"
                                                                            class="form-control round"
                                                                            placeholder="Voornaam" required
-                                                                           aria-invalid="false" name="voornaam_z">
+                                                                           aria-invalid="false" name="voornaam_p">
                                                                 </div>
                                                                 <div class="controls">
                                                                     <label for="tussenvoegsel">Tussenvoegsel</label>
                                                                     <input type="text" id="tussenvoegsel"
                                                                            class="form-control round"
                                                                            placeholder="Tussenvoegsel" required
-                                                                           aria-invalid="false" name="tussenvoegsel_z">
+                                                                           aria-invalid="false" name="tussenvoegsel_p">
                                                                 </div>
                                                                 <div class="controls">
                                                                     <label for="achternaam">Achternaam</label>
                                                                     <input type="text" id="achternaam"
                                                                            class="form-control round"
                                                                            placeholder="Achternaam" required
-                                                                           aria-invalid="false" name="achternaam_z">
+                                                                           aria-invalid="false" name="achternaam_p">
                                                                 </div>
                                                                 <div class="controls">
-                                                                    <label for="email">E-mail</label>
-                                                                    <input type="email" id="email"
+                                                                    <label for="users-edit-email">E-mail</label>
+                                                                    <input type="email" id="users-edit-email"
                                                                            class="form-control round"
                                                                            placeholder="Typeemail@hier.com" required
-                                                                           aria-invalid="false" name="email_z">
+                                                                           aria-invalid="false" name="email_p">
                                                                 </div>
                                                                 <div class="controls">
                                                                     <label for="telefoonnummer">Telefoonnummer</label>
                                                                     <input type="text" id="telefoonnummer"
                                                                            class="form-control round"
                                                                            placeholder="Telefoonnummer" required
-                                                                           aria-invalid="false" name="telefoonnummer_z">
+                                                                           aria-invalid="false" name="telefoonnummer_p">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -274,37 +271,31 @@ echo $_POST['bedrijf_z'];
                                                             <div class="form-group">
                                                                 <h4>Adresgegevens</h4>
                                                                 <div class="controls ">
-                                                                    <label for="straatnaam">Straatnaam</label>
-                                                                    <input type="text" id="straatnaam"
+                                                                    <label for="users-edit-username">Straatnaam</label>
+                                                                    <input type="text" id="users-edit-username"
                                                                            class="form-control round"
                                                                            placeholder="Straatnaam" required
-                                                                           aria-invalid="false" name="straatnaam_z">
+                                                                           aria-invalid="false" name="straatnaam_p">
                                                                 </div>
                                                                 <div class="controls">
-                                                                    <label for="huisnummer">Huisnummer</label>
-                                                                    <input type="text" id="huisnummer"
+                                                                    <label for="users-edit-username">Huisnummer</label>
+                                                                    <input type="text" id="users-edit-username"
                                                                            class="form-control round"
                                                                            placeholder="Huisnummer" required
-                                                                           aria-invalid="false" name="huisnummer_z">
+                                                                           aria-invalid="false" name="huisnummer_p">
                                                                 </div>
                                                                 <div class="controls ">
-                                                                    <label for="postcode">Postcode</label>
-                                                                    <input type="text" id="postcode"
+                                                                    <label for="users-edit-username">Postcode</label>
+                                                                    <input type="text" id="users-edit-username"
                                                                            class="form-control round"
                                                                            placeholder="Postcode" required
-                                                                           aria-invalid="false" name="postcode_z">
-                                                                </div>
-                                                                <div class="controls ">
-                                                                    <label for="bedrijfsnaam">Bedrijfsnaam</label>
-                                                                    <input type="text" id="bedrijfsnaam"
-                                                                           class="form-control round"
-                                                                           placeholder="Bedrijfsnaam" required
-                                                                           aria-invalid="false" name="bedrijfsnaam">
+                                                                           aria-invalid="false" name="postcode_p">
                                                                 </div>
                                                                 <label for="bedrijf">Klant van</label>
                                                                 <div class="form-group">
-                                                                    <select class="select2 form-control" id="bedrijf" name="bedrijf_z">
+                                                                    <select class="select2 form-control" id="bedrijf" name="bedrijf">
                                                                         <?php
+                                                                        //                                                                        BusinessSelector();
                                                                         global $mysqli;
                                                                         $data = "SELECT * FROM `organisation`";
                                                                         $stmt = $mysqli->prepare($data);
@@ -316,6 +307,7 @@ echo $_POST['bedrijf_z'];
                                                                             <option value="<?= $row["id"] ?>"><?= $row["name"] ?></option>
                                                                             <?php
                                                                         }
+
                                                                         ?>
                                                                     </select>
                                                                 </div>
@@ -324,7 +316,7 @@ echo $_POST['bedrijf_z'];
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
                                                             <input type="submit"
                                                                    class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                                   name="registreerZakelijk"
+                                                                   name="registreerParticulier"
                                                                    value="Relatie Toevoegen">
 
                                                             <button type="reset" onclick="window.history.go(-1); return false;" class="btn btn-secondary">Cancel
@@ -332,10 +324,144 @@ echo $_POST['bedrijf_z'];
                                                         </div>
                                                     </div>
                                                 </form>
-
-                                                <!-- Account form starts -->
                                                 <!-- Account form ends -->
                                             </div>
+                                            <!-- Account content ends -->
+
+                                            <!-- Information content starts -->
+<!--                                            <div class="tab-pane fade mt-2 show" id="Zakelijk" role="tabpanel"-->
+<!--                                                 aria-labelledby="Zakelijk-tab">-->
+<!--                                                <!-- Media object starts -->-->
+<!--                                                <!-- Media object ends -->-->
+<!--                                                <form method="post">-->
+<!--                                                    <div>-->
+<!--                                                        --><?php
+//                                                        if (isset($_GET["toevoegenZak"])) {
+//                                                            if ($_GET["toevoegenZak"] == "empty") {
+//                                                                echo "<p class='text-danger'>Vul alle velden in aub</p>";
+//                                                            } elseif ($_GET["toevoegenZak"] == "namefout") {
+//                                                                echo "<p class='text-danger'>Voornaam heeft foute tekens</p>";
+//                                                            } elseif ($_GET["toevoegenZak"] == "telfout") {
+//                                                                echo "<p class='text-danger'>Telefoonnummer klopt niet</p>";
+//                                                            } elseif ($_GET["toevoegenZak"] == "mailfout") {
+//                                                                echo "<p class='text-danger'>Email klopt niet</p>";
+//                                                            } elseif ($_GET["toevoegenZak"] == "emaildupli") {
+//                                                                echo "<p class='text-danger'>Email bestaat al</p>";
+//                                                            }
+//                                                            if ($_GET["toevoegenZak"] == "succes") {
+//                                                                echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
+//                                                            }
+//                                                        }
+//                                                        ?>
+<!--                                                    </div>-->
+<!--                                                    <div class="row">-->
+<!---->
+<!--                                                        <div class="col-12 col-md-6">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <h4>Klantgegevens</h4>-->
+<!--                                                                <div class="controls">-->
+<!--                                                                    <label for="users-edit-username">Voornaam</label>-->
+<!--                                                                    <input type="text" id="users-edit-username"-->
+<!--                                                                           class="form-control round"-->
+<!--                                                                           placeholder="Voornaam" required-->
+<!--                                                                           aria-invalid="false" name="voornaam_z">-->
+<!--                                                                </div>-->
+<!--                                                                <div class="controls">-->
+<!--                                                                    <label for="tussenvoegsel">Tussenvoegsel</label>-->
+<!--                                                                    <input type="text" id="tussenvoegsel"-->
+<!--                                                                           class="form-control round"-->
+<!--                                                                           placeholder="Tussenvoegsel" required-->
+<!--                                                                           aria-invalid="false" name="tussenvoegsel_z">-->
+<!--                                                                </div>-->
+<!--                                                                <div class="controls">-->
+<!--                                                                    <label for="achternaam">Achternaam</label>-->
+<!--                                                                    <input type="text" id="achternaam"-->
+<!--                                                                           class="form-control round"-->
+<!--                                                                           placeholder="Achternaam" required-->
+<!--                                                                           aria-invalid="false" name="achternaam_z">-->
+<!--                                                                </div>-->
+<!--                                                                <div class="controls">-->
+<!--                                                                    <label for="email">E-mail</label>-->
+<!--                                                                    <input type="email" id="email"-->
+<!--                                                                           class="form-control round"-->
+<!--                                                                           placeholder="Typeemail@hier.com" required-->
+<!--                                                                           aria-invalid="false" name="email_z">-->
+<!--                                                                </div>-->
+<!--                                                                <div class="controls">-->
+<!--                                                                    <label for="telefoonnummer">Telefoonnummer</label>-->
+<!--                                                                    <input type="text" id="telefoonnummer"-->
+<!--                                                                           class="form-control round"-->
+<!--                                                                           placeholder="Telefoonnummer" required-->
+<!--                                                                           aria-invalid="false" name="telefoonnummer_z">-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="col-12 col-md-6">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <h4>Adresgegevens</h4>-->
+<!--                                                                <div class="controls ">-->
+<!--                                                                    <label for="straatnaam">Straatnaam</label>-->
+<!--                                                                    <input type="text" id="straatnaam"-->
+<!--                                                                           class="form-control round"-->
+<!--                                                                           placeholder="Straatnaam" required-->
+<!--                                                                           aria-invalid="false" name="straatnaam_z">-->
+<!--                                                                </div>-->
+<!--                                                                <div class="controls">-->
+<!--                                                                    <label for="huisnummer">Huisnummer</label>-->
+<!--                                                                    <input type="text" id="huisnummer"-->
+<!--                                                                           class="form-control round"-->
+<!--                                                                           placeholder="Huisnummer" required-->
+<!--                                                                           aria-invalid="false" name="huisnummer_z">-->
+<!--                                                                </div>-->
+<!--                                                                <div class="controls ">-->
+<!--                                                                    <label for="postcode">Postcode</label>-->
+<!--                                                                    <input type="text" id="postcode"-->
+<!--                                                                           class="form-control round"-->
+<!--                                                                           placeholder="Postcode" required-->
+<!--                                                                           aria-invalid="false" name="postcode_z">-->
+<!--                                                                </div>-->
+<!--                                                                <div class="controls ">-->
+<!--                                                                    <label for="bedrijfsnaam">Bedrijfsnaam</label>-->
+<!--                                                                    <input type="text" id="bedrijfsnaam"-->
+<!--                                                                           class="form-control round"-->
+<!--                                                                           placeholder="Bedrijfsnaam" required-->
+<!--                                                                           aria-invalid="false" name="bedrijfsnaam">-->
+<!--                                                                </div>-->
+<!--                                                                <label for="bedrijf">Klant van</label>-->
+<!--                                                                <div class="form-group">-->
+<!--                                                                    <select class="select2 form-control" id="bedrijf" name="bedrijf_z">-->
+<!--                                                                        --><?php
+//                                                                        global $mysqli;
+//                                                                        $data = "SELECT * FROM `organisation`";
+//                                                                        $stmt = $mysqli->prepare($data);
+//                                                                        $stmt->execute();
+//                                                                        $resultData = $stmt->get_result();
+//                                                                        while ($row = $resultData->fetch_array()) {
+//                                                                            ?>
+<!--                                                                            <option value="" selected hidden>Kiezen....</option>-->
+<!--                                                                            <option value="--><?//= $row["id"] ?><!--">--><?//= $row["name"] ?><!--</option>-->
+<!--                                                                            --><?php
+//                                                                        }
+//                                                                        ?>
+<!--                                                                    </select>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">-->
+<!--                                                            <input type="submit"-->
+<!--                                                                   class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"-->
+<!--                                                                   name="registreerZakelijk"-->
+<!--                                                                   value="Relatie Toevoegen">-->
+<!---->
+<!--                                                            <button type="reset" onclick="window.history.go(-1); return false;" class="btn btn-secondary">Cancel-->
+<!--                                                            </button>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </form>-->
+<!---->
+<!--                                                <!-- Account form starts -->-->
+<!--                                                <!-- Account form ends -->-->
+<!--                                            </div>-->
                                             <!-- Information content ends -->
                                         </div>
                                     </div>
