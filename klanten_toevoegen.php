@@ -226,18 +226,18 @@ if (isset($_POST['registreerZakelijk'])) {
                                                                            aria-invalid="false" name="voornaam_z">
                                                                 </div>
                                                                 <div class="controls">
-                                                                    <label for="achternaam">Achternaam</label>
-                                                                    <input type="text" id="achternaam"
-                                                                           class="form-control round"
-                                                                           placeholder="Achternaam" required
-                                                                           aria-invalid="false" name="achternaam_z">
-                                                                </div>
-                                                                <div class="controls">
                                                                     <label for="tussenvoegsel">Tussenvoegsel</label>
                                                                     <input type="text" id="tussenvoegsel"
                                                                            class="form-control round"
                                                                            placeholder="Tussenvoegsel" required
                                                                            aria-invalid="false" name="tussenvoegsel_z">
+                                                                </div>
+                                                                <div class="controls">
+                                                                    <label for="achternaam">Achternaam</label>
+                                                                    <input type="text" id="achternaam"
+                                                                           class="form-control round"
+                                                                           placeholder="Achternaam" required
+                                                                           aria-invalid="false" name="achternaam_z">
                                                                 </div>
                                                                 <div class="controls">
                                                                     <label for="email">E-mail</label>
