@@ -63,7 +63,7 @@ $row = Getuser();
                                 class="nav-link dropdown-toggle user-dropdown d-flex align-items-end"
                                 id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
                             <div class="user d-md-flex d-none mr-2"><span
-                                        class="text-right"><?= $_SESSION["name"] ?></span><span
+                                        class="text-right"><?php if (isset($_SESSION["name"])) {echo $_SESSION["name"]; } ?></span><span
                                         class="text-right text-muted font-small-3">Beschikbaar</span></div>
                             <img class="avatar" src="uploads/<?= $row['image_url'] ?>" alt="avatar"
                                  height="35" width="35">
