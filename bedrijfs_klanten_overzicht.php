@@ -143,7 +143,7 @@ include "partials/navbar.php";
                                         <li class="nav-tabs">
                                             <a type="button"
                                                class="nav-link d-flex align-items-end"
-                                               data-toggle="modal" data-target="#inlineForm">
+                                               data-toggle="modal" data-target="#iconForm">
                                                 <i class="ft-plus mr-1"></i>
                                                 <span class="d-none d-sm-block">Formulier</span>
                                             </a>
@@ -715,32 +715,39 @@ include "partials/navbar.php";
     <!-- Button trigger modal -->
     <!-- Modal -->
 
-    <div class="modal fade text-left" id="inlineForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <label class="modal-title text-text-bold-600" id="myModalLabel33">Inline Login Form</label>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
-                    </button>
-                </div>
-                <form action="#">
-                    <div class="modal-body">
-                        <label>Email: </label>
-                        <div class="form-group">
-                            <input type="text" placeholder="Email Address" class="form-control">
-                        </div>
+        <div class="modal fade text-left" id="iconForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel34" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="myModalLabel34">Modal Title</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
+                        </button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <label>Email: </label>
+                            <div class="form-group position-relative has-icon-left">
+                                <input type="text" placeholder="Email Address" class="form-control">
+                                <div class="form-control-position">
+                                    <i class="ft-mail font-medium-2 text-muted"></i>
+                                </div>
+                            </div>
 
-                        <label>Password: </label>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
+                            <label>Password: </label>
+                            <div class="form-group position-relative has-icon-left">
+                                <input type="password" placeholder="Password" class="form-control">
+                                <div class="form-control-position">
+                                    <i class="ft-lock font-medium-2 text-muted"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
-                        <input type="submit" class="btn btn-primary" value="Login">
-                    </div>
-                </form>
+                        <div class="modal-footer">
+                            <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
+                            <input type="submit" class="btn btn-primary" value="Login">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
