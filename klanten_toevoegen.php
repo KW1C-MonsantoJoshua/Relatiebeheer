@@ -15,12 +15,6 @@ require_once('backend/Klant_toevoegen.php');
 
 $users = new userActions();
 
-if (isset($_POST['registreerParticulier'])) {
-    echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_GET['membof']);
-}
-if (isset($_POST['registreerZakelijk'])) {
-    echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_GET['membof']);
-}
 ?>
 <!-- END : Head-->
 
@@ -78,21 +72,13 @@ if (isset($_POST['registreerZakelijk'])) {
                                                 <form method="post">
                                                     <div>
                                                         <?php
-                                                        if (isset($_GET["toevoegenPart"])) {
-                                                            if ($_GET["toevoegenPart"] == "empty") {
-                                                                echo "<p class='text-danger'>Vul alle velden in aub</p>";
-                                                            } elseif ($_GET["toevoegenPart"] == "namefout") {
-                                                                echo "<p class='text-danger'>Voornaam heeft foute tekens</p>";
-                                                            } elseif ($_GET["toevoegenPart"] == "telfout") {
-                                                                echo "<p class='text-danger'>Telefoonnummer klopt niet</p>";
-                                                            } elseif ($_GET["toevoegenPart"] == "mailfout") {
-                                                                echo "<p class='text-danger'>Email klopt niet</p>";
-                                                            } elseif ($_GET["toevoegenPart"] == "emaildupli") {
-                                                                echo "<p class='text-danger'>Email bestaat al</p>";
-                                                            }
-                                                            if ($_GET["toevoegenPart"] == "succes") {
-                                                                echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
-                                                            }
+                                                        if (isset($_POST['registreerParticulier'])) {
+                                                            echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_GET['membof']);
+                                                            echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
+                                                        }
+                                                        if (isset($_POST['registreerZakelijk'])) {
+                                                            echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_GET['membof']);
+                                                            echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
                                                         }
                                                         ?>
                                                     </div>
