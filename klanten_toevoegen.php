@@ -65,6 +65,9 @@ include "partials/header.php";
                                                 <form method="post">
                                                     <div>
                                                         <?php
+
+                                                        echo $_POST['bedrijf'];
+
                                                         if (isset($_GET["toevoegenPart"])) {
                                                             if ($_GET["toevoegenPart"] == "empty") {
                                                                 echo "<p class='text-danger'>Vul alle velden in aub</p>";
