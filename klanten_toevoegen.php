@@ -9,6 +9,19 @@ include "backend/functions.php";
 <?php
 include "partials/header.php";
 ?>
+
+<?php
+require_once('backend/Klant_toevoegen.php');
+
+$users = new userActions();
+
+if (isset($_POST['registreerParticulier'])) {
+    echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p']);
+}
+if (isset($_POST['registreerZakelijk'])) {
+    echo $users->registerUsersZ('bob', 'dave123', '127.0.0.1');
+}
+?>
 <!-- END : Head-->
 
 <!-- BEGIN : Body-->
@@ -94,6 +107,13 @@ include "partials/header.php";
                                                                            class="form-control round"
                                                                            placeholder="Voornaam" required
                                                                            aria-invalid="false" name="voornaam_p">
+                                                                </div>
+                                                                <div class="controls">
+                                                                    <label for="tussenvoegsel">Tussenvoegsel</label>
+                                                                    <input type="text" id="tussenvoegsel"
+                                                                           class="form-control round"
+                                                                           placeholder="Tussenvoegsel" required
+                                                                           aria-invalid="false" name="tussenvoegsel_p">
                                                                 </div>
                                                                 <div class="controls">
                                                                     <label for="achternaam">Achternaam</label>
