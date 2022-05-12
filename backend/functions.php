@@ -2740,5 +2740,5 @@ function Sendmail(){
         $msg = wordwrap($msg, 70);
         $headers = "From: Admin@qccs.nl";
         mail($to, $subject, $msg, $headers);
-    } else echo "er is een fout";
+    }
 }
