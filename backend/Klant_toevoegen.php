@@ -6,6 +6,7 @@ class userActions
     public $link;
 
     public function __construct($dbhost = 'localhost', $dbuser = 'relatebeheer', $dbpass = 'Z1HaCog5gh6d%efu', $dbname = 'relatebeheer', $charset = 'utf8') {
+        global $mysqli;
         $this->connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
         if ($this->connection->connect_error) {
             $this->error('Failed to connect to MySQL - ' . $this->connection->connect_error);
@@ -15,6 +16,7 @@ class userActions
     }
 
     function registerUsersP($first_name, $last_name_prefix, $last_name, $street, $housenumber, $postalcode, $phoneNumber, $email, $customer_of){
+        global $mysqli;
         $query = $this->link->prepare("INSERT INTO `customers_individual`(`first_name`,`last_name_prefix`, `last_name`, `street`,
                                    `housenumber`,
                                    `postalcode`, `phoneNumber`,email,customer_of) VALUES (?,?,?,?,?,?,?,?,?)");
@@ -22,6 +24,7 @@ class userActions
         $query->execute();
     }
     function registerUsersZ($first_name, $last_name_prefix, $last_name, $street, $housenumber, $postalcode, $phoneNumber, $email, $business, $customer_of){
+        global $mysqli;
         $query = $this->link->prepare("INSERT INTO `customers_business`(`first_name`,`last_name_prefix`,`last_name`,`street`,
                                  `housenumber`,`postalcode`,`phoneNumber`,
                                  `email`,`business`,`customer_of`)VALUES(?,?,?,?,?,?,?,?,?,?)");
