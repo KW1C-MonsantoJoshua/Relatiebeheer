@@ -72,11 +72,11 @@ $users = new userActions();
                                                 <form method="post">
                                                     <div>
                                                         <?php
-                                                        if (isset($_POST['registreerParticulier'])) {
+                                                        if (isset($_POST['registreerParticulierr'])) {
                                                             echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_GET['membof']);
                                                             echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
                                                         }
-                                                        if (isset($_POST['registreerZakelijk'])) {
+                                                        if (isset($_POST['registreerZakelijkk'])) {
                                                             echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_GET['membof']);
                                                             echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
                                                         }
@@ -153,7 +153,7 @@ $users = new userActions();
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
                                                             <input type="submit"
                                                                    class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                                   name="registreerParticulier"
+                                                                   name="registreerParticulierr"
                                                                    value="Relatie Toevoegen">
 
                                                             <button type="reset" onclick="window.history.go(-1); return false;" class="btn btn-secondary">Cancel
@@ -269,7 +269,7 @@ $users = new userActions();
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
                                                             <input type="submit"
                                                                    class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                                   name="registreerZakelijk"
+                                                                   name="registreerZakelijkk"
                                                                    value="Relatie Toevoegen">
 
                                                             <button type="reset" onclick="window.history.go(-1); return false;" class="btn btn-secondary">Cancel
