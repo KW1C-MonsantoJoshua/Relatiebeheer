@@ -578,20 +578,16 @@ function InsertCustomerBusiness()
             if (!preg_match("/^[a-zA-Z]+$/", $_POST['voornaam_z']) && !preg_match("/^[a-zA-Z]+$/", $_POST['achternaam_z'])) {
                 // header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=namefout");
                 exit();
-            }
-//            elseif (preg_match($re, $_POST['telefoonnummer_z'])) {
-//                // header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=telfout");
-//                exit();
-//            }
-            elseif (preg_match($pattern, $_POST['email_z']) === 0) {
+            } elseif (preg_match($re, $_POST['telefoonnummer_z'])) {
+                // header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=telfout");
+                exit();
+            } elseif (preg_match($pattern, $_POST['email_z']) === 0) {
                 //header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=mailfout");
                 exit();
-            }
-//            elseif (preg_match($reStraat, $_POST["straatnaam_z"])) {
-//                // header("Location:../bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=straatfout");
-//                exit();
-//            }
-            elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode_z'])) {
+            } elseif (preg_match($reStraat, $_POST["straatnaam_z"])) {
+                // header("Location:../bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=straatfout");
+                exit();
+            } elseif (!preg_match("/^[1-9][0-9]{3} ?(?!sa|sd|ss|SA|SD|SS)[A-Za-z]{2}$/", $_POST['postcode_z'])) {
                 //header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenZak=postcodefout");
                 exit();
             } else {
