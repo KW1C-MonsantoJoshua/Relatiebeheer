@@ -2740,5 +2740,6 @@ function Sendmail(){
         $msg = wordwrap($msg, 70);
         $headers = "From: Admin@qccs.nl";
         mail($to, $subject, $msg, $headers);
+        header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=Formulier");
     }
 }

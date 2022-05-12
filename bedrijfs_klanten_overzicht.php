@@ -183,6 +183,11 @@ include "partials/navbar.php";
                                                                 if ($_GET["toevoegenPart"] == "succes") {
                                                                     echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
                                                                 }
+                                                                if ($_GET["toevoegenPart"] == "Formulier") {
+                                                                    echo "<p class='text-success'>Email succesvol verstuurd !</p>";
+                                                                }else {
+                                                                    echo "<p class='text-danger'>Email is niet succesvol verstuurd !</p>";
+                                                                }
                                                             }
                                                             ?>
                                                         </div>
