@@ -15,15 +15,12 @@ require_once('backend/Klant_toevoegen.php');
 
 $users = new userActions();
 
-//if (isset($_POST['registreerParticulier'])) {
-//    echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_POST['bedrijf']);
-//}
-//if (isset($_POST['registreerZakelijk'])) {
-//    echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_POST['bedrijf']);
-//}else echo "fout2";
-
-echo $_POST['bedrijf'];
-echo $_POST['bedrijf_z'];
+if (isset($_POST['registreerParticulier'])) {
+    echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_GET['memb_of']);
+}
+if (isset($_POST['registreerZakelijk'])) {
+    echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_GET['memb_of']);
+}
 ?>
 <!-- END : Head-->
 
@@ -165,16 +162,6 @@ echo $_POST['bedrijf_z'];
                                                                            placeholder="Postcode" required
                                                                            aria-invalid="false" name="postcode_p">
                                                                 </div>
-                                                                <label for="bedrijf">Klant van</label>
-                                                                <div class="form-group">
-                                                                    <select class="select2 form-control" id="bedrijf" name="bedrijf">
-                                                                        <?php
-//                                                                        BusinessSelector();
-
-
-                                                                        ?>
-                                                                    </select>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
@@ -290,24 +277,6 @@ echo $_POST['bedrijf_z'];
                                                                            class="form-control round"
                                                                            placeholder="Bedrijfsnaam" required
                                                                            aria-invalid="false" name="bedrijfsnaam">
-                                                                </div>
-                                                                <label for="bedrijf">Klant van</label>
-                                                                <div class="form-group">
-                                                                    <select class="select2 form-control" id="bedrijf" name="bedrijf_z">
-                                                                        <?php
-                                                                        global $mysqli;
-                                                                        $data = "SELECT * FROM `organisation`";
-                                                                        $stmt = $mysqli->prepare($data);
-                                                                        $stmt->execute();
-                                                                        $resultData = $stmt->get_result();
-                                                                        while ($row = $resultData->fetch_array()) {
-                                                                            ?>
-                                                                            <option value="" selected hidden>Kiezen....</option>
-                                                                            <option value="<?= $row["id"] ?>"><?= $row["name"] ?></option>
-                                                                            <?php
-                                                                        }
-                                                                        ?>
-                                                                    </select>
                                                                 </div>
                                                             </div>
                                                         </div>

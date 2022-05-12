@@ -2736,8 +2736,6 @@ function Sendmail(){
         $email = $_POST['Email'];
         $to = $email;
         $subject = "Gegevenens invullen";
-        header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=telfout");
-
         $msg = "Hier ontangt u een link om uw gegevens in te vullen <br> https://relatiebeheer.qccstest.nl/klanten_toevoegen.php?custof=" . $_GET["custof"]  . "&membof=" . $_GET["membof"] . " <br> Vul je gegevens in met deze link. Click of open in new tab<br>";
         $msg = wordwrap($msg, 70);
         $headers = "From: Admin@qccs.nl";
