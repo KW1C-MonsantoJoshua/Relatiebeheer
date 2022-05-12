@@ -16,11 +16,9 @@ require_once('backend/Klant_toevoegen.php');
 $users = new userActions();
 
 if (isset($_POST['registreerParticulier'])) {
-    global $mysqli;
     echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_POST['bedrijf']);
 }else echo "fout1";
 if (isset($_POST['registreerZakelijk'])) {
-    global $mysqli;
     echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_POST['bedrijf']);
 }else echo "fout2";
 ?>
