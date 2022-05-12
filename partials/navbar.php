@@ -91,14 +91,14 @@ $row = Getuser();
     <!--     Sidebar Header For Starter Kit starts-->
     <div class="sidebar-header">
         <div class="logo clearfix">
-            <?php if ($_SESSION["memb_of"] == 0) {
+            <?php if (isset($_SESSION["memb_of"])) {if ($_SESSION["memb_of"] == 0) {
                 ?>
                 <a class="logo-text float-left" href="bedrijfs_overzicht.php">
                     <div class="logo-img"><img src="../assets/img/logo.png"/></div>
                     <span class="text">CRM</span>
                 </a>
                 <?php
-            } elseif ($_SESSION["memb_of"] > 0) {
+            } }elseif ($_SESSION["memb_of"] > 0) {
                 if ($_SESSION['auth'] == "Bedrijfsleider") {
                     ?>
                     <a class="logo-text float-left"
