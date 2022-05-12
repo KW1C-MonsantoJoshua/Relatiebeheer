@@ -1,3 +1,7 @@
+<?php
+include "backend/functions.php";
+
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en">
 <!-- BEGIN : Head-->
