@@ -69,7 +69,7 @@ $users = new userActions();
                                             <div class="tab-pane fade mt-2 show active" id="Particulier" role="tabpanel"
                                                  aria-labelledby="account-tab">
                                                 <!-- Account form starts -->
-                                                <form method="post">
+                                                <form method="post" action="klanten_toevoegen.php">
                                                     <div>
                                                         <?php
                                                         if (isset($_POST['registreerParticulier'])) {
@@ -170,7 +170,7 @@ $users = new userActions();
                                                  aria-labelledby="Zakelijk-tab">
                                                 <!-- Media object starts -->
                                                 <!-- Media object ends -->
-                                                <form method="post">
+                                                <form method="post" action="klanten_toevoegen.php">
                                                     <div>
                                                         <?php
                                                         if (isset($_GET["toevoegenZak"])) {
