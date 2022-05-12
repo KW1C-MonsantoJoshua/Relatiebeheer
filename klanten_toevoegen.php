@@ -293,7 +293,17 @@ echo $_POST['bedrijf_z'];
                                                                 <div class="form-group">
                                                                     <select class="select2 form-control" id="bedrijf" name="bedrijf_z">
                                                                         <?php
-                                                                        BusinessSelector();
+                                                                        global $mysqli;
+                                                                        $data = "SELECT * FROM `organisation`";
+                                                                        $stmt = $mysqli->prepare($data);
+                                                                        $stmt->execute();
+                                                                        $resultData = $stmt->get_result();
+                                                                        while ($row = $resultData->fetch_array()) {
+                                                                            ?>
+                                                                            <option value="" selected hidden>Kiezen....</option>
+                                                                            <option value="<?= $row["id"] ?>"><?= $row["name"] ?></option>
+                                                                            <?php
+                                                                        }
                                                                         ?>
                                                                     </select>
                                                                 </div>
