@@ -719,7 +719,7 @@ include "partials/navbar.php";
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <label class="modal-title text-text-bold-600" id="myModalLabel33">Inline Login Form</label>
+                    <label class="modal-title text-text-bold-600" id="myModalLabel33">Formulier</label>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class="ft-x font-medium-2 text-bold-700"></i></span>
                     </button>
@@ -731,10 +731,6 @@ include "partials/navbar.php";
                             <input type="text" placeholder="Email Address" class="form-control">
                         </div>
 
-                        <label>Password: </label>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
-                        </div>
                     </div>
                     <div class="modal-footer">
                         <input type="reset" class="btn bg-light-secondary" data-dismiss="modal" value="Close">
