@@ -2736,7 +2736,7 @@ function Sendmail(){
         $email = $_POST['Email'];
         $to = $email;
         $subject = "Gegevenens invullen";
-        $msg = "Your password reset link <br> https://relatiebeheer.qccstest.nl/wachtwoord_new.php?token=" . " <br> Reset your password with this link .Click or open in new tab<br>";
+        $msg = "Hier ontangt u een link om uw gegevens in te vullen <br> https://relatiebeheer.qccstest.nl/klanten_toevoegen.php" . " <br> Vul je gegevens in met deze link. Click of open in new tab<br>";
         $msg = wordwrap($msg, 70);
         $headers = "From: Admin@qccs.nl";
         mail($to, $subject, $msg, $headers);
