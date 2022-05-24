@@ -79,7 +79,8 @@ $users = new userActions();
                                                                 $stmt = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
                                                                 $stmt->bind_param("s", $token);
                                                                 $stmt->execute();
-                                                                if ($stmt->affected_rows > 0){
+                                                                $token_check = $stmt->fetch();
+                                                                if ($token_check){
                                                                     $data = $stmt->get_result();
                                                                     $idtoken = $data->fetch_array();
                                                                     $stmt_d = $mysqli->prepare("DELETE FROM token WHERE idtoken = ?");
