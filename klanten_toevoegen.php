@@ -91,7 +91,7 @@ $users = new userActions();
                                                                     echo "<p class='text-danger'>Token is niet meer geldig !</p>";
                                                                 }
                                                             }else{
-                                                                echo "fout2";
+                                                                echo "fout2hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh";
                                                             }
                                                         }else{
                                                             echo "fout1";
