@@ -82,10 +82,10 @@ $users = new userActions();
 //                                                                $token_check = $stmt->fetch();
                                                                 $stmt->store_result();
                                                                 $stmt->bind_result($id,$token_check);  // number of arguments must match columns in SELECT
-                                                                if($stmt->num_rows > 0) {
-                                                                    while ($stmt->fetch()) {
-                                                                    }
-                                                                }
+//                                                                if($stmt->num_rows > 0) {
+//                                                                    while ($stmt->fetch()) {
+//                                                                    }
+//                                                                }
                                                                 if ($token_check){
                                                                     $stmt_d = $mysqli->prepare("DELETE FROM token WHERE token = ?");
                                                                     $stmt_d->bind_param("s", $token);
@@ -103,17 +103,21 @@ $users = new userActions();
                                                                 $token = $_GET['token'];
                                                                 $stmt = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
                                                                 $stmt->bind_param("s", $token);
-                                                                if ($stmt->execute()){
-                                                                    $data = $stmt->get_result();
-                                                                    $idtoken = $data->fetch_array();
-                                                                    $stmt_d = $mysqli->prepare("DELETE FROM token WHERE idtoken = ?");
-                                                                    $stmt_d->bind_param("s", $idtoken['idtoken']);
-                                                                    if ($stmt_d->execute()){
-                                                                        echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_GET['membof']);
-                                                                        echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
+                                                                $stmt->execute();
+//                                                                $token_check = $stmt->fetch();
+                                                                $stmt->store_result();
+                                                                $stmt->bind_result($id,$token_check);  // number of arguments must match columns in SELECT
+                                                                if($stmt->num_rows > 0) {
+                                                                    while ($stmt->fetch()) {
                                                                     }
                                                                 }
-                                                                else{
+                                                                if ($token_check){
+                                                                    $stmt_d = $mysqli->prepare("DELETE FROM token WHERE token = ?");
+                                                                    $stmt_d->bind_param("s", $token);
+                                                                    $stmt_d->execute();
+                                                                    echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_GET['membof']);
+                                                                    echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
+                                                                }else {
                                                                     echo "<p class='text-danger'>Token is niet meer geldig !</p>";
                                                                 }
                                                             }
