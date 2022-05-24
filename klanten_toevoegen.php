@@ -83,8 +83,8 @@ $users = new userActions();
                                                                 $stmt->fetch();
                                                                 if ($stmt->num_rows > 0){
                                                                     $data = $stmt->get_result();
-                                                                    echo "fout3";
                                                                     $idtoken = $data->fetch_array();
+                                                                    echo "fout3";
                                                                     $stmt_d = $mysqli->prepare("DELETE FROM token WHERE idtoken = ?");
                                                                     $stmt_d->bind_param("s", $idtoken['idtoken']);
                                                                     if ($stmt_d->execute()){
