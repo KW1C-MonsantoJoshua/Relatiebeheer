@@ -81,10 +81,10 @@ $users = new userActions();
                                                                 $stmt->execute();
                                                                 $token_check = $stmt->fetch();
                                                                 if ($token_check){
-                                                                    $stmt = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
-                                                                    $stmt->bind_param("s", $token);
-                                                                    $stmt->execute();
-                                                                    $data = $stmt->get_result();
+                                                                    $stmt_1 = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
+                                                                    $stmt_1->bind_param("s", $token);
+                                                                    $stmt_1->execute();
+                                                                    $data = $stmt_1->get_result();
                                                                     $idtoken = $data->fetch_array();
                                                                     $stmt_d = $mysqli->prepare("DELETE FROM token WHERE idtoken = ?");
                                                                     $stmt_d->bind_param("s", $idtoken['idtoken']);
