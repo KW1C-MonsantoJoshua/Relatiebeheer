@@ -82,8 +82,8 @@ $users = new userActions();
                                                                 $token_check = $stmt->fetch();
                                                                 if ($token_check){
                                                                     $stmt_d = $mysqli->prepare("DELETE FROM token WHERE token = ?");
-                                                                    echo $token;
                                                                     $stmt_d->bind_param("s", $token);
+                                                                    echo $token;
                                                                     $stmt_d->execute();
                                                                     echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_GET['membof']);
                                                                     echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
