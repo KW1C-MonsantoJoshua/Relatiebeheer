@@ -76,11 +76,11 @@ $users = new userActions();
                                                             if (isset($_GET['token'])) {
                                                                 global $mysqli;
                                                                 $token = $_GET['token'];
+                                                                echo $token;
                                                                 $stmt = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
                                                                 $stmt->bind_param("s", $token);
                                                                 $stmt->execute();
                                                                 $token_check = $stmt->fetch();
-                                                                echo $token;
                                                                 if ($token_check){
                                                                     $stmt_delete = $mysqli->prepare("DELETE FROM `token` WHERE token = ?");
                                                                     $stmt_delete->bind_param("s", $token);
