@@ -79,14 +79,20 @@ $users = new userActions();
                                                                 $stmt = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
                                                                 $stmt->bind_param("s", $token);
                                                                 $stmt->execute();
-                                                                $token_check = $stmt->fetch();
-                                                                if ($token_check){
+//                                                                $token_check = $stmt->fetch();
+                                                                $stmt->store_result();
+                                                                $stmt->bind_result($token_check);  // number of arguments must match columns in SELECT
+                                                                if($stmt->num_rows > 0) {
+                                                                    while ($stmt->fetch()) {
+                                                                        echo $token_check;
+                                                                    }
+//                                                                    if ($token_check){
                                                                     $stmt_d = $mysqli->prepare("DELETE FROM token WHERE token = ?");
                                                                     $stmt_d->bind_param("s", $token);
                                                                     $stmt_d->execute();
                                                                     echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_GET['membof']);
                                                                     echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
-                                                                }else {
+                                                                else {
                                                                     echo "<p class='text-danger'>Token is niet meer geldig !</p>";
                                                                 }
                                                             }
