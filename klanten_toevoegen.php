@@ -90,7 +90,11 @@ $users = new userActions();
                                                                 }else {
                                                                     echo "<p class='text-danger'>Token is niet meer geldig !</p>";
                                                                 }
+                                                            }else{
+                                                                echo "fout2";
                                                             }
+                                                        }else{
+                                                            echo "fout1";
                                                         }
                                                         if (isset($_POST['registreerZakelijkk'])) {
                                                             if (isset($_GET['token'])) {

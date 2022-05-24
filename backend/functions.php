@@ -2741,7 +2741,7 @@ function Sendmail(){
         if ($stmt->execute()){
             $to = $email;
             $subject = "Gegevenens invullen";
-            $msg = "Hier ontangt u een link om uw gegevens in te vullen <br> https://relatiebeheer.qccstest.nl/klanten_toevoegen.php?custof=" . $_GET["custof"]  . "&membof=" . $_GET["membof"] . $token . " <br> Vul je gegevens in met deze link. Click of open in new tab<br>";
+            $msg = "Hier ontangt u een link om uw gegevens in te vullen <br> https://relatiebeheer.qccstest.nl/klanten_toevoegen.php?custof=" . $_GET["custof"]  . "&membof=" . $_GET["membof"] . "&token=". $token . " <br> Vul je gegevens in met deze link. Click of open in new tab<br>";
             $msg = wordwrap($msg, 70);
             $headers = "From: Admin@qccs.nl";
             mail($to, $subject, $msg, $headers);
