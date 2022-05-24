@@ -81,6 +81,7 @@ $users = new userActions();
                                                                 $stmt->execute();
                                                                 $token_check = $stmt->fetch();
                                                                 if ($token_check){
+                                                                    $token = $_GET['token'];
                                                                     $stmt_1 = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
                                                                     $stmt_1->bind_param("s", $token);
                                                                     $stmt_1->execute();
