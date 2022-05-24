@@ -81,15 +81,8 @@ $users = new userActions();
                                                                 $stmt->execute();
                                                                 $token_check = $stmt->fetch();
                                                                 if ($token_check){
-                                                                    echo $token;
-                                                                    $stmt_1 = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
-                                                                    $stmt_1->bind_param("s", $token);
-                                                                    $stmt_1->execute();
-                                                                    $result = $stmt_1->get_result();
-                                                                    $idtoken = $result->fetch_assoc();
-                                                                    echo $idtoken;
-                                                                    $stmt_d = $mysqli->prepare("DELETE FROM token WHERE idtoken = ?");
-                                                                    $stmt_d->bind_param("s", $idtoken['idtoken']);
+                                                                    $stmt_d = $mysqli->prepare("DELETE FROM token WHERE token = ?");
+                                                                    $stmt_d->bind_param("s", $token);
                                                                     if ($stmt_d->execute()){
                                                                         echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_GET['membof']);
                                                                         echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
