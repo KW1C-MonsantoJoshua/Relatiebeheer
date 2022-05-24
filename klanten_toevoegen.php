@@ -81,7 +81,7 @@ $users = new userActions();
                                                                 $stmt->execute();
 //                                                                $token_check = $stmt->fetch();
                                                                 $stmt->store_result();
-                                                                $stmt->bind_result($token_check);  // number of arguments must match columns in SELECT
+                                                                $stmt->bind_result($id,$token_check);  // number of arguments must match columns in SELECT
                                                                 if($stmt->num_rows > 0) {
                                                                     while ($stmt->fetch()) {
                                                                         echo $token_check;
