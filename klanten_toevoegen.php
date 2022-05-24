@@ -79,13 +79,8 @@ $users = new userActions();
                                                                 $stmt = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
                                                                 $stmt->bind_param("s", $token);
                                                                 $stmt->execute();
-//                                                                $token_check = $stmt->fetch();
                                                                 $stmt->store_result();
                                                                 $stmt->bind_result($id,$token_check);  // number of arguments must match columns in SELECT
-//                                                                if($stmt->num_rows > 0) {
-//                                                                    while ($stmt->fetch()) {
-//                                                                    }
-//                                                                }
                                                                 if ($token_check){
                                                                     $stmt_d = $mysqli->prepare("DELETE FROM token WHERE token = ?");
                                                                     $stmt_d->bind_param("s", $token);
@@ -104,13 +99,8 @@ $users = new userActions();
                                                                 $stmt = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
                                                                 $stmt->bind_param("s", $token);
                                                                 $stmt->execute();
-//                                                                $token_check = $stmt->fetch();
                                                                 $stmt->store_result();
                                                                 $stmt->bind_result($id,$token_check);  // number of arguments must match columns in SELECT
-                                                                if($stmt->num_rows > 0) {
-                                                                    while ($stmt->fetch()) {
-                                                                    }
-                                                                }
                                                                 if ($token_check){
                                                                     $stmt_d = $mysqli->prepare("DELETE FROM token WHERE token = ?");
                                                                     $stmt_d->bind_param("s", $token);
