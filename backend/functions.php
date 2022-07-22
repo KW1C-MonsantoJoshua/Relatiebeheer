@@ -2716,8 +2716,6 @@ function Insertfactuur()
             $stmtFactuur->execute();
             $stmtFactuur->close();
         }
-    }else {
-        echo "fout1";
     }
 }
 
@@ -2730,4 +2728,25 @@ function GetFactuurInfo()
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array();
+}
+
+function Sendmail(){
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        global $mysqli;
+        $email = $_POST['Email'];
+        $token = bin2hex(random_bytes(50));
+        $stmt = $mysqli->prepare("INSERT INTO `token`(`token`) VALUES (?)");
+        $stmt->bind_param("s", $token);
+        if ($stmt->execute()){
+            $to = $email;
+            $subject = "Gegevenens invullen";
+            $msg = "Hier ontangt u een link om uw gegevens in te vullen <br> https://relatiebeheer.qccstest.nl/klanten_toevoegen.php?custof=" . $_GET["custof"]  . "&membof=" . $_GET["membof"] . "&token=". $token . " <br> Vul je gegevens in met deze link. Click of open in new tab<br>";
+            $msg = wordwrap($msg, 70);
+            $headers = "From: Admin@qccs.nl";
+            mail($to, $subject, $msg, $headers);
+            header("Location:bedrijfs_klanten_overzicht.php?custof=" . $_GET["custof"] . "&membof=" . $_GET["membof"] . "&toevoegenPart=Formulier");
+
+        }
+   }
 }

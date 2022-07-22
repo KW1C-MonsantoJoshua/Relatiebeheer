@@ -9,6 +9,13 @@ include "backend/functions.php";
 <?php
 include "partials/header.php";
 ?>
+
+<?php
+require_once('backend/Klant_toevoegen.php');
+
+$users = new userActions();
+
+?>
 <!-- END : Head-->
 
 <!-- BEGIN : Body-->
@@ -65,20 +72,44 @@ include "partials/header.php";
                                                 <form method="post">
                                                     <div>
                                                         <?php
-                                                        if (isset($_GET["toevoegenPart"])) {
-                                                            if ($_GET["toevoegenPart"] == "empty") {
-                                                                echo "<p class='text-danger'>Vul alle velden in aub</p>";
-                                                            } elseif ($_GET["toevoegenPart"] == "namefout") {
-                                                                echo "<p class='text-danger'>Voornaam heeft foute tekens</p>";
-                                                            } elseif ($_GET["toevoegenPart"] == "telfout") {
-                                                                echo "<p class='text-danger'>Telefoonnummer klopt niet</p>";
-                                                            } elseif ($_GET["toevoegenPart"] == "mailfout") {
-                                                                echo "<p class='text-danger'>Email klopt niet</p>";
-                                                            } elseif ($_GET["toevoegenPart"] == "emaildupli") {
-                                                                echo "<p class='text-danger'>Email bestaat al</p>";
+                                                        if (isset($_POST['registreerParticulierr'])) {
+                                                            if (isset($_GET['token'])) {
+                                                                global $mysqli;
+                                                                $token = $_GET['token'];
+                                                                $stmt = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
+                                                                $stmt->bind_param("s", $token);
+                                                                $stmt->execute();
+                                                                $stmt->store_result();
+                                                                $stmt->bind_result($id,$token_check);  // number of arguments must match columns in SELECT
+                                                                if ($token_check){
+                                                                    $stmt_d = $mysqli->prepare("DELETE FROM token WHERE token = ?");
+                                                                    $stmt_d->bind_param("s", $token);
+                                                                    $stmt_d->execute();
+                                                                    echo $users->registerUsersP($_POST['voornaam_p'],$_POST['tussenvoegsel_p'], $_POST['achternaam_p'], $_POST['straatnaam_p'], $_POST['huisnummer_p'], $_POST['postcode_p'], $_POST['telefoonnummer_p'], $_POST['email_p'], $_GET['membof']);
+                                                                    echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
+                                                                }else {
+                                                                    echo "<p class='text-danger'>Token is niet meer geldig !</p>";
+                                                                }
                                                             }
-                                                            if ($_GET["toevoegenPart"] == "succes") {
-                                                                echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
+                                                        }
+                                                        if (isset($_POST['registreerZakelijkk'])) {
+                                                            if (isset($_GET['token'])) {
+                                                                global $mysqli;
+                                                                $token = $_GET['token'];
+                                                                $stmt = $mysqli->prepare("SELECT * FROM `token` WHERE token = ?");
+                                                                $stmt->bind_param("s", $token);
+                                                                $stmt->execute();
+                                                                $stmt->store_result();
+                                                                $stmt->bind_result($id,$token_check);  // number of arguments must match columns in SELECT
+                                                                if ($token_check){
+                                                                    $stmt_d = $mysqli->prepare("DELETE FROM token WHERE token = ?");
+                                                                    $stmt_d->bind_param("s", $token);
+                                                                    $stmt_d->execute();
+                                                                    echo $users->registerUsersZ($_POST['voornaam_z'],$_POST['tussenvoegsel_z'], $_POST['achternaam_z'], $_POST['straatnaam_z'], $_POST['huisnummer_z'], $_POST['postcode_z'], $_POST['telefoonnummer_z'], $_POST['email_z'], $_POST['bedrijfsnaam'], $_GET['membof']);
+                                                                    echo "<p class='text-success'>Relatie succesvol toegevoegd !</p>";
+                                                                }else {
+                                                                    echo "<p class='text-danger'>Token is niet meer geldig !</p>";
+                                                                }
                                                             }
                                                         }
                                                         ?>
@@ -94,6 +125,13 @@ include "partials/header.php";
                                                                            class="form-control round"
                                                                            placeholder="Voornaam" required
                                                                            aria-invalid="false" name="voornaam_p">
+                                                                </div>
+                                                                <div class="controls">
+                                                                    <label for="tussenvoegsel">Tussenvoegsel</label>
+                                                                    <input type="text" id="tussenvoegsel"
+                                                                           class="form-control round"
+                                                                           placeholder="Tussenvoegsel" required
+                                                                           aria-invalid="false" name="tussenvoegsel_p">
                                                                 </div>
                                                                 <div class="controls">
                                                                     <label for="achternaam">Achternaam</label>
@@ -142,20 +180,12 @@ include "partials/header.php";
                                                                            placeholder="Postcode" required
                                                                            aria-invalid="false" name="postcode_p">
                                                                 </div>
-                                                                <label for="bedrijf">Klant van</label>
-                                                                <div class="form-group">
-                                                                    <select class="select2 form-control" id="bedrijf" name="bedrijf">
-                                                                        <?php
-                                                                        BusinessSelector();
-                                                                        ?>
-                                                                    </select>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
                                                             <input type="submit"
                                                                    class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                                   name="registreerParticulier"
+                                                                   name="registreerParticulierr"
                                                                    value="Relatie Toevoegen">
 
                                                             <button type="reset" onclick="window.history.go(-1); return false;" class="btn btn-secondary">Cancel
@@ -204,6 +234,13 @@ include "partials/header.php";
                                                                            class="form-control round"
                                                                            placeholder="Voornaam" required
                                                                            aria-invalid="false" name="voornaam_z">
+                                                                </div>
+                                                                <div class="controls">
+                                                                    <label for="tussenvoegsel">Tussenvoegsel</label>
+                                                                    <input type="text" id="tussenvoegsel"
+                                                                           class="form-control round"
+                                                                           placeholder="Tussenvoegsel" required
+                                                                           aria-invalid="false" name="tussenvoegsel_z">
                                                                 </div>
                                                                 <div class="controls">
                                                                     <label for="achternaam">Achternaam</label>
@@ -259,20 +296,12 @@ include "partials/header.php";
                                                                            placeholder="Bedrijfsnaam" required
                                                                            aria-invalid="false" name="bedrijfsnaam">
                                                                 </div>
-                                                                <label for="bedrijf">Klant van</label>
-                                                                <div class="form-group">
-                                                                    <select class="select2 form-control" id="bedrijf" name="bedrijf">
-                                                                        <?php
-                                                                        BusinessSelector();
-                                                                        ?>
-                                                                    </select>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-3 mt-sm-2">
                                                             <input type="submit"
                                                                    class="btn btn-primary mb-2 mb-sm-0 mr-sm-2"
-                                                                   name="registreerZakelijk"
+                                                                   name="registreerZakelijkk"
                                                                    value="Relatie Toevoegen">
 
                                                             <button type="reset" onclick="window.history.go(-1); return false;" class="btn btn-secondary">Cancel

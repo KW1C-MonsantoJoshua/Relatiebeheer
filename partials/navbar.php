@@ -63,7 +63,7 @@ $row = Getuser();
                                 class="nav-link dropdown-toggle user-dropdown d-flex align-items-end"
                                 id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
                             <div class="user d-md-flex d-none mr-2"><span
-                                        class="text-right"><?= $_SESSION["name"] ?></span><span
+                                        class="text-right"><?php if (isset($_SESSION["name"])) {echo $_SESSION["name"]; } ?></span><span
                                         class="text-right text-muted font-small-3">Beschikbaar</span></div>
                             <img class="avatar" src="uploads/<?= $row['image_url'] ?>" alt="avatar"
                                  height="35" width="35">
@@ -91,14 +91,15 @@ $row = Getuser();
     <!--     Sidebar Header For Starter Kit starts-->
     <div class="sidebar-header">
         <div class="logo clearfix">
-            <?php if ($_SESSION["memb_of"] == 0) {
+            <?php if (isset($_SESSION["memb_of"])) {if ($_SESSION["memb_of"] == 0) {
                 ?>
                 <a class="logo-text float-left" href="bedrijfs_overzicht.php">
                     <div class="logo-img"><img src="../assets/img/logo.png"/></div>
                     <span class="text">CRM</span>
                 </a>
                 <?php
-            } elseif ($_SESSION["memb_of"] > 0) {
+            }
+            }if (isset($_SESSION["memb_of"])) {if ($_SESSION["memb_of"] > 0) {
                 if ($_SESSION['auth'] == "Bedrijfsleider") {
                     ?>
                     <a class="logo-text float-left"
@@ -115,6 +116,7 @@ $row = Getuser();
                     </a>
                 <?php }
             }
+            }
             ?>
             <a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i
                         class="toggle-icon ft-toggle-right" data-toggle="expanded"></i></a>
@@ -130,7 +132,7 @@ $row = Getuser();
         <div class="nav-container">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class="nav-item">
-                    <?php if ($_SESSION["memb_of"] == 0) {
+                    <?php if (isset($_SESSION["memb_of"])) { if ($_SESSION["memb_of"] == 0) {
                         ?>
                         <a class="" href="bedrijfs_overzicht.php">
                             <i class="ft-align-justify"></i>
@@ -153,6 +155,7 @@ $row = Getuser();
                                 <span class="text">Relaties</span>
                             </a>
                         <?php }
+                    }
                     }
                     ?>
                 </li>
