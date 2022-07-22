@@ -1528,7 +1528,7 @@ if(isset($_GET['m'])){ ?>
 
 <?php
 if(isset($_GET['u'])){ ?>
-    <div class="flash-data3" data-flashdata="<?php echo $_GET['u'];?>"></div>
+    <div class="flash-data3" data-flashdata=""></div>
 <?php } ?>
 
 <?php
